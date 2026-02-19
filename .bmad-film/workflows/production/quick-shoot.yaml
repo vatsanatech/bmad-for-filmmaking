@@ -1,0 +1,237 @@
+# Quick Shoot Workflow
+# For streamlined production execution of simple projects
+
+workflow:
+  id: "quick-shoot"
+  name: "Quick Shoot"
+  version: "1.0.0"
+  phase: "production"
+  scale: "micro"
+  estimated_duration: "1-2 days (prep + shoot)"
+
+description: |
+  Streamlined production workflow for micro projects (30-second commercials, social media content).
+  Focuses on efficient execution with minimal crew and rapid turnaround.
+
+lead_agent: "first-ad"
+supporting_agents:
+  - "cinematographer"
+  - "script-supervisor"
+  - "producer"
+  - "directors-assistant"
+
+prerequisites:
+  - "Quick Film Spec complete (/quick-film-spec)"
+  - "Creative vision defined"
+  - "Budget and resources confirmed"
+
+inputs:
+  required:
+    - "film-project-context.md" # From /quick-film-spec
+    - "creative_vision" # Visual style, tone, story beats
+    - "available_resources" # Crew, equipment, location
+    - "shoot_date" # When production happens
+
+  optional:
+    - "shot_list" # If pre-planned
+    - "location_details"
+    - "talent_info" # If actors involved
+
+outputs:
+  - "shot-list.md" # Shot-by-shot plan
+  - "production-plan.md" # Day-of-shoot plan
+  - "continuity-notes.md" # On-set continuity tracking
+  - "production-report.md" # End-of-day wrap report
+
+process:
+  - step: 1
+    name: "Production Planning"
+    agent: "first-ad"
+    collaborators: ["producer", "cinematographer"]
+    action: |
+      Create streamlined production plan:
+      - Confirm shoot date, time, location
+      - Verify crew and equipment availability
+      - Create simple call sheet (who, when, where)
+      - Identify potential issues and backup plans
+    outputs:
+      - "Simple call sheet"
+      - "Equipment checklist"
+      - "Backup plan if needed"
+    duration: "30 min"
+
+  - step: 2
+    name: "Shot List Creation"
+    agent: "directors-assistant"
+    collaborators: ["cinematographer"]
+    action: |
+      Build efficient shot list:
+      - Translate story beats into specific shots (3-7 shots typical for 30 sec)
+      - Define camera angles, lenses, movement
+      - Prioritize: Essential shots vs. nice-to-have
+      - Estimate time per shot
+
+      For 30-second project typical shots:
+      1. Establishing/Wide (set context)
+      2. Medium shot (main action)
+      3. Close-up (emotional beat or product)
+      4. Insert/Detail (key object or moment)
+      5. Optional: B-roll for coverage
+    outputs:
+      - "Shot list with priorities"
+      - "Time estimates per shot"
+      - "Technical notes (lens, camera, lighting)"
+    duration: "30 min"
+
+  - step: 3
+    name: "Technical Preparation"
+    agent: "cinematographer"
+    action: |
+      Prepare technical execution plan:
+      - Camera package (body, lenses, support)
+      - Lighting approach (natural light + minimal artificial)
+      - Setup sequence (most efficient order)
+      - Backup equipment plan
+    outputs:
+      - "Camera/lighting package list"
+      - "Setup sequence"
+    duration: "20 min"
+
+  - step: 4
+    name: "Pre-Shoot Briefing"
+    agent: "first-ad"
+    action: |
+      Brief all participants:
+      - Review creative vision and story beats
+      - Walk through shot list
+      - Confirm timing and schedule
+      - Clarify roles and responsibilities
+      - Safety briefing if needed
+    duration: "15 min (on shoot day)"
+
+  - step: 5
+    name: "Production Execution"
+    agent: "first-ad"
+    collaborators: ["cinematographer", "script-supervisor", "directors-assistant"]
+    action: |
+      Execute shoot day:
+
+      1. Setup (Cinematographer leads)
+         - Equipment setup
+         - Lighting setup
+         - Camera tests
+
+      2. Shooting (1st AD manages flow)
+         - Work through shot list in order
+         - Monitor time vs. schedule
+         - Ensure adequate takes per shot
+         - Script Supervisor tracks continuity
+         - Directors Assistant ensures creative vision maintained
+
+      3. Coverage Verification (Script Supervisor)
+         - Check all essential shots captured
+         - Flag any missing elements
+         - Confirm adequate takes exist
+
+      4. Wrap
+         - Equipment breakdown
+         - Data backup
+         - Location restoration
+    outputs:
+      - "Raw footage (backed up)"
+      - "Continuity notes"
+      - "Production report"
+    duration: "Variable (2-6 hours typical for micro project)"
+
+  - step: 6
+    name: "Post-Shoot Wrap"
+    agent: "first-ad"
+    action: |
+      End-of-day wrap activities:
+      - Verify all footage backed up (dual backups minimum)
+      - Generate production report
+      - Update film-project-context.md
+      - Flag any issues for post-production
+      - Prepare handoff to Editor
+    outputs:
+      - "Production report"
+      - "Footage organized and backed up"
+      - "Notes for Editor"
+    duration: "30 min"
+
+  - step: 7
+    name: "Update Context & Next Steps"
+    agent: "bmad-film-master"
+    action: |
+      Update film-project-context.md:
+      - Mark production phase complete
+      - Log production details
+      - Document any issues or changes
+      - Update continuity registry
+
+      Recommend next workflow: /quick-edit
+    duration: "10 min"
+
+context_updates:
+  - section: "current_phase"
+    update: "Production complete, moving to Post-Production"
+
+  - section: "production_notes"
+    add:
+      - "Shoot date and location"
+      - "Crew and equipment used"
+      - "Issues encountered and resolutions"
+      - "Coverage assessment"
+
+  - section: "continuity_registry"
+    add: "On-set continuity notes"
+
+success_criteria:
+  - "All essential shots captured with adequate takes"
+  - "Footage backed up securely (dual backups)"
+  - "Continuity maintained across shots"
+  - "Production stayed on schedule and budget"
+  - "No safety incidents"
+  - "Footage ready for editing handoff"
+
+failure_modes:
+  - issue: "Missing essential shot"
+    resolution: "1st AD identifies before wrap, capture as pickup immediately"
+
+  - issue: "Continuity break discovered"
+    resolution: "Script Supervisor flags, reshoot affected shots if critical"
+
+  - issue: "Running behind schedule"
+    resolution: "1st AD prioritizes essential shots, drops nice-to-haves"
+
+  - issue: "Equipment failure"
+    resolution: "Use backup equipment or adapt creatively with available gear"
+
+  - issue: "Location issue"
+    resolution: "Activate backup location plan or adjust shooting approach"
+
+on_set_decision_framework: |
+  WHEN running short on time:
+  1. Refer to shot list priorities (Essential vs. nice-to-have)
+  2. Capture essential shots FIRST
+  3. Add coverage only if time permits
+
+  WHEN technical issue arises:
+  1. Assess: Can we fix quickly (< 10 min) or need workaround?
+  2. If quick fix: Do it
+  3. If requires time: Find creative workaround or adjust approach
+
+  WHEN creative change proposed on set:
+  1. Assess time impact
+  2. If improves story and fits schedule: Do it
+  3. If adds time: Only if essential AND can cut something else
+
+next_workflows:
+  - "/quick-edit" # Move to post-production
+
+tips:
+  - "Setup time is longer than you think—first shot always takes longest"
+  - "Get the master shot first (widest shot establishing scene)"
+  - "Adequate takes > perfect single take (give Editor options)"
+  - "Simple lighting fast, fast shoots allow more takes"
+  - "Backup footage immediately—never delete from camera until confirmed backed up twice"

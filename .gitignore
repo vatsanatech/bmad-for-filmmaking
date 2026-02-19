@@ -1,0 +1,57 @@
+# BMAD-FILM Framework .gitignore
+# User projects are NOT tracked - only framework files
+
+# ==========================================
+# USER PROJECT OUTPUTS (Don't track)
+# ==========================================
+project/*/
+!project/.gitkeep
+
+# Keep the project directory structure but not contents
+project/*
+!project/README.md
+
+# ==========================================
+# SYSTEM FILES (Don't track)
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ==========================================
+# EDITOR FILES (Don't track)
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ==========================================
+# LOGS AND TEMP (Don't track)
+# ==========================================
+*.log
+tmp/
+temp/
+.cache/
+
+# ==========================================
+# BACKUP FILES (Don't track)
+# ==========================================
+*-old.md
+*-backup.md
+*.bak
+
+# ==========================================
+# TRACKED BY FRAMEWORK (These ARE pushed)
+# ==========================================
+# .bmad-film/              ✓ Framework core
+# *.md (docs)              ✓ Documentation
+# README.md                ✓ Main docs
+# QUICK-START.md           ✓ User guide
+# QUICK-REFERENCE.md       ✓ Commands
+# etc.

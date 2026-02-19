@@ -1,0 +1,924 @@
+workflow_id: screenplay
+name: "Screenplay Development (Interactive + Multi-Dialect)"
+version: 6.0.0-multi-dialect
+category: development
+description: |
+  **INTERACTIVE CO-WRITING + MULTI-DIALECT SUPPORT** - Creates screenplay through questions, with automatic multi-language dialect support.
+
+  **NEW IN v6.0**: Automatic multi-dialect screenplay creation!
+  If character-bible was created in multiple dialects, screenplay automatically creates versions for each dialect.
+
+  **3-PHASE PROCESS**:
+
+  **Phase 0: Dialect Auto-Detection (NEW!)**
+  - Reads dialect preferences from character-bible workflow
+  - If multi-dialect character-bible exists → Creates screenplay per dialect
+  - Dialogue automatically adapted to each regional language
+  - Same scene structure, localized dialogue
+
+  **Phase 1: Screenplay Questions (15 questions)**
+  - Screenplay Structure Writer asks 10 questions (style, pacing, scenes)
+  - Dialogue Writer asks 5 questions (language ratio, dialect, memorable lines)
+  - Understands YOUR vision for scenes, dialogue, visual storytelling
+
+  **Phase 2: Collaborative Refinement**
+  - Present structure approach based on answers
+  - You refine key scenes/dialogue beats
+  - Iterates until screenplay direction feels RIGHT
+
+  **Phase 3: Screenplay Creation**
+  - Structure Writer creates scenes/action (same for all dialects)
+  - Dialogue Writer polishes dialogue per dialect (from character-bible voice profiles)
+  - **IF MULTI-DIALECT**: Creates separate screenplay-{dialect}.md files
+  - Two-agent Bollywood authentic approach
+  - Output: Complete screenplay(s) matching your vision
+
+  **BOLLYWOOD TWO-AGENT MODEL**:
+  1. Screenplay Structure Writer - Visual foundation (scenes, action, pacing)
+  2. Dialogue Writer (Samvad Lekhak) - Impactful dialogue per dialect
+
+  Creates UNIQUE screenplay based on your 15 answers, not generic template.
+  Supports single language (default: Hindi) OR multiple Indian dialects automatically.
+
+  This runs AFTER character-bible in development workflow.
+
+  Input: Approved character bible(s) - single OR multi-dialect
+  Output: Professional screenplay(s) - single file OR multiple dialect-specific files
+
+lead_agent: screenplay-structure-writer
+supporting_agents:
+  - dialogue-writer
+  - master-story-director
+  - genre-specific-agent
+
+inputs:
+  required:
+    - project_name: "Project directory name (e.g., 'band-darwaza')"
+
+  optional:
+    - language: "Language/dialect specification (default: Simple Bollywood Hindi)"
+      # Options:
+      # - "Simple Bollywood Hindi" (60-70% Hindi, 30-40% English - DEFAULT)
+      # - "Pure Hindi" (90% Hindi, formal/literary)
+      # - "Hinglish" (50-50 mix, urban youth)
+      # - "Haryanvi" (rural Haryana dialect)
+      # - "Bihari" (Bhojpuri influenced)
+      # - "Marathi-influenced" (Mumbai local)
+      # - "Punjabi-influenced" (energetic, expressive)
+
+context_requirements:
+  read:
+    - "project/{project_name}/genre-analysis.md"
+    - "project/{project_name}/story-synopsis.md"
+    - "project/{project_name}/beat-sheet.md"
+    - "project/{project_name}/character-bible.md (or dialect-specific versions)"
+
+  write:
+    - "project/{project_name}/screenplay-structure.md"
+    - "project/{project_name}/screenplay.md (or dialect-specific versions)"
+
+process:
+  # ═══════════════════════════════════════════════════════
+  # STEP 0: DIALECT AUTO-DETECTION (NEW!)
+  # ═══════════════════════════════════════════════════════
+
+  - step: 0
+    name: "DIALECT AUTO-DETECTION & FILE SETUP"
+    agent: screenplay-structure-writer
+    action: |
+      **🔴 ANNOUNCE TO USER (MANDATORY):**
+      ```
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 SCREENPLAY WORKFLOW — STARTING
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 0 of 4 — Reading ALL Project Files
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      Reading: genre-analysis.md + story-synopsis.md +
+               character-bible.md + beat-sheet.md
+      ```
+      **🔴 MANDATORY: Read ALL these files BEFORE proceeding:**
+      - `project/{project_name}/genre-analysis.md`
+      - `project/{project_name}/story-synopsis.md`
+      - `project/{project_name}/character-bible.md` (or dialect versions)
+      - `project/{project_name}/beat-sheet.md` (if exists)
+
+      **Auto-detect dialect preferences from character-bible:**
+
+      **CHECK CHARACTER-BIBLE FILES**:
+
+      Look in `project/{project_name}/` for:
+      - Single file: `character-bible.md` → SINGLE DIALECT
+      - Multiple folders: `hindi/`, `tamil/`, `telugu/` (with character-bible.md inside each) → MULTI-DIALECT
+
+      ---
+
+      **IF SINGLE DIALECT FOUND**:
+      - Read: `character-bible.md`
+      - Extract: Language/dialect used (default: Hindi)
+      - Setup: Create single screenplay file
+      - Output: `screenplay.md`
+
+      ---
+
+      **IF MULTI-DIALECT FOUND**:
+      - Count dialect folders: hindi/, tamil/, telugu/, etc.
+      - Extract: List of dialects (Hindi, Tamil, Telugu, Bengali, etc.)
+      - Setup: Prepare to create screenplay in each dialect folder
+      - Output: `hindi/screenplay.md`, `tamil/screenplay.md`, `telugu/screenplay.md`, etc.
+
+      **READ LOCALIZATION SETTINGS**:
+      From each character-bible file, extract:
+      - Localization depth (dialogue-only / full cultural)
+      - Character names (adapted or universal)
+      - Speech patterns per dialect
+      - Cultural references strategy
+
+      ---
+
+      **INFORM USER**:
+
+      IF SINGLE DIALECT:
+      ```
+      ✓ Character Bible detected: Single dialect (Hindi)
+      → Will create: screenplay.md
+      ```
+
+      IF MULTI-DIALECT:
+      ```
+      ✓ Character Bibles detected: 3 dialects (Hindi, Tamil, Telugu)
+      → Will create:
+         - hindi/screenplay.md (Hindi dialogue)
+         - tamil/screenplay.md (Tamil dialogue)
+         - telugu/screenplay.md (Telugu dialogue)
+
+      Same scenes, same structure, localized dialogue per dialect.
+      ```
+
+      **CONTINUE TO STEP 1** (Screenplay questions - same for all dialects)
+
+    outputs:
+      - Dialect count and list detected
+      - File naming strategy set
+      - Localization settings loaded
+
+    duration: "1-2 min (automatic detection)"
+
+  # ═══════════════════════════════════════════════════════
+  # PHASE 1: SCREENPLAY QUESTION PHASE
+  # ═══════════════════════════════════════════════════════
+
+  - step: 1
+    name: "PHASE 1A - Screenplay Structure Questions (10 questions)"
+    agent: screenplay-structure-writer
+
+    action: |
+      **🔴 ANNOUNCE TO USER (MANDATORY):**
+      ```
+      ✅ STEP 0 complete — All project files read.
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 1 of 4 — Screenplay Questions (15 questions)
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
+      **Screenplay Structure Writer asks 10 questions:**
+
+      Reference: `.bmad-film/agents/screenplay-structure-writer.md`
+
+      **A. SCREENPLAY STYLE (4 questions)**:
+
+      Q1. Dialogue vs Visual Balance - Dialogue-heavy? Balanced? Visual-first?
+      Q2. Scene Length - Quick cuts? Moderate? Longer takes? Varied?
+      Q3. Opening Scene - Character? World? Hook? Mood? Inciting incident?
+      Q4. Closing Scene - Last image/moment kya hona chahiye?
+
+      **B. PACING & STRUCTURE (3 questions)**:
+
+      Q5. Pacing Strategy - Fast & tight? Measured? Building? Wave pattern?
+      Q6. Subtext Level - Direct? Moderate? Heavy subtext? Layered?
+      Q7. Scene Transitions - Hard cuts? Motivated? Time jumps? Thematic?
+
+      **C. SPECIFIC SCENES (3 questions)**:
+
+      Q8. Must-Have Scenes - Koi specific scenes clearly imagine kar rahe ho?
+      Q9. Emotional Beats Placement - Audience ko kab kya feel (map 3-5 moments)?
+      Q10. Montages/Special Sequences - Training? Time passage? Flashbacks?
+
+      **Collect all 10 answers before proceeding to Step 2.**
+
+    duration: "10-15 min"
+
+  - step: 2
+    name: "PHASE 1B - Dialogue/Language Questions (5 questions)"
+    agent: dialogue-writer
+
+    action: |
+      **Dialogue Writer asks 5 language questions:**
+
+      Reference: `.bmad-film/agents/dialogue-writer.md`
+
+      **LANGUAGE & VOICE (5 questions)**:
+
+      Q11. Hindi-English Ratio - Default 60-70% Hindi theek hai? Ya adjust?
+      Q12. Dialect/Regional Flavor - Koi specific dialect? (Haryanvi, Punjabi, etc.)
+      Q13. Formality Level - Formal? Casual? Mixed? Character-based?
+      Q14. Memorable Lines - Koi specific lines/quotes include karna hai?
+      Q15. Dialogue Density - Talky? Balanced? Minimal? Action-driven?
+
+      **Collect all 5 answers before proceeding.**
+
+    duration: "5-10 min"
+
+  - step: 3
+    name: "Answer Synthesis & Screenplay Architecture"
+    agent: screenplay-structure-writer
+    collaboration:
+      - dialogue-writer
+
+    action: |
+      **Synthesize ALL 15 answers:**
+
+      ```
+      Perfect! Screenplay vision clear hai:
+
+      ✓ Style: [Q1-Q4 answers - dialogue/visual balance, pacing]
+      ✓ Structure: [Q5-Q7 - pacing, subtext, transitions]
+      ✓ Scenes: [Q8-Q10 - must-haves, beats, montages]
+      ✓ Language: [Q11-Q15 - ratio, dialect, formality, density]
+
+      Yeh sahi hai? Final confirm before screenplay creation?
+      ```
+
+      **Apply Decision Tree**:
+
+      Based on answers, determine:
+      - Scene length/count (Q2 - quick cuts = 15-20 scenes, longer = 8-12)
+      - Pacing strategy (Q5 - fast/measured/building)
+      - Subtext level (Q6 - affects dialogue style)
+      - Language mix (Q11-Q13 - per character if needed)
+      - Montages needed (Q10)
+      - Opening/closing specific (Q3, Q4)
+
+      **Architecture internally**:
+      - Scene breakdown based on answers
+      - Emotional beat placement from Q9
+      - Must-have scenes from Q8 integrated
+      - Language/dialect strategy from Q11-Q13
+
+    duration: "10 min"
+
+  # ═══════════════════════════════════════════════════════
+  # PHASE 2: COLLABORATIVE REFINEMENT (Optional)
+  # ═══════════════════════════════════════════════════════
+
+  - step: 4
+    name: "PHASE 2 - Present Structure Approach (Optional Refinement)"
+    agent: screenplay-structure-writer
+
+    action: |
+      **Present screenplay approach for review:**
+
+      "Yeh structure bana rahe hain based on answers:
+
+      - Scene count: [Estimated based on Q2]
+      - Opening: [Based on Q3 answer]
+      - Key emotional beats: [Q9 placements]
+      - Must-have scenes: [Q8 integrated]
+      - Closing: [Based on Q4 answer]
+
+      Yeh direction sahi hai? Kuch adjust?"
+
+      If user wants changes, adjust before full screenplay.
+      If approved, proceed to Step 5.
+
+    duration: "5 min (optional)"
+
+  # ═══════════════════════════════════════════════════════
+  # PHASE 3: SCREENPLAY CREATION
+  # ═══════════════════════════════════════════════════════
+
+  - step: 5
+    name: "Read Project Context (CRITICAL FOR CONSISTENCY)"
+    agent: screenplay-structure-writer
+
+    action: |
+      **CRITICAL: Read ALL previous workflow outputs FIRST:**
+
+      **MUST READ** (from previous workflows):
+      1. `project/{project_name}/genre-analysis.md` - Genre, tone, visual style
+      2. `project/{project_name}/story-synopsis.md` - **BOTH versions** (continuous narrative + scene-by-scene)
+      3. `project/{project_name}/beat-sheet.md` - Beat-by-beat story breakdown, emotional mapping, pacing
+      4. `project/{project_name}/character-bible.md` - Complete character profiles, voices, arcs
+         - OR if multi-dialect: `project/{project_name}/{dialect}/character-bible.md` (read all dialects)
+
+      **Extract for screenplay:**
+      - Genre and tone (determines screenplay style) → FROM genre-analysis
+      - All story beats (must be covered) → FROM beat-sheet (beat-by-beat breakdown)
+      - Emotional progression map → FROM beat-sheet (highs/lows placement)
+      - Pacing rhythm → FROM beat-sheet (fast/measured/slow burn)
+      - Character roster with voice profiles → FROM character-bible
+      - Character speech patterns (Q4 answers from character-bible)
+      - Key relationships (affects dialogue dynamics) → FROM character-bible relationships section
+      - Scene progression (exact sequence) → FROM story-synopsis (scene-by-scene) + beat-sheet
+      - Visual style notes → FROM genre-analysis
+
+      **CONSISTENCY CHECK**:
+      - Screenplay scenes MUST match beat-sheet beats (all beats covered)
+      - Screenplay pacing MUST match beat-sheet rhythm
+      - Screenplay emotional arcs MUST match beat-sheet emotional mapping
+      - Dialogue voices MUST match character-bible speech patterns
+      - Genre tone MUST match genre-analysis recommendations
+
+      **Combine previous outputs with Q1-Q15 answers to create screenplay.**
+
+    outputs:
+      - Project understanding
+      - Character roster with voice profiles
+      - Answers + context combined
+
+  - step: 6
+    name: "Scene Structure Planning (Based on Q1-Q10 Answers)"
+    agent: screenplay-structure-writer
+    collaboration:
+      - master-story-director (structure oversight)
+      - genre-specific-agent (genre conventions)
+
+    action: |
+      **Break story into scenes using Q1-Q10 answers:**
+
+      **Scene Count determined by Q2 answer**:
+      - Quick cuts (Q2) = 15-20 short scenes
+      - Moderate = 10-15 scenes
+      - Longer takes = 8-12 scenes
+
+      For each scene identify:
+      - Location (INT/EXT, specific place)
+      - Time of day
+      - Characters present
+      - What happens (action beats from story)
+      - Emotional tone (match Q9 emotional beat map)
+      - Dialogue moments (who speaks, about what)
+      - Scene purpose (plot/character/theme)
+      - Estimated duration
+
+      **Create scene flow using Q3, Q4, Q8, Q9 answers**:
+      - **Opening scene from Q3** (character? world? hook?)
+      - Development scenes (build story)
+      - **Must-have scenes from Q8** (integrate specifically)
+      - **Emotional beats from Q9** (place at right moments)
+      - Climax scene (peak tension/emotion)
+      - **Closing scene from Q4** (specific final image/moment)
+
+      **Apply Q10 montages**:
+      - Training montage (if requested)
+      - Time passage (if requested)
+      - Flashbacks (if requested)
+
+      **Pacing from Q5**:
+      - Fast & tight = minimal setup, jump to action
+      - Building = slow start, accelerate to climax
+      - Wave = peaks + valleys rhythm
+
+      Verify:
+      - All story beats covered
+      - Q9 emotional beats placed correctly
+      - Q8 must-have scenes included
+      - Character arcs progress
+      - Genre conventions honored
+
+    outputs:
+      - Complete scene breakdown (answer-based)
+      - Q9 emotional beats mapped to scenes
+      - Q8 must-haves integrated
+
+  - step: 7
+    name: "PHASE 3A - Write Screenplay Structure (Based on Q1-Q10)"
+    agent: screenplay-structure-writer
+
+    action: |
+      **Write STRUCTURE DRAFT using Q1-Q10 answers:**
+
+      This draft includes:
+      ✅ Complete scene headings (INT/EXT, LOCATION - TIME)
+      ✅ Detailed action lines (visual storytelling based on Q1)
+      ✅ Character introductions (memorable first appearances)
+      ✅ Scene descriptions and atmosphere
+      ✅ Character behavior and movement
+      ✅ PLACEHOLDER DIALOGUE (functional, shows flow and tone)
+
+      **Apply Q1 (Dialogue vs Visual Balance)**:
+      - Dialogue-heavy → Longer dialogue blocks, less action description
+      - Visual-first → Detailed action lines, minimal dialogue
+      - Balanced → Equal weight to both
+
+      **Apply Q2 (Scene Length)**:
+      - Quick cuts → Scenes 0.5-1 page each
+      - Moderate → Scenes 1-3 pages
+      - Longer takes → Scenes 3-5 pages
+
+      **Apply Q6 (Subtext Level)**:
+      - Direct → Placeholder dialogue says what it means
+      - Heavy subtext → Placeholder shows tension, avoidance
+      - Mark silences and beats
+
+      **Apply Q7 (Transitions)**:
+      - Hard cuts → Just scene heading, no bridge
+      - Motivated → Link scenes with action/sound/theme
+      - Time jumps → Add "LATER" / "DAYS LATER"
+
+      For EACH scene write:
+
+      **1. SCENE HEADING**:
+      ```
+      INT. LOCATION - TIME
+      or
+      EXT. LOCATION - TIME
+      ```
+
+      **2. SCENE ESTABLISHMENT** (opening lines):
+      - Atmosphere and mood (genre-appropriate)
+      - Location details that matter
+      - Time/lighting feeling
+      - Environmental sounds or energy
+      - Sets visual tone
+
+      **3. ACTION LINES** (what we see/hear):
+      - Present tense, active voice
+      - Visual description (what camera captures)
+      - Character behavior and movement
+      - Emotional states SHOWN (not told)
+      - Important props/objects
+      - Environment interactions
+      - Short paragraphs (3-4 lines max - readable)
+
+      **4. PLACEHOLDER DIALOGUE**:
+      - Basic Hindi-English mix (from character profiles)
+      - Shows information being conveyed
+      - Shows emotional tone
+      - Shows conversation flow
+      - CHARACTER-APPROPRIATE (references character bible)
+      - NOT final impactful lines (dialogue writer handles that)
+
+      **GENRE-SPECIFIC STYLE**:
+      Apply appropriate genre screenplay style:
+      - Thriller: Tension in descriptions, observational details
+      - Romance: Emotional atmosphere, character connection shown
+      - Horror: Dread and unease, sensory details, what's NOT seen
+      - Comedy: Setup/payoff structure, physical comedy opportunities
+      - Action: Dynamic movement, clear geography, impact
+
+      **RULES - DO NOT INCLUDE**:
+      ❌ NO camera directions (no "CLOSE-UP", "WIDE SHOT")
+      ❌ NO technical notes (lighting, sound, editing)
+      ❌ NO shot breakdowns
+      ❌ NO final polished dialogue (placeholder only)
+
+      **ONLY WRITE**:
+      ✅ Scene headings
+      ✅ Action lines (visual description)
+      ✅ Placeholder dialogue (functional)
+      ✅ Scene flow and structure
+
+      Keep it CLEAN and VISUAL. Structure foundation for dialogue.
+
+    quality_standards: |
+      Every scene must meet:
+
+      ✓ **Format**: Industry standard (INT/EXT, proper action/dialogue format)
+      ✓ **Visual**: Action lines show, don't tell
+      ✓ **Clear**: Easy to read, easy to visualize
+      ✓ **Genre-appropriate**: Matches genre conventions
+      ✓ **Shootable**: Director can stage, actors can perform
+      ✓ **Character-accurate**: Behavior matches character bible
+      ✓ **Clean**: NO technical notes or camera directions
+      ✓ **Placeholder dialogue**: Shows flow, NOT final impact
+
+    outputs:
+      - Complete screenplay STRUCTURE draft
+      - All scenes written with action and placeholder dialogue
+      - Genre style applied
+      - Ready for dialogue writing phase
+
+      Save as: `project/{project_name}/screenplay-structure.md`
+
+  - step: 8
+    name: "PHASE 3B - Craft Final Dialogue (Based on Q11-Q15)"
+    agent: dialogue-writer
+
+    inputs_from_previous:
+      - Screenplay structure with placeholder dialogue
+      - Character Bible with voice profiles
+      - Q11-Q15 answers (language, dialect, formality, memorable lines, density)
+
+    action: |
+      **Replace ALL placeholder dialogue using Q11-Q15 answers:**
+
+      **Apply Q11 (Hindi-English Ratio)**:
+      - 60-70% Hindi (default) → Standard Bollywood mix
+      - More Hindi (80-90%) → Traditional/regional characters
+      - More English (40-50%) → Urban/elite characters
+      - Character-specific → Different per person
+
+      **Apply Q12 (Dialect)**:
+      - NO DIALECT → Standard Bollywood Hindi
+      - LIGHT REGIONAL → Few dialect words for flavor
+      - HEAVY REGIONAL → Full Haryanvi/Punjabi/Bhojpuri/etc. for authenticity
+
+      **Apply Q13 (Formality)**:
+      - Formal → "Aap" form, proper Hindi, educated vocabulary
+      - Casual → "Tu/tum" form, street-smart mixing
+      - Character-based → Different formality per person
+
+      **Apply Q14 (Memorable Lines)**:
+      - If user gave specific lines → Include EXACTLY as given
+      - Craft dialoguebaazi moments at key scenes
+      - One-liners, philosophical zingers, quotable lines
+
+      **Apply Q15 (Dialogue Density)**:
+      - Talky → Longer dialogue blocks, conversations
+      - Balanced → Dialogue when needed, silence when powerful
+      - Minimal → Terse lines, mark silences, Gulzar-style
+      - Action-driven → Brief functional dialogue
+
+      **Process**:
+
+      1. **Read screenplay structure thoroughly**:
+         - Note all placeholder dialogue
+         - Understand scene emotional arcs
+         - Identify character dynamics per scene
+         - Track conversation power dynamics
+
+      2. **Consult Character Bible for each character**:
+         - Hindi-English ratio (e.g., 70% Hindi, 30% English)
+         - Vocabulary level (educated/simple/technical)
+         - Speech rhythm (fast/slow/interrupted)
+         - Verbal tics (repeated phrases)
+         - Emotional expression style
+         - Background (class, education, region)
+
+      3. **Apply Genre Dialogue Style**:
+         - **Thriller**: Terse, subtext-heavy, tension in casual talk
+         - **Romance**: Emotional, expressive, vulnerability shown
+         - **Horror**: Believable fear, fragmented under terror
+         - **Comedy**: Wit, timing, absurd logic, rapid-fire
+         - **Action**: Short punchy lines, one-liners, urgency
+
+      4. **Apply Language/Dialect** (user-specified or default):
+         - Default: Simple Bollywood Hindi (60-70% Hindi, 30-40% English)
+         - Natural code-switching (tech/modern = English, emotions = Hindi)
+         - If dialect specified (Haryanvi/Bihari/etc): Apply consistently
+         - Balance authenticity with accessibility
+
+      5. **Write Final Dialogue**:
+         - Each character sounds DISTINCT (identify speaker without name)
+         - Actable (sounds natural when spoken aloud)
+         - Has subtext (what's unsaid matters)
+         - Reveals character (not just information)
+         - Moves story or deepens character
+         - Fits emotional tone of scene
+         - Create memorable moments (quotable lines where appropriate)
+
+      6. **Quality Check**:
+         - Read aloud test (must sound natural)
+         - Character voice consistency check
+         - No on-the-nose exposition
+         - Subtext present
+         - Genre tone maintained
+         - Language specification followed
+
+      **BOLLYWOOD DIALOGUE QUALITY**:
+      - Impactful, not flat
+      - Memorable lines (audiences remember dialogue)
+      - Character-specific voices
+      - Natural speech (not literary)
+      - Emotional authenticity
+      - Cultural authenticity
+
+    quality_standards: |
+      Every dialogue must meet:
+
+      ✓ **Distinct**: Can identify speaker without seeing name
+      ✓ **Natural**: Sounds real when spoken aloud
+      ✓ **Layered**: Has subtext, what's unsaid matters
+      ✓ **Genre-appropriate**: Matches thriller/romance/horror/comedy/action style
+      ✓ **Language-accurate**: Follows Hindi-English ratio from character bible
+      ✓ **Dialect-consistent**: If specified, applied throughout
+      ✓ **Actable**: Actor can deliver with emotion
+      ✓ **Impactful**: Bollywood quality, memorable where appropriate
+      ✓ **No exposition dumps**: Information conveyed naturally
+
+    outputs:
+      - Complete screenplay with final dialogue
+      - All placeholder dialogue replaced
+      - Character voices distinct and consistent
+      - Genre-appropriate dialogue style
+      - Language/dialect authenticity
+      - Bollywood-quality memorable lines
+
+  - step: 9
+    name: "Format and Length Verification"
+    agent: dialogue-writer
+
+    action: |
+      **Verify final screenplay format and length (answers applied):**
+
+      **Format Check**:
+      - Scene headings proper (INT/EXT, LOCATION - TIME)
+      - Action lines present tense, visual, short paragraphs
+      - Dialogue formatted correctly (character name, dialogue)
+      - Character names CAPS on first mention
+      - Proper spacing and readability
+      - NO technical notes (verify clean)
+
+      **Length Verification**:
+      - Count pages (1 page ≈ 1 minute)
+      - Target: [X] pages for [X]-minute film
+      - If over/under by more than 10%:
+        * Identify scenes to trim/expand
+        * Adjust dialogue length (not content)
+        * Maintain all story beats
+
+      **Readability Check**:
+      - Flows smoothly scene to scene
+      - Easy to visualize
+      - Easy to read aloud
+      - Professional appearance
+
+      **Language Check**:
+      - Consistent Hindi-English ratios per character
+      - Dialect (if specified) consistent throughout
+      - Natural code-switching (not forced)
+      - Accessible to target audience
+
+    outputs:
+      - Formatted screenplay
+      - Length verified and adjusted
+      - Clean professional format confirmed
+      - Language consistency verified
+
+  - step: 10
+    name: "Quality Assurance (Answer-Based Verification)"
+    agent: master-story-director
+    collaboration:
+      - screenplay-structure-writer
+      - dialogue-writer
+      - genre-specific-agent
+
+    action: |
+      **Master Story Director reviews screenplay for Q1-Q15 answer usage:**
+
+      **ANSWER INTEGRATION CHECK**:
+      - [ ] Q1 (Dialogue vs Visual) applied correctly
+      - [ ] Q2 (Scene Length) matches - scenes right size
+      - [ ] Q3 (Opening Scene) matches user's vision
+      - [ ] Q4 (Closing Scene) matches specific final image
+      - [ ] Q5 (Pacing) matches user preference (fast/measured/building)
+      - [ ] Q6 (Subtext) level matches answer (direct/heavy/layered)
+      - [ ] Q7 (Transitions) style matches (cuts/motivated/jumps)
+      - [ ] Q8 (Must-Have Scenes) all included as specified
+      - [ ] Q9 (Emotional Beats) placed at specified moments
+      - [ ] Q10 (Montages) included if requested
+      - [ ] Q11 (Hindi-English Ratio) matches answer per character
+      - [ ] Q12 (Dialect) applied if specified
+      - [ ] Q13 (Formality) matches per character
+      - [ ] Q14 (Memorable Lines) included if user gave specific lines
+      - [ ] Q15 (Dialogue Density) matches (talky/balanced/minimal)
+
+      **Structure Check**:
+      - All story beats from synopsis present
+      - Scene flow logical and engaging
+      - Pacing matches Q5 answer
+      - Character arcs progress clearly
+      - Visual storytelling (show don't tell from Q1)
+
+      **Dialogue Check**:
+      - Characters sound distinct
+      - Voices consistent with character bible + Q4 answers
+      - Subtext level matches Q6
+      - Natural, actable dialogue
+      - Genre-appropriate style
+      - Language ratios match Q11-Q13
+
+      **Genre Check**:
+      - Genre conventions honored
+      - Tone consistent
+      - Audience expectations met
+
+      **Bollywood Quality Check**:
+      - Professional format
+      - Dialogue has impact (not flat)
+      - Memorable moments present
+      - Shootable and actable
+      - Ready for production
+
+      **If user's Q1-Q15 answers not respected → Send back for revision**
+
+    approval_gate: |
+      Master Story Director MUST approve.
+
+      If NOT approved:
+      - Identify specific issues (structure/dialogue/genre/language)
+      - Route back to appropriate agent for revision
+      - Re-review after revision
+
+      If APPROVED:
+      - Proceed to finalization
+
+    outputs:
+      - Quality approval
+      - Revision notes (if needed)
+      - Final sign-off
+
+  - step: 11
+    name: "Finalize Screenplay"
+    agent: dialogue-writer
+
+    action: |
+      Create final screenplay document with proper credits:
+
+      **Document Structure**:
+
+      ```
+      =====================================
+      [PROJECT TITLE]
+      [Duration] Minute Film
+      Genre: [Genre]
+      Language: [Hindi/Hinglish/Dialect]
+
+      Story by: [Genre Specialist Agent Name]
+      Character Bible by: BMAD-FILM Character Developer
+      Screenplay by: BMAD-FILM Screenplay Structure Writer
+      Dialogues by: BMAD-FILM Dialogue Writer (Samvad Lekhak)
+
+      Date: [Date]
+      Version: Final Draft 1.0
+      =====================================
+
+      FADE IN:
+
+      [Complete screenplay - all scenes with final dialogue]
+
+      FADE OUT.
+
+      =====================================
+      END OF SCREENPLAY
+      =====================================
+
+      PRODUCTION SUMMARY:
+
+      Runtime: [X] minutes (estimated)
+      Total Scenes: [X]
+      Locations: [List unique locations]
+      Cast: [List all characters with roles]
+
+      Language: [Specification]
+      Dialogue Style: [Genre-appropriate description]
+
+      Character Voice Summary:
+      - [Character 1]: [Brief voice description]
+      - [Character 2]: [Brief voice description]
+
+      Notable Dialogue Moments (Marketing Potential):
+      - "[Memorable line 1]"
+      - "[Memorable line 2]"
+      ```
+
+      **FILE NAMING** (based on Step 0 dialect auto-detection):
+
+      **IF SINGLE DIALECT**:
+      Save as: `project/{project_name}/screenplay.md`
+
+      **IF MULTI-DIALECT**:
+      Save screenplay in each DIALECT FOLDER:
+      - `project/{project_name}/hindi/screenplay.md`
+      - `project/{project_name}/tamil/screenplay.md`
+      - `project/{project_name}/telugu/screenplay.md`
+      - etc. (one file per dialect folder detected in Step 0)
+
+      **Each dialect file contains**:
+      - SAME scene structure (INT/EXT, scene headings, action lines)
+      - SAME story beats and progression
+      - LOCALIZED dialogue:
+        - Hindi version: Hinglish dialogue (from character-bible-hindi)
+        - Tamil version: Tamil dialogue (from character-bible-tamil)
+        - Telugu version: Telugu dialogue (from character-bible-telugu)
+        - etc.
+      - Character names: As per dialect character-bible (adapted or universal)
+      - Cultural references: As per localization depth from character-bible
+
+      **EXAMPLE - Multi-Dialect Scene**:
+
+      **hindi/screenplay.md**:
+      ```
+      INT. COMMUNITY HALL - EVENING
+
+      Arjun DJ equipment setup kar raha hai.
+
+      MEERA
+      (flirty)
+      Late ho gaye, DJ sahab.
+      ```
+
+      **tamil/screenplay.md**:
+      ```
+      INT. COMMUNITY HALL - EVENING
+
+      Arun DJ equipment setup pannitu irukkaru.
+
+      MEERA
+      (flirty)
+      Late agiruchu, DJ sir.
+      ```
+
+      **Also Preserve**:
+      Keep `screenplay-structure.md` for reference (shows evolution from structure to final)
+
+    outputs:
+      - Final complete screenplay file(s)
+      - Single file (if single dialect) OR Multiple files (if multi-dialect)
+      - Production-ready script per dialect
+      - Bollywood-authentic credits (two-agent model)
+      - Clean, professional format
+
+success_criteria: |
+  Screenplay is successful when:
+
+  ✓ **Answer-Based**: Screenplay matches ALL 15 answers (Q1-Q15, not generic template)
+  ✓ **Q1-Q7 Structure**: Dialogue/visual balance, scene length, pacing, subtext, transitions match answers
+  ✓ **Q8-Q10 Scenes**: Must-have scenes included, emotional beats placed correctly, montages if requested
+  ✓ **Q11-Q15 Dialogue**: Language ratio, dialect, formality, memorable lines, density match answers
+  ✓ **Structure**: Properly formatted (industry standard)
+  ✓ **Story**: All story beats present
+  ✓ **Visual**: Action lines show, don't tell (per Q1)
+  ✓ **Dialogue**: Natural, impactful, character-specific (Bollywood quality)
+  ✓ **Character Voices**: Distinct per character bible + Q4 speech patterns
+  ✓ **Genre**: Conventions honored, tone consistent
+  ✓ **Language**: Simple Bollywood Hindi (60-70% mix or per Q11)
+  ✓ **Readable**: Easy to read and visualize
+  ✓ **Shootable**: Director can stage scenes
+  ✓ **Actable**: Actors can perform with emotion
+  ✓ **Runtime**: Matches target (±30 seconds)
+  ✓ **Clean Format**: NO technical notes or camera directions
+  ✓ **User Feels**: "This is MY screenplay - they understood my vision for scenes + dialogue!"
+
+deliverables:
+  primary:
+    - file: "project/{project_name}/screenplay.md (single dialect) OR screenplay-{dialect}.md (multi-dialect)"
+      description: "Complete screenplay with structure and final dialogue - single file OR multiple dialect-specific files"
+
+  secondary:
+    - file: "project/{project_name}/screenplay-structure.md"
+      description: "Structure draft with placeholder dialogue (reference - universal for all dialects)"
+
+  multi_dialect_example:
+    - "hindi/screenplay.md - Hindi/Hinglish dialogue version"
+    - "tamil/screenplay.md - Tamil dialogue version"
+    - "telugu/screenplay.md - Telugu dialogue version"
+
+estimated_time: "2-3 hours for 5-minute screenplay (structure + dialogue)"
+
+notes: |
+  Screenplay is STEP 4 in development workflow:
+
+  1. Story Synopsis ✅
+  2. Character Bible ✅
+  3. Beat Sheet ✅
+  4. Screenplay ⬅️ (This step)
+
+  BOLLYWOOD TWO-AGENT MODEL (Authentic Industry Practice):
+
+  **Agent 1: Screenplay Structure Writer**
+  - Creates visual foundation
+  - Scene construction, action lines
+  - Placeholder dialogue (functional)
+  - Genre-trained for appropriate style
+
+  **Agent 2: Dialogue Writer (Samvad Lekhak)**
+  - Crafts final impactful dialogue
+  - Character-specific voices
+  - Genre-appropriate style
+  - Language/dialect expertise
+
+  This separation mirrors Bollywood tradition:
+  - "Screenplay: [Name]"
+  - "Dialogues: [Name]"
+
+  Benefits:
+  - Better specialization (dialogue is an art)
+  - Genre-trained agents for both structure and dialogue
+  - Dialogue quality matches Bollywood standards
+  - Character voices more distinct
+  - More control over final product
+
+  Language/Dialect Options:
+  - Default: Simple Bollywood Hindi (60-70% Hindi, 30-40% English)
+  - Pure Hindi (90% Hindi, formal/literary)
+  - Hinglish (50-50, urban youth)
+  - Regional dialects: Haryanvi, Bihari, Marathi-influenced, Punjabi-influenced
+
+  Technical specifications come LATER from:
+  - Cinematographer (camera, shots)
+  - Gaffer (lighting)
+  - Sound Designer (sound)
+  - Editor (cutting)
+
+  Screenplay = STORY in visual form with powerful dialogue
+  NOT = Production manual

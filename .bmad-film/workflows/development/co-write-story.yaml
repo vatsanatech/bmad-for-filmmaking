@@ -1,0 +1,503 @@
+# CO-WRITE STORY WORKFLOW
+# Writer-Led Original Story Development
+# Claude is CO-WRITER, Writer is PRIMARY AUTHOR
+# Max 30 deep questions → then story articulation
+
+workflow:
+  id: "co-write-story"
+  name: "Original Story Co-Writing Session"
+  version: "1.0.0"
+  phase: "development"
+  mode: "writer-led"
+  scale: ["micro", "short", "feature", "series"]
+
+description: |
+  **WRITER'S ORIGINAL STORY — CO-WRITE MODE**
+
+  Yeh mode tab use hota hai jab story WRITER KI APNI HAI.
+  Claude sirf co-writer hai. Primary author = Writer.
+
+  DIFFERENCE from Story Synopsis:
+  - Story Synopsis: Writer gives idea → Claude generates
+  - Co-Write: Writer has THEIR OWN STORY → Claude extracts, shapes, articulates
+
+  Credits: "Written by [Writer's Name] | Story Development: BMAD-FILM Co-Write"
+
+  HOW IT WORKS:
+  Phase 1: Co-writer (Claude) asks up to 30 deep questions
+           → Extract the complete story that lives in writer's head
+           → Questions go from surface → deep → personal → craft
+
+  Phase 2: Claude summarizes understanding, confirms with writer
+           → Genre identification from writer's answers
+
+  Phase 3: Claude articulates writer's story in proper format
+           → Continuous narrative (flowing prose)
+           → Scene-by-scene breakdown
+           → The WRITER'S story, not Claude's invention
+
+  CRITICAL RULE:
+  - Do NOT invent story elements not given by writer
+  - Do NOT impose Bollywood patterns over writer's vision
+  - PROTECT writer's unique voice — don't "fix" it into generic
+  - If writer says "I don't know yet" → note it as open question
+  - Writer's instinct > System's pattern
+
+execution_mode: "interactive-only"
+lead_agent: "co-write-director"
+
+# ═══════════════════════════════════════════════════════
+# THE 30-QUESTION FRAMEWORK
+# Divided into 6 Phases (5 questions each)
+# Ask conversationally, not as a form
+# Stop early if writer has answered the essence
+# ═══════════════════════════════════════════════════════
+
+question_framework:
+
+  phase_A:
+    name: "STORY FOUNDATION — Sabse Pehle Yeh Batao"
+    questions: 5
+    always_ask: true
+    purpose: "What is this story? At its core."
+    questions_list:
+      Q1: |
+        Pehle bilkul seedha batao — yeh story kis BAARE MEIN hai?
+        One sentence mein: "Yeh story hai [KISKA] ke baare mein, jab [KYA HOTA HAI]."
+        Don't think too much. Jo pehla jawaab aaya, wahi batao.
+
+      Q2: |
+        Is story ka SEEDHA seed kya hai — matlab woh moment, woh khayal,
+        woh image jo sabse pehle aaya tha jab yeh story soochna shuru kiya?
+        "Pehli baar kab aaya yeh khayal, aur kis roop mein aaya?"
+
+      Q3: |
+        Is story mein ek character hai jo aap feel karte ho ki SIRF AAPKE ANDAR SE
+        aa sakta tha — koi aur nahi likh sakta tha yeh character?
+        Woh kaun hai? Usmein kya hai jo specifically AAPKA hai?
+
+      Q4: |
+        Is story ka WOH MOMENT batao jo aapko sabse zyada excited karta hai —
+        woh scene ya situation jo aap BAHUT DEKHNA chahte ho.
+        Matlab aapka favorite moment jo abhi tak sirf aapke imagination mein hai.
+
+      Q5: |
+        Yeh story aapne KYUN likhi? Ya kyun likhna chahte ho?
+        Kya kehna chahte ho isse? Ya kya FEEL karna chahte ho likhke?
+        (Koi zaruri nahi ki "message" ho — entertainment bhi valid hai)
+
+  phase_B:
+    name: "PROTAGONIST — Woh Kaun Hai"
+    questions: 5
+    always_ask: true
+    purpose: "Know the main character deeply — as writer sees them."
+    questions_list:
+      Q6: |
+        Aapka protagonist — uska naam kya hai? Aur woh kaisa DIKHTA/DIKHTI hai
+        aapke imagination mein? Age, appearance, ek-do physical details jo
+        aapke zehan mein clearly hain.
+
+      Q7: |
+        Is protagonist ke baare mein woh ek baat batao jo KISI AUR KO NAHI PATA —
+        koi secret, koi wound, koi guilt jo woh andar chhupa ke chal raha/rahi hai.
+        Yeh uski psychology ka sabse important hissa hai.
+
+      Q8: |
+        Story shuru hone se pehle, is protagonist ki ZINDAGI KAISI HAI?
+        Normal day kaisa hota hai uska? Kya chal raha hai uske saath?
+
+      Q9: |
+        Is story mein protagonist ko SABSE BADA DARD kya milega?
+        Woh lowest point kaunsa hai jahan aap unhe le jaana chahte ho?
+
+      Q10: |
+        Story ke end mein protagonist mein kya BADLA HAI?
+        Ya kya NAHI BADLA? (Kabhi kabhi character ka na badlana bhi
+        bahut powerful hota hai — yeh bhi valid hai.)
+
+  phase_C:
+    name: "WORLD & CONFLICT — Duniya Kaise Hai"
+    questions: 5
+    always_ask: true
+    purpose: "Setting, atmosphere, and the central engine of the story."
+    questions_list:
+      Q11: |
+        Story KI SETTING batao — jagah, waqt, maahol.
+        Kahan hai yeh duniya? Kaisa feel hai us jagah ka?
+        Agar aap wahan khade hote toh kya sunai deta, kya dikhai deta?
+
+      Q12: |
+        Is story ka CENTRAL CONFLICT kya hai — woh ek sabse badi problem
+        ya tension jo poori story ko drive karti hai?
+        (External ho sakti hai — villain, situation. Ya internal — andar ki jung.)
+
+      Q13: |
+        ANTAGONIST hai koi? Ya conflict kisi aur form mein hai?
+        Agar villain hai — woh kya chahta/chahti hai aur kyun?
+        (Villain ko bhi apna logic chahiye — woh apne aap ko villain nahi samajhta)
+
+      Q14: |
+        Story mein koi SUPPORTING CHARACTERS hain jo important hain?
+        Un mein se ek-do ke baare mein batao — woh kaun hain, protagonist
+        se kya rishta hai, story mein kya kaam karte hain?
+
+      Q15: |
+        Is duniya mein KUCH AISA HAI jo sirf is story ki duniya mein hi hai —
+        koi rule, koi tradition, koi secret, koi dynamic jo real duniya se
+        thoda alag hai ya bahut specific hai?
+
+  phase_D:
+    name: "STRUCTURE & TURNS — Kahani Kahaan Jaati Hai"
+    questions: 5
+    conditional: "ask if story has clear structure or if writer knows plot"
+    purpose: "Map the journey — beginning, middle, end, key turns."
+    questions_list:
+      Q16: |
+        Story KI SHURUAT kaise hoti hai?
+        Audience jo pehla scene dekhega — wahan kya ho raha hai?
+        Protagonist kidhar hai, kya kar raha/rahi hai?
+
+      Q17: |
+        Woh ek moment batao jo story ka TURNING POINT hai —
+        jab sab kuch badal jaata hai. Protagonist ke liye poori duniya
+        pehli jaisi nahi rehti. Kab aata hai yeh moment?
+
+      Q18: |
+        Story ka CLIMAX kya hai — woh scene ya confrontation jahan
+        sab kuch resolution ke liye aa jaata hai?
+        Highest stake wala moment kaunsa hai?
+
+      Q19: |
+        Story KAISE KHATAM HOTI HAI?
+        Last scene mein kya hota hai? Aur audience kaise feel karta hai
+        jab credits chalne lagte hain?
+
+      Q20: |
+        Story mein koi TWIST hai? Ya koi aise revelation jo audience ko
+        sab kuch naye nazar se dekhne par majboor karta hai?
+        Ya story twist-free hai — straightforward emotional journey?
+
+  phase_E:
+    name: "VOICE & STYLE — Aap Kaise Kahenge"
+    questions: 5
+    conditional: "ask if writer has stylistic preferences"
+    purpose: "How this story should FEEL and SOUND."
+    questions_list:
+      Q21: |
+        Yeh story ka TONE kya hai? Matlab iska emotional temperature?
+        Dark? Hopeful? Bittersweet? Comic? Tragic?
+        Woh ek shabd ya do jo is story ke mood ko pakad le?
+
+      Q22: |
+        Dialogue ke baare mein — characters KAISE BOLTE HAIN?
+        Zyada bolne waale hain? Kam? Poetic? Direct? Casual?
+        Koi character hai jisski awaaz aap clearly sun sakte ho?
+
+      Q23: |
+        Language preference kya hai? Hindi dominant? Hinglish?
+        Koi regional dialect (Haryanvi, Punjabi, Bhojpuri)?
+        Characters ki background se kya nikalna chahiye language mein?
+
+      Q24: |
+        Koi SPECIFIC SCENE hai jo aapne already imagine kar li hai
+        bahut detail mein — camera angle, lighting, exactly kya ho raha hai?
+        Batao — yeh "vision shots" hote hain jise writer protect karna chahta hai.
+
+      Q25: |
+        Koi cheez hai jo is story mein NAHI HONI CHAHIYE — koi trope,
+        cliché, ya narrative choice jo aapko lagta hai story ko kharab kar dega?
+        Kya avoid karna hai?
+
+  phase_F:
+    name: "DEPTH & SOUL — Iske Andar Kya Hai"
+    questions: 5
+    conditional: "ask for deeper stories, feature-length, or if writer wants to go deeper"
+    purpose: "The thematic and emotional heart of the story."
+    questions_list:
+      Q26: |
+        Agar koi audience member is film ko dekh ke SIRF EK CHEEZ LEKE JAAYE —
+        ek feeling, ek khayal, ek image — toh woh kya hona chahiye?
+
+      Q27: |
+        Yeh story mein kuch hai jo AAPKE APNE ANDAR SE AAI HAI —
+        koi experience, koi dar, koi khwahish jo aapne is story mein daali hai?
+        Sirf utna batao jo aap share karna chahte ho.
+
+      Q28: |
+        Is story ka GENRE kya hai aapke hisaab se?
+        Ya mixed hai? Kaunsa genre dominant lagta hai?
+        (Yeh confirm karne ke liye — genre specialist aapki story ko
+        aur sharpen karega)
+
+      Q29: |
+        Yeh story kitni LAMBI honi chahiye?
+        5 minute ka short? 15 minute? Feature (90+ min)? Web series?
+        Ya abhi decide nahi kiya?
+
+      Q30: |
+        Ek AAKHRI SAWAAL — is story ke baare mein jo main nahi poochha
+        lekin aap BATANA CHAHTE THE — woh kya hai?
+        Ya koi aise element jo aapko important laga lekin abhi aaya nahi?
+
+# ═══════════════════════════════════════════════════════
+# PROCESS STEPS
+# ═══════════════════════════════════════════════════════
+
+process:
+
+  - step: 1
+    name: "Co-Write Opening — Set the Tone"
+    action: |
+      Start with warm, collaborative energy:
+
+      ```
+      Aaiye! Aaj hum aapki apni original story pe kaam karte hain.
+
+      Yeh session thoda alag hai — yahan main story GENERATE nahi karta.
+      Yahan main aapka CO-WRITER hoon. Story AAPKI HAI.
+
+      Main sawaal poochunga — thoda thoda, koi rush nahi.
+      Aap jawab dete jaao. Jitna aapko pata hai, utna batao.
+      "Abhi tak socha nahi" — yeh bhi perfectly valid answer hai.
+
+      Jo story aapke zehan mein hai — main use nikaalkar
+      page pe laaunga, theek waise jaise aapne socha hai.
+
+      Chaliye shuru karte hain!
+      ```
+
+      Then ask Phase A questions (Q1-Q5) conversationally.
+      Ask Q1 first. Wait for answer. Then Q2, etc.
+      DO NOT ask all 5 at once.
+    duration: "10-15 min"
+
+  - step: 2
+    name: "Protagonist Deep Dive"
+    action: |
+      After Phase A answers, transition naturally:
+
+      ```
+      Bahut achha! Yeh story interesting direction mein hai.
+      Ab protagonist ke paas chalte hain...
+      ```
+
+      Ask Phase B questions (Q6-Q10).
+      One question at a time. Listen and follow-up if needed.
+    duration: "10-15 min"
+
+  - step: 3
+    name: "World & Conflict Mapping"
+    action: |
+      Phase C questions (Q11-Q15).
+      Transition: "Ab is kahani ki duniya samjhte hain..."
+    duration: "10 min"
+
+  - step: 4
+    name: "Structure Discovery"
+    action: |
+      Phase D questions (Q16-Q20).
+
+      If writer says "I don't know the plot fully yet" →
+      Skip detailed structure questions, note as TBD.
+
+      Transition: "Kahani kahan kahan jaati hai..."
+    duration: "10 min"
+
+  - step: 5
+    name: "Voice & Style"
+    action: |
+      Phase E questions (Q21-Q25).
+      Transition: "Ab baat karte hain aapki writing ki AWAAZ ke baare mein..."
+    duration: "8-10 min"
+
+  - step: 6
+    name: "Soul Questions (Optional)"
+    action: |
+      Phase F questions (Q26-Q30).
+
+      These are optional — offer them:
+      "Kuch aur sawaal hain agar aap aur deep jaana chahte ho.
+       Time hai? Ya ab story likhna shuru karein?"
+
+      If writer wants to proceed → skip to Step 7.
+      If writer wants deeper → ask Phase F.
+    duration: "8-10 min"
+
+  - step: 7
+    name: "Understanding Summary & Confirmation"
+    action: |
+      Summarize everything understood:
+
+      ```
+      Theek hai! Yeh jo aapne bataya, usse main samajh gaya:
+
+      STORY: [One-line summary]
+
+      PROTAGONIST: [Name + core essence]
+      CENTRAL CONFLICT: [Core tension]
+      WORLD: [Setting + atmosphere]
+      TURNING POINT: [Key moment]
+      ENDING: [How it ends]
+      TONE: [Emotional temperature]
+
+      GENRE: [Primary + secondary if mixed]
+      FORMAT: [Length/format]
+
+      MUST-HAVES: [Elements writer specified]
+      MUST-AVOIDS: [Clichés/elements to avoid]
+
+      OPEN QUESTIONS: [Things writer said "not decided yet"]
+
+      Kya yeh sahi hai? Kuch add karna ya change karna hai?
+      ```
+
+      Wait for confirmation. Adjust if needed.
+    duration: "5 min"
+
+  - step: 8
+    name: "Genre Routing (Internal)"
+    action: |
+      Based on writer's answers, identify genre:
+      - Thriller/Suspense → Suspense Architect principles
+      - Romance → Romance Architect principles
+      - Action → Action Architect principles
+      - Comedy → Comedy Architect principles
+      - Drama → Drama Architect principles
+      - Horror → Horror Architect principles
+      - Musical → Musical Architect principles
+      - Social → Social Cinema Architect principles
+
+      DO NOT generate new story elements.
+      ONLY organize and articulate writer's own answers
+      through the lens of genre craft.
+
+      Tell writer:
+      ```
+      Genre: [IDENTIFIED GENRE] (Primary)
+      [If mixed: + Secondary genre]
+
+      Main ab aapki story ko sahi format mein likhta hoon.
+      Yeh aapki story hai — main sirf usse sahi se page pe rakhta hoon.
+      ```
+    duration: "2 min"
+
+  - step: 9
+    name: "Story Articulation — Writer's Voice"
+    action: |
+      Write the story based on writer's answers ONLY.
+
+      CRITICAL RULES FOR CO-WRITE MODE:
+
+      1. DO NOT INVENT — Use only what writer gave.
+         If writer left something open → write "TBD by writer" in notes.
+
+      2. PROTECT WRITER'S INSTINCT — If writer said something
+         unconventional → keep it, don't "fix" it into standard Bollywood.
+
+      3. CREDIT FORMAT — Story credit is writer's.
+
+      4. OPEN QUESTIONS SECTION — At end, list all things
+         writer said "not decided" so they know what to develop next.
+
+      Write in TWO FORMATS (both mandatory):
+
+      FORMAT 1: CONTINUOUS NARRATIVE (Flowing Hindi Prose)
+      - Writer's story told as flowing Hindi prose
+      - No scene headings, no dividers, no technical labels
+      - Pure paragraphs, one flowing into next
+      - Language: As writer specified (Hindi/Hinglish/dialect)
+      - Writer's voice preserved, not sanitized
+
+      FORMAT 2: SCENE-BY-SCENE BREAKDOWN (Technical)
+      - Same story in numbered scene format
+      - Location, time, action, dialogue
+      - Technical details for production
+      - Timestamps/sequence
+
+      Save to: project/{project_name}/story-synopsis.md
+
+      File header MUST include:
+      ```
+      # STORY SYNOPSIS
+      **Written by**: [Writer's Name / "To be credited"]
+      **Co-Write Session**: BMAD-FILM Interactive
+      **Date**: [Date]
+      **Format**: [Feature/Short/Series]
+      **Genre**: [Identified genre]
+      ```
+
+      After writing, show writer the output and ask:
+      ```
+      Yeh raha aapka story pehli draft mein.
+      Dekho — kya aapki original vision isme dikh rahi hai?
+
+      Kya protect karna chahte ho?
+      Kya change karna chahte ho?
+      Kya missing hai?
+      ```
+    outputs:
+      - "project/{project_name}/story-synopsis.md"
+    duration: "20-30 min"
+
+  - step: 10
+    name: "Review & Next Steps"
+    action: |
+      Present options:
+
+      OPTION A: APPROVE
+      → Story is right. Proceed to Character Bible.
+
+      OPTION B: REFINE
+      → Specific elements need adjustment.
+      → Discuss and revise while maintaining writer's voice.
+
+      OPTION C: MORE QUESTIONS
+      → Writer wants to develop undecided elements first.
+      → Resume question session for open items.
+
+      OPTION D: JUST THE NOTES
+      → Writer wants raw notes, will write themselves.
+      → Output all answers as structured notes document.
+    duration: "5 min"
+
+# ═══════════════════════════════════════════════════════
+# CO-WRITE PHILOSOPHY
+# ═══════════════════════════════════════════════════════
+
+philosophy: |
+  CO-WRITE KA MATLAB HAI:
+
+  Writer ki story writer ke paas rehti hai.
+  Claude sirf ek skilled collaborator hai — jo sawaal poochh sakta hai,
+  structure de sakta hai, format mein likh sakta hai.
+
+  Lekin story ka DNA, characters ki soul, situations ka logic —
+  yeh sab writer ka hai.
+
+  Real co-writing mein:
+  - Ek writer bolta hai: "Main yeh feel karna chahta hoon"
+  - Dusra puchtha hai: "Achha, aur? Protagonist ka darr kya hai?"
+  - Pehla keh deta hai: "Yeh yeh yeh..."
+  - Dusra bolata hai: "Toh scene aisa hoga..."
+
+  Yahi hota hai yahan.
+
+  Writer = Primary Author (Full Credit)
+  Claude = Dramaturg / Co-Writer (Acknowledged in Notes)
+
+success_criteria:
+  - "Writer feels their story has been HEARD, not changed"
+  - "Output reflects writer's vision, not Claude's patterns"
+  - "Writer's instincts are PROTECTED, not overridden"
+  - "Unconventional elements are preserved, not standardized"
+  - "Open questions are clearly noted for writer to develop"
+  - "Writer can show this draft to others as their own work"
+  - "Story credit is unambiguously the writer's"
+
+tips:
+  - "Writer se zyada, khud kam likho — question karo"
+  - "Agar writer ne 'pata nahi' kaha → don't fill in, note it as TBD"
+  - "Writer ka unconventional choice = gift. Protect it."
+  - "Question mein judgement mat daalo — accept karo jo aata hai"
+  - "If writer is emotional about a scene → that scene is SACRED. Build around it."
+  - "Co-write = listening > talking"

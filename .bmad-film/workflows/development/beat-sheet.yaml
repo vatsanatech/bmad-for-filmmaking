@@ -1,0 +1,585 @@
+workflow_id: beat-sheet
+name: "Beat Sheet Development (Interactive + Multi-Dialect)"
+version: 1.0.0-multi-dialect
+category: development
+description: |
+  **INTERACTIVE CO-WRITING** - Creates story beat sheet through questions, breaking story into key emotional/plot moments.
+
+  **WHAT IS BEAT SHEET?**
+  A beat sheet is the bridge between story synopsis and screenplay. It breaks the story into individual "beats" (moments/units of action) showing:
+  - Story progression beat-by-beat
+  - Emotional arcs mapped
+  - Key turning points identified
+  - Pacing and rhythm defined
+
+  **WHY BEAT SHEET?**
+  - Ensures screenplay covers all essential story beats
+  - Maps emotional highs/lows before writing dialogue
+  - Identifies pacing issues early
+  - Industry-standard tool (used by Save the Cat, Blake Snyder, Syd Field methods)
+
+  **3-PHASE PROCESS**:
+
+  **Phase 1: Beat Questions (8 questions)**
+  - Story Developer asks about story structure and pacing
+  - Identifies key emotional beats
+  - Understands YOUR vision for story rhythm
+
+  **Phase 2: Beat Analysis**
+  - Analyzes story synopsis for natural beats
+  - Maps emotional progression
+  - Identifies turning points
+
+  **Phase 3: Beat Sheet Creation**
+  - Creates detailed beat-by-beat breakdown
+  - Numbers each beat with description
+  - Shows emotional tone per beat
+  - **Universal for all dialects** (story structure doesn't change)
+
+  Creates UNIQUE beat sheet based on your story + answers.
+
+  This runs AFTER character-bible, BEFORE screenplay.
+
+  Input: Story synopsis + Character bible
+  Output: Beat sheet document (universal - same for all dialects)
+
+lead_agent: story-developer
+supporting_agents:
+  - master-story-director
+  - genre-specific-agent
+
+inputs:
+  required:
+    - project_name: "Project directory name (e.g., 'aakhri-dhun')"
+
+context_requirements:
+  read:
+    - "project/{project_name}/genre-analysis.md"
+    - "project/{project_name}/story-synopsis.md"
+    - "project/{project_name}/character-bible.md (or dialect-specific versions)"
+
+  write:
+    - "project/{project_name}/beat-sheet.md"
+
+process:
+  # ═══════════════════════════════════════════════════════
+  # PHASE 1: BEAT QUESTION PHASE
+  # ═══════════════════════════════════════════════════════
+
+  - step: 1
+    name: "Read Project Context (CRITICAL FOR CONSISTENCY)"
+    agent: story-developer
+
+    action: |
+      **CRITICAL: Read ALL previous workflow outputs FIRST:**
+
+      **MUST READ** (from previous workflows):
+      1. `project/{project_name}/genre-analysis.md` - Genre, tone, pacing recommendations
+      2. `project/{project_name}/story-synopsis.md` - **BOTH versions** (continuous narrative + scene-by-scene)
+      3. `project/{project_name}/character-bible.md` - Character arcs and transformations
+         - OR if multi-dialect: `project/{project_name}/{dialect}/character-bible.md` (read all dialects to understand arc)
+
+      **Extract for beat sheet:**
+      - Genre and expected pacing rhythm → FROM genre-analysis
+      - All story events in order → FROM story-synopsis (scene-by-scene version)
+      - Character emotional arcs → FROM character-bible
+      - Key story turning points → FROM story-synopsis
+      - Character transformations → FROM character-bible
+
+      **CONSISTENCY CHECK**:
+      - Beat sheet MUST cover all story events from synopsis (no events skipped)
+      - Beat sheet MUST align with character arcs from character-bible
+      - Beat sheet MUST follow genre pacing from genre-analysis
+
+      **Combine previous outputs to create beat sheet foundation.**
+
+    outputs:
+      - Story understanding complete
+      - Character arcs identified
+      - Genre pacing understood
+
+  - step: 2
+    name: "PHASE 1 - Beat Sheet Questions (8 questions)"
+    agent: story-developer
+
+    action: |
+      **Story Developer asks 8 beat sheet questions:**
+
+      **A. STRUCTURE APPROACH (3 questions)**:
+
+      Q1. Story Structure Type - Kaun sa structure best fit hai?
+         OPTIONS:
+         - THREE-ACT (Setup → Confrontation → Resolution)
+         - FIVE-ACT (Exposition → Rising → Climax → Falling → Resolution)
+         - NON-LINEAR (Flashbacks, time jumps, puzzle)
+         - CIRCULAR (Ends where it began)
+         - SINGLE TIMELINE (Simple A→B→C progression)
+
+      Q2. Opening Hook Strategy - Story kaise shuru honi chahiye?
+         OPTIONS:
+         - IN MEDIAS RES (Action mein directly)
+         - SLOW BURN (Establish world first)
+         - MYSTERY OPENING (Question raise karo)
+         - CHARACTER INTRO (Character se shuru)
+         - WORLD BUILDING (Setting establish first)
+
+      Q3. Pacing Rhythm - Overall pacing kaisi chahiye?
+         OPTIONS:
+         - FAST-PACED (Quick beats, rapid progression)
+         - MEASURED (Balanced, breathing room)
+         - SLOW BURN (Gradual build, patience)
+         - UNEVEN (Varies - slow then fast)
+         - RELENTLESS (Non-stop, no breaks)
+
+      **B. EMOTIONAL BEATS (3 questions)**:
+
+      Q4. Emotional Highs - Kahaan audience ko high/excited feel hona chahiye? (List 2-3 moments)
+         Example: "When protagonist succeeds", "Romantic confession", "Victory moment"
+
+      Q5. Emotional Lows - Kahaan audience ko low/tense feel hona chahiye? (List 2-3 moments)
+         Example: "When protagonist fails", "Betrayal reveal", "All seems lost"
+
+      Q6. Climax Emotional Peak - Climax mein audience ko kya feel karna chahiye?
+         OPTIONS:
+         - TRIUMPH/VICTORY (Hero wins!)
+         - TRAGEDY/LOSS (Hero loses)
+         - BITTERSWEET (Win but at cost)
+         - SHOCK/SURPRISE (Unexpected twist)
+         - CATHARSIS (Emotional release)
+         - AMBIGUOUS (Uncertain/open)
+
+      **C. BEAT DETAIL LEVEL (2 questions)**:
+
+      Q7. Beat Granularity - Beats kitne detailed chahiye?
+         OPTIONS:
+         - MACRO BEATS (10-15 big beats, major moments only)
+         - MODERATE (20-30 beats, scene-level detail)
+         - MICRO BEATS (40+ beats, every story unit)
+         - MINIMAL (5-8 beats, sequences only)
+
+      Q8. Scene Transition Notes - Beats mein transitions ka mention?
+         OPTIONS:
+         - YES (How beats connect, transition notes)
+         - NO (Just beat description, no transition)
+         - SELECTIVE (Only for complex transitions)
+
+      **Collect ALL 8 answers before proceeding.**
+
+    duration: "10-15 min"
+
+  - step: 3
+    name: "Answer Synthesis & Beat Architecture"
+    agent: story-developer
+
+    action: |
+      **Synthesize ALL 8 answers and plan beat structure:**
+
+      ```
+      Perfect! Beat sheet vision clear hai:
+
+      ✓ Structure: [Q1 answer - three-act/non-linear/etc.]
+      ✓ Opening: [Q2 answer - in medias res/slow burn]
+      ✓ Pacing: [Q3 answer - fast/measured/slow burn]
+      ✓ Emotional Highs: [Q4 answer - specific moments]
+      ✓ Emotional Lows: [Q5 answer - specific moments]
+      ✓ Climax Feel: [Q6 answer - triumph/tragedy/etc.]
+      ✓ Detail Level: [Q7 answer - macro/moderate/micro]
+      ✓ Transitions: [Q8 answer - yes/no/selective]
+
+      Yeh sahi hai? Final confirm before beat sheet creation?
+      ```
+
+      **Apply Decision Tree**:
+
+      Based on answers, determine:
+      - Beat count (Q7 - macro=10-15, moderate=20-30, micro=40+)
+      - Structure type (Q1 - three-act divisions, non-linear markers)
+      - Opening approach (Q2 - cold open vs slow intro)
+      - Pacing distribution (Q3 - fast=quick beats, slow=longer beats)
+      - Emotional beat placement (Q4, Q5 - where highs/lows go)
+      - Climax construction (Q6 - how to build to peak)
+      - Transition notes inclusion (Q8 - add or skip)
+
+    duration: "5 min"
+
+  # ═══════════════════════════════════════════════════════
+  # PHASE 2: BEAT ANALYSIS
+  # ═══════════════════════════════════════════════════════
+
+  - step: 4
+    name: "PHASE 2 - Extract Beats from Story Synopsis"
+    agent: story-developer
+    collaboration:
+      - genre-specific-agent
+
+    action: |
+      **Extract natural story beats from story synopsis:**
+
+      Read scene-by-scene version from story-synopsis.md:
+      - Identify each distinct story unit/moment
+      - Each scene may have 1-3 beats
+      - Beat = Unit of action/emotion (not necessarily full scene)
+
+      **For each beat, identify**:
+      - What happens (action/event)
+      - Who's involved (characters)
+      - Emotional tone (happy/tense/sad/shocking)
+      - Story function (setup/complication/revelation/resolution)
+      - Character arc progression (how character changes)
+
+      **Count beats based on Q7 answer**:
+      - If Q7 = MACRO → Combine multiple moments into big beats (10-15 total)
+      - If Q7 = MODERATE → Scene-level beats (20-30 total)
+      - If Q7 = MICRO → Every action/emotion shift (40+ total)
+      - If Q7 = MINIMAL → Major sequences only (5-8 total)
+
+    outputs:
+      - Raw beat list extracted from story
+      - Emotional tone per beat
+      - Story function per beat
+
+  - step: 5
+    name: "Map Emotional Progression (Using Q4-Q6 Answers)"
+    agent: story-developer
+
+    action: |
+      **Map emotional journey using Q4-Q6 answers:**
+
+      Create emotional arc graph (conceptual):
+
+      ```
+      EMOTIONAL INTENSITY
+
+      HIGH  |     [Q4 HIGH]      [CLIMAX-Q6]
+            |    /            /\
+      MID   |   /   [Q4]    /  \
+            |  /           /    \
+      LOW   | /  [Q5 LOW] /  [Q5]
+            |________________TIME→
+           Start          Mid          End
+      ```
+
+      **Place Q4 emotional highs** at appropriate story beats:
+      - User specified 2-3 high moments in Q4
+      - Find beats matching those descriptions
+      - Mark as EMOTIONAL HIGH
+
+      **Place Q5 emotional lows** at appropriate story beats:
+      - User specified 2-3 low moments in Q5
+      - Find beats matching those descriptions
+      - Mark as EMOTIONAL LOW
+
+      **Build to Q6 climax emotion**:
+      - Q6 specified climax feeling (triumph/tragedy/etc.)
+      - Ensure beats build toward that emotion
+      - Climax beat reflects Q6 choice
+
+      **Apply Q3 pacing**:
+      - If FAST-PACED → Beats quick, rapid progression, less breathing room
+      - If MEASURED → Beats balanced, even distribution, some pauses
+      - If SLOW BURN → Beats gradual, patient build, more setup
+      - If UNEVEN → Vary beat length/intensity (slow → fast → slow)
+      - If RELENTLESS → No pause beats, constant forward drive
+
+    outputs:
+      - Emotional arc mapped
+      - Highs and lows placed per Q4-Q5
+      - Pacing rhythm applied per Q3
+      - Climax emotion aligned with Q6
+
+  # ═══════════════════════════════════════════════════════
+  # PHASE 3: BEAT SHEET CREATION
+  # ═══════════════════════════════════════════════════════
+
+  - step: 6
+    name: "PHASE 3 - Write Beat Sheet (Based on Q1-Q8 Answers)"
+    agent: story-developer
+
+    action: |
+      **Create complete beat sheet using Q1-Q8 answers:**
+
+      **Format Structure**:
+
+      ```markdown
+      # BEAT SHEET
+      ## [PROJECT TITLE]
+
+      **Genre**: [Genre]
+      **Runtime**: [Runtime]
+      **Structure**: [Q1 Answer - Three-Act/Non-Linear/etc.]
+      **Pacing**: [Q3 Answer - Fast/Measured/Slow Burn]
+
+      **Created by**: BMAD-FILM Story Developer
+      **Date**: [Date]
+
+      ═══════════════════════════════════════════════════════
+
+      ## STORY STRUCTURE OVERVIEW
+
+      **Opening Strategy**: [Q2 Answer]
+      **Emotional Highs**: [Q4 Moments]
+      **Emotional Lows**: [Q5 Moments]
+      **Climax Emotion**: [Q6 Answer]
+
+      ═══════════════════════════════════════════════════════
+
+      ## BEAT-BY-BEAT BREAKDOWN
+
+      **BEAT 1** - [Beat Title/Description]
+      - **What Happens**: [Action/event description]
+      - **Characters**: [Who's involved]
+      - **Emotional Tone**: [Happy/Tense/Sad/Shocking/etc.]
+      - **Story Function**: [Setup/Complication/Revelation/Resolution]
+      - **Character Arc**: [How protagonist changes/learns]
+      - **Duration**: [Estimated time - 30 sec, 1 min, etc.]
+      [IF Q8=YES: **Transition To Next**: [How this beat flows to next]]
+
+      **BEAT 2** - [Beat Title/Description]
+      - **What Happens**: [Action/event description]
+      - **Characters**: [Who's involved]
+      - **Emotional Tone**: [EMOTIONAL HIGH ⬆️] [If Q4 moment]
+      - **Story Function**: [Setup/Complication/etc.]
+      - **Character Arc**: [Progression]
+      - **Duration**: [Estimated time]
+      [IF Q8=YES: **Transition To Next**: [Transition note]]
+
+      **BEAT 3** - [Beat Title/Description]
+      - **What Happens**: [Action/event description]
+      - **Characters**: [Who's involved]
+      - **Emotional Tone**: [EMOTIONAL LOW ⬇️] [If Q5 moment]
+      - **Story Function**: [Complication/Revelation/etc.]
+      - **Character Arc**: [Progression]
+      - **Duration**: [Estimated time]
+      [IF Q8=YES: **Transition To Next**: [Transition note]]
+
+      [Continue for all beats based on Q7 granularity]
+
+      ...
+
+      **BEAT [CLIMAX]** - [Climax Beat Title]
+      - **What Happens**: [Climax action]
+      - **Characters**: [All key characters]
+      - **Emotional Tone**: **CLIMAX - [Q6 Answer]** 🎬
+      - **Story Function**: Resolution/Revelation
+      - **Character Arc**: [Final transformation]
+      - **Duration**: [Estimated time]
+
+      **BEAT [FINAL]** - [Resolution Beat]
+      - **What Happens**: [Ending/denouement]
+      - **Characters**: [Final character state]
+      - **Emotional Tone**: [Closing emotion]
+      - **Story Function**: Resolution/Closure
+      - **Character Arc**: [Who protagonist has become]
+      - **Duration**: [Estimated time]
+
+      ═══════════════════════════════════════════════════════
+
+      ## EMOTIONAL ARC SUMMARY
+
+      [Visual representation of emotional progression]
+
+      Opening: [Emotion]
+      Rising: [Emotional highs from Q4]
+      Lows: [Emotional lows from Q5]
+      Climax: [Q6 climax emotion]
+      Resolution: [Final emotion]
+
+      ═══════════════════════════════════════════════════════
+
+      ## PACING NOTES
+
+      **Total Beats**: [Count based on Q7]
+      **Avg Beat Duration**: [Runtime / beat count]
+      **Rhythm**: [Q3 Pacing description]
+
+      **Fast Sections**: [Beats where pace quickens]
+      **Slow Sections**: [Beats where pace slows]
+      **Breathing Moments**: [Pauses, if any]
+
+      ═══════════════════════════════════════════════════════
+      END OF BEAT SHEET
+      ═══════════════════════════════════════════════════════
+      ```
+
+      **Apply Q1 Structure**:
+      - If THREE-ACT → Group beats into Act 1 (Setup), Act 2 (Confrontation), Act 3 (Resolution)
+      - If FIVE-ACT → Group beats into 5 acts
+      - If NON-LINEAR → Add time markers (PRESENT, FLASHBACK, etc.)
+      - If CIRCULAR → Note circular structure in overview
+      - If SINGLE TIMELINE → Simple linear progression
+
+      **Apply Q2 Opening**:
+      - If IN MEDIAS RES → Beat 1 starts in action, backstory in Beat 2-3
+      - If SLOW BURN → Beat 1-2 establish world/character before action
+      - If MYSTERY → Beat 1 poses question
+      - If CHARACTER INTRO → Beat 1 focuses on protagonist introduction
+      - If WORLD BUILDING → Beat 1 establishes setting/rules
+
+      **Apply Q7 Granularity**:
+      - MACRO → 10-15 beats total (big moments only)
+      - MODERATE → 20-30 beats (scene-level detail)
+      - MICRO → 40+ beats (every action shift)
+      - MINIMAL → 5-8 beats (sequences only)
+
+      **Apply Q8 Transitions**:
+      - If YES → Add "Transition To Next" field for each beat
+      - If NO → Skip transition notes
+      - If SELECTIVE → Add only for complex transitions
+
+      **Mark Q4 Emotional Highs** with ⬆️ symbol
+      **Mark Q5 Emotional Lows** with ⬇️ symbol
+      **Mark Climax** with 🎬 and Q6 emotion
+
+    quality_standards: |
+      Every beat must meet:
+
+      ✓ **Clear**: What happens is specific (not vague)
+      ✓ **Actionable**: Screenwriter can write scene from beat
+      ✓ **Emotional**: Tone is defined
+      ✓ **Functional**: Story purpose clear
+      ✓ **Character-Driven**: Shows character progression
+      ✓ **Timed**: Duration estimate helps pacing
+      ✓ **Complete**: All story events from synopsis covered
+      ✓ **Answer-Based**: Reflects Q1-Q8 user choices
+
+    outputs:
+      - Complete beat sheet document
+      - All beats numbered and described
+      - Emotional arc mapped
+      - Pacing rhythm defined
+      - Character progression tracked
+
+  - step: 7
+    name: "Quality Check (Answer-Based Verification)"
+    agent: master-story-director
+    collaboration:
+      - story-developer
+      - genre-specific-agent
+
+    action: |
+      **Master Story Director reviews beat sheet for Q1-Q8 answer usage:**
+
+      **Check ANSWER INTEGRATION**:
+      - [ ] Structure matches Q1 answer (three-act/non-linear/etc. - not default)
+      - [ ] Opening approach matches Q2 answer (in medias res/slow burn/etc.)
+      - [ ] Pacing rhythm matches Q3 answer (fast/measured/slow burn)
+      - [ ] Q4 emotional highs placed at specified moments
+      - [ ] Q5 emotional lows placed at specified moments
+      - [ ] Climax emotion matches Q6 answer (triumph/tragedy/etc.)
+      - [ ] Beat count matches Q7 granularity (macro/moderate/micro)
+      - [ ] Transition notes match Q8 choice (yes/no/selective)
+
+      **Check QUALITY**:
+      - All story events from synopsis covered (no gaps)
+      - Beats progress logically
+      - Emotional arc makes sense
+      - Character arcs align with character-bible
+      - Genre pacing appropriate
+      - Beat descriptions clear and specific
+      - Duration estimates realistic
+      - Ready to inform screenplay writing
+
+      **Verify**:
+      - Total runtime matches (beat durations sum to target)
+      - No contradictions with story synopsis
+      - No contradictions with character arcs
+      - User's Q1-Q8 answers RESPECTED throughout
+
+      **If user's Q1-Q8 answers not used → Send back for revision**
+      **If beats don't cover all story events → Send back**
+      **If approved → Finalize beat sheet**
+
+    approval_gate: true
+
+    outputs:
+      - Quality approval
+      - Revision notes (if needed)
+
+  - step: 8
+    name: "Finalize Beat Sheet"
+    agent: story-developer
+
+    action: |
+      Create final beat sheet document:
+
+      Save as: `project/{project_name}/beat-sheet.md`
+
+      **NOTE: Beat sheet is UNIVERSAL (same for all dialects)**
+
+      Story structure doesn't change based on language.
+      Emotional beats are the same whether dialogue is Hindi/Tamil/Telugu.
+
+      Only ONE beat-sheet.md file created, even if multi-dialect project.
+
+      **This beat sheet informs**:
+      - Screenplay structure (next workflow)
+      - Scene organization
+      - Emotional pacing
+      - Character arc progression
+      - Dialogue placement and intensity
+
+    outputs:
+      - Complete beat sheet document
+      - Ready for screenplay development
+      - Universal for all dialect versions
+
+success_criteria: |
+  Beat Sheet is successful when:
+
+  ✓ Beat sheet is UNIQUE based on story + user's 8 answers (not template)
+  ✓ Structure type matches Q1 answer (three-act/non-linear/etc.)
+  ✓ Opening strategy matches Q2 answer (in medias res/slow burn)
+  ✓ Pacing rhythm matches Q3 answer (fast/measured/slow burn)
+  ✓ Emotional highs placed per Q4 user specifications
+  ✓ Emotional lows placed per Q5 user specifications
+  ✓ Climax emotion matches Q6 answer (triumph/tragedy/bittersweet)
+  ✓ Beat granularity matches Q7 answer (macro/moderate/micro count)
+  ✓ Transition notes match Q8 choice (present or absent)
+  ✓ All story events from synopsis covered (no gaps)
+  ✓ Beats progress logically from start to end
+  ✓ Emotional arc makes narrative sense
+  ✓ Character arcs align with character-bible transformations
+  ✓ Genre pacing appropriate (thriller fast, drama measured, etc.)
+  ✓ Beat descriptions clear, specific, actionable
+  ✓ Duration estimates realistic (sum to target runtime)
+  ✓ User feels: "This is MY story's rhythm - they understood my pacing vision!"
+  ✓ Ready to inform screenplay scene construction
+
+deliverables:
+  primary:
+    - file: "project/{project_name}/beat-sheet.md"
+      description: "Complete beat-by-beat story breakdown with emotional mapping"
+
+estimated_time: "30-45 minutes for 5-minute film (8 questions + beat extraction + writing)"
+
+notes: |
+  Beat Sheet is STEP 3 in development workflow:
+
+  1. Story Synopsis ✅
+  2. Character Bible ✅
+  3. Beat Sheet ⬅️ (This step - NEW!)
+  4. Screenplay (uses beat sheet for structure)
+
+  **WHY BEAT SHEET MATTERS**:
+  - Industry standard tool (Save the Cat, Blake Snyder, Syd Field)
+  - Prevents screenplay structural problems
+  - Maps emotional journey before dialogue writing
+  - Identifies pacing issues early (easier to fix in beats than in screenplay)
+  - Ensures all story events covered
+  - Shows character arc progression clearly
+
+  **Beat vs Scene**:
+  - BEAT = Unit of story/emotion (may be part of scene or full scene)
+  - SCENE = Location/time unit (INT. ROOM - DAY)
+  - One scene may have multiple beats
+  - One beat may span multiple scenes (montage)
+
+  **Universal for Multi-Dialect**:
+  - Story beats same for all languages
+  - Emotional progression universal
+  - Only ONE beat-sheet.md created
+  - Screenplay adapts beats to dialect-specific dialogue
+
+  Beat Sheet → Screenplay is smoother than Synopsis → Screenplay directly.
+
+  This is the filmmaker's roadmap before writing actual scenes.

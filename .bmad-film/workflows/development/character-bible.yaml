@@ -1,0 +1,814 @@
+workflow_id: character-bible
+name: "Character Bible Development (Interactive + Multi-Dialect)"
+version: 3.0.0-multi-dialect
+category: development
+description: |
+  **INTERACTIVE CO-WRITING + MULTI-DIALECT LOCALIZATION** - Creates three-dimensional characters through questions, with optional multi-language/dialect support.
+
+  **NEW IN v3.0**: Multi-dialect/language support for regional Indian content!
+  Create same story in Hindi, Tamil, Telugu, Bengali, Marathi, Punjabi, etc. with culturally-appropriate character adaptations.
+
+  **4-PHASE PROCESS**:
+
+  **Phase 0: Dialect & Localization Setup (NEW!)**
+  - Ask: Single dialect or multi-dialect production?
+  - If multi-dialect: Which languages? (Hindi, Tamil, Telugu, Bengali, etc.)
+  - Localization depth? (Dialogue only / Dialogue+Names / Full cultural)
+  - Creates separate character-bible file per dialect selected
+
+  **Phase 1: Character Questions (18 questions)**
+  - Character Developer asks about protagonist depth (8 questions)
+  - Asks about supporting characters (5 questions per major character)
+  - Asks about character dynamics (5 questions)
+  - Understands YOUR vision for each person
+
+  **Phase 2: Collaborative Refinement**
+  - Presents initial profiles based on answers
+  - You refine specific details
+  - Iterates until characters feel RIGHT
+
+  **Phase 3: Profile Creation**
+  - Creates detailed character bible based on ALL answers
+  - Principals get full 8-aspect profiles
+  - Supporting get appropriate depth (moderate/brief)
+  - **IF MULTI-DIALECT**: Creates culturally-adapted versions per language
+    - Names adapted (Arjun → Arun/Arnab/Aravind)
+    - Speech patterns in regional language
+    - Cultural backgrounds localized
+    - Regional attire/references
+
+  Creates UNIQUE characters based on your answers, not templates.
+  Supports single language (default: Hindi) OR multiple Indian languages/dialects.
+
+  This runs AFTER story synopsis, BEFORE screenplay.
+
+  Input: Approved story synopsis
+  Output: Complete character bible(s) - single file OR multiple dialect-specific files
+
+lead_agent: character-developer
+supporting_agents:
+  - master-story-director
+  - genre-specific-agent
+
+inputs:
+  required:
+    - project_name: "Project directory name (e.g., 'band-darwaza')"
+
+context_requirements:
+  read:
+    - "project/{project_name}/genre-analysis.md"
+    - "project/{project_name}/story-synopsis.md"
+
+  write:
+    - "project/{project_name}/character-bible.md"
+
+process:
+  # ═══════════════════════════════════════════════════════
+  # STEP 0: DIALECT & LOCALIZATION SETUP (NEW!)
+  # ═══════════════════════════════════════════════════════
+
+  - step: 0
+    name: "DIALECT & LOCALIZATION SETUP"
+    agent: character-developer
+    action: |
+      **🔴 ANNOUNCE TO USER (MANDATORY):**
+      ```
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 CHARACTER BIBLE WORKFLOW — STARTING
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 0 of 5 — Reading project files + Dialect Setup
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      Reading: genre-analysis.md + story-synopsis.md
+      ```
+      **🔴 MANDATORY: Read these files BEFORE asking any questions:**
+      - `project/{project_name}/genre-analysis.md`
+      - `project/{project_name}/story-synopsis.md`
+
+      **Before character development, determine language/dialect strategy:**
+
+      This enables creating content for multiple Indian languages/dialects from same story.
+
+      ---
+
+      **Q0a. Production Language Strategy?**
+
+      कौन सी approach चाहिए?
+
+      **OPTIONS**:
+      - **SINGLE DIALECT** (Hindi default - standard Bollywood mix)
+      - **MULTI-DIALECT** (Same story, multiple language versions for different regions)
+
+      **DEFAULT**: Single Dialect (Hindi)
+
+      ---
+
+      **IF SINGLE DIALECT CHOSEN**:
+      - Default = Hindi (Hinglish mix, 60-70% Hindi + 30-40% English)
+      - Continue to Step 1 (character extraction)
+      - Create: character-bible.md (single file)
+
+      ---
+
+      **IF MULTI-DIALECT CHOSEN, ask Q0b-Q0e:**
+
+      ---
+
+      **Q0b. Which Dialects/Languages to Create?** (Multi-select)
+
+      **MAJOR INDIAN LANGUAGES**:
+      - ✓ **Hindi** (हिंदी - Hinglish mix, Pan-India)
+      - ✓ **Tamil** (தமிழ் - Tamil Nadu)
+      - ✓ **Telugu** (తెలుగు - Andhra Pradesh, Telangana)
+      - ✓ **Bengali** (বাংলা - West Bengal, Bangladesh)
+      - ✓ **Marathi** (मराठी - Maharashtra)
+      - ✓ **Punjabi** (ਪੰਜਾਬੀ - Punjab)
+      - ✓ **Gujarati** (ગુજરાતી - Gujarat)
+      - ✓ **Kannada** (ಕನ್ನಡ - Karnataka)
+      - ✓ **Malayalam** (മലയാളം - Kerala)
+
+      **REGIONAL DIALECTS**:
+      - ✓ **Haryanvi** (हरियाणवी - Haryana)
+      - ✓ **Bhojpuri** (भोजपुरी - Bihar, Eastern UP)
+      - ✓ **Odia** (ଓଡ଼ିଆ - Odisha)
+      - ✓ **Assamese** (অসমীয়া - Assam)
+      - ✓ **Rajasthani** (राजस्थानी - Rajasthan)
+      - ✓ **Others** (specify)
+
+      **Batao - kaun kaun se languages/dialects mein banana hai?**
+
+      ---
+
+      **Q0c. Localization Depth?**
+
+      Kitna localize karna hai har dialect mein?
+
+      **OPTIONS**:
+
+      1. **DIALOGUE ONLY** (सबसे simple)
+         - Same story, same character names, same locations
+         - ONLY dialogue translated to regional language
+         - Example: "Aap kaise hain?" → "Neengal eppadi irukeenga?" (Tamil)
+
+      2. **DIALOGUE + NAMES** (Moderate)
+         - Dialogue translated
+         - Character names culturally adapted
+         - Example: Arjun → Arun (Tamil) / Arnab (Bengali) / Aravind (Kannada)
+
+      3. **DIALOGUE + CULTURE** (Deep)
+         - Dialogue translated
+         - Names adapted
+         - Cultural references localized (festivals, food, customs)
+         - Example: "Diwali ki raat" → "Pongal ki raat" (Tamil) / "Durga Puja ki raat" (Bengali)
+
+      4. **FULL CULTURAL ADAPTATION** (सबसे complete)
+         - Dialogue translated
+         - Names adapted
+         - Culture localized
+         - Locations adapted (Delhi → Chennai → Kolkata)
+         - Attire/costumes regionalized
+         - Regional sensibilities honored
+
+      **Kaunsa depth level chahiye?**
+
+      ---
+
+      **Q0d. Character Names Strategy?**
+
+      Names kaise handle karein?
+
+      **OPTIONS**:
+      - **KEEP UNIVERSAL** (Arjun = Arjun in all versions - works pan-India)
+      - **ADAPT CULTURALLY** (Arjun → Arun/Arnab/Aravind based on region)
+
+      **Recommendation**: Universal for urban/modern stories, Adapted for regional stories
+
+      **Names same rakhein ya culturally adapt karein?**
+
+      ---
+
+      **Q0e. Location Strategy?**
+
+      Story setting kaise approach karein?
+
+      **OPTIONS**:
+      - **REGION-AGNOSTIC** (Generic "ek shahar", "ek gaon" - works everywhere)
+      - **ADAPT PER DIALECT** (Hindi=Delhi/Mumbai, Tamil=Chennai, Bengali=Kolkata, etc.)
+
+      **Recommendation**: Region-agnostic for easier multi-dialect production
+
+      **Location generic rakhein ya dialect-specific?**
+
+      ---
+
+      **PROCESSING ANSWERS**:
+
+      Based on Q0a-Q0e answers:
+
+      **IF SINGLE DIALECT**:
+      - Create: `character-bible.md` (one file)
+      - Language: Hindi (default) or chosen single dialect
+      - Continue to Step 1
+
+      **IF MULTI-DIALECT**:
+      - Create: `character-bible-{dialect}.md` (separate file per dialect)
+      - Example: character-bible-hindi.md, character-bible-tamil.md, etc.
+      - Each file contains characters adapted for that dialect/culture
+      - Continue to Step 1 (repeat for each dialect)
+
+      **Save dialect preferences for later workflows** (Screenplay, Shot Breakdown will read this)
+
+    outputs:
+      - Dialect strategy determined
+      - File naming convention set
+      - Localization depth defined
+
+    duration: "5-10 min (only if multi-dialect chosen, otherwise quick default)"
+
+  # ═══════════════════════════════════════════════════════
+  # PHASE 1: CHARACTER QUESTION PHASE
+  # ═══════════════════════════════════════════════════════
+
+  - step: 1
+    name: "Extract Characters from Story (Preparation)"
+    agent: character-developer
+
+    action: |
+      **CRITICAL: Read approved story synopsis FIRST for consistency:**
+
+      **MUST READ** (from previous workflow outputs):
+      - `project/{project_name}/genre-analysis.md` (genre, tone, visual language)
+      - `project/{project_name}/story-synopsis.md` (BOTH versions - continuous narrative + scene-by-scene)
+
+      **Extract characters from story synopsis:**
+
+      Create initial roster based on STORY (not assumptions):
+      - Protagonist (lead, main character FROM STORY)
+      - Major Supporting (2-4 key characters FROM STORY)
+      - Minor Supporting (functional roles FROM STORY)
+
+      **CONSISTENCY CHECK**: All characters MUST come from approved story.
+
+      **NOTE**: Character names in story-synopsis may be generic/placeholder.
+      These will be finalized based on dialect preferences from Step 0.
+
+      This roster will guide which questions to ask in Step 2.
+
+    outputs:
+      - Character roster (protagonist + major supporting identified)
+
+  - step: 2
+    name: "PHASE 1 - Character Questions (18 questions)"
+    agent: character-developer
+
+    action: |
+      **🔴 ANNOUNCE TO USER (MANDATORY):**
+      ```
+      ✅ STEP 0 complete — Files read, dialect strategy set.
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 2 of 5 — Character Questions (18 questions)
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
+      **Character Developer asks 18 questions:**
+
+      Reference: `.bmad-film/agents/character-developer.md`
+
+      **A. PROTAGONIST DEEP DIVE (8 questions - ALWAYS)**:
+
+      Q1. Biggest Fear - Internal dar kya hai? (Not external danger)
+         Examples: Failure, abandonment, loss of control, being exposed
+
+      Q2. Shaping Backstory - Kaunsa ek event ne shape kiya?
+         ONE pivotal moment that made them who they are
+
+      Q3. Character Flaw - Kaun sa flaw rok raha hai?
+         Pride? Cowardice? Dishonesty? Cynicism? Impulsiveness?
+
+      Q4. Speech Patterns - Woh kaise bolte hain?
+         Formal? Casual? Regional? Terse? Witty? Nervous?
+
+      Q5. Physical Description - Appearance kya hai?
+         Age, build, face, clothing style, distinguishing marks
+
+      Q6. Character Transformation - End mein kaise change hote hain?
+         Internal growth, what they learn, start vs end
+
+      Q7. Relatability Factor - Flaws ke baavjood, kyun root karega audience?
+         Good intentions? Humor? Love for someone? Underdog? Vulnerability?
+
+      Q8. Actor/Persona Reference - (Optional) Koi actor ya real person ka vibe?
+         "Pankaj Tripathi ki quiet intensity" / "Kangana ki fierceness"
+
+      **B. SUPPORTING CHARACTERS (5 questions PER major character)**:
+
+      For EACH major supporting character identified in Step 1:
+
+      Q9. Relationship to Protagonist - [CHARACTER X] ka protagonist se kya rishta?
+         Family? Friend? Mentor? Rival? Love interest? Authority?
+
+      Q10. What They Want - [CHARACTER X] protagonist se kya chahte hain?
+         Approval? Help? Change? Revenge? Nothing? Distance?
+
+      Q11. Help or Hinder? - [CHARACTER X] protagonist ki help ya obstacles?
+         Ally? Obstacle? Complex? Catalyst? Mirror? Neutral?
+
+      Q12. Specific Traits/Quirks - [CHARACTER X] ko memorable kya banayega?
+         Specific behavior, quirk, habit (not generic "nice guy")
+
+      Q13. Depth Level Needed - [CHARACTER X] ko kitni depth?
+         Brief (1-2 scenes)? Moderate (recurring)? Full (major role)?
+
+      **C. CHARACTER DYNAMICS (5 questions)**:
+
+      Q14. Key Relationships - Sabse important relationships kaun se? (Top 2-3)
+
+      Q15. Romantic Subplot? - Romance hai? Kitna deep? Chemistry ka base?
+
+      Q16. Antagonist Type - Villain kaisa? Clear evil? Morally complex?
+         System? Internal demons? No antagonist?
+
+      Q17. Best Dialogue Potential - Kon se character pairs ke beech best dialogue?
+         Protagonist + antagonist? Mentor? Sidekick? Romantic?
+
+      Q18. Personal Inspiration - (Optional) Koi character real person se inspired?
+
+      **Collect ALL 18 answers (8 + 5xN + 5) before proceeding.**
+
+    duration: "20-30 min"
+
+  - step: 3
+    name: "Answer Synthesis & Profile Architecture"
+    agent: character-developer
+
+    action: |
+      **Synthesize ALL answers and plan character profiles:**
+
+      ```
+      Perfect! Characters clear hain:
+
+      ✓ Protagonist: [Name, fear, flaw, transformation]
+      ✓ Key Supporting: [2-3 major characters identified]
+      ✓ Dynamics: [Key relationships, romance?, antagonist type]
+      ✓ Depth Levels: [Who gets full/moderate/brief]
+
+      Yeh sahi hai? Final confirm before creating profiles?
+      ```
+
+      **Apply Decision Tree**:
+
+      Based on answers, determine:
+      - Protagonist gets FULL depth (all 8 aspects)
+      - Antagonist depth based on Q16 (complex = full, clear villain = moderate)
+      - Love interest depth based on Q15 (major story = full, subplot = moderate)
+      - Supporting character depth based on Q13 answers (full/moderate/brief)
+
+      **Architecture profiles internally (don't write yet)**:
+      - Protagonist: Fear drives flaw, flaw creates conflict, arc resolves flaw
+      - Supporting: Relationship to protagonist shapes their role
+      - Dynamics: Key relationships have tension/chemistry from answers
+
+    duration: "10 min"
+
+  # ═══════════════════════════════════════════════════════
+  # PHASE 2: COLLABORATIVE REFINEMENT (if needed)
+  # ═══════════════════════════════════════════════════════
+
+  - step: 4
+    name: "PHASE 2 - Present Initial Ideas (Optional Refinement)"
+    agent: character-developer
+
+    action: |
+      **Present character concepts for quick review:**
+
+      "Yeh concepts bana rahe hain based on answers:
+
+      Protagonist: [Brief description with fear, flaw, arc]
+      Key Supporting: [2-3 character concepts]
+
+      Yeh direction sahi hai? Kuch adjust karna hai?"
+
+      If user wants changes, adjust before full profile creation.
+      If approved, proceed to Step 5.
+
+    duration: "5-10 min (optional)"
+
+  # ═══════════════════════════════════════════════════════
+  # PHASE 3: PROFILE CREATION
+  # ═══════════════════════════════════════════════════════
+
+  - step: 5
+    name: "PHASE 3 - Develop Principal Characters (Based on Answers)"
+    agent: character-developer
+    collaboration:
+      - genre-specific-agent (for genre-appropriate depth)
+
+    action: |
+      **🔴 ANNOUNCE TO USER (MANDATORY):**
+      ```
+      ✅ STEP 3 complete — Vision confirmed, synthesis done.
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 4 of 5 — Character Profile Creation
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      Creating full character profiles based on YOUR 18 answers.
+      ```
+      **For PROTAGONIST, create FULL profile using answers:**
+
+      **1. BASIC INFORMATION**
+      - From story synopsis + your answers
+
+      **2. PHYSICAL DESCRIPTION** (from Q5):
+      - Use EXACT details user provided
+      - Age, build, face, clothing, distinguishing marks
+      - Body language (from Q5 answer)
+      - Actor/persona reference if given (Q8)
+
+      **3. PSYCHOLOGICAL PROFILE** (from Q1, Q3, Q7):
+      - Core personality (from story + answers)
+      - Strengths/capabilities (from story)
+      - **FLAW from Q3** (pride? cowardice? dishonesty?)
+      - **FEAR from Q1** (failure? abandonment? exposure?)
+      - Core desires (from story Q7 - what they want)
+      - Motivations (WHY they act)
+      - **Internal conflict** (flaw + fear create this)
+
+      **4. BACKSTORY** (from Q2):
+      - **KEY SHAPING EVENT from Q2** (ONE pivotal moment)
+      - Family background (relevant to story)
+      - Education/training (if relevant)
+      - Events leading to story
+
+      **5. CHARACTER ARC** (from Q6):
+      - Starting point (from story beginning)
+      - Journey (story events)
+      - **TRANSFORMATION from Q6** (what they learn/change)
+      - Ending point (who they become - from Q6)
+      - Cost of change
+
+      **6. SPEAKING VOICE** (from Q4):
+      - **SPEECH PATTERN from Q4** (formal? casual? regional? witty?)
+      - Hindi-English balance (based on character background)
+      - Vocabulary level (educated? simple?)
+      - Verbal tics if mentioned
+      - Sample dialogue in their voice
+
+      **7. BEHAVIORAL TRAITS**:
+      - Physical mannerisms (if mentioned in answers)
+      - Stress reactions (based on fear from Q1)
+      - Comfort habits
+      - Energy level
+
+      **8. RELATIONSHIPS** (from Q9-Q18):
+      - With each major character (use answers from Q9-Q13)
+      - Nature of relationships (help? hinder? complex?)
+      - Romantic connection if any (Q15)
+      - Best dialogue potential pairs (Q17)
+
+      **CRITICAL**: Use user's SPECIFIC answers, not generic template!
+      - Their fear from Q1, not generic fear
+      - Their flaw from Q3, not common flaw
+      - Their transformation from Q6, not standard arc
+
+    outputs:
+      - Complete profiles for all principal characters
+      - Deep psychological understanding
+      - Clear character arcs
+
+  - step: 6
+    name: "Develop Supporting Characters (Based on Q9-Q13 Answers)"
+    agent: character-developer
+
+    action: |
+      **For EACH major supporting character, create profile using Q9-Q13 answers:**
+
+      **Depth level determined by Q13 answer**:
+
+      IF Q13 = "Full Depth":
+        Create similar to protagonist (8 aspects, less detail)
+
+      IF Q13 = "Moderate":
+        Create focused profile:
+        - Basic info (name, age, occupation, role)
+        - Physical description (casting-ready)
+        - **Relationship to protagonist from Q9** (family? friend? rival?)
+        - **What they want from Q10** (approval? help? distance?)
+        - **Role from Q11** (ally? obstacle? catalyst?)
+        - **MEMORABLE TRAIT from Q12** (specific quirk/behavior)
+        - Voice pattern basics (Hindi-English mix)
+        - Key behaviors
+
+      IF Q13 = "Brief":
+        Create minimal profile:
+        - Basic info
+        - **MEMORABLE TRAIT from Q12** (one thing that makes them stand out)
+        - **Role from Q11** (functional purpose)
+        - Brief physical description
+
+      **CRITICAL**: Use user's SPECIFIC answers from Q9-Q13
+      - Not generic "supportive friend" but their specific relationship from Q9
+      - Not vague "wants to help" but their specific want from Q10
+      - Not "funny sidekick" but their specific quirk from Q12
+
+    outputs:
+      - Profiles for all supporting characters
+      - Character consistency established
+
+  - step: 7
+    name: "Define Minor Characters"
+    agent: character-developer
+
+    action: |
+      For EACH minor character, create brief profile:
+
+      - Name, age, role
+      - One-line description
+      - Key trait or purpose
+      - Brief appearance note
+
+      Just enough so they're not generic placeholders.
+
+    outputs:
+      - Brief profiles for minor characters
+
+  - step: 8
+    name: "Map Relationships (Based on Q14-Q17)"
+    agent: character-developer
+
+    action: |
+      Create relationship dynamics map:
+
+      For each major relationship:
+      - Connection type (family/romantic/professional/antagonistic)
+      - History (how they know each other)
+      - Current state (relationship now)
+      - Conflict points (what divides them)
+      - Bond points (what connects them)
+      - Power dynamic (who has power, what kind)
+      - Evolution (how relationship changes in story)
+
+      Show how characters affect each other.
+
+    outputs:
+      - Relationship dynamics map
+      - Connection web
+
+  - step: 9
+    name: "Character Voice Distinction (Based on Q4)"
+    agent: character-developer
+
+    action: |
+      **Ensure each character sounds DISTINCT using Q4 answers:**
+
+      For each principal/supporting character:
+      - **Use SPEECH PATTERN from Q4** (formal? casual? regional? witty?)
+      - Define Hindi-English ratio (from Q4 + character background)
+      - Identify word choice patterns (educated? street-smart?)
+      - Note verbal tics or repeated phrases (if mentioned in Q4)
+      - Describe speech rhythm (fast? slow? terse?)
+      - Create sample dialogue (3-4 lines in their distinct voice)
+
+      **Simple Bollywood Hindi default (60-70% Hindi mix)**
+
+      Test: Can you tell who's speaking without seeing name?
+      If not, make voices more distinct.
+
+    outputs:
+      - Distinct voice for each character
+      - Sample dialogue demonstrating voices
+
+  - step: 10
+    name: "Character Arc Summary (Based on Q6)"
+    agent: character-developer
+
+    action: |
+      **For each principal character, summarize arc using Q6 answer:**
+
+      **Beginning**:
+      - Who they are
+      - What they believe
+      - What they want
+      - **Their flaw/wound from Q3** (pride? cowardice?)
+
+      **Journey**:
+      - Key story events that test them
+      - Choices that define them
+      - What they learn
+
+      **Transformation (from Q6 answer)**:
+      - **How they change (Q6: what did user say they learn/change?)**
+      - What they overcome (flaw from Q3 resolved?)
+      - Cost of change
+
+      **End**:
+      - **Who they've become (from Q6)**
+      - What they've gained/lost
+
+      **CRITICAL**: Arc must match user's Q6 answer about transformation!
+
+    outputs:
+      - Clear character arcs matching Q6 answers
+      - Transformation paths defined
+
+  - step: 11
+    name: "Quality Check (Answer-Based)"
+    agent: master-story-director
+    collaboration:
+      - character-developer
+      - genre-specific-agent
+
+    action: |
+      **Master Story Director reviews character bible for answer usage:**
+
+      **Check ANSWER INTEGRATION**:
+      - [ ] Protagonist fear matches Q1 answer (not generic fear)
+      - [ ] Protagonist flaw matches Q3 answer (not common flaw)
+      - [ ] Speech patterns match Q4 answers (each character distinct)
+      - [ ] Physical descriptions match Q5 answer (user's specifics)
+      - [ ] Transformation matches Q6 answer (not standard arc)
+      - [ ] Supporting character relationships match Q9 answers
+      - [ ] Supporting roles match Q11 answers (ally/obstacle/etc.)
+      - [ ] Memorable traits match Q12 answers (specific quirks)
+      - [ ] Depth levels match Q13 answers (full/moderate/brief)
+
+      **Check QUALITY**:
+      - Characters feel three-dimensional (not templates)
+      - Motivations believable
+      - Arcs clear and earned
+      - Relationships make sense (from Q14-Q17)
+      - Voices distinct (from Q4, Q17)
+      - Physical descriptions detailed (Q5)
+      - Simple Bollywood Hindi used
+      - Genre conventions honored
+      - Cultural authenticity present
+
+      **Verify**:
+      - Principals have full 8-aspect development
+      - Supporting have depth per Q13 answers
+      - Minor characters defined
+      - No contradictions
+      - User's answers RESPECTED throughout
+
+      **If user's specific answers not used → Send back for revision**
+      **If approved → Proceed to finalization**
+
+    approval_gate: true
+
+    outputs:
+      - Quality approval
+      - Revision notes (if needed)
+
+  - step: 12
+    name: "Finalize Character Bible"
+    agent: character-developer
+
+    action: |
+      Create final character bible document:
+
+      **Structure**:
+
+      ```
+      =====================================
+      CHARACTER BIBLE
+      [Project Title]
+
+      Genre: [Genre]
+      Runtime: [Runtime]
+
+      Created by: BMAD-FILM Character Developer
+      Date: [Date]
+      =====================================
+
+      ## OVERVIEW
+
+      Total Characters: [X]
+      - Principals: [X]
+      - Supporting: [X]
+      - Minor: [X]
+
+      ## CHARACTER ROSTER
+
+      [List all with one-line descriptions]
+
+      =====================================
+
+      ## PRINCIPAL CHARACTERS
+
+      [Full profile for each]
+
+      =====================================
+
+      ## SUPPORTING CHARACTERS
+
+      [Profiles for each]
+
+      =====================================
+
+      ## MINOR CHARACTERS
+
+      [Brief profiles]
+
+      =====================================
+
+      ## RELATIONSHIP DYNAMICS
+
+      [Relationship map and key dynamics]
+
+      =====================================
+
+      ## CHARACTER ARCS SUMMARY
+
+      [Arc for each principal]
+
+      =====================================
+      END OF CHARACTER BIBLE
+      =====================================
+      ```
+
+      **FILE NAMING** (based on Step 0 dialect choices):
+
+      **IF SINGLE DIALECT**:
+      Save as: `project/{project_name}/character-bible.md`
+
+      **IF MULTI-DIALECT**:
+      Create DIALECT FOLDERS and save character-bible per dialect:
+      - `project/{project_name}/hindi/character-bible.md`
+      - `project/{project_name}/tamil/character-bible.md`
+      - `project/{project_name}/telugu/character-bible.md`
+      - etc. (one folder + file per dialect selected in Step 0)
+
+      **Each dialect file contains**:
+      - Same structure (overview, roster, profiles, relationships, arcs)
+      - LOCALIZED content:
+        - Character names (if Q0d = culturally adapt)
+        - Speech patterns (in that dialect/language)
+        - Cultural backgrounds (regional context)
+        - Sample dialogue (in that dialect)
+        - Regional attire notes (if Q0c = full cultural)
+        - Regional references (festivals, food, customs)
+
+      **DIALECT-SPECIFIC ADAPTATIONS**:
+
+      **Example - Hindi Version** (hindi/character-bible.md):
+      - Name: Arjun
+      - Speech: Hinglish (60% Hindi, 40% English)
+      - Sample: "Aap logon ko kya pasand hai?"
+      - Culture: North Indian middle-class
+      - Attire: Urban casual (jeans, t-shirt)
+
+      **Example - Tamil Version** (tamil/character-bible.md):
+      - Name: Arun (if Q0d = adapt) OR Arjun (if Q0d = universal)
+      - Speech: Tamil (with da/pa usage)
+      - Sample: "Ungalukku enna pidikkum?"
+      - Culture: Tamil Nadu middle-class
+      - Attire: Urban casual (or regional variation if Q0c = full)
+
+      **Example - Bengali Version** (bengali/character-bible.md):
+      - Name: Arnab (if Q0d = adapt) OR Arjun (if Q0d = universal)
+      - Speech: Bengali (tumi/tomar usage)
+      - Sample: "Apnara ki shunbe?"
+      - Culture: Bengali middle-class (Kolkata)
+      - Attire: Urban casual (kurta-jeans acceptable)
+
+    outputs:
+      - Complete character bible document(s)
+      - Single file (if single dialect) OR Multiple files (if multi-dialect)
+      - Ready for screenplay development
+      - Dialect preferences saved for next workflows
+
+success_criteria: |
+  Character Bible is successful when:
+
+  ✓ Characters are UNIQUE based on user's 18 answers (not templates)
+  ✓ Protagonist fear/flaw/transformation match Q1/Q3/Q6 answers
+  ✓ Speech patterns match Q4 answers (each character distinct voice)
+  ✓ Physical descriptions match Q5 user details
+  ✓ Supporting characters match Q9-Q13 answers (relationships, roles, quirks, depth)
+  ✓ Relationship dynamics match Q14-Q17 answers
+  ✓ Characters feel real and three-dimensional (not flat archetypes)
+  ✓ Motivations clear and believable
+  ✓ Character arcs match user's Q6 transformation vision
+  ✓ Simple Bollywood Hindi used (60-70% Hindi mix)
+  ✓ Depth levels appropriate (full for principals, moderate/brief per Q13)
+  ✓ User feels: "These are MY characters, they understood my vision!"
+  ✓ Ready to inform screenplay writing with distinct voices
+
+deliverables:
+  primary:
+    - file: "project/{project_name}/character-bible.md"
+      description: "Complete character profiles, relationships, arcs"
+
+estimated_time: "1-2 hours for 5-minute film (5-8 characters typical)"
+
+notes: |
+  Character Bible is STEP 2 in development workflow:
+
+  1. Story Synopsis ✅
+  2. Character Bible ⬅️ (This step)
+  3. Screenplay (uses character bible)
+
+  Characters must be developed BEFORE screenplay so:
+  - Dialogue reflects distinct voices
+  - Actions align with motivations
+  - Arcs are tracked through scenes
+  - Relationships are consistent
+  - Actors have full character understanding
+
+  Good Character Bible = Better Screenplay

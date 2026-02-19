@@ -1,0 +1,349 @@
+# Quick Edit Workflow
+# For fast-turnaround post-production of simple projects
+
+workflow:
+  id: "quick-edit"
+  name: "Quick Edit"
+  version: "1.0.0"
+  phase: "post-production"
+  scale: "micro"
+  estimated_duration: "2-3 days"
+
+description: |
+  Fast-turnaround editing workflow for micro projects (30-second commercials, social media content).
+  Streamlined process from footage ingest to final delivery with minimal iteration.
+
+lead_agent: "editor"
+supporting_agents:
+  - "post-supervisor"
+  - "producer"
+  - "directors-assistant"
+
+prerequisites:
+  - "Quick Shoot complete (/quick-shoot)"
+  - "Footage backed up and organized"
+  - "Continuity notes available"
+  - "Delivery specs defined"
+
+inputs:
+  required:
+    - "raw_footage" # From production
+    - "continuity_notes" # From Script Supervisor
+    - "creative_vision" # From film-project-context.md
+    - "delivery_format" # Technical specs for final output
+
+  optional:
+    - "music_preferences"
+    - "brand_assets" # Logo, graphics, etc.
+    - "reference_edits" # Style references
+
+outputs:
+  - "rough-cut-v1" # First assembly
+  - "final-cut" # Approved version
+  - "final-deliverables" # Export files ready for delivery
+  - "project-archive" # Archived project files
+
+process:
+  - step: 1
+    name: "Footage Organization & Ingest"
+    agent: "post-supervisor"
+    action: |
+      Setup post-production:
+      - Create editing project
+      - Ingest all footage
+      - Organize by scene/shot
+      - Verify footage quality (exposure, focus, audio)
+      - Flag any technical issues
+      - Review continuity notes
+    outputs:
+      - "Organized editing project"
+      - "Footage verified and ready"
+    duration: "1-2 hours"
+
+  - step: 2
+    name: "Review Footage & Select Takes"
+    agent: "editor"
+    action: |
+      Review all footage:
+      - Watch all takes
+      - Select best performances/technical quality
+      - Identify usable B-roll and cutaways
+      - Note any missing coverage or issues
+      - Reference Script Supervisor notes for selected takes
+    outputs:
+      - "Selected takes marked"
+      - "Coverage assessment"
+    duration: "1-2 hours"
+
+  - step: 3
+    name: "First Assembly"
+    agent: "editor"
+    action: |
+      Build initial cut:
+      - Assemble story based on shot list and creative vision
+      - Focus on structure and story flow (not refinement yet)
+      - Include all key story beats
+      - Rough timing to target length
+      - Add placeholder music/sound if helpful for pacing
+
+    editing_priorities:
+      1. Story clarity (does it make sense?)
+      2. Emotional flow (does it feel right?)
+      3. Pacing (does it drag or rush?)
+      4. Target length (hit the time requirement)
+
+    outputs:
+      - "Assembly v1 (rough cut)"
+      - "Runtime check"
+    duration: "2-3 hours"
+
+  - step: 4
+    name: "Review & Feedback"
+    agent: "editor"
+    collaborators: ["directors-assistant", "producer"]
+    action: |
+      Review assembly with creative leads:
+      - Screen rough cut
+      - Gather feedback on story, pacing, emotion
+      - Identify what's working vs. what needs adjustment
+      - Prioritize changes (must-fix vs. nice-to-have)
+    outputs:
+      - "Feedback notes"
+      - "Prioritized revision list"
+    duration: "30 min - 1 hour"
+
+  - step: 5
+    name: "Refine Cut"
+    agent: "editor"
+    action: |
+      Refine based on feedback:
+      - Adjust pacing and timing
+      - Optimize shot selection
+      - Fine-tune transitions
+      - Refine to exact target length
+      - Polish story flow
+
+    refinement_focus:
+      - Tighten pacing (remove dead air, tighten reactions)
+      - Enhance emotional beats (hold key moments, cut faster through transitions)
+      - Smooth transitions (ensure cuts feel natural)
+      - Hit exact runtime (30.0 sec, not 30.5 sec)
+
+    outputs:
+      - "Refined cut v1"
+    duration: "2-3 hours"
+
+  - step: 6
+    name: "Sound Design & Music (Basic)"
+    agent: "editor"
+    action: |
+      Add audio elements:
+      - Clean dialogue (if applicable)
+      - Add music (licensed or provided track)
+      - Basic sound effects
+      - Mix levels (dialogue clear, music balanced)
+      - Ensure audio meets broadcast specs (if applicable)
+
+    audio_priorities:
+      1. Dialogue clarity (if present)
+      2. Music enhances emotion without overpowering
+      3. Sound effects feel natural
+      4. Consistent levels (no sudden jumps)
+
+    outputs:
+      - "Cut with audio mix"
+    duration: "1-2 hours"
+
+  - step: 7
+    name: "Color Correction (Basic)"
+    agent: "editor"
+    action: |
+      Basic color grading:
+      - Correct exposure and white balance
+      - Match shots for consistency
+      - Apply creative grade supporting visual style
+      - Ensure broadcast-safe levels (if applicable)
+
+    color_priorities:
+      1. Consistency (shots match across cuts)
+      2. Correct exposure (no overly dark/bright)
+      3. Creative grade (mood and tone)
+      4. Technical compliance (broadcast specs if needed)
+
+    outputs:
+      - "Color-corrected cut"
+    duration: "1-2 hours"
+
+  - step: 8
+    name: "Add Graphics/Text (If Needed)"
+    agent: "editor"
+    action: |
+      Add any required graphics:
+      - Title cards
+      - Lower thirds
+      - Logo placement
+      - Call-to-action text
+      - Brand elements
+
+    outputs:
+      - "Cut with graphics"
+    duration: "30 min - 1 hour"
+
+  - step: 9
+    name: "Final Review & Approval"
+    agent: "editor"
+    collaborators: ["directors-assistant", "producer"]
+    action: |
+      Final quality check:
+      - Screen complete cut
+      - Check technical specs (resolution, aspect ratio, runtime)
+      - Verify audio levels
+      - Confirm all required elements present
+      - Get final approval
+    outputs:
+      - "Approved final cut"
+    duration: "30 min"
+
+  - step: 10
+    name: "Export & Delivery"
+    agent: "post-supervisor"
+    action: |
+      Create deliverables:
+      - Export final master (highest quality)
+      - Export delivery formats (per specs)
+      - Generate proxy/screener (if needed)
+      - Create thumbnail/poster frame (if needed)
+      - Verify all exports play correctly
+
+    common_delivery_formats:
+      - "ProRes 422 HQ (master archive)"
+      - "H.264 (web delivery)"
+      - "Specific platform specs (Instagram, YouTube, TV broadcast)"
+
+    outputs:
+      - "Final deliverables ready for distribution"
+    duration: "30 min - 1 hour"
+
+  - step: 11
+    name: "Archive Project"
+    agent: "post-supervisor"
+    action: |
+      Archive for future reference:
+      - Backup final project file
+      - Backup final exports
+      - Organize all assets
+      - Document project details
+      - Store in accessible location
+    outputs:
+      - "Complete project archive"
+    duration: "30 min"
+
+  - step: 12
+    name: "Update Context & Wrap"
+    agent: "bmad-film-master"
+    action: |
+      Update film-project-context.md:
+      - Mark post-production complete
+      - Document final runtime and specs
+      - Log lessons learned
+      - Archive project details
+
+      Mark project COMPLETE
+    duration: "10 min"
+
+context_updates:
+  - section: "current_phase"
+    update: "Post-Production complete, project delivered"
+
+  - section: "post_production_status"
+    add:
+      - "Final runtime"
+      - "Delivery formats"
+      - "Completion date"
+      - "Archive location"
+
+  - section: "lessons_learned"
+    add: "What worked well, what to improve next time"
+
+success_criteria:
+  - "Story is clear and engaging"
+  - "Pacing keeps audience attention"
+  - "Technical quality meets broadcast/platform specs"
+  - "Hit exact target runtime"
+  - "Audio is clear and well-mixed"
+  - "Color is consistent and supports mood"
+  - "All required elements present (graphics, logo, CTA)"
+  - "Deliverables exported and verified"
+  - "Project archived for future reference"
+
+failure_modes:
+  - issue: "Missing coverage for key moment"
+    resolution: "Editor finds creative workaround (cutaway, B-roll, creative transition)"
+
+  - issue: "Audio quality poor"
+    resolution: "Use EQ/noise reduction, or suggest ADR if critical"
+
+  - issue: "Shots don't match (color/exposure)"
+    resolution: "Color correction to match, may require more aggressive grading"
+
+  - issue: "Pacing feels off"
+    resolution: "Re-cut for tighter pacing, adjust music, try different shot order"
+
+  - issue: "Over length (e.g., 33 sec instead of 30 sec)"
+    resolution: "Identify and trim non-essential moments, tighten transitions"
+
+editing_tips:
+  - "Kill your darlings—if a shot doesn't serve story, cut it"
+  - "Watch with fresh eyes—take breaks between editing sessions"
+  - "Audio drives emotion—music and sound design are critical"
+  - "Transitions should be invisible unless motivate by style"
+  - "When in doubt, cut tighter—pacing usually too slow, not too fast"
+  - "Export multiple times—always test exports before delivery"
+
+technical_specs_common:
+  instagram_feed:
+    aspect_ratio: "1:1 (square) or 4:5 (vertical)"
+    resolution: "1080x1080 or 1080x1350"
+    max_length: "60 seconds"
+    format: "H.264, AAC audio"
+
+  instagram_stories:
+    aspect_ratio: "9:16 (vertical)"
+    resolution: "1080x1920"
+    max_length: "15 seconds per story"
+    format: "H.264, AAC audio"
+
+  youtube:
+    aspect_ratio: "16:9"
+    resolution: "1920x1080 or 3840x2160 (4K)"
+    format: "H.264, AAC audio"
+    bitrate: "8-12 Mbps (1080p)"
+
+  broadcast_tv:
+    aspect_ratio: "16:9"
+    resolution: "1920x1080"
+    format: "ProRes 422 or H.264 (per specs)"
+    audio: "Stereo, -23 LUFS (EBU R128 spec)"
+
+next_workflows:
+  - "/festival-strategy" # If submitting to festivals
+  - "/marketing-campaign" # If distributing online
+  - "Project complete!" # If simple delivery only
+
+timeline_summary:
+  day_1:
+    - "Ingest and organize footage (1-2 hrs)"
+    - "Review and select takes (1-2 hrs)"
+    - "First assembly (2-3 hrs)"
+    - "Initial review and feedback (1 hr)"
+
+  day_2:
+    - "Refine cut (2-3 hrs)"
+    - "Sound design and music (1-2 hrs)"
+    - "Color correction (1-2 hrs)"
+    - "Add graphics (0.5-1 hr)"
+
+  day_3:
+    - "Final review and approval (0.5 hr)"
+    - "Export and delivery (0.5-1 hr)"
+    - "Archive project (0.5 hr)"

@@ -1,0 +1,308 @@
+# BMAD-FILM Configuration
+# Breakthrough Method of Agile AI-Driven Filmmaking
+# Version 1.0.0 - Phase 1 MVP
+
+framework:
+  name: "BMAD-FILM"
+  version: "1.0.0"
+  phase: "Phase 1 - Foundation & Quick Flow"
+  description: "Intelligent filmmaking framework with AI-powered agent collaboration"
+
+# System Settings
+system:
+  context_file: "project/film-project-context.md"
+  auto_context_update: true
+  decision_logging: true
+  scale_adaptive: true
+
+  # Agent collaboration settings
+  multi_agent_mode: true
+  production_mode: false  # Enabled in Phase 4
+
+  # AI-powered tools (Phase 4)
+  continuity_checker_enabled: false
+  coverage_analyzer_enabled: false
+  schedule_optimizer_enabled: false
+  budget_tracker_enabled: false
+
+# Scale Definitions
+scales:
+  micro:
+    name: "Micro Project"
+    examples: ["Social media content", "15-30 second commercial"]
+    duration_days: "1-2"
+    agents_active: 5
+    workflows: ["Quick Flow"]
+
+  short:
+    name: "Short Project"
+    examples: ["Music video", "Short film (under 15 min)"]
+    duration_weeks: "4-8"
+    agents_active: 12
+    workflows: ["Standard Flow"]
+
+  feature:
+    name: "Feature Project"
+    examples: ["Feature film", "Documentary feature"]
+    duration_months: "8-12"
+    agents_active: 17
+    workflows: ["Full Production Path"]
+
+# Agent Registry (Phase 1 MVP - 8 agents)
+agents:
+  orchestration:
+    - id: "bmad-film-master"
+      name: "BMAD-FILM Master"
+      role: "Orchestrator"
+      active: true
+
+  development:
+    - id: "story-developer"
+      name: "Story Developer (Legacy)"
+      role: "Story & Script Development"
+      active: true
+      note: "Original story agent - use for quick projects"
+
+    # Enhanced Story Development System (v2.0)
+    - id: "story-architect"
+      name: "Story Architect"
+      role: "Master Story Development & Narrative Architecture"
+      active: true
+      inspired_by: "Sujoy Ghosh & Sriram Raghavan"
+      version: "2.0.0"
+
+    - id: "character-designer"
+      name: "Character Designer & Consistency Agent"
+      role: "Character Architecture & Consistency Management"
+      active: true
+      inspired_by: "Sujoy Ghosh & Sriram Raghavan"
+      version: "2.0.0"
+
+    - id: "screenplay-developer"
+      name: "Screenplay Development Agent"
+      role: "Screenplay Structure & Scene Construction"
+      active: true
+      inspired_by: "Sujoy Ghosh & Sriram Raghavan"
+      version: "2.0.0"
+
+    - id: "dialogue-agent"
+      name: "Dialogue Agent"
+      role: "Dialogue Craft & Subtext Master"
+      active: true
+      inspired_by: "Sujoy Ghosh & Sriram Raghavan"
+      version: "2.0.0"
+
+  production_management:
+    - id: "producer"
+      name: "Producer"
+      role: "Budget, Schedule, Resources"
+      active: true
+
+    - id: "first-ad"
+      name: "1st Assistant Director"
+      role: "On-set Production Management"
+      active: true
+
+  creative:
+    - id: "directors-assistant"
+      name: "Director's Assistant"
+      role: "Creative Vision & Shot Planning"
+      active: true
+
+    - id: "cinematographer"
+      name: "Cinematographer (DP)"
+      role: "Camera & Lighting Strategy"
+      active: true
+
+    - id: "script-supervisor"
+      name: "Script Supervisor"
+      role: "Continuity Tracking"
+      active: true
+
+  post_production:
+    - id: "editor"
+      name: "Editor"
+      role: "Assembly, Pacing, Storytelling"
+      active: true
+
+    - id: "post-supervisor"
+      name: "Post-Production Supervisor"
+      role: "Post Pipeline Management"
+      active: true
+
+# Phase 2+ Agents (inactive in Phase 1)
+  additional_agents:
+    - id: "production-designer"
+      name: "Production Designer"
+      active: false
+      phase: 2
+
+    - id: "casting-director"
+      name: "Casting Director"
+      active: false
+      phase: 2
+
+    - id: "vfx-supervisor"
+      name: "VFX Supervisor"
+      active: false
+      phase: 2
+
+    - id: "production-coordinator"
+      name: "Production Coordinator"
+      active: false
+      phase: 2
+
+    - id: "colorist"
+      name: "Colorist"
+      active: false
+      phase: 3
+
+    - id: "sound-post"
+      name: "Sound Post"
+      active: false
+      phase: 3
+
+    - id: "festival-strategist"
+      name: "Festival Strategist"
+      active: false
+      phase: 3
+
+    - id: "marketing-coordinator"
+      name: "Marketing Coordinator"
+      active: false
+      phase: 3
+
+# Workflow Registry
+workflows:
+  # Quick Flow (Phase 1)
+  quick_flow:
+    - id: "quick-film-spec"
+      name: "Quick Film Specification"
+      phase: "development"
+      lead_agent: "story-developer"
+      supporting_agents: ["producer", "directors-assistant"]
+      active: true
+
+    - id: "quick-shoot"
+      name: "Quick Shoot"
+      phase: "production"
+      lead_agent: "first-ad"
+      supporting_agents: ["cinematographer", "script-supervisor", "producer"]
+      active: true
+
+    - id: "quick-edit"
+      name: "Quick Edit"
+      phase: "post-production"
+      lead_agent: "editor"
+      supporting_agents: ["post-supervisor", "producer"]
+      active: true
+
+  # Standard workflows (Phase 2+)
+  development:
+    - id: "story-development"
+      name: "Story Development (Ghosh-Raghavan Method)"
+      phase: "development"
+      lead_agent: "story-architect"
+      supporting_agents: ["character-designer", "screenplay-developer", "dialogue-agent"]
+      active: true
+      version: "2.0.0"
+      duration: "4-8 hours"
+      best_for: "Thrillers, suspense, neo-noir, psychological dramas"
+
+    - id: "script-analysis"
+      active: false
+      phase: 2
+
+    - id: "creative-vision"
+      active: false
+      phase: 2
+
+  pre_production:
+    - id: "shot-breakdown"
+      active: false
+      phase: 2
+
+    - id: "budget-breakdown"
+      active: false
+      phase: 2
+
+    - id: "schedule-build"
+      active: false
+      phase: 2
+
+  production:
+    - id: "shoot-day"
+      active: false
+      phase: 3
+
+    - id: "call-sheet"
+      active: false
+      phase: 3
+
+    - id: "continuity-check"
+      active: false
+      phase: 3
+
+  post_production:
+    - id: "edit-workflow"
+      active: false
+      phase: 3
+
+    - id: "vfx-workflow"
+      active: false
+      phase: 3
+
+    - id: "sound-workflow"
+      active: false
+      phase: 3
+
+# Command Mappings
+commands:
+  # Quick Flow
+  "/quick-film-spec": "workflows/development/quick-film-spec.yaml"
+  "/quick-shoot": "workflows/production/quick-shoot.yaml"
+  "/quick-edit": "workflows/post-production/quick-edit.yaml"
+
+  # Story Development (Enhanced v2.0)
+  "/story-development": "workflows/development/story-development.yaml"
+
+  # Utility
+  "/bmad-film-help": "skills/bmad-film-help"
+  "/project-status": "skills/project-status"
+
+# Context Schema Version
+context_schema:
+  version: "1.0.0"
+  required_sections:
+    - project_overview
+    - creative_vision
+    - production_details
+    - current_phase
+    - constraints
+    - continuity_registry
+    - decision_log
+
+# File Paths
+paths:
+  agents: ".bmad-film/agents"
+  workflows: ".bmad-film/workflows"
+  tasks: ".bmad-film/tasks"
+  manifests: ".bmad-film/manifests"
+  project: "project"
+  docs: "docs"
+  tools: "tools"
+  skills: ".claude/skills/bmad-film"
+
+# Logging & Analytics
+logging:
+  enabled: true
+  level: "INFO"
+  log_decisions: true
+  log_agent_actions: true
+  log_workflow_execution: true
+
+# Integration Settings
+integrations:
+  claude_code: true
+  version_control: true
+  external_tools: []  # Future: Final Draft, Movie Magic, etc.

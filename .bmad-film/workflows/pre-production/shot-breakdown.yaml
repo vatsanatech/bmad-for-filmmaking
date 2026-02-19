@@ -1,0 +1,906 @@
+workflow_id: shot-breakdown
+name: "Shot Breakdown Development (Interactive + Multi-Dialect Support)"
+version: 4.0.0-multi-dialect
+category: pre-production
+description: |
+  **INTERACTIVE CO-WRITING + MULTI-DIALECT SUPPORT** - Creates shooting script through visual questions, with automatic dialect-specific production notes.
+
+  **NEW IN v4.0**: Multi-dialect production support!
+  If screenplay exists in multiple dialects, shot breakdown includes dialect-specific notes for costumes, props, location signage.
+
+  **3-PHASE PROCESS**:
+
+  **Phase 0: Dialect Auto-Detection (NEW!)**
+  - Detects if screenplay exists in multiple dialects
+  - Master shooting script created (universal camera/visual plan)
+  - Dialect-specific appendix added (costumes, props, cultural elements)
+
+  **Phase 1: Visual Questions (15 questions)**
+  - Shot Breakdown Specialist asks about visual style (7 questions)
+  - Asks about coverage strategy (4 questions)
+  - Asks about production reality (4 questions)
+  - Understands YOUR cinematography vision and constraints
+
+  **Phase 2: Collaborative Refinement**
+  - Present visual approach based on answers
+  - You refine specific shot choices
+  - Iterates until visual direction feels RIGHT
+
+  **Phase 3: Shooting Script Creation**
+  - Creates shot-by-shot breakdown matching your vision
+  - Industry-standard shooting script format
+  - Genre-appropriate visual language applied to YOUR answers
+  - **IF MULTI-DIALECT**: Adds dialect-specific notes per scene
+    - Costume variations (Hindi/Tamil/Telugu attire)
+    - Prop differences (cultural items)
+    - Location signage (regional language text)
+  - Realistic for your equipment/crew/time
+
+  Creates UNIQUE shooting script based on your 15 answers + production reality.
+  Supports single language OR multi-dialect production with cultural notes.
+
+  Input: Approved screenplay(s) - single OR multi-dialect
+  Output: Production-ready shooting script with dialect-specific production notes (if applicable)
+
+lead_agent: shot-breakdown-specialist
+supporting_agents:
+  - master-story-director
+  - genre-specific-agent
+
+inputs:
+  required:
+    - project_name: "Project directory name"
+
+context_requirements:
+  read:
+    - "project/{project_name}/genre-analysis.md"
+    - "project/{project_name}/beat-sheet.md"
+    - "project/{project_name}/character-bible.md (or dialect-specific versions)"
+    - "project/{project_name}/screenplay.md (or dialect-specific versions)"
+  write:
+    - "project/{project_name}/shot-breakdown.md"
+
+process:
+  # ═══════════════════════════════════════════════════════
+  # PHASE 1: VISUAL QUESTION PHASE
+  # ═══════════════════════════════════════════════════════
+
+  - step: 1
+    name: "PHASE 1 - Visual Questions (15 questions)"
+    agent: shot-breakdown-specialist
+    action: |
+      **🔴 ANNOUNCE TO USER (MANDATORY):**
+      ```
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 SHOT BREAKDOWN WORKFLOW — STARTING
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 0 of 3 — Reading ALL Project Files
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      Reading: genre-analysis.md + story-synopsis.md +
+               character-bible.md + beat-sheet.md + screenplay.md
+      ```
+      **🔴 MANDATORY: Read ALL project files BEFORE asking questions.**
+      Then announce:
+      ```
+      ✅ STEP 0 complete — All project files read.
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 1 of 3 — Visual Questions (15 questions)
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
+      **Shot Breakdown Specialist asks 15 visual questions:**
+
+      Reference: `.bmad-film/agents/shot-breakdown-specialist.md`
+
+      **A. VISUAL STYLE (7 questions)**:
+
+      Q1. Visual Tone - Overall visual tone kaisa ho?
+         BRIGHTNESS: Bright / Balanced / Dark
+         COLOR: Colorful / Muted / Monochrome zones
+
+      Q2. Camera Movement - Camera kaise move karega?
+         OPTIONS: STATIC / SMOOTH / HANDHELD / MIXED / DYNAMIC
+
+      Q3. Shot Size Preference - Shots ka dominant size kya ho?
+         OPTIONS: WIDE / TIGHT / BALANCED MIX / GENRE-APPROPRIATE
+
+      Q4. Lighting Mood - Lighting ka overall mood?
+         OPTIONS: NATURAL / DRAMATIC / NOIR / SOFT/DIFFUSED / HARSH
+
+      Q5. Favorite Camera Angles - Koi specific angles jo pasand hain?
+         OPTIONS: LOW ANGLE / HIGH ANGLE / DUTCH TILT / POV / OVERHEAD / EYE-LEVEL
+
+      Q6. Reference Films (Visual Style) - Koi films jo visual style capture karti hain?
+         Examples: "Tumbbad ki dark atmospheric" / "K3G ka colorful" / "GOW ki gritty"
+
+      Q7. Signature Shots (Must-Have) - Koi specific shots jo MUST dekhna chahte?
+         Examples: "Slow-motion walk" / "360° rotating" / "Long take" / "Bird's eye"
+
+      **B. COVERAGE STRATEGY (4 questions)**:
+
+      Q8. Coverage Priority - Coverage kitna chahiye?
+         OPTIONS: MINIMAL / MODERATE / EXTENSIVE / SINGLE-TAKE FOCUSED
+
+      Q9. Close-Up Philosophy - Close-ups ka use kitna?
+         OPTIONS: HEAVY / SELECTIVE / RARE / GENRE-APPROPRIATE
+
+      Q10. Establishing Shots - Location establish mein kitna time?
+         OPTIONS: DETAILED / QUICK / MINIMALIST / REVISIT
+
+      Q11. Transitions & Cuts - Scene-to-scene transitions kaise?
+         OPTIONS: HARD CUTS / DISSOLVES / MATCH CUTS / CREATIVE / MOTIVATED
+
+      **C. PRODUCTION REALITY (4 questions)**:
+
+      Q12. Equipment Available - Shooting equipment kya hai?
+         OPTIONS: PHONE/BASIC / DSLR/MIRRORLESS / CINEMA CAMERA / FULL RIG
+
+      Q13. Crew Size - Team kitni badi hai?
+         OPTIONS: SOLO / SMALL (2-5) / MODERATE (10-20) / FULL CREW (30+)
+
+      Q14. Location Constraints - Shooting locations ka reality?
+         OPTIONS: SINGLE / FEW (2-3) / MULTIPLE (5+) / OUTDOOR / INDOOR / MIXED
+
+      Q15. Shooting Time Available - Kitne din shoot ke liye?
+         OPTIONS: SINGLE DAY / WEEKEND / ONE WEEK / TWO WEEKS / MONTH+
+
+      **Collect ALL 15 answers before proceeding.**
+
+    duration: "10-15 min"
+
+  - step: 2
+    name: "Answer Synthesis & Visual Architecture"
+    agent: shot-breakdown-specialist
+    action: |
+      **Synthesize ALL 15 answers and plan visual approach:**
+
+      ```
+      Samajh gaya! Cinematography vision clear hai:
+
+      ✓ Visual Tone: [Q1 answer - bright/dark, colorful/muted]
+      ✓ Camera Movement: [Q2 answer - static/smooth/handheld]
+      ✓ Shot Size: [Q3 answer - wide/tight/balanced]
+      ✓ Lighting: [Q4 answer - natural/dramatic/noir]
+      ✓ Angles: [Q5 answer - specific preferences]
+      ✓ Reference: [Q6 answer - film references]
+      ✓ Signature Shots: [Q7 answer - must-have moments]
+
+      ✓ Coverage: [Q8 answer - minimal/extensive]
+      ✓ Close-ups: [Q9 answer - heavy/selective/rare]
+      ✓ Establishing: [Q10 answer - detailed/quick]
+      ✓ Transitions: [Q11 answer - hard cuts/dissolves]
+
+      ✓ Equipment: [Q12 answer - phone/DSLR/cinema]
+      ✓ Crew: [Q13 answer - solo/small/moderate]
+      ✓ Locations: [Q14 answer - single/few/multiple]
+      ✓ Time: [Q15 answer - days available]
+
+      Production reality + vision aligned? Yeh sahi hai?
+      ```
+
+      **Architecture visual approach internally:**
+
+      Based on Q1-Q7 (Visual Style):
+      - Determine shot language (noir vs bright, static vs dynamic)
+      - Plan signature shots from Q7
+      - Identify reference aesthetic from Q6
+
+      Based on Q8-Q11 (Coverage):
+      - Plan coverage depth (minimal vs extensive)
+      - Determine close-up usage
+      - Plan establishing shot approach
+      - Choose transition style
+
+      Based on Q12-Q15 (Production Reality):
+      - Adjust shots to equipment capability
+      - Scale complexity to crew size
+      - Optimize for location count
+      - Make shootable in time available
+
+    duration: "5 min"
+
+  # ═══════════════════════════════════════════════════════
+  # PHASE 2: COLLABORATIVE REFINEMENT (optional)
+  # ═══════════════════════════════════════════════════════
+
+  - step: 3
+    name: "PHASE 2 - Present Visual Approach (Optional Refinement)"
+    agent: shot-breakdown-specialist
+    action: |
+      **Present cinematography concepts for quick review:**
+
+      "Yeh visual approach bana raha hoon based on answers:
+
+      STYLE: [Brief description using Q1-Q7 answers]
+      COVERAGE: [Brief description using Q8-Q11 answers]
+      PRODUCTION: [Brief description using Q12-Q15 answers]
+
+      Yeh direction sahi hai? Kuch adjust karna hai?"
+
+      If user wants changes, adjust before full shooting script creation.
+      If approved, proceed to Step 4.
+
+    duration: "5 min (optional)"
+
+  # ═══════════════════════════════════════════════════════
+  # PHASE 3: SHOOTING SCRIPT CREATION
+  # ═══════════════════════════════════════════════════════
+
+  - step: 4
+    name: "Read Context (CRITICAL FOR CONSISTENCY)"
+    agent: shot-breakdown-specialist
+    action: |
+      **CRITICAL: Read ALL previous workflow outputs FIRST:**
+
+      **MUST READ** (from previous workflows):
+      1. `project/{project_name}/genre-analysis.md`
+      2. `project/{project_name}/beat-sheet.md`
+      3. `project/{project_name}/character-bible.md` (or dialect folders: `hindi/`, `tamil/`, etc.)
+      4. `project/{project_name}/screenplay.md` (or dialect folders: `hindi/screenplay.md`, `tamil/screenplay.md`, etc.)
+
+      **Extract for shooting script:**
+
+      **From Genre Analysis**:
+      - Genre type (Thriller/Romance/Horror/Comedy/Action)
+      - Visual language recommendations (cinematography style)
+      - Genre specialist techniques to apply
+
+      **From Beat Sheet**:
+      - Emotional progression map (where intensity peaks/dips)
+      - Pacing rhythm (fast/measured/slow sections)
+      - Key story beats (ensure visual coverage)
+
+      **From Character Bible**:
+      - Character emotional beats (what close-ups needed)
+      - Key relationships (blocking, framing dynamics)
+      - Character arcs (visual progression)
+
+      **From Screenplay** (PRIMARY SOURCE):
+      - **Scene-by-scene breakdown** (EXACT scenes to shoot)
+      - Dialogue and action (EXACT what happens)
+      - Story structure (pacing, rhythm)
+      - Scene locations (INT/EXT, specific places)
+      - Scene times (day/night, specific timing)
+
+      **NOTE**: If multi-dialect, read ONE screenplay version for scene structure (all have same scenes).
+      Dialect-specific notes added separately in production notes appendix.
+
+      **CONSISTENCY CHECK**:
+      - Shooting script scenes MUST match screenplay scenes (same events, same dialogue, same order)
+      - Shooting script pacing MUST match beat-sheet rhythm
+      - Visual intensity MUST match beat-sheet emotional mapping
+      - Visual style MUST align with genre-analysis recommendations
+      - Shot choices MUST serve character arcs from character-bible
+      - Every screenplay scene gets shot breakdown (no scenes skipped)
+
+      **Combine previous outputs with Q1-Q15 visual answers to create shooting script.**
+
+      Understand the story, characters, and genre DEEPLY before planning shots.
+
+  - step: 5
+    name: "Apply Genre Visual Language (Using Q1-Q7 Answers)"
+    agent: shot-breakdown-specialist
+    collaboration:
+      - genre-specific-agent
+    action: |
+      **Apply genre conventions ADJUSTED by Q1-Q7 user answers:**
+
+      **Genre Base Language**:
+
+      THRILLER → Close-ups, high/low angles, noir lighting, abrupt cuts
+      ROMANCE → Soft focus, warm lighting, smooth moves, dissolves
+      HORROR → Low/dutch angles, deep shadows, static then sudden, POV shots
+      COMEDY → Bright lighting, medium shots, timing cuts, clean frames
+      ACTION → Dynamic movement, wide lenses, clear geography, fast cuts
+
+      **ADJUST based on user answers**:
+
+      **Q1 (Visual Tone)**:
+      - If "Dark" → Emphasize shadows, low-key lighting
+      - If "Bright" → High-key lighting, colorful palettes
+      - If "Muted" → Desaturated, gritty realism
+
+      **Q2 (Camera Movement)**:
+      - If "STATIC" → Locked-off shots, composed frames
+      - If "SMOOTH" → Dolly/slider moves, cinematic glides
+      - If "HANDHELD" → Shaky, documentary feel, intimate
+      - If "DYNAMIC" → Constant movement, Scorsese-style
+
+      **Q3 (Shot Size)**:
+      - If "WIDE" → Emphasize establishing, geography, space
+      - If "TIGHT" → Emphasize close-ups, faces, emotion
+      - If "BALANCED" → Mix of all sizes
+
+      **Q4 (Lighting)**:
+      - If "NATURAL" → Sunlight, practical lights, realistic
+      - If "DRAMATIC" → High contrast, shadows, theatrical
+      - If "NOIR" → Single source, hard shadows, mystery
+      - If "SOFT" → Romantic, gentle, beauty lighting
+
+      **Q5 (Angles)**:
+      - Use preferred angles from Q5 answer
+      - LOW ANGLE → Power, menace
+      - HIGH ANGLE → Vulnerability
+      - DUTCH → Disorientation
+      - POV → Character perspective
+
+      **Q6 (Reference Films)**:
+      - Apply aesthetic from reference films mentioned
+      - "Tumbbad" → Dark atmospheric lighting
+      - "Andhadhun" → Tight urban frames
+      - "K3G" → Grand colorful aesthetic
+
+      **Q7 (Signature Shots)**:
+      - Include must-have shots from Q7
+      - Plan where in story these shots fit
+
+      **CRITICAL**: User's Q1-Q7 answers override generic genre defaults!
+
+  - step: 6
+    name: "Scene-by-Scene Analysis"
+    agent: shot-breakdown-specialist
+    action: |
+      For EACH scene in screenplay, analyze:
+
+      **Story Purpose**:
+      - What must this scene accomplish?
+      - What emotion should audience feel?
+      - What information is revealed?
+
+      **Visual Approach**:
+      - Master shot needed? (establish geography)
+      - Coverage needed? (dialogue, reactions)
+      - Special shots? (POV, insert, montage)
+      - Key emotional beats? (close-ups)
+
+      **Shot Flow**:
+      - How does scene open? (establishing)
+      - How does dialogue unfold? (shot-reverse-shot)
+      - How does scene end? (transition to next)
+
+      Plan visual storytelling for each scene.
+
+  - step: 7
+    name: "Shot Selection (Based on Q1-Q7 Answers)"
+    agent: shot-breakdown-specialist
+    action: |
+      For each moment in screenplay, choose shots **using Q1-Q7 answers**:
+
+      **Shot Size Selection** (from Q3):
+      - If Q3 = "WIDE" → Emphasize: Establish location, geography, multiple characters
+      - If Q3 = "TIGHT" → Emphasize: Close-ups for emotion, reaction, lies, secrets
+      - If Q3 = "BALANCED" → Mix: Wide for establishing, medium for dialogue, close for emotion
+      - If Q3 = "GENRE-APPROPRIATE" → Follow genre conventions
+
+      **Angle Selection** (from Q5):
+      - Use angles mentioned in Q5 answer
+      - EYE LEVEL: Neutral, objective
+      - HIGH ANGLE: Vulnerability, weakness (if Q5 mentioned)
+      - LOW ANGLE: Power, menace (if Q5 mentioned)
+      - DUTCH ANGLE: Disorientation (if Q5 mentioned)
+      - POV SHOTS: Character perspective (if Q5 mentioned)
+      - OVERHEAD: God's eye, patterns (if Q5 mentioned)
+
+      **Movement Selection** (from Q2):
+      - If Q2 = "STATIC" → Locked-off shots, stability, tension building
+      - If Q2 = "SMOOTH" → Dolly in/out, tracking, crane shots, cinematic glides
+      - If Q2 = "HANDHELD" → Shaky, intimate, documentary feel
+      - If Q2 = "MIXED" → Static for drama, handheld for action/emotion
+      - If Q2 = "DYNAMIC" → Constant movement, Scorsese-style
+
+      **Lighting** (from Q1, Q4):
+      - Apply Q1 tone (bright/balanced/dark) and Q4 mood (natural/dramatic/noir)
+
+      **Signature Shots** (from Q7):
+      - Incorporate must-have shots from Q7 at appropriate story moments
+
+      Choose based on:
+      - User's Q1-Q7 answers (PRIMARY)
+      - Genre conventions (SECONDARY)
+      - Story purpose
+      - Emotional beat
+      - Coverage needs
+
+  - step: 8
+    name: "Coverage Strategy (Based on Q8-Q11 Answers)"
+    agent: shot-breakdown-specialist
+    action: |
+      Ensure adequate coverage for editing **using Q8-Q11 answers**:
+
+      **Apply Q8 (Coverage Priority)**:
+
+      IF Q8 = "MINIMAL":
+      - Master shot + 1-2 essential angles only
+      - Pre-planned, lock shots, less edit options
+      - Fast shooting, efficient
+
+      IF Q8 = "MODERATE":
+      - Master + key coverage (over-shoulder, reactions)
+      - Balanced approach
+      - Standard: 1 master + 2-3 coverage angles
+
+      IF Q8 = "EXTENSIVE":
+      - Many angles, lots of edit choices
+      - Dialogue: 1 master + 5+ coverage angles
+      - Action: 8+ angles
+      - Safer, more editing flexibility
+
+      IF Q8 = "SINGLE-TAKE FOCUSED":
+      - Long takes, minimal cutting
+      - Choreographed blocking
+      - Few angles, plan movement carefully
+
+      **Apply Q9 (Close-Up Philosophy)**:
+
+      IF Q9 = "HEAVY":
+      - Faces dominate, emotion primary
+      - Close-ups in most scenes
+      - TV-style coverage (lots of tight shots)
+
+      IF Q9 = "SELECTIVE":
+      - Close-ups for key moments only
+      - Mostly wide/medium, close-ups for emphasis
+
+      IF Q9 = "RARE":
+      - Mostly wide/medium, space over faces
+      - Close-ups reserved for critical beats
+
+      **Apply Q10 (Establishing Shots)**:
+
+      IF Q10 = "DETAILED":
+      - Long establishing shots, geography clear
+      - Audience understands space fully
+
+      IF Q10 = "QUICK":
+      - Brief establish, move on
+      - Efficient, get into action
+
+      IF Q10 = "MINIMALIST":
+      - Cut right into action, infer location
+      - Modern, propulsive
+
+      **Apply Q11 (Transitions)**:
+
+      IF Q11 = "HARD CUTS":
+      - Straight cuts, no transitions (90% of cuts)
+
+      IF Q11 = "DISSOLVES":
+      - Gentle fades between scenes, dreamlike, time passing
+
+      IF Q11 = "MATCH CUTS":
+      - Visual element connects scenes creatively
+
+      IF Q11 = "CREATIVE":
+      - Wipes, iris, stylized transitions
+
+      **For Each Scene, Provide** (adjusted to Q8-Q11):
+
+      1. **Master Shot** (Wide) - If Q8 allows
+      2. **Coverage Shots** (Medium/Close) - Based on Q8, Q9
+      3. **Insert Shots** (Detail) - If Q8 = moderate/extensive
+      4. **Reaction Shots** - Based on Q9
+      5. **Establishing Shots** - Based on Q10
+
+      **CRITICAL**: Respect user's Q8-Q11 choices, even if less coverage than standard!
+
+  - step: 9
+    name: "Write Shooting Script (Using Q1-Q15 Answers)"
+    agent: shot-breakdown-specialist
+    action: |
+      Create SHOOTING SCRIPT in industry-standard format **using ALL Q1-Q15 answers**:
+
+      **Format Structure**:
+
+      ```
+      SCENE HEADING
+
+      SHOT TYPE (ANGLE/MOVEMENT) - SUBJECT/CHARACTER, action description.
+      Detailed visual description of what we see and how it feels.
+
+                          CHARACTER
+                       (parenthetical)
+                Dialogue line in Hindi/Hinglish.
+
+                                                          TRANSITION:
+
+      NEXT SHOT TYPE - SUBJECT/CHARACTER
+
+      Action continues...
+      ```
+
+      **For Each Shot, Include**:
+      - Shot type and angle
+      - Subject/character
+      - Visual description (what we see)
+      - Atmospheric details (lighting, mood)
+      - Character action (what they do)
+      - Dialogue (if present)
+      - Appropriate transition
+
+      **Transitions to Use**:
+      - **CUT TO:** (standard, 90% of transitions)
+      - **SMASH CUT TO:** (abrupt, shocking)
+      - **DISSOLVE TO:** (time passing, dreamlike)
+      - **FADE TO BLACK:** (end of sequence)
+      - **MATCH CUT TO:** (visual similarity)
+
+      **Special Formats**:
+      - MONTAGE sections
+      - FLASHBACK sequences
+      - TITLE CARDS
+      - POV shots
+
+      Write clear, visual, production-ready shooting script.
+
+  - step: 10
+    name: "Add Production Notes (Based on Q12-Q15 Answers)"
+    agent: shot-breakdown-specialist
+    action: |
+      At end of shooting script, add **production notes based on Q12-Q15 answers**:
+
+      **SHOT COUNT SUMMARY**:
+      ```
+      TOTAL SHOTS: [count from shooting script]
+      - Wide Shots: [count]
+      - Medium Shots: [count]
+      - Close Ups: [count based on Q9]
+      - Extreme Close Ups: [count]
+
+      ESTIMATED SHOOTING DAYS: [days from Q15]
+      ESTIMATED RUNTIME: [minutes from screenplay]
+      ```
+
+      **EQUIPMENT REQUIREMENTS** (from Q12):
+
+      IF Q12 = "PHONE/BASIC":
+      ```
+      CAMERA: Smartphone (iPhone/Android)
+      SUPPORT: Phone tripod, handheld only
+      LIGHTING: Natural light + phone flashlight
+      SPECIAL: [Minimal]
+      ```
+
+      IF Q12 = "DSLR/MIRRORLESS":
+      ```
+      CAMERA: DSLR/Mirrorless (Canon/Sony/Panasonic)
+      LENSES: Kit lens or prime set (24mm, 50mm, 85mm)
+      SUPPORT: Tripod + fluid head, gimbal (optional)
+      LIGHTING: LED panels (2-3), practical lights
+      SPECIAL: [Based on needs]
+      ```
+
+      IF Q12 = "CINEMA CAMERA":
+      ```
+      CAMERA: Cinema camera (RED/Arri/Sony FX)
+      LENSES: Professional prime set (18-85mm range)
+      SUPPORT: Tripod + fluid head, dolly + track, gimbal
+      LIGHTING: LED panels (5+), modifiers, practicals
+      SPECIAL: [Full capabilities]
+      ```
+
+      IF Q12 = "FULL RIG":
+      ```
+      CAMERA: Cinema camera + backup
+      LENSES: Full prime set + zoom lenses
+      SUPPORT: Tripod, dolly + track, crane, gimbal, steadicam
+      LIGHTING: Full lighting package (LED, tungsten, HMI)
+      SPECIAL: [Any needed equipment/effects]
+      ```
+
+      **CREW REQUIREMENTS** (from Q13):
+      ```
+      CREW SIZE: [From Q13 - Solo/Small/Moderate/Full]
+
+      IF SOLO: Director/DP/Editor (one person)
+      IF SMALL (2-5): Director, DP, Sound, PA
+      IF MODERATE (10-20): Director, DP, AC, Gaffer, Sound, PA, etc.
+      IF FULL (30+): Full departmental crew
+      ```
+
+      **LOCATION PLAN** (from Q14):
+      ```
+      LOCATION SCOPE: [From Q14 - Single/Few/Multiple/Outdoor/Indoor/Mixed]
+
+      [List specific locations from screenplay]
+      [Indicate which are INT/EXT]
+      ```
+
+      **SHOOTING ORDER** (Optimized by Q14 Locations, Q15 Time):
+      ```
+      TIME AVAILABLE: [From Q15 - Single day/Weekend/Week/etc.]
+
+      Optimize schedule:
+      - Group by location (minimize travel)
+      - Group by lighting (day/night)
+      - Prioritize complex scenes early
+
+      DAY 1 - [LOCATION]
+      - [List scenes/shots that fit Q15 time constraint]
+
+      DAY 2 - [LOCATION]
+      - [Continue based on Q15 days available]
+
+      [Adjust number of days to match Q15 answer]
+      ```
+
+      ---
+
+      **DIALECT-SPECIFIC PRODUCTION NOTES** (NEW - if multi-dialect):
+
+      **IF MULTI-DIALECT SCREENPLAYS EXIST**:
+
+      Add appendix section with dialect-specific notes for each scene/shot:
+
+      ```
+      ═══════════════════════════════════════════════════════
+      ## DIALECT-SPECIFIC PRODUCTION NOTES
+      ═══════════════════════════════════════════════════════
+
+      **MULTI-DIALECT PRODUCTION DETECTED**
+
+      Detected dialect folders: hindi/, tamil/, telugu/ (example)
+
+      Same visual plan (camera, shots, blocking) for all versions.
+      Dialect-specific elements noted below per scene.
+
+      ---
+
+      ### SCENE 1 - COMMUNITY HALL CELEBRATION
+
+      **UNIVERSAL VISUAL** (same for all dialects):
+      - Camera: Wide shot, high angle
+      - Lighting: Warm practical lights
+      - Blocking: Characters arranged in semicircle
+
+      **DIALECT-SPECIFIC NOTES**:
+
+      **HINDI VERSION**:
+      - Decor: Marigold garlands, "Shubh Vivah" banner (Devanagari)
+      - Costumes: Salwar kameez (Meera), jeans+tee (Arjun)
+      - Props: None specific
+      - Cultural: Standard North Indian wedding
+
+      **TAMIL VERSION**:
+      - Decor: Mango leaf torans, "Mangala Vazthukal" kolam, banana plants
+      - Costumes: Half-saree OR churidar (Meera), Same OR lungi-shirt (Arjun if village)
+      - Props: Traditional brass lamps (kuthu vilakku)
+      - Cultural: Tamil wedding customs
+
+      **TELUGU VERSION**:
+      - Decor: Mango leaves, "Shubhamastu" rangoli
+      - Costumes: Pattu langa (Meera option), Same (Arjun)
+      - Props: Traditional items
+      - Cultural: Telugu wedding customs
+
+      ---
+
+      [Repeat for each scene with cultural/visual differences]
+
+      ---
+
+      ### COSTUME REFERENCE CHART
+
+      | Character | Hindi | Tamil | Telugu |
+      |-----------|-------|-------|--------|
+      | Meera     | Salwar kameez | Half-saree/Churidar | Pattu langa option |
+      | Arjun     | Jeans+tee | Same OR lungi-shirt | Same |
+      | Elders    | Traditional | Dhoti+angavastram | Traditional Telugu |
+
+      ---
+
+      ### PROP DIFFERENCES
+
+      **CULTURAL ITEMS**:
+      - Hindi: Standard North Indian items
+      - Tamil: Brass lamps, betel leaves, traditional items
+      - Telugu: Regional specific props
+
+      ---
+
+      ### LOCATION SIGNAGE
+
+      **ON-SCREEN TEXT** (if any):
+      - Hindi: Devanagari script (हिंदी)
+      - Tamil: Tamil script (தமிழ்)
+      - Telugu: Telugu script (తెలుగు)
+
+      **PRODUCTION STRATEGY**:
+      - Film master shots ONCE (universal framing)
+      - Swap costumes/props between dialect versions
+      - Re-shoot close-ups of signs/text per dialect
+      - Efficient: Shoot all Hindi scenes, then all Tamil scenes (same location)
+
+      ═══════════════════════════════════════════════════════
+      ```
+
+      **NOTE**: Only include dialect-specific notes if multi-dialect production.
+      If single dialect, skip this section entirely.
+
+      ---
+
+      **CRITICAL**: Production notes must match Q12-Q15 production reality!
+
+  - step: 11
+    name: "Quality Review (Answer-Based Verification)"
+    agent: master-story-director
+    collaboration:
+      - shot-breakdown-specialist
+      - genre-specific-agent
+    action: |
+      Master Story Director reviews shooting script for Q1-Q15 answer usage:
+
+      **Check ANSWER INTEGRATION**:
+      - [ ] Visual tone matches Q1 answer (bright/dark, colorful/muted - not generic)
+      - [ ] Camera movement matches Q2 answer (static/smooth/handheld - not random)
+      - [ ] Shot sizes match Q3 answer (wide/tight/balanced - not default)
+      - [ ] Lighting mood matches Q4 answer (natural/dramatic/noir - not generic)
+      - [ ] Camera angles match Q5 answer (specific angles used - not standard only)
+      - [ ] Visual style references Q6 films (if mentioned)
+      - [ ] Signature shots from Q7 included (must-have moments present)
+      - [ ] Coverage level matches Q8 answer (minimal/moderate/extensive - not overshoot)
+      - [ ] Close-up usage matches Q9 answer (heavy/selective/rare - not default)
+      - [ ] Establishing approach matches Q10 answer (detailed/quick/minimalist)
+      - [ ] Transitions match Q11 answer (hard cuts/dissolves/match cuts)
+      - [ ] Equipment notes match Q12 answer (phone/DSLR/cinema - realistic)
+      - [ ] Crew requirements match Q13 answer (solo/small/moderate/full)
+      - [ ] Location scope matches Q14 answer (single/few/multiple)
+      - [ ] Shooting schedule fits Q15 answer (days available - not longer)
+
+      **Check QUALITY**:
+      - Every scene from screenplay covered
+      - Shot descriptions clear and visual
+      - Genre visual language applied (but adjusted by Q1-Q7)
+      - Coverage adequate for Q8 choice (not over/under)
+      - Dialogue included with appropriate shots
+      - Transitions match Q11 choice
+      - Format is industry-standard
+      - Special shots formatted properly
+      - Production notes realistic (Q12-Q15)
+
+      **Verify**:
+      - Visual storytelling serves the story
+      - Shots convey appropriate emotion
+      - User's visual vision from Q1-Q7 honored
+      - Coverage matches user's Q8-Q11 strategy
+      - Practically shootable within Q12-Q15 constraints
+      - Equipment realistic (not fantasy)
+      - Shooting order optimized for Q14 locations, Q15 time
+
+      **If user's Q1-Q15 answers not used → Send back for revision**
+      **If production notes exceed Q12-Q15 constraints → Send back**
+      **If approved → Finalize for production**
+
+    approval_gate: true
+
+  - step: 12
+    name: "Finalize Shooting Script"
+    agent: shot-breakdown-specialist
+    action: |
+      Create final shooting script document:
+
+      **STRUCTURE**:
+
+      ```markdown
+      # SHOOTING SCRIPT
+      ## [PROJECT TITLE]
+
+      **Genre**: [Genre]
+      **Runtime**: [Runtime]
+      **Format**: [Format]
+
+      **Created by**: BMAD-FILM Shot Breakdown Specialist
+      **Date**: [Date]
+      **Version**: Production Draft
+
+      ═══════════════════════════════════════════════════════
+
+      [COMPLETE SHOOTING SCRIPT WITH EMBEDDED SHOT DESCRIPTIONS]
+
+      All scenes with:
+      - Shot types and angles
+      - Visual descriptions
+      - Character action
+      - Dialogue
+      - Transitions
+
+      ═══════════════════════════════════════════════════════
+
+      ## PRODUCTION NOTES
+
+      ### Shot Count Summary
+      [Statistics]
+
+      ### Equipment Requirements
+      [Complete list]
+
+      ### Shooting Order
+      [Day-by-day breakdown]
+
+      ═══════════════════════════════════════════════════════
+      END OF SHOOTING SCRIPT
+      ═══════════════════════════════════════════════════════
+      ```
+
+      Save as: `project/{project_name}/shot-breakdown.md`
+
+      **This is production-ready document for**:
+      - Director (visual plan)
+      - Cinematographer (camera specs)
+      - 1st AD (scheduling)
+      - Script Supervisor (continuity)
+      - Production Designer (shot requirements)
+      - Actors (understand framing and performance)
+
+success_criteria: |
+  Shooting Script is successful when:
+
+  ✓ Visual approach is UNIQUE based on user's 15 answers (not generic shot list)
+  ✓ Visual tone matches Q1 answer (bright/dark, colorful/muted - not default)
+  ✓ Camera movement matches Q2 answer (static/smooth/handheld - not random)
+  ✓ Shot sizes match Q3 answer (wide/tight/balanced - not default)
+  ✓ Lighting mood matches Q4 answer (natural/dramatic/noir - not generic)
+  ✓ Camera angles match Q5 answer (specific angles used - not standard only)
+  ✓ Visual references from Q6 applied (if mentioned)
+  ✓ Signature shots from Q7 included (must-have moments present)
+  ✓ Coverage level matches Q8 answer (minimal/moderate/extensive - not overshoot)
+  ✓ Close-up usage matches Q9 answer (heavy/selective/rare - not default)
+  ✓ Establishing approach matches Q10 answer (detailed/quick/minimalist)
+  ✓ Transitions match Q11 answer (hard cuts/dissolves/match cuts - not random)
+  ✓ Equipment notes match Q12 answer (phone/DSLR/cinema - realistic, not fantasy)
+  ✓ Crew requirements match Q13 answer (solo/small/moderate/full)
+  ✓ Location scope matches Q14 answer (single/few/multiple)
+  ✓ Shooting schedule fits Q15 answer (days available - not longer)
+  ✓ Industry-standard format (readable by crew)
+  ✓ Every scene from screenplay covered
+  ✓ Shot descriptions clear and visual
+  ✓ Genre visual language applied (but adjusted by Q1-Q7)
+  ✓ Dialogue included with shots
+  ✓ Special shots formatted correctly
+  ✓ Production notes realistic (Q12-Q15)
+  ✓ Bollywood cinematography standards met
+  ✓ User feels: "This is MY visual vision, they understood my cinematography choices!"
+  ✓ Production-ready and shootable within Q12-Q15 constraints
+
+deliverables:
+  primary:
+    - file: "project/{project_name}/shot-breakdown.md"
+      description: "Shooting script with embedded shot descriptions"
+
+estimated_time: "45-75 minutes (15 min questions + 30-60 min shooting script creation, depending on screenplay length)"
+
+notes: |
+  Shot Breakdown is STEP 5 in workflow:
+
+  1. Story Synopsis ✅
+  2. Character Bible ✅
+  3. Beat Sheet ✅
+  4. Screenplay ✅
+  5. Shot Breakdown ⬅️ (This step)
+
+  Shot Breakdown creates SHOOTING SCRIPT format through INTERACTIVE CO-WRITING:
+
+  **NOT a shot list** - This is screenplay with shot descriptions embedded
+  **NOT technical specs** - This is visual storytelling guide
+  **NOT storyboards** - This is written visual plan
+  **NOT generic patterns** - This uses YOUR 15 answers to create unique visual approach
+
+  **IS**: Production-ready shooting script showing exactly how to film each moment
+
+  **3-PHASE INTERACTIVE PROCESS**:
+  1. Question Phase (15 questions) - Understand your visual vision
+  2. Refinement Phase (optional) - Align on cinematography approach
+  3. Creation Phase (shooting script) - Detailed shot-by-shot breakdown using your answers
+
+  **WHY QUESTIONS?**
+  - Every film has unique visual style (Tumbbad ≠ K3G ≠ Gangs of Wasseypur)
+  - Your equipment/crew/time constraints shape realistic approach
+  - Your coverage strategy (minimal vs extensive) affects shooting time
+  - Decision tree uses answers to create UNIQUE shooting script, not patterns
+
+  Format used by:
+  - Bollywood directors (Anurag Kashyap, Sriram Raghavan, Karan Johar)
+  - International directors (Tarantino, Nolan, Fincher)
+  - Film schools (FTII, Whistling Woods)
+
+  This is what goes on set. This is what gets filmed.
+
+  **SHOOTING SCRIPT = SCREENPLAY + SHOT DESCRIPTIONS (based on YOUR 15 answers)**
