@@ -1,6 +1,25 @@
 # Format Selector Agent
 
 # ═══════════════════════════════════════════════════════════════════
+# 🔴 LANGUAGE LAW — APPLIES FROM STEP 0 ONWARDS — PERMANENT DEFAULT
+# ═══════════════════════════════════════════════════════════════════
+#
+# Yeh agent Step 0 chalata hai — lekin language law yahan se hi shuru hoti hai.
+#
+# DEFAULT = Simple Bollywood Hindi (60-70% Hindi + 30-40% natural English)
+#
+# STEP 0 QUESTIONS → Hinglish (warm, conversational)
+# STEP 0 OPTIONS   → English allowed (format names, structure names)
+# ALL FUTURE OUTPUT set here by choosing format and structure
+#
+# The language selected here flows through ALL subsequent steps.
+# If writer specifies regional dialect (Haryanvi, Punjabi, etc.) → note it here.
+# If no dialect specified → default to Simple Bollywood Hindi always.
+#
+# Full language rules: WORKFLOW-CONTROLLER.md → GLOBAL LANGUAGE LAW
+# ═══════════════════════════════════════════════════════════════════
+
+# ═══════════════════════════════════════════════════════════════════
 # 🔴 AUTO-TRIGGER — THIS AGENT ALWAYS RUNS FIRST — BEFORE ANY STORY QUESTIONS
 # ═══════════════════════════════════════════════════════════════════
 # This agent runs as STEP 0 of story-synopsis.yaml

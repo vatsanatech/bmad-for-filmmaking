@@ -830,6 +830,300 @@ process:
       - Production Designer (shot requirements)
       - Actors (understand framing and performance)
 
+  # ═══════════════════════════════════════════════════════
+  # AI SHOT BREAKDOWN PHASE — After traditional breakdown
+  # ═══════════════════════════════════════════════════════
+
+  - step: 13
+    name: "ANNOUNCE AI BREAKDOWN PHASE + Ask Q16-Q20"
+    agent: ai-shot-breakdown-specialist
+    action: |
+      **🔴 ANNOUNCE TO USER (MANDATORY):**
+      ```
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ✅ Traditional Shot Breakdown complete.
+         Saved: project/{project_name}/shot-breakdown.md
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 AI SHOT BREAKDOWN — Starting
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      Ab AI filmmaking ke liye shot-breakdown-ai.md create hoga.
+      Yeh document Veo3, Nano Banana, Runway, Pika ke liye
+      hyper-detailed, paste-ready prompts contain karega.
+
+      5 quick sawaal:
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
+
+      **AI Shot Breakdown Specialist asks 5 AI platform questions:**
+
+      Reference: `.bmad-film/agents/ai-shot-breakdown-specialist.md`
+
+      **Q16. AI Video Platform**:
+      AI video generation ke liye kaun sa platform use karoge?
+      Naam batao — jaise Veo3, Runway, Pika, Kling.
+      DEFAULT: Veo3
+
+      **Q17. AI Image Generation (for stills/reference)**:
+      Character aur location reference images ke liye kaun sa tool?
+      Naam batao — jaise Midjourney, Flux, Firefly.
+      DEFAULT: Midjourney
+
+      **Q18. Shot Duration per Clip**:
+      Har AI clip ki duration kitni ho?
+      Seconds mein batao — jaise 5 sec, 8 sec, 10 sec.
+      DEFAULT: 5-8 sec (scene ke hisaab se)
+
+      **Q19. Character Consistency Strategy**:
+      Characters ko consistent rakhne ka method kya ho?
+      Batao apna approach.
+      DEFAULT: Descriptive anchors — har prompt mein same character
+               description word-for-word copy karo
+
+      **Q20. Visual Style**:
+      AI generation ka visual style kya ho?
+      Batao — jaise ultra-realistic, film grain, documentary.
+      DEFAULT: Ultra-realistic live action
+
+      **Collect ALL 5 answers before proceeding.**
+      DEFAULT if skipped: Veo3 + Midjourney + 5-8 sec + descriptive anchors + ultra-realistic.
+
+    duration: "3-5 min"
+
+  - step: 14
+    name: "AI Shot Architecture + Character Anchors"
+    agent: ai-shot-breakdown-specialist
+    action: |
+      **Build AI generation architecture from all answers:**
+
+      **From Q16-Q20 (AI Platform Setup)**:
+      - Primary platform + secondary platform determined
+      - AI INSTRUCTIONS template format locked (Veo3/Nano Banana/Runway/Pika)
+      - Aspect ratio from Q17
+      - Duration strategy from Q18
+      - Consistency method from Q19
+      - Color/tone rule from Q20
+
+      **From Q1-Q7 (Traditional Visual Style)**:
+      - Visual tone → COLOR & TONE RULE per shot
+      - Camera movement → CAMERA MOVEMENT per shot
+      - Shot sizes → SHOT TYPE / SCALE guidance
+      - Lighting mood → LIGHTING per shot
+      - Reference films → AI aesthetic guidance
+
+      **Build CHARACTER ANCHORS**:
+      For each recurring character, create anchor description:
+      ```
+      CHARACTER ANCHOR — [Name]:
+      Age: [specific range]
+      Build: [precise physical]
+      Face: [specific features]
+      Skin: [tone + texture]
+      Key marker: [ONE distinctive anchor feature]
+      Key clothing: [exact clothing with colors, if consistent across scenes]
+      ```
+
+      **CHARACTER CONSISTENCY RULES (ABSOLUTE — NEVER BREAK)**:
+      1. Build anchor from character-bible.md — exact physical details only
+      2. Write ALL anchors at FILE TOP before any shots begin
+      3. EVERY AI INSTRUCTIONS field for that character = word-for-word copy of anchor
+      4. ZERO variation between shots — same character = same anchor text, always
+      5. Anchor text is LOCKED — never edit after writing, not even one word
+      6. If character changes clothes between scenes, create separate anchor per costume
+      7. NEVER paraphrase anchor — copy exactly, never summarize or rephrase
+
+      This anchor text used IDENTICALLY in every AI INSTRUCTIONS entry for that character.
+
+      **Synthesize and announce**:
+      ```
+      AI generation setup clear hai:
+
+      ✓ Platform: [Q16 answer]
+      ✓ Image tool: [Q17 answer]
+      ✓ Duration: [Q18 answer]
+      ✓ Consistency: [Q19 method]
+      ✓ Style: [Q20 — default/override]
+
+      Character anchors created for: [character names]
+
+      Ab AI shot entries generate karta hoon — 18 fields har shot ke liye.
+      Yeh paste-ready prompts honge.
+      ```
+
+    duration: "5 min"
+
+  - step: 15
+    name: "Generate AI Shot Breakdown (18 Fields Per Shot)"
+    agent: ai-shot-breakdown-specialist
+    action: |
+      **Generate shot-breakdown-ai.md using ALL screenplay scenes:**
+
+      **CRITICAL: Read screenplay carefully. Every scene gets AI shot entries.**
+      **CRITICAL: Use character anchors IDENTICALLY in every AI INSTRUCTIONS for that character.**
+      **CRITICAL: AI INSTRUCTIONS must be platform-specific and paste-ready.**
+
+      **MULTI-FILE SPLIT RULE — MANDATORY:**
+      IF total shots > 20: ALWAYS split into multiple part files. NEVER write all shots in one file.
+      Split logic:
+      - Max 10-15 shots per part file — split by SCENE GROUPS (never mid-scene)
+      - Name convention: shot-breakdown-ai-part1.md, shot-breakdown-ai-part2.md, etc.
+      - EVERY part file includes FULL Global Character Anchors at top — each part is self-contained
+      - Continue shot numbering sequentially across parts (001 onward — NEVER restart numbering)
+      - Each part file header: "PART N of TOTAL | scene coverage | shot range"
+      - End of each part (except last): note → "Continue: shot-breakdown-ai-partN+1.md → Scene X (Shots YYY–ZZZ)"
+      - WHY SPLIT: Claude output token limit ~32,000. 47 shots × 18 fields × ~200 words = exceeds limit.
+        Splitting ensures EVERY shot gets complete 18-field treatment — no shortcuts, no truncation.
+
+      STANDARD SPLIT for 5-minute micro film (~47 shots):
+        PART 1 → Scenes 1-2  (Shots 001-015, ~15 shots)
+        PART 2 → Scenes 3-4  (Shots 016-027, ~12 shots)
+        PART 3 → Scene 5     (Shots 028-041, ~14 shots — Climax)
+        PART 4 → Scenes 6-7  (Shots 042-047, ~6 shots — Resolution)
+
+      For shorter films (≤ 20 shots total): single file shot-breakdown-ai.md is acceptable.
+
+      **MANDATORY RULES — NEVER BREAK (applies to every single field):**
+      1. NO "/" IN ANY FIELD — one definitive value only, always.
+         WRONG: "Wide / Establishing"         CORRECT: "Wide — Establishing Shot"
+         WRONG: "pan left / static"            CORRECT: "pan left — 2 seconds, slow"
+         WRONG: "morning / afternoon"          CORRECT: "morning, 9 AM"
+      2. NO "or" IN ANY FIELD — state what IS, not what could be.
+         WRONG: "one or two tears"             CORRECT: "two tears on face, unwiped"
+         WRONG: "sits or stands"               CORRECT: "sits on floor, both legs folded"
+         WRONG: "back of head or shoulder"     CORRECT: "back of head, right side"
+      3. NO conditional language anywhere — "unless specified", "if applicable",
+         "might be", "could be", "possibly", "either", "depending on"
+      4. NO alternatives or options — every field = one definitive, final answer
+      5. CHARACTER ANCHOR in AI INSTRUCTIONS = word-for-word copy from GLOBAL CHARACTER ANCHORS.
+         Never paraphrase. Never summarize. Never rephrase. Copy exactly.
+      6. SHOT TYPE field = exactly ONE type. CAMERA MOVEMENT field = exactly ONE movement.
+
+      **For EACH scene, for EACH shot, fill ALL 18 fields:**
+
+      1. SHOT NO.: Sequential (001, 002, 003...)
+      2. SHOT TYPE / SCALE: From visual analysis + Q3 answer
+      3. LOCATION: City + area + specific place + in/outdoor + era
+      4. TIME & DAY: Exact time + year/period
+      5. ENVIRONMENT & SET DETAIL: Hyper-specific — walls, floor, weather, textures, objects, cultural elements
+      6. CHARACTERS IN FRAME: Who + count + position + distance + key appearance
+      7. CHARACTER ACTION: Micro-action level — step-by-step what happens in the clip
+      8. FACIAL EXPRESSION & BODY LANGUAGE: Anatomically specific — jaw, eyes, posture, hands, breath
+      9. DIALOGUE (IF ANY): Devanagari for Hindi dialogue | Roman for English | "Koi dialogue nahi" if absent
+      10. CORE VOICE TONE (IF DIALOGUE): Accent + pitch + emotion + pacing | "Dialogue nahi hai" if absent
+      11. CAMERA MOVEMENT: Static / Pan direction + speed / Dolly in/out / Handheld intensity
+      12. CAMERA SPECS: Lens mm equivalent + aperture feel + DOF + grain if relevant
+      13. LIGHTING: Natural source + direction + quality (hard/soft) + time accuracy + color temp
+      14. COLOR & TONE RULE: Default = raw neutral no-grading + any scene-specific exception
+      15. AUDIO / SFX: Layered ambient — 3-4 specific sounds + silence note if intentional
+      16. MOOD & SUBTEXT: Emotional undertone in Hindi + narrative purpose
+      17. REALISM CONSTRAINTS: Explicit "no" list — no lens flare, no VFX, no beautification, no color grading
+      18. AI INSTRUCTIONS: Platform-specific paste-ready English prompt with character anchor + negatives
+
+      **AI INSTRUCTIONS Platform Formats**:
+
+      Veo3: "[Veo3] Ultra-realistic [SHOT TYPE], [ENVIRONMENT], [CHARACTER+ACTION],
+             [CAMERA], [LENS], [LIGHTING], no color grading, documentary authenticity,
+             ambient audio: [AUDIO], [DURATION]s. Avoid: [REALISM CONSTRAINTS list]."
+
+      Nano Banana: "[Nano Banana] Hyperrealistic [SHOT TYPE], [ENVIRONMENT],
+                   [CHARACTER+ACTION], [CAMERA], [LIGHTING],
+                   photographic accuracy, no AI artifacts, [DURATION].
+                   Constraints: [REALISM CONSTRAINTS]."
+
+      Runway Gen-4: "[Runway Gen-4] [ENVIRONMENT + TIME + LIGHTING].
+                    [CHARACTER] [ACTION]. [CAMERA]. Cinematic realism.
+                    Natural lighting. No color grading. No VFX. Duration: [X]s."
+
+      Pika 2.2: "[Pika 2.2] [SHOT+ENVIRONMENT], [CHARACTER+ACTION],
+                [CAMERA], realistic cinematography, [LIGHTING], [DURATION].
+                --neg stylized, color graded, VFX, beautified, lens flare"
+
+      Multi-platform: Provide MULTIPLE AI INSTRUCTIONS blocks (one per platform).
+
+      **Write all shots in story sequence order.**
+      **Add scene transition markers between scene groups:**
+      `--- SCENE [X]: [SCENE HEADING] ---`
+
+    duration: "60-90 min"
+
+  - step: 16
+    name: "Quality Review + Finalize AI Breakdown"
+    agent: ai-shot-breakdown-specialist
+    collaboration:
+      - master-story-director
+    action: |
+      **Review shot-breakdown-ai.md for AI generation quality:**
+
+      **Per Shot Checks**:
+      - [ ] All 18 fields filled — none skipped
+      - [ ] ENVIRONMENT is hyper-specific (not generic)
+      - [ ] CHARACTER ACTION is micro-action level
+      - [ ] FACIAL EXPRESSION is anatomically specific
+      - [ ] DIALOGUE in Devanagari if Hindi character
+      - [ ] CAMERA SPECS has lens mm + aperture
+      - [ ] LIGHTING is time-accurate + natural
+      - [ ] COLOR & TONE RULE restates no-grading
+      - [ ] AUDIO has 3+ layered sound details
+      - [ ] MOOD & SUBTEXT in Hindi
+      - [ ] REALISM CONSTRAINTS has explicit "no" list
+      - [ ] AI INSTRUCTIONS is platform-specific + paste-ready
+      - [ ] NO "/" used in any of the 18 fields — check all fields
+      - [ ] NO "or" used as an alternative in any field
+      - [ ] NO conditional language — "unless", "might", "could be", "possibly", "depending on"
+      - [ ] SHOT TYPE has exactly ONE type — no slash, no hybrid description
+      - [ ] CAMERA MOVEMENT has exactly ONE movement — no alternatives
+      - [ ] CHARACTER ANCHOR in AI INSTRUCTIONS = exact word-for-word copy from GLOBAL CHARACTER ANCHORS
+
+      **Document Checks**:
+      - [ ] CHARACTER ANCHORS defined at top of file, before any shots
+      - [ ] Same character = IDENTICAL anchor text in every AI INSTRUCTIONS (zero variation)
+      - [ ] Anchor verified: same words, same order, same details across ALL shots
+      - [ ] Run search for "/" in entire file → must return zero results
+      - [ ] Run search for " or " in entire file → check all results, remove alternatives
+      - [ ] All screenplay scenes covered
+      - [ ] Shot numbering sequential (001 onward)
+      - [ ] Scene markers present between groups
+      - [ ] Document header complete
+
+      **Save final document (multi-part or single):**
+
+      IF total shots > 20 — ALWAYS multi-file:
+      ```
+      project/{project_name}/shot-breakdown-ai-part1.md
+      project/{project_name}/shot-breakdown-ai-part2.md
+      project/{project_name}/shot-breakdown-ai-part3.md
+      project/{project_name}/shot-breakdown-ai-part4.md
+      [additional parts named sequentially as needed]
+      ```
+
+      IF total shots ≤ 20 — single file:
+      ```
+      project/{project_name}/shot-breakdown-ai.md
+      ```
+
+      **Announce to user:**
+      ```
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ✅ SHOT BREAKDOWN COMPLETE — BOTH FILES READY
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      📄 Traditional (Director/DP/Set):
+         project/{project_name}/shot-breakdown.md
+
+      🤖 AI Generation (Veo3/Nano Banana/Runway/Pika):
+         project/{project_name}/shot-breakdown-ai-part1.md  ← Part 1 of [N]
+         project/{project_name}/shot-breakdown-ai-part2.md  ← Part 2 of [N]
+         [all parts listed — or shot-breakdown-ai.md if ≤ 20 shots]
+
+      AI breakdown mein:
+      ✓ [X] shots — 18 fields har shot ke liye
+      ✓ Platform: [selected platform]
+      ✓ Character anchors: [character names]
+      ✓ Paste-ready prompts — seedha AI tool mein daalo
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
+
+    approval_gate: true
+
 success_criteria: |
   Shooting Script is successful when:
 
@@ -859,13 +1153,19 @@ success_criteria: |
   ✓ Bollywood cinematography standards met
   ✓ User feels: "This is MY visual vision, they understood my cinematography choices!"
   ✓ Production-ready and shootable within Q12-Q15 constraints
+  ✓ AI breakdown: zero "/" in any field — every field one definitive value
+  ✓ AI breakdown: zero "or" alternatives — state what IS, not options
+  ✓ AI breakdown: character anchors identical across ALL shots — zero variation
+  ✓ AI breakdown: paste-ready prompts with complete anchors for AI consistency
 
 deliverables:
   primary:
     - file: "project/{project_name}/shot-breakdown.md"
-      description: "Shooting script with embedded shot descriptions"
+      description: "Traditional shooting script with embedded shot descriptions (for directors, DPs, set crew)"
+    - file: "project/{project_name}/shot-breakdown-ai.md (≤20 shots) OR shot-breakdown-ai-part1.md through shot-breakdown-ai-partN.md (>20 shots)"
+      description: "AI-generation-ready shot breakdown with 18-field entries — paste-ready prompts for Veo3, Nano Banana, Runway Gen-4, Pika 2.2. MULTI-FILE when total shots > 20 — each part covers scene groups, max 10-15 shots, self-contained with full character anchors at top."
 
-estimated_time: "45-75 minutes (15 min questions + 30-60 min shooting script creation, depending on screenplay length)"
+estimated_time: "90-150 minutes (20 min questions + 60-90 min traditional breakdown + 30-60 min AI breakdown, depending on screenplay length)"
 
 notes: |
   Shot Breakdown is STEP 5 in workflow:
@@ -876,31 +1176,43 @@ notes: |
   4. Screenplay ✅
   5. Shot Breakdown ⬅️ (This step)
 
-  Shot Breakdown creates SHOOTING SCRIPT format through INTERACTIVE CO-WRITING:
+  Shot Breakdown produces TWO DOCUMENTS in one workflow:
 
+  ── DOCUMENT 1: shot-breakdown.md (Traditional / Offline Filmmaking) ──────────
   **NOT a shot list** - This is screenplay with shot descriptions embedded
   **NOT technical specs** - This is visual storytelling guide
   **NOT storyboards** - This is written visual plan
-  **NOT generic patterns** - This uses YOUR 15 answers to create unique visual approach
-
-  **IS**: Production-ready shooting script showing exactly how to film each moment
-
-  **3-PHASE INTERACTIVE PROCESS**:
-  1. Question Phase (15 questions) - Understand your visual vision
-  2. Refinement Phase (optional) - Align on cinematography approach
-  3. Creation Phase (shooting script) - Detailed shot-by-shot breakdown using your answers
-
-  **WHY QUESTIONS?**
-  - Every film has unique visual style (Tumbbad ≠ K3G ≠ Gangs of Wasseypur)
-  - Your equipment/crew/time constraints shape realistic approach
-  - Your coverage strategy (minimal vs extensive) affects shooting time
-  - Decision tree uses answers to create UNIQUE shooting script, not patterns
+  **IS**: Production-ready shooting script for directors, DPs, ADs, script supervisors
 
   Format used by:
   - Bollywood directors (Anurag Kashyap, Sriram Raghavan, Karan Johar)
   - International directors (Tarantino, Nolan, Fincher)
   - Film schools (FTII, Whistling Woods)
 
-  This is what goes on set. This is what gets filmed.
+  ── DOCUMENT 2: shot-breakdown-ai.md (AI Filmmaking) ────────────────────────
+  **IS**: 18-field per-shot entries optimized for AI video/image generation
+  **Platform support**: Veo3, Nano Banana, Runway Gen-4, Pika 2.2, Midjourney v6
+  **Each entry contains**:
+    - Hyper-detailed environment + set description
+    - Micro-action character behavior
+    - Anatomically specific facial/body language
+    - Dialogue in Devanagari (for lip-sync accuracy)
+    - Platform-specific paste-ready AI INSTRUCTIONS
+    - Explicit realism constraints (no VFX, no color grading, no beautification)
+    - Layered audio/SFX descriptions
+    - Character anchor descriptions for consistency
 
-  **SHOOTING SCRIPT = SCREENPLAY + SHOT DESCRIPTIONS (based on YOUR 15 answers)**
+  **WHY 5 EXTRA QUESTIONS (Q16-Q20)?**
+  - AI tools need platform-specific prompt formats
+  - Character consistency requires different strategies per tool
+  - Shot duration varies by platform capability
+  - Aspect ratio is a generation-time decision (not post-production)
+
+  **4-PHASE INTERACTIVE PROCESS**:
+  1. Traditional Questions (Q1-Q15) — Visual vision + production reality
+  2. AI Platform Questions (Q16-Q20) — Platform, ratio, duration, consistency
+  3. Traditional Shot Breakdown — Shooting script for set use
+  4. AI Shot Breakdown — 18-field entries, paste-ready prompts
+
+  **SHOOTING SCRIPT = SCREENPLAY + SHOT DESCRIPTIONS (Q1-Q15 answers)**
+  **AI BREAKDOWN = SCREENPLAY + HYPER-DETAIL + PLATFORM PROMPTS (Q16-Q20 answers)**
