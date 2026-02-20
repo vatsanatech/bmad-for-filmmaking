@@ -649,6 +649,47 @@ process:
       **If user's specific answers not used → Send back for revision**
       **If approved → Proceed to finalization**
 
+      **BLIND VOICE TEST (Mandatory — run before approving):**
+
+      Take 5 dialogue lines from each major character. Remove all character names.
+      Present internally: "Inhe padhke batao — kaun bol raha hai?"
+
+      RESULT FORMAT (show to user):
+      ```
+      BLIND VOICE TEST:
+
+      [Character 1 Name]: 5 lines without names shown
+      AI identification: [Correct X/5]
+      Assessment: [✅ Voice distinct (4-5/5) / ⚠️ Voice blurring (2-3/5) — rewrite speech profile]
+
+      [Character 2 Name]: Same test
+      [Continue for all major characters]
+
+      FAIL threshold: Any character below 4/5 → Character Bible incomplete.
+      Fix: Rewrite speech patterns (Q4 answers) before proceeding.
+      ```
+
+      **ANTAGONIST MIRROR TEST (if antagonist exists):**
+
+      5 mandatory checks before approving antagonist:
+      ```
+      A1. Antagonist ke perspective se — protagonist kya GALAT kar raha hai?
+          (Not evil perspective — their logic from their own worldview)
+          → [AI states antagonist's rationale in 2 sentences]
+
+      A2. Antagonist ki apni story mein woh HERO hai. Woh story kya hai?
+          → [2-sentence antagonist's self-narrative]
+
+      A3. Antagonist ka wound — kya yeh protagonist ke wound ka mirror hai?
+          → [✅ Mirror found: [how] / ⚠️ No mirror — antagonist feels like obstacle, not character]
+
+      A4. Agar antagonist jeet jaaye — audience ke liye woh understandable (not likeable) hoga?
+          → [✅ / ⚠️ Antagonist too cartoonish — add human logic]
+
+      A5. Ek scene jahan protagonist aur antagonist same choice karte hain — dono mein koi difference nahi dikhta.
+          → [Scene identified: / ⚠️ No such scene — story's moral complexity is absent]
+      ```
+
     approval_gate: true
 
     outputs:
