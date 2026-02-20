@@ -377,6 +377,41 @@ process:
       - Building = slow start, accelerate to climax
       - Wave = peaks + valleys rhythm
 
+      **SCENE-LEVEL SUBTEXT TRACKING (mandatory — every scene with 2+ characters):**
+
+      Before writing each scene, read the relationship's entry in character-relations.md.
+
+      For each scene ask:
+      - THE UNSAID: Kya relationship ka unsaid moment felt hota hai? (not stated — felt through action/pause/deflection)
+      - POWER DYNAMIC: Kaun lean kar raha hai, kaun pull away? Who speaks less?
+      - WANT vs NEED: At least one character wants something they don't ask for directly?
+      - SUBTEXT SIGNATURE: From character-relations.md — does it appear this act?
+
+      Subtext Failure Patterns (flag and rewrite):
+      ❌ STATED SUBTEXT: Characters say exactly what they feel (should be unspoken)
+      ❌ SURFACE DIALOGUE: Characters only discuss events/logistics (no emotional undercurrent)
+      ❌ EQUAL POWER: Both characters comfortable, nothing at stake between them
+      ❌ MISSING SIGNATURE: Three scenes between same characters, signature never appears
+
+      **PACING ARCHITECTURE MAP (create before writing scenes):**
+
+      | Act | Scene Type | Pacing | Why |
+      |---|---|---|---|
+      | Act 1 Opening | Establish | Medium→Fast | Hook audience, establish world |
+      | Act 1 End / Inciting Incident | Disruption | Fast | Sudden change must feel sudden |
+      | Act 2 First Half | Exploration | Medium | Character in new situation |
+      | Act 2 Midpoint | Turn | Fast | Midpoint raises stakes suddenly |
+      | Act 2 Second Half | Escalation | Fast→Faster | Pressure building |
+      | Pre-Climax | Lowest Point | SLOW | Dark night of the soul — must breathe |
+      | Climax | Resolution | Fast → Slow | Action fast / emotional resolution slow |
+      | Denouement | Landing | Slow | Audience needs to exhale |
+
+      Pacing Rules:
+      → THREE consecutive fast scenes = audience fatigue
+      → THREE consecutive slow scenes = audience disengagement
+      → After every emotional peak → one scene to breathe before next peak
+      → Bollywood: slow down 2-3 scenes before interval, interval scene = emotional peak
+
       Verify:
       - All story beats covered
       - Q9 emotional beats placed correctly
@@ -605,6 +640,31 @@ process:
       ✓ **Impactful**: Bollywood quality, memorable where appropriate
       ✓ **No exposition dumps**: Information conveyed naturally
 
+      **DIALOGUE QUOTABILITY AUDIT (run after full dialogue pass):**
+
+      *Har badi Bollywood film mein 3-5 lines hoti hain jo log saalon tak bolte hain.*
+
+      Quotability Criteria (a line is quotable if it meets 3+):
+      1. Specific enough to feel real (not generic)
+      2. Universal enough that anyone can see themselves in it
+      3. Surprising word choice (expected thing, unexpected way)
+      4. Standalone: makes sense without film context
+      5. Emotionally charged: feeling in the words themselves
+      6. Rhythmic: sounds good when said aloud
+
+      Process:
+      → Extract 10 most important lines from the screenplay
+      → Apply criteria to each — lines scoring 2 or below = rewrite candidate
+      → Target: 3-5 quotable lines per feature | 1-2 per web series episode
+
+      Quotability Rewrite Technique (for low-scoring important lines):
+      Take the meaning → strip obvious phrasing → find unexpected way to say it
+      Obvious: "Main tumse bahut pyaar karta hoon"
+      Better: "Aaj bhi chaai teri taraf se banata hoon — teri cup alag rakhta hoon"
+      → Same meaning → unexpected specificity → quotable
+
+      Show to writer: "Yeh hain confirmed quotable lines jo is film ko define karengi: [list 3-5]"
+
     outputs:
       - Complete screenplay with final dialogue
       - All placeholder dialogue replaced
@@ -647,6 +707,27 @@ process:
       - Dialect (if specified) consistent throughout
       - Natural code-switching (not forced)
       - Accessible to target audience
+
+      **VISUAL vs DIALOGUE BALANCE AUDIT:**
+
+      Categorize every scene: Dialogue-Heavy (70%+ dialogue) / Visual (70%+ action) / Balanced
+
+      Healthy Ratios by Genre:
+      | Genre | Dialogue-Heavy | Visual | Balanced |
+      |---|---|---|---|
+      | Drama | 40-50% | 20-30% | 30-40% |
+      | Thriller/Action | 20-30% | 40-50% | 30-40% |
+      | Romance | 35-45% | 25-35% | 30-40% |
+      | Comedy | 40-50% | 20-30% | 30-40% |
+      | Social Cinema | 35-45% | 25-35% | 30-40% |
+
+      Imbalance Flags:
+      ❌ 60%+ scenes Dialogue-Heavy: "Yeh radio play lag raha hai, film nahi"
+         → Identify 3 scenes that could be converted to visual storytelling
+      ❌ 5+ consecutive same-pacing scenes: rhythm broken → vary texture
+      ❌ Visual-only if NOT intentional: verify selected framework was Visual-Forward
+
+      Show to writer (brief): "Balance check: [X]% dialogue / [Y]% visual / [Z]% balanced → [PASS / FLAG]"
 
     outputs:
       - Formatted screenplay

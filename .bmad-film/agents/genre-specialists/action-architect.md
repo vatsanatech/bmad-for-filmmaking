@@ -984,3 +984,55 @@ NOT:
 **The story should READ like a Bollywood film is being described in Hindi.**
 **This is how Indians tell stories - in their language, not English.**
 
+## GENRE QUESTIONS — ACTION ARCHITECT
+## (Run at STEP 8 — after Master Story Director routes to this specialist)
+## Reference: 15 questions in 5 groups
+
+**A. ACTION TYPE (3 questions)**
+Q1. Action Sub-Genre: Revenge thriller? Heist? War/military? Vigilante justice? Espionage?
+    Gangster? Survival action? Superhero-adjacent?
+Q2. Action Style: Rohit Shetty (spectacle, comedy, OTT scale)? Siddharth Anand (slick, international)?
+    Ali Abbas Zafar (grounded intensity)? Neeraj Pandey (procedural, realistic)?
+    Or describe what fits this story.
+Q3. Scale: Single hero vs. system? Small team vs. large force? One location contained action?
+    Multi-city/country scope? Intimate action (2-3 characters) vs. large set-pieces?
+
+**B. PROTAGONIST ARCHITECTURE (3 questions)**
+Q4. Hero Type: Lone wolf? Team leader? Reluctant hero (forced into action)?
+    Professional (soldier/agent/cop)? Civilian with specific skill? Anti-hero?
+Q5. Hero's Personal Stake: Action hero fights better when it's personal.
+    Kya personal stake hai — family? revenge? justice? survival? redemption?
+Q6. Hero Limitation: Best action protagonists have a genuine weakness.
+    Kya hai woh limitation — physical? emotional? ethical code they won't break? Past failure?
+
+**C. ANTAGONIST + CONFLICT (3 questions)**
+Q7. Antagonist Type: Individual villain? Corrupt system? Faceless organization?
+    Mirror villain (same skills as hero, opposite values)?
+Q8. Antagonist's Logic: Kya villain sirf evil hai — ya unke paas koi understandable reason hai?
+    Best action films have villains who make sense even if they're wrong. Kya reason hai inke paas?
+Q9. The Confrontation Architecture: Kab aur kahan hero aur villain face karte hain?
+    Multiple confrontations (early loss, later win) ya one final confrontation?
+    What does the hero need to overcome internally to win the final fight?
+
+**D. ACTION SEQUENCES (3 questions)**
+Q10. Set-Piece Count + Location: Kitne major action sequences? Kahan kahan?
+     (Action film needs 3-5 major set-pieces spread across the story)
+Q11. Signature Action Moment: Woh ek action sequence jo is film ko define karega.
+     Describe it: Where? What happens? What makes it unique — not just scale but MEANING?
+Q12. Climax Design: Climax fight/sequence — physical location? Stakes (not just life/death — personal)?
+     Does hero win through skill? Strength? Intelligence? Or sacrifice?
+
+**E. ACTION-SPECIFIC ELEMENTS (3 questions)**
+Q13. Emotional Core in Action: Best action films have an emotional throughline.
+     Kya hai woh emotional story running under the action? (Revenge? Love? Redemption?)
+Q14. Comedy Relief: Action ka rhythm — kab aur kaise comic beats aate hain?
+     (Rohit Shetty style: regular comedy / Neeraj Pandey style: very little)
+Q15. The Cost of Violence: Kya action film acknowledge karta hai woh cost jo violence laata hai?
+     Or pure cathartic violence with no consequence? Consciously choose.
+
+**ACTION QUALITY GATES:**
+- [ ] Hero's personal stake makes every action scene meaningful (not just cool)
+- [ ] Antagonist has clear logic (not cartoon evil)
+- [ ] Signature set-piece is unique to THIS story (not generic)
+- [ ] Emotional throughline is visible through all action
+- [ ] Climax requires both physical AND internal overcoming

@@ -53,57 +53,60 @@ Ask the writer:
 ```
 Pehle yeh batao — tum kya bana rahe ho?
 
-1. FEATURE FILM (90–120 min) — Cinema release, OTT, full-length
-2. SHORT FILM (Under 30 min) — Festival circuit, YouTube, passion project
-3. WEB SERIES (Multi-episode) — Streaming platform, season arc
-4. LIMITED SERIES (3–8 episodes) — OTT limited, single story across episodes
-5. ANTHOLOGY (Self-contained stories) — Each episode independent
-6. DOCUMENTARY — Real people, real events, real locations
-7. DOCUDRAMA — Real events, dramatized with actors
-8. MICRO-DRAMA (Under 5 min, vertical) — Reels, TikTok, DramaBox format
-9. SOCIAL MEDIA (60–90 seconds) — Instagram, YouTube Shorts narrative
-10. MOCKUMENTARY — Fiction in documentary style (The Office format)
+1. MOVIE           (Feature Film)        — Cinema/OTT, full-length story
+2. WEB SERIES      (Multi-Episode)       — Streaming platform, season arc
+3. MICRO DRAMA     (Multi-Episode)       — Short episodes, vertical/horizontal format
 
-Kaunsa format hai tumhara?
+Kaunsa format hai? (1, 2 ya 3 batao)
 ```
 
 ### Format-Specific Follow-Up Questions:
 
-**IF WEB SERIES:**
+**IF MOVIE (Option 1) selected:**
 ```
-- Kitne episodes sooch rahe ho per season?
-- Episodic (standalone episodes) ya serialized (continuous story)?
-- Episode ka duration kya hoga? (20 min / 45 min / 60 min)
-- Already kisi platform ke liye bana rahe ho? (Netflix, Prime, YouTube, etc.)
+Ab yeh batao:
+
+- Runtime kitna hoga?
+  (90 min / 105 min / 120 min / 150 min)
+
+- Release kahan hogi?
+  (Cinema / OTT / Festival / abhi decide nahi)
+
+- Bollywood commercial approach chahiye ya parallel/art cinema?
 ```
 
-**IF LIMITED SERIES:**
+**IF WEB SERIES (Option 2) selected:**
 ```
-- Kitne episodes? (3, 5, 6, or 8?)
-- Yeh ek complete story hai ya multi-season potential hai?
-- Based on true events ya fictional?
+Ab yeh batao:
+
+- Kitne episodes sooch rahe ho is season mein?
+  (6 / 8 / 10 / 13 / ya koi aur number)
+
+- Har episode ki duration kya hogi?
+  (20-30 min / 40-50 min / 60+ min)
+
+- Episodic hai (har episode apni poori kahani) ya
+  Serialized hai (ek continuous story, episode breaks)?
+
+- Kisi platform ke liye bana rahe ho?
+  (Netflix / Prime / YouTube / MX Player / Television / abhi decide nahi)
 ```
 
-**IF SHORT FILM:**
+**IF MICRO DRAMA (Option 3) selected:**
 ```
-- Exact runtime target kya hai? (5 min / 12 min / 20 min / 30 min)
-- Festival submission hai ya online release?
-- Single location ya multi-location allowed?
-```
+Ab yeh batao:
 
-**IF MICRO-DRAMA:**
-```
-- Vertical format (9:16) ya standard?
-- Kitne episodes per season? (20-80 episodes typical)
-- Platform? (DramaBox / ReelShort / Instagram / TikTok)
-- Episode duration target? (60 sec / 90 sec / 3 min)
-```
+- Kitne episodes total sooch rahe ho?
+  (10 / 20 / 30 / 50 / 100 / ya koi aur number)
 
-**IF FEATURE FILM:**
-```
-- Runtime target? (90 min / 105 min / 120 min / 150 min)
-- Cinema release ya OTT direct?
-- Bollywood commercial ya parallel/art cinema approach?
+- Har episode ki duration kya hogi?
+  (1-2 min / 2-3 min / 3-5 min / 5-7 min)
+
+- Screen format kya hoga?
+  Vertical (9:16 — phone/reels) ya Horizontal (16:9 — YouTube/TV)?
+
+- Platform?
+  (YouTube Shorts / Instagram Reels / YouTube / OTT / Television)
 ```
 
 ---
@@ -1221,18 +1224,11 @@ This agent's output MUST be passed to ALL subsequent steps:
 
 ## FORMAT QUICK REFERENCE TABLE
 
-| Format | Runtime | Structure Best Fit | Depth Level |
+| Format | Runtime / Episodes | Structure Best Fit | Depth Level |
 |---|---|---|---|
-| Feature Film | 90–120 min | Three-Act / Save the Cat / Hero's Journey | Full — all sections |
-| Short Film | Under 30 min | Compressed Three-Act / Fichtean Curve | Focused — single transformation |
-| Web Series | Multi-episode | Sequence Approach + Episode Structure | Per character role in series |
-| Limited Series | 3–8 episodes | Three-Act at series level | Deep — sustained arc |
-| Bollywood Feature | 120–180 min | Bollywood Interval Structure | Full + song moments |
-| Anthology | Self-contained | Compressed Three-Act / Kishōtenketsu per story | Fresh per story |
-| Documentary | Any | Three-Act (protagonist = subject) | Evidence-based |
-| Micro-Drama | 60-90 sec/ep | Episode cliffhanger structure | Voice + hook focused |
-| Social Media | 60-90 sec | Compressed: Hook → Problem → Twist | Single emotional beat |
-| Mockumentary | 90 min / series | Three-Act in documentary style | Character + situational comedy |
+| Movie | 90–150 min | Three-Act / Save the Cat / Hero's Journey / Bollywood Interval | Full — all sections |
+| Web Series | 6–13+ eps, 20–60 min/ep | Sequence Approach + Episode Structure | Deep — sustained arc per character |
+| Micro Drama | 10–100 eps, 1–7 min/ep | Episode cliffhanger structure | Voice + hook focused, compressed |
 
 ## STRUCTURE BEST-FIT TABLE
 

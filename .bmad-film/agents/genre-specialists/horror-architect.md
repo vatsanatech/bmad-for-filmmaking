@@ -1036,3 +1036,59 @@ NOT:
 **The story should READ like a Bollywood film is being described in Hindi.**
 **This is how Indians tell stories - in their language, not English.**
 
+## GENRE QUESTIONS — HORROR ARCHITECT
+## (Run at STEP 8 — after Master Story Director routes to this specialist)
+## Reference: 15 questions in 5 groups
+
+**A. HORROR TYPE (3 questions)**
+Q1. Horror Sub-Genre: Supernatural (ghost/demon/curse)? Psychological (terror from within)?
+    Folklore/mythology-based (Indian legends)? Creature horror? Haunted location?
+    Social horror (societal evil made monstrous)?
+Q2. Horror Style: Ram Gopal Varma (atmospheric dread, naturalistic)? Vikram Bhatt (mythology, jump scares)?
+    Vishal Bhardwaj (dark literary, psychological)? Tumbbad style (folk-horror, mythic greed)?
+    Or describe what fits this story.
+Q3. Tone: Pure horror (audience is scared)? Horror with heart (emotional story + fear)?
+    Dark fantasy (horror world with wonder)? Cosmic horror (small human vs. vast unknown)?
+
+**B. FEAR ARCHITECTURE (3 questions)**
+Q4. Primary Fear Type: Fear of the unknown (unseen)? Fear of violation (loss of body/mind control)?
+    Fear of loss (loved ones)? Fear of truth (what you discover is worse than ignorance)?
+    Dread (slow building tension) vs. shock (sudden terror)?
+Q5. The Scare Strategy: Slow atmospheric dread building to climax?
+    Repeated jump scares + escalating threat? One sustained nightmare?
+    Mystery horror (horror revealed gradually through investigation)?
+Q6. The Vulnerability: Horror works when protagonist has a specific weakness the horror exploits.
+    Kya hai woh vulnerability? Guilt? Love for someone? A secret? Trauma?
+
+**C. WORLD RULES (3 questions)**
+Q7. Horror World Rules: Kya rules hain is horror world mein — kya possible hai, kya nahi?
+    (Tumbbad: greed summons Hastar. Stree: she can only take men who know her name.)
+    Clear rules make horror believable. Kya hain is story ke rules?
+Q8. Rule Violation: Horror stories work when someone breaks the rule.
+    Kaunsa rule todha jaata hai — aur uska consequence kya hai?
+Q9. Safe Space: Horror needs a place where characters feel (falsely) safe.
+    Kahan hai woh safe space — aur kab woh space compromised hoti hai?
+
+**D. PROTAGONIST IN HORROR (3 questions)**
+Q10. Why This Protagonist: Horror protagonist ko specifically yeh horror kyun face karna pad raha hai?
+     Kya connection hai unka is horror se — personal, karmic, accidental?
+Q11. Descent or Survival: Horror arc — protagonist descends into horror and is destroyed?
+     Or survives but permanently changed? Or neither — tragic ending?
+Q12. The Dread of Discovery: Kya ek moment hai jab protagonist ko truth pata chalti hai —
+     aur kya woh truth worse hai than the fear? Kya hai woh truth?
+
+**E. HORROR-SPECIFIC ELEMENTS (3 questions)**
+Q13. Visual Horror Strategy: How is the horror shown — suggestion (glimpses, shadows)?
+     Full reveal (creature/ghost fully visible)? Psychological (protagonist might be imagining)?
+     Sound-driven (heard but not seen)?
+Q14. Relief Moments: Ek ya do moments jahan horror pauses — comic relief? False safety?
+     (These make the next horror hit harder.) Kahan aayenge yeh relief moments?
+Q15. The Resolution: Horror resolves how — horror defeated? Protagonist escapes?
+     Horror contained but not destroyed? Protagonist destroyed by horror? Open/ambiguous?
+
+**HORROR QUALITY GATES:**
+- [ ] Horror rules are established before they're violated
+- [ ] Protagonist's specific vulnerability is exploited by the specific horror
+- [ ] Dread building is sustained (not all jump scares, not all atmosphere)
+- [ ] Resolution is earned (not convenient)
+- [ ] Final image creates lingering unease even after resolution

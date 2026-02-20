@@ -331,6 +331,32 @@ process:
 
       Q18. Personal Inspiration - (Optional) Koi character real person se inspired?
 
+      **CHARACTER CONTRADICTION DESIGN (mandatory — ask for EVERY character):**
+
+      *Real logon mein contradiction hoti hai. Cardboard characters mein nahi.*
+
+      Core Contradiction Question: "[Character name] ke andar kaunsi EK badi contradiction hai?"
+      → NOT: "Woh strong hai lekin weak bhi hai" (too vague)
+      → YES: "Woh dost ke liye kuch bhi kar sakta hai lekin apni behen ke phone nahi uthata"
+
+      Contradiction Types (show writer, they recognize their character):
+      TYPE 1 — COURAGE + COWARDICE IN DIFFERENT DOMAINS:
+        "Kahan woh bilkul nahi darti — aur kahan woh bilkul darr jaati hai?"
+      TYPE 2 — GENEROUS + SELFISH IN DIFFERENT RELATIONSHIPS:
+        "Kiske saath woh bahut deta/deti hai — aur kiske saath bilkul nahi?"
+      TYPE 3 — STATED BELIEF vs ACTUAL BEHAVIOR:
+        "Woh kya kehta/kehti hai apne baare mein jo bilkul sach nahi hai?"
+      TYPE 4 — PAST SELF vs PRESENT SELF:
+        "Woh pehle kaisa tha — aur ab bilkul ulta kyun hai?"
+
+      CONTRADICTION RULES:
+      → Both sides must be VISIBLE in the story (not just backstory)
+      → Must create at least ONE scene of friction with another character
+      → Contradiction is NOT a flaw — it's a TRUTH. Characters face it, don't necessarily fix it.
+
+      Add to every character profile:
+      Character Contradiction: [Quality A] contradicts [Quality B] | Scene where most visible: [which scene]
+
       **Collect ALL 18 answers (8 + 5xN + 5) before proceeding.**
 
     duration: "20-30 min"
@@ -466,6 +492,63 @@ process:
       - Their fear from Q1, not generic fear
       - Their flaw from Q3, not common flaw
       - Their transformation from Q6, not standard arc
+
+      **SECONDARY CHARACTER DEPTH FLOOR (mandatory — every supporting character):**
+
+      *Supporting characters ko paragraph mein nipataana galat hai. Woh bhi log hain.*
+
+      Every supporting character MUST have AT MINIMUM:
+
+      FLOOR 1 — THE WANT THAT DRIVES THEM IN EVERY SCENE:
+      → Not the story goal — the moment-to-moment want shaping their behavior
+
+      FLOOR 2 — THE ONE THING THEY HIDE:
+      → What they never show other characters (but audience slowly sees)
+      → Without this: character is what they appear to be = flat
+
+      FLOOR 3 — THEIR NEED FROM THE PROTAGONIST (unspoken):
+      → What do they need from protagonist that they never ask for directly?
+      → This unspoken exchange = subtext of every scene between them
+
+      FLOOR 4 — ONE SPECIFIC MEMORY:
+      → ONE scene from their past, 2 sentences, explains present behavior
+      → Should be usable as a FLASHBACK SCENE in screenplay
+
+      FLOOR 5 — EXIT MOMENT:
+      → Their last scene — what do they DO in it?
+      → Does it show who they BECAME (not just what happened to them)?
+
+      Secondary Character Depth Check (before approving any supporting character):
+      1. Want identified? 2. One hidden thing defined? 3. Need from protagonist? 4. One specific memory? 5. Exit moment designed?
+      Any NO = character not ready → fill before proceeding to screenplay.
+
+      Background characters (tertiary — minimum): one want + one distinguishing behavior.
+      "Tea stall owner who always listens but never speaks about himself" > "Tea stall owner"
+
+      **CHARACTER EXIT DESIGN (mandatory — every major character):**
+
+      *Kisi bhi character ka aakhri scene uska poora arc define karta hai.*
+
+      Exit Moment Question: "Is character ka AAKHRI scene kya hai — aur woh scene us character ke baare mein kya kehta hai?"
+
+      THREE EXIT TYPES:
+      TYPE 1 — COMPLETION EXIT: Character completes their arc
+        → Last scene's action = who they became | No explanation, just one choice
+      TYPE 2 — RECOGNITION EXIT: Character sees themselves clearly for the first time
+        → They don't change, but they acknowledge what they are | Camera holds. Cut.
+      TYPE 3 — CONTINUATION EXIT: Story doesn't end for them — life goes on
+        → Last scene shows impact of story on them | Best for supporting characters
+
+      Add to every major character's profile:
+      Exit Type: [Completion/Recognition/Continuation]
+      Last Scene: [2-3 sentences what happens]
+      Key Action/Line: [one specific thing they do/say]
+      Connection to Contradiction: [does exit resolve or acknowledge their core contradiction?]
+
+      Exit Stress Test:
+      → Can you describe this character's exit in ONE sentence? NO = not designed yet
+      → Does it show CHARACTER (who they are) not just PLOT (what happened)? NO = redesign
+      → No major character proceeds to screenplay without exit moment designed.
 
     outputs:
       - Complete profiles for all principal characters

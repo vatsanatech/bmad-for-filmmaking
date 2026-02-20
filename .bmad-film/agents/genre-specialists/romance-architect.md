@@ -1044,3 +1044,46 @@ NOT:
 **The story should READ like a Bollywood film is being described in Hindi.**
 **This is how Indians tell stories - in their language, not English.**
 
+## GENRE QUESTIONS — ROMANCE ARCHITECT
+## (Run at STEP 8 — after Master Story Director routes to this specialist)
+## Reference: 15 questions in 5 groups
+
+**A. LOVE TYPE (3 questions)**
+Q1. Romance Sub-Type: Slow burn? Love at first sight? Enemies-to-lovers? Second chance? Forbidden love?
+Q2. Chemistry Base: Shared values? Intellectual spark? Physical attraction? Shared grief/trauma? Humor?
+Q3. Bollywood Romance Style: Yash Chopra (poetic longing)? Bhansali (grand tragedy)? Imtiaz Ali (self-discovery love)?
+    Hrishikesh Mukherjee (quiet warmth)? Zoya Akhtar (urban modern)? Describe if none of above.
+
+**B. OBSTACLE ARCHITECTURE (3 questions)**
+Q4. Primary Obstacle: Family opposition? Class difference? Past trauma? Career vs. love? Geographical distance? Social taboo?
+Q5. Secondary Obstacle: Rival? Misunderstanding? Internal fear? Duty vs. desire?
+Q6. The "Third Character": Jo in dono ko alag karta hai — koi insaan, koi duty, koi memory, ya society?
+    Is this character sympathetic (parent who means well) or antagonistic?
+
+**C. EMOTIONAL BEATS (3 questions)**
+Q7. First Meeting Energy: Hostile? Indifferent? Instant spark? Gradual awareness? Comic misunderstanding?
+Q8. The Chemistry Scene: Kaunsa ek scene hai jahan audience ZAROOR feel kare "yeh dono ek doosre ke liye bane hain"?
+    Kahan hoga yeh scene — kis context mein?
+Q9. The Separation: Kab aur kyun alag honge? Voluntary (one pushes away)? Forced (external)? Misunderstanding?
+    How long does separation last — 5 min? 20 min? Final act?
+
+**D. RESOLUTION ARCHITECTURE (3 questions)**
+Q10. Resolution Type: Union (happy ending)? Tragic separation (earned)? Ambiguous (open)? Bittersweet (together but changed)?
+Q11. The Grand Gesture: Kya ek bada moment hoga jab ek character ki feelings clearly saamne aayengi?
+     Ya quiet realization — no grand gesture?
+Q12. Post-Resolution: After union/separation — audience exactly kya feel kare? Joy? Relief? Ache? Wonder?
+
+**E. ROMANCE-SPECIFIC ELEMENTS (3 questions)**
+Q13. Songs: Kitne songs? Kahan? Love song kaunse emotional beat pe aayega?
+     (First meeting song? Union song? Separation lament? Resolution song?)
+Q14. Physical Expression: Pyaar ka physical expression kaise dikhega — subtle (hand touch, eye contact)?
+     Bold (Bollywood song dance)? Restrained (almost touch, never quite)?
+Q15. The Unsaid Love: Kya woh cheez hai jo in dono mein se koi kabhi directly nahi kehta throughout the story?
+     Woh cheez jo audience samjhe par characters nahi kehte — kya hai woh?
+
+**ROMANCE QUALITY GATES:**
+- [ ] Obstacle genuinely separates them (not easily overcome)
+- [ ] Chemistry scene is earned (not forced by plot)
+- [ ] Resolution matches the emotional logic of the story (not convenience)
+- [ ] Songs serve narrative (not decoration)
+- [ ] The unsaid runs throughout (love felt, not stated)

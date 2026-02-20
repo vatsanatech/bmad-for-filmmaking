@@ -993,3 +993,54 @@ NOT:
 **The story should READ like a Bollywood film is being described in Hindi.**
 **This is how Indians tell stories - in their language, not English.**
 
+## GENRE QUESTIONS — COMEDY ARCHITECT
+## (Run at STEP 8 — after Master Story Director routes to this specialist)
+## Reference: 15 questions in 5 groups
+
+**A. COMEDY TYPE (3 questions)**
+Q1. Humor Source: Situational (misunderstanding/chaos)? Character-driven (personality clash)?
+    Satirical (social commentary)? Absurdist (surreal logic)? Verbal (wordplay/wit)?
+Q2. Comedy Style: Hrishikesh Mukherjee (warm humanist)? Rajkumar Hirani (message + laugh)?
+    Priyadarshan (chaos + ensemble)? Govind Nihalani (dark comedy)? Shoojit Sircar (quiet absurdism)?
+Q3. Tone: Pure fun (no message)? Comedy with heart (message hidden in laugh)? Dark comedy (uncomfortable truths laughed at)?
+    Satire (system critique through humor)?
+
+**B. PROTAGONIST + ENSEMBLE (3 questions)**
+Q4. Comedy Protagonist Type: Bumbling innocent? Clever schemer? Straight man in mad world?
+    Serious person in absurd situation? Con artist? Fish out of water?
+Q5. Ensemble or Solo: Ek main character ka journey ya ensemble comedy (multiple characters create chaos together)?
+    If ensemble — who are the 2-3 characters whose clash creates the humor?
+Q6. The Comedy Pair: Ek "straight man" aur ek "funny man" pairing hai? Ya multiple chaotic characters?
+    Best Bollywood comedy pairing dynamics — describe what works for THIS story.
+
+**C. CONFLICT STRUCTURE (3 questions)**
+Q7. The Core Complication: Woh ek misunderstanding/situation/secret jo sab kuch complicated karta hai.
+    Kya hai woh — aur kab reveal hota hai?
+Q8. Escalation Pattern: Ek complication se do banti hain, do se teen — yeh chain kaise build karti hai?
+    Hrishikesh pattern (slow warm build) ya Priyadarshan pattern (rapid-fire chaos)?
+Q9. The Climax: Comedy climax = maximum chaos/confusion → sudden resolution.
+    Kahan hoga yeh climax? Kya hai woh "maximum chaos" moment?
+
+**D. TONE & MESSAGE (3 questions)**
+Q10. Darkness Level: Clean fun (everyone happy)? Light satire (gentle critique)?
+     Dark comedy (uncomfortable realizations in laugh)? Pure chaos (no message)?
+Q11. Hidden Message: Agar is comedy mein koi cheez hai jo log laugh karne ke baad feel karein —
+     kya hai woh? (Hirani style — "3 Idiots" made people think about education while laughing)
+     Ya no message — just pure entertainment?
+Q12. Emotional Core: Comedy ke beech mein ek emotional scene hoga jo audience ko pakad le.
+     Kaunsa scene? Kab? (Best Bollywood comedies have one moment that makes you almost cry)
+
+**E. COMEDY-SPECIFIC ELEMENTS (3 questions)**
+Q13. Running Gag: Ek recurring joke ya situation jo baar baar aata hai with escalating funny versions.
+     Kya hoga woh running gag?
+Q14. Comedy Villain / Antagonist: Kya koi character hai jo unintentionally ya intentionally obstacles create karta hai?
+     Are they comic themselves or serious-while-being-funny?
+Q15. Resolution Tone: Comedy khatam hoti hai — warm reunion? Comic twist? Unexpected satisfaction?
+     Ya deliberately anticlimactic (Shoojit Sircar style)?
+
+**COMEDY QUALITY GATES:**
+- [ ] Core complication is genuinely unexpected (not obvious)
+- [ ] Escalation makes logical sense even while being absurd
+- [ ] Comedy doesn't come from humiliating anyone (unless intentionally dark)
+- [ ] Emotional core moment is earned
+- [ ] Resolution gives satisfaction + smile, not just closure

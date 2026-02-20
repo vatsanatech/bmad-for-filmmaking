@@ -277,6 +277,14 @@ process:
       → Platform strategy: [AI proposal] — from MS10 depth probe
       → What to avoid: [MS9 feeling to avoid]
 
+      STORY WORLD IDENTITY (STAGE Framework):
+      → World Type: [Realistic / Heightened Reality / Historical / Fantastical]
+      → LOOK (Visual Identity): [Defining visual detail — one thing only THIS world has] — from MS4 depth probe
+      → SOUND (Sound Identity): [Defining audio/silence of this micro world] — from MS1 depth probe
+      → FEEL (Emotional Identity): [Dominant emotion this world evokes in viewers] — from MS6
+      → RULE (World as Constraint): [The one rule holding both characters back] — from MS4 depth probe
+      → MUDDA (Core Issue): [Unexplored human truth this relationship/world contains] — from MS3/MS4
+
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       Har point pe batao — theek hai, wrong direction, ya kya change karna hai?
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -359,6 +367,25 @@ process:
 
       Yeh teeno avoid kiye gaye hain. Ab 4th version ki Bible likh raha hoon.
       ```
+
+      **PASS 6 — STAGE QA SCORE (Internal — run before Bible is written):**
+      Target: 70+ to proceed. Adapted for micro drama format.
+
+      STORY & CONCEPT      /25 → Originality + Series Hook (Ep 1 grabs in 3 seconds?) + Core Truth (Mudda) + Platform fit
+      STRUCTURE           /20 → Scroll-stop engineering + Escalation ladder clear + Paywall episode strong + Final episode earn
+      CHARACTERS          /15 → Core pair distinctness + Wounds defined + Dynamic (knowing/not-knowing) clear
+      DIALOGUES           /15 → Double duty every line + Natural speech + Subtext weight + Quotable moment per episode
+      EMOTIONAL ENGAGEMENT /10 → One emotion per episode (no blurring) + Unseen Emotion present somewhere in series
+      BINGE FACTOR        /10 → Hook variety across series + The Unsaid protected + Escalation phases felt
+      PRODUCTION FEASIBILITY /5 → Platform format match (vertical/horizontal) + Episode duration achievable
+
+      STAGE SCORE GATE: 85-100 (A+) → 75-84 (A) → 65-74 (B+) → Below 65 (rethink)
+
+      CRITICAL FLAGS (fail immediately if any present):
+      ❌ Mudda missing → Series has no human/social truth — feels like content, not story
+      ❌ The Unsaid not protected → Series engine is broken
+      ❌ Ep 1 scroll-stop absent → Audience won't start
+      ❌ Unseen emotion absent → Series is forgettable across episodes
 
       **DIVERGE BEFORE CONVERGE (MANDATORY — before Bible is written):**
       3 genuinely different series directions writer ke OWN seeds se:
@@ -678,6 +705,45 @@ process:
 
       ---
 
+      ## EPISODE TITLE ENGINEERING *(mandatory — before script begins)*
+
+      *"Episode 3" koi nahi dekhta. "Jab Usne Pehli Baar Jhootha Bola" — log click karte hain.*
+
+      **EPISODE TITLE FORMULA — 3 TYPES (pick one per episode):**
+
+      **TYPE 1 — THE UNSAID THING:**
+      The thing the characters want to say but can't — stated as a past tense revelation
+      Format: "Jab [character] ne [action that reveals the unsaid]"
+      Example: "Jab Usne Woh Thaali Nahi Utha'i" / "Jab Woh Pehli Baar Ruka"
+
+      **TYPE 2 — THE PIVOT MOMENT:**
+      The exact moment everything changes — what happened, not why
+      Format: "[The moment described in 4-6 words]"
+      Example: "Woh Khat Jo Kabhi Nahi Bheja" / "Teen Baaje Ka Call"
+
+      **TYPE 3 — THE AUDIENCE QUESTION:**
+      The question the episode answers — phrased so audience NEEDS to know the answer
+      Format: "[Question that creates desire to watch]"
+      Example: "Kyun Laut Aaya Woh?" / "Kya Woh Jaanti Thi?"
+
+      **TITLE RULES:**
+      → MAX 5-7 words in Hindi/Hinglish
+      → NO generic titles: "Pehla Qadam", "Nayi Shuruaat", "Ek Naya Rishta" — FORBIDDEN
+      → Title must be SPECIFIC to THIS episode — not interchangeable with any other episode
+      → Title test: Can you tell which episode this is just from the title? YES = good. NO = rewrite.
+      → Title should create FOMO — someone who missed the episode wants to watch based on title alone
+
+      **GENERATE 2 TITLE OPTIONS per episode:**
+      Option A: [Type 1/2/3 title]
+      Option B: [Different type title]
+      → Writer picks one → confirmed title goes in episode-arc-map.md
+
+      **TITLE SEQUENCE CHECK (at Episode Arc Map level):**
+      View all episode titles together — do they tell a story?
+      A good title sequence reads like a chapter index that itself creates intrigue.
+
+      ---
+
       ## SCROLL-STOP FRAME (0-3 seconds — MANDATORY)
       *Har episode MUST open mid-emotion. Not mid-setup. This stops the scroll.*
 
@@ -717,6 +783,30 @@ process:
       ## EPISODE HOOK
       [Final moment — what pulls audience to next episode]
       [This is the last thing they see/hear. Make it count.]
+
+      ---
+
+      ## REWATCH PLANT *(place in first 30% of episode — one per episode)*
+
+      *Best micro dramas are rewatched. Engineer the rewatch moment.*
+
+      **REWATCH PLANT DEFINITION:**
+      A small detail in the BEGINNING of the episode that seems random or insignificant —
+      but after the episode's ending, becomes the most important moment in the episode.
+
+      **REWATCH PLANT TYPES:**
+      → A LINE that seems throwaway but is actually the episode's thematic statement
+      → AN ACTION the character does that only makes sense AFTER you know the ending
+      → AN OBJECT in frame that connects to the episode's final revelation
+      → A SILENCE that the audience skips over on first watch but catches on rewatch
+
+      **REWATCH PLANT FIELD:**
+      Rewatch Plant:
+        - Placed at: [minute 0:XX — specific scene]
+        - What it is: [describe the detail]
+        - Why it's invisible on first watch: [why audiences won't notice]
+        - What it reveals on rewatch: [what it means after the ending]
+        - Connection to episode's ending: [how it recontextualizes]
 
       ---
 
@@ -779,10 +869,57 @@ process:
 
       6. PAYWALL CHECK (if this is paywall episode):
          → [✅ Maximum tension present / ⚠️ Needs escalation]
+
+      7. REWATCH VALUE: Rewatch plant present in first 30%? Does episode ending recontextualize something from the beginning?
+         → If ending changes nothing about the beginning → no rewatch motivation → flag for revision
       ```
 
       If any check fails → revise before marking episode complete.
       Move to next episode only after current episode passes stress test.
+
+      ## COMMENT & SHARE BAIT CHECK *(mandatory before episode is approved)*
+
+      *Micro drama platforms reward comments and shares. Engineer them — don't hope for them.*
+
+      **THE RELATABILITY TEST:**
+      Every micro drama episode needs ONE moment that makes someone think:
+      "Yeh toh bilkul meri zindagi hai" OR "Maine bhi aisa hi kiya tha" OR "Yeh toh main hi hoon"
+
+      → Identify that ONE moment in this episode: [describe it]
+      → Is it specific enough to feel real (not generic)?
+      → Is it universal enough that many people can see themselves in it?
+
+      **SHARE TRIGGER DESIGN:**
+      What will make someone send this episode to a specific person in their life?
+      People share content because it says something THEY couldn't say themselves.
+
+      → What is the line/moment in this episode that someone will screenshot and send to their partner / parent / friend?
+      → That moment = the share trigger
+      → If no clear share trigger exists → identify which scene should be rewritten to create one
+
+      **COMMENT BAIT DESIGN (platform engagement):**
+      Design one moment per episode that naturally generates a specific type of comment:
+
+      TYPE A — AGREEMENT COMMENT: "Main bhi aisa hi sochta/sochti hoon"
+      → Character voices a universal feeling in a specific way nobody else has said it
+
+      TYPE B — ARGUMENT COMMENT: "Nahi yaar, character galat hai — maine bhi aisa hi kiya..."
+      → Character makes a morally complex decision that splits audience opinion
+
+      TYPE C — PREDICTION COMMENT: "Next episode mein yeh hoga..."
+      → Episode ends on a situation where audience has strong opinion about what should happen
+
+      TYPE D — TAG COMMENT: "Yeh dekh [person's name]"
+      → Moment so specific to a universal relationship dynamic that people tag the person in that dynamic
+
+      **IDENTIFY FOR THIS EPISODE:**
+      - Relatability moment: [which scene/line]
+      - Share trigger: [which moment]
+      - Comment type this episode generates: [A/B/C/D]
+      - The taggable moment: [describe]
+
+      **PASS CONDITION:** At least 1 relatability moment + 1 share trigger identified
+      **FLAG:** Neither present → episode serves story but not platform → add one scene that does both
 
     duration: "5 min"
 
@@ -806,6 +943,22 @@ process:
       - [ ] Series theme emerges from all episodes combined (not stated in any one)?
       - [ ] Episode 1 establishes world in under 60 seconds?
       - [ ] Final episode delivers payoff earned across all episodes?
+
+      **STAGE CONTENT QUALITY CHECKS — Show results to user (5 criteria):**
+      ```
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      STAGE EVALUATION — 5 Audience Connection Criteria (Series Level)
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      8. MUDDA (Unexplored Issue) — kya is series mein koi aisa relationship/social topic hai jo screen pe rarely explore hua?
+      9. UNSEEN EMOTION — kya koi aisa emotion hai jo puri series mein kabhi rarely dikhta hai — par yahan dikhta hai?
+      10. AUDIENCE MIRROR — kya audience apni zindagi is core relationship ki journey mein dekh sakta hai?
+      11. GROUP EMOTION MOMENT — kya ek aisa episode ya scene hai jab poore audience ek hi cheez feel kare?
+      12. ASPIRATIONAL ELEMENT — kya series mein koi "unsaid cheez kahe jaane" ka moment ya inspiring relationship shift hai?
+      ```
+
+      PASS CONDITION: 4-5/5 STAGE checks ✅ → Proceed to final episode review
+      FLAG: 3/5 or below → Revisit series bible before releasing episodes
 
     duration: "20 min"
 

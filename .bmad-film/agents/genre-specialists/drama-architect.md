@@ -1014,3 +1014,56 @@ NOT:
 **The story should READ like a Bollywood film is being described in Hindi.**
 **This is how Indians tell stories - in their language, not English.**
 
+## GENRE QUESTIONS — DRAMA ARCHITECT
+## (Run at STEP 8 — after Master Story Director routes to this specialist)
+## Reference: 15 questions in 5 groups
+
+**A. DRAMA TYPE (3 questions)**
+Q1. Drama Sub-Genre: Family drama? Social realism? Character study? Period drama? Tragedy?
+    Redemption arc? Coming-of-age? Relationship drama?
+Q2. Drama Style: Bimal Roy (dignity + quiet dignity)? Gulzar (poetic subtext)?
+    Ashutosh Gowariker (epic personal journey)? Zoya Akhtar (urban contemporary)?
+    Shoojit Sircar (gentle observational)? Or describe what fits this story.
+Q3. Realism Level: Heightened emotional drama (Bollywood convention)?
+    Realistic/naturalistic (Anurag Basu / Sircar style)?
+    Stylized (Bhansali visual poetry)? Documentary-adjacent?
+
+**B. PROTAGONIST ARCHITECTURE (3 questions)**
+Q4. Protagonist's Core Flaw: Woh ek cheez jo protagonist ko rok rahi hai — pride? Cowardice? Denial?
+    Inability to forgive? Ambition that hurts others? Self-sacrifice that destroys self?
+Q5. The Transformation Question: Is story ke end mein protagonist kya seekhta/seekhti hai?
+    Or do they FAIL to learn — and what is the tragedy of that failure?
+Q6. The Moral Dilemma: Kya ek esa moment hai jahan protagonist ke saamne do equally valid choices hain
+    — aur koi bhi perfect nahi hai? Woh kaunsa dilemma hai?
+
+**C. CONFLICT STRUCTURE (3 questions)**
+Q7. Primary Conflict: Internal (character vs. self)? Relational (character vs. character)?
+    Social (character vs. system/society)? All three simultaneously?
+Q8. The Central Sacrifice: Drama ke heart mein usually ek sacrifice hoti hai.
+    Kaun kya sacrifice karta hai — aur kya woh sacrifice worth it hai ya nahi?
+Q9. The Point of No Return: Kaunsa moment hai jab kuch permanently badal jaata hai
+    — woh choice ya event jiske baad wapas nahi ja sakte?
+
+**D. EMOTIONAL INTENSITY (3 questions)**
+Q10. Emotional Register: Quiet and subtle (emotion in silences)?
+     Openly emotional (tears, confrontations, declarations)?
+     Restrained but intense (pressure building without release)?
+Q11. The Climactic Confrontation: Drama ki climax usually ek important confrontation hai.
+     Kaun, kahan, kya kehta hai — aur kya jawaab milta hai ya nahi?
+Q12. Catharsis Type: Audience ko kya feel hona chahiye at end — purified grief? Earned hope?
+     Complicated satisfaction? Quiet acceptance? Devastating but necessary loss?
+
+**E. DRAMA-SPECIFIC ELEMENTS (3 questions)**
+Q13. Silence Usage: Drama mein silence ka role — characters ke beech kya nahi kaha jaata
+     jo zyada bolta hai? Kaunse relationship mein silence is most charged?
+Q14. Subtext Engine: Har scene mein do conversations hoti hain — jo ho rahi hai aur jo really ho rahi hai.
+     Is drama ka primary subtext engine kya hai?
+Q15. The Final Image: Drama ka last image — kya hai woh? Closure ya open question?
+     Ek word mein describe karo woh image ka emotional weight.
+
+**DRAMA QUALITY GATES:**
+- [ ] Protagonist's flaw directly causes the central conflict
+- [ ] Moral dilemma has no easy answer
+- [ ] Climactic confrontation is earned by everything before it
+- [ ] Catharsis is emotional truth, not manipulated sentiment
+- [ ] Final image carries the whole story's meaning without words

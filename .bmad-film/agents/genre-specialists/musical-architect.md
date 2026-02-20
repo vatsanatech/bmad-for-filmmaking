@@ -1062,3 +1062,64 @@ NOT:
 **The story should READ like a Bollywood film is being described in Hindi.**
 **This is how Indians tell stories - in their language, not English.**
 
+## GENRE QUESTIONS — MUSICAL ARCHITECT
+## (Run at STEP 8 — after Master Story Director routes to this specialist)
+## Reference: 15 questions in 5 groups
+
+**A. MUSICAL TYPE (3 questions)**
+Q1. Musical Sub-Genre: Performer's journey (backstage/competition)?
+    Song-and-dance romance (songs advance relationship)?
+    Period spectacle (historical musical grandeur)?
+    Modern urban musical (contemporary feel)?
+Q2. Music's Role: Songs as emotional punctuation (express what characters can't say)?
+    Songs as narrative (story advances WITHIN the song)?
+    Songs as spectacle (pure entertainment, story pauses)?
+    Songs as cultural ritual (wedding, festival, celebration)?
+Q3. Dance Narrative Function: Farah Khan (dance IS the story)?
+    Karan Johar (dance = emotional peak moments)?
+    Sanjay Leela Bhansali (dance as visual poetry)?
+    Or describe what fits.
+
+**B. SONG ARCHITECTURE (3 questions)**
+Q4. Song Count: Kitne songs? (Commercial = 5-7, Mid-range = 3-4, Art-leaning = 1-2)
+Q5. Song Placement Map: For each song, identify its narrative function:
+    - Intro Song: World/character establish karna
+    - Love Song: Relationship advancement
+    - Sad/Separation Song: Grief montage
+    - Celebration Song: Emotional release / plot transition
+    - Climax Song: Resolution celebrate karna
+    Which of these apply to THIS story and WHEN?
+Q6. The One Indispensable Song: Kaunsa ek song hai jo film ki soul hai —
+    jo remove kiya toh film incomplete feel kare? Kya hai woh song's emotional purpose?
+
+**C. PERFORMANCE + SPECTACLE (3 questions)**
+Q7. Performance Scale: Intimate (characters in real-life settings) ya staged (choreographed spectacle)?
+    Or mix (intimate love songs + grand celebration sequences)?
+Q8. The Signature Performance: Woh ek dance/performance sequence jo yeh film define karega.
+    Kahan hai woh scene? Kaunsi situation? Kya feeling deta hai — joy? defiance? grief? triumph?
+Q9. Performer's Arc (if musical is about performance): Protagonist kahan se kahan jaata hai as a performer?
+    Kya milta hai, kya kho jaata hai through the performance journey?
+
+**D. EMOTION + STORY (3 questions)**
+Q10. Emotional Range: Musical mein kaun se emotions cover honge?
+     Shringar (love/romance)? Hasya (joy/celebration)? Karuna (loss/pathos)?
+     Vira (triumph)? — Map the emotional journey song by song.
+Q11. Story Without Songs: Agar songs remove kar do — kya story still works?
+     If YES — songs are decoration. If NO — songs are essential. Target: songs should be essential.
+Q12. The Emotional Climax: Climax song ya climax scene — kaunsa hai jo audience ke liye catharsis laayega?
+     Kya happens — performance? Reunion? Recognition? Sacrifice?
+
+**E. MUSICAL-SPECIFIC ELEMENTS (3 questions)**
+Q13. Original Songs or Existing: New songs compose honge? Ya existing Bollywood songs used?
+     If new — tone describe karo (folk? classical fusion? contemporary pop? qawwali?).
+Q14. Cultural Authenticity: Koi specific regional music tradition is story mein?
+     (Sufi? Classical? Filmi? Folk — Rajasthani, Bengali, Punjabi?) This affects world + character.
+Q15. The Last Song: Film ka aakhri song (ya last musical moment) — kya feel karta hai?
+     Resolution? Bittersweet ache? Pure joy? Quiet farewell?
+
+**MUSICAL QUALITY GATES:**
+- [ ] Every song serves a narrative function (none are removable decoration)
+- [ ] Signature performance is story-specific (can't happen in any other film)
+- [ ] Emotional range covers at least 4 rasas across songs
+- [ ] Story works without songs (then songs make it extraordinary, not necessary)
+- [ ] Last musical moment is the emotional culmination, not a random closing

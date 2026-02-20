@@ -165,6 +165,24 @@ process:
 
       Ask format-specific follow-ups (runtime, episodes, platform, etc.)
 
+      **PRODUCTION FEASIBILITY LAYER (ask after format selection):**
+
+      *Story ki duniya format se pehle tay hoti hai — budget se.*
+
+      Budget Tier select karo (yeh sab world/location/character choices shape karega):
+
+      1. **MICRO BUDGET** (under ₹50 lakhs / $60K)
+         → Max 3-4 locations | Max 5-6 speaking characters | No VFX | Real locations only
+      2. **INDIE** (₹50L - ₹5Cr / $60K - $600K)
+         → Max 8-10 locations | Max 10-12 characters | Minimal VFX | Mix of real + set
+      3. **MID-RANGE COMMERCIAL** (₹5Cr - ₹50Cr / $600K - $6M)
+         → Flexible locations | Full cast | Moderate VFX | Period possible
+      4. **STUDIO COMMERCIAL** (₹50Cr+ / $6M+)
+         → Any location, any world, any scale, full VFX
+
+      Store as: `budget_tier: [selected]` — apply at every world-building step.
+      Flag story ideas that exceed selected tier and suggest compression.
+
       **STEP 0B — Story Structure:**
       Ask which structure they want OR run the 10-question diagnostic:
       Three-Act / Hero's Journey / Save the Cat / Dan Harmon /
@@ -260,6 +278,25 @@ process:
       **70% OUTCOME WRITER KE WORDS SE:**
       Yeh rule yaad rakho — agar writer ne kuch specific kaha hai, woh already story ka 70% hai.
       Tumhara kaam sirf woh 70% bahar laana hai. Baaki 30% structured questions se aayega.
+
+      **REFERENCE FILM INTEGRATION (run if writer mentions any reference films):**
+
+      *"Masaan jaisi feeling chahiye" se kaam nahi chalega — specifically kya chahiye?*
+
+      Agar writer ne koi film ka naam liya, toh yeh extract karo:
+
+      ASK: "[Film name] mein SPECIFICALLY kya tha jo aapko chahiye?"
+        → Ek specific scene ya moment — poori film nahi
+        → Woh scene technically KAISE bana tha? (long silence / handheld / no background music)
+        → Woh scene ne kaunsa emotion create kiya?
+
+      Reference Extraction Table (fill per film):
+      | Reference Film | Specific Scene | Technique Used | Emotion Created | Apply In Our Story At |
+      |---|---|---|---|---|
+      | [Film] | [Scene] | [Camera/edit/sound] | [Audience emotion] | [Which part of our story] |
+
+      RULE: Reference films give TECHNIQUE, not story. Writer's seeds give STORY.
+      Never copy story elements — only extract the HOW, not the WHAT.
 
       **CONCEPT MINING EXAMPLES:**
 
@@ -358,6 +395,25 @@ process:
            exactly kya feel kar rahe honge? Anxiety? Dread? Hope? Betrayal?
            Woh exact emotion batao jo half-time mein unke saath baahir jaayega."
 
+      S8b. OPENING SCENE SEED *(Movie format only — skip for Short Film/Web/Micro)*
+
+           *First 7 minutes = audience ka pehla decision: rukna ya jaana.*
+
+           Main Q: "Aapki film ka PEHLA scene — pehli image kya hai jo audience dekhegi?
+           Kaun hai frame mein, kya ho raha hai, pehla sound kya hai?"
+           Depth Probe — Opening Engineering:
+           → Pehla dialogue line kya hai — ya kya koi bolega hi nahi?
+           → Woh pehla scene audience ke dimag mein kaunsa EK sawaal dalta hai?
+             (Yeh sawaal poori film mein unanswered rehna chahiye — climax tak)
+
+           Opening Scene Types (writer recognizes, not chooses):
+           - IN MEDIAS RES: Story ke beech se shuru (action/argument already happening)
+           - CHARACTER REVEAL: Protagonist ki ek action jo unka poora character bataye
+           - WORLD REVEAL: Duniya dikhao — protagonist ke aane se pehle
+           - TONAL PROMISE: First scene = contract with audience (what kind of film this is)
+
+           Store as: `opening_hook_question` — verify it's answered at climax in Stress Test.
+
       ---
 
       **GROUP 3 — LANDING + TONE (Seeds S9–S12)**
@@ -411,6 +467,29 @@ process:
       8. **NEVER suggest** — sirf seeds extract karo. AI baad mein banayega.
 
       **Collect ALL 12 seeds + depth probe answers. Tab Step 1b (AI Architecture Proposal) shuru karo.**
+
+      ---
+
+      **B-STORY / SUBPLOT DESIGN *(Movie format only — supplement to seeds)***
+
+      *Bollywood ki kamzor filmein B-story mein marti hain — woh A-story ke parallel chalti hai aur kabhi milti nahi.*
+
+      B1: Aapki film mein ek DOOSRI kahani kya hai jo A-story ke saath-saath chal rahi hai?
+          Depth Probe → B-story mein kaunse characters hain jo A-story mein bhi hain?
+
+      B2: B-story aur A-story KAHAN milti hain? (They MUST collide — parallel nahi chalegi)
+          → Kis scene mein B-story ka conflict A-story ke climax ko directly affect karta hai?
+          Depth Probe → Agar B-story remove kar dein → A-story badlegi? Agar nahi → B-story weak hai
+
+      B3: B-story ka emotional function kya hai?
+          → Comic relief / Emotional contrast / Theme mirror / Stakes amplifier / Character reveal
+          Depth Probe → B-story protagonist ke internal wound ko address karti hai?
+
+      B-STORY COLLISION TEST (internal — run before story creation):
+      ✅ PASS: B-story character ek scene mein A-story outcome ko directly change karta hai
+      ❌ FAIL: B-story runs separately, mentioned occasionally, disappears at climax
+      → FAIL = redesign B-story OR remove it entirely (no B-story > weak B-story)
+
     duration: "20-30 min"
 
   - step: 1b
@@ -479,6 +558,14 @@ process:
       → [Hyper-specific texture] — from S10 specific scene described
       → [What to avoid + why]: [S11 feeling to avoid]
       → [Unexpected element origin]: [S12 real-world anchor]
+
+      STORY WORLD IDENTITY (STAGE Framework):
+      → World Type: [Realistic / Heightened Reality / Historical / Fantastical]
+      → LOOK (Visual Identity): [Defining color, texture, light — one detail only THIS world has] — from S2
+      → SOUND (Sound Identity): [Defining audio — music/ambient/silence of this world] — from S2 depth probe
+      → FEEL (Emotional Identity): [The dominant emotion this world evokes in audience] — from S3
+      → RULE (World as Constraint): [One social/physical rule that holds protagonist back] — from S6/S7
+      → MUDDA (Core Issue): [Unexplored human or social truth this world contains] — from S4
 
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       Har point pe batao — theek hai, wrong direction, ya kya change karna hai?
@@ -656,6 +743,28 @@ process:
       Rasa sequence = emotional pacing map of the film.
       ```
 
+      **BOLLYWOOD SONG PLACEMENT ENGINEERING *(Movie format only)***
+
+      *Song galat jagah = momentum toot gaya. Song sahi jagah = emotion double ho gayi.*
+
+      Song Count by Film Type:
+      - Full Commercial: 5-7 songs | Indie/Drama: 2-3 songs | Thriller/Action: 1-2 songs (background only)
+
+      For each song, define:
+      | Song # | Placement (beat/scene) | Emotional Function | Nava Rasa Served | Story Information Carried |
+      |---|---|---|---|---|
+      | 1 | [Pre-interval / Act 1] | [Establish / Character intro] | [...] | [What audience learns/feels] |
+      | 2 | [Post-interval / Act 2 turn] | [Montage / Release / Time passage] | [...] | [...] |
+      | N | [Climax / End credits] | [Resolution / Theme] | [...] | [...] |
+
+      Song Placement Rules:
+      → NEVER place a song immediately after the interval — momentum already broken
+      → Post-interval first scene = dialogue/action (establish stakes BEFORE any song)
+      → A song carrying no story information (no character change, no time passage) = filler = cut
+      → Climax song: ONLY after emotional resolution — never DURING the climax scene
+      → Song Stress Test: "Agar yeh song remove kar dein — kya story ka koi hissa miss hoga?"
+         YES = song is doing work → keep | NO = song is decoration → cut or replace with score
+
     outputs:
       - "project/{project_name}/genre-analysis.md"
     duration: "5 min"
@@ -826,6 +935,29 @@ process:
       Agar YES → Rewrite until it couldn't happen anywhere else.
       Characters ki specific psychology + world ka specific pressure = unique irreplaceable moment.
       Use Q10b-Q10e (rishta answers) + Q12a (world anchor) + Q10a (contradiction) to make it specific.
+
+      **PASS 6 — STAGE QA SCORE (Internal — run after architecture, before step 5):**
+      Target: 70+ to proceed. Score each parameter internally.
+
+      STORY & CONCEPT      /25 → Originality + Hook strength + Theme (organic, not stated) + Mudda presence + Audience fit
+      STRUCTURE           /20 → Opening hook + Pacing (dialogue vs action balance) + Interval/Midpoint strength + Climax earn
+      CHARACTERS          /15 → Protagonist distinctness + Character world (lived-in, not vacuum) + Arc completeness
+      DIALOGUES           /15 → Authenticity (natural speech) + Memorable/quotable lines + Subtext weight
+      EMOTIONAL ENGAGEMENT /10 → Clear emotional core + Unseen Emotion (emotion rarely shown on screen)
+      SONGS / PACING      /10 → [Movie: song situations earned + chartbuster potential] [Short/Micro: rhythm + emotional density]
+      PRODUCTION FEASIBILITY /5 → Story stays within selected budget tier?
+
+      STAGE SCORE GATE:
+      → 85-100 (A+): Premium — proceed with confidence
+      → 75-84  (A) : Quality — proceed
+      → 65-74  (B+): Fix flagged areas before writing
+      → Below 65   : Return to seeds — story needs rethink
+
+      CRITICAL FLAGS (fail immediately if any present):
+      ❌ Mudda missing: No unexplored social/human truth → Story feels hollow
+      ❌ Unseen emotion absent: All emotions predictable → Story forgettable
+      ❌ Hook weak: First scenes don't plant a driving question that runs to climax
+      ❌ Character world flat: Characters exist in a vacuum — no lived-in world context
 
     duration: "10 min"
 
@@ -1107,6 +1239,28 @@ process:
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       ```
 
+      **THEME STRESS TEST (run internally before 7-criteria check):**
+
+      Theme Statement: "Yeh film kehti hai ki ___________" (from S4 + S12)
+
+      Scene-by-Scene Theme Check (internal):
+      → Har major scene: Is it ADVANCING, COMPLICATING, or CHALLENGING the theme?
+      → OR is it only advancing plot?
+
+      Theme Presence Score:
+      - Scenes actively serving theme: [X] of [total major scenes]
+      - Target: 70%+ of scenes connect to theme
+      - Theme Violation Flags:
+        ❌ Theme STATED in dialogue ("Zindagi mein trust important hai")
+        ❌ Subplot contradicts theme
+        ❌ Climax abandons theme
+        ❌ Theme only present at start/end (middle forgets)
+
+      PASS: 70%+ + climax resolves thematic question
+      FLAG: Under 70% → list specific scenes for targeted revision
+
+      ---
+
       **Run all 7 checks on the written story. Show results to user.**
 
       **USER KO DIKHAO (MANDATORY FORMAT):**
@@ -1161,8 +1315,90 @@ process:
       → [Assessment + evidence from story seeds]
       ```
 
+      **CLIMAX ENGINEERING CHECK:**
+
+      *Climax ek scene nahi hai — teen resolutions ek saath hain.*
+
+      C1 — EXTERNAL CONFLICT RESOLUTION:
+        → Protagonist ka external goal achieve hua ya nahi? (Ya consciously abandon kiya?)
+        → Is resolution earned by protagonist's actions — not luck, not others?
+
+      C2 — INTERNAL WOUND RESOLUTION:
+        → S5 ka character wound address hua?
+        → Did they CHANGE because of the story — or did they just survive it?
+        → Wound doesn't have to heal — but must be ACKNOWLEDGED and acted upon
+
+      C3 — CORE RELATIONSHIP RESOLUTION:
+        → S6 ki core relationship — where does it END?
+        → Did THE UNSAID (S7) finally get spoken? Or deliberately left unspoken?
+        → Is relationship's end state EARNED by what happened between these two people?
+
+      CLIMAX FAILURE PATTERNS (flag if present):
+      ❌ DEX EX MACHINA: Someone else solves protagonist's problem
+      ❌ COINCIDENCE CLIMAX: Lucky event resolves external conflict
+      ❌ EMOTIONAL SKIP: External resolved but internal wound ignored
+      ❌ RELATIONSHIP ABANDONED: Core relationship disappears at climax
+      ❌ THEME VIOLATION: Climax contradicts the story's own theme
+
+      OPENING HOOK CLOSURE: `opening_hook_question` (from S8b) — answered at climax? ✅/❌
+      First image (S2) and last image (S9) — in dialogue with each other? ✅/❌
+
+      PASS: All 3 resolutions present + no failure patterns + opening hook closed
+      FAIL: Any resolution missing → flag to writer → targeted revision before approval
+
+      ---
+
+      **LOGLINE GENERATOR (mandatory output after story creation):**
+
+      *Har filmmaker ko yeh chahiye: ek line mein poori film.*
+
+      Generate THREE logline versions:
+
+      🎬 **VERSION A — Commercial Hook** (for producers/investors):
+      "[Protagonist descriptor] jab [inciting incident] toh use [goal] karna padta hai, lekin [obstacle from S8], aur agar fail ho gaya toh [stakes from S3]."
+
+      💭 **VERSION B — Emotional Hook** (for audiences/trailers):
+      "[Character essence from S5] aur [core relationship from S6] ki kahani, jab [catalyst]..."
+
+      🏆 **VERSION C — Festival/Art House** (for critics/festivals):
+      "[Theme statement] — ek [tone word] film, jab [world] mein [protagonist] ko [human truth] ka saamna karna padta hai"
+
+      Show all three to writer: "Kaunsi logline aapki film ko sahi capture kar rahi hai?"
+      Confirmed logline → save to genre-analysis.md under `LOGLINE:` field.
+
+      ---
+
+      **STAGE CONTENT QUALITY CHECKS — Show results to user (5 criteria):**
+      ```
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      STAGE EVALUATION — 5 Audience Connection Criteria
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      8. MUDDA (Unexplored Issue)
+         Kya story mein koi aisa topic hai jo screen pe pehle rarely explore hua?
+         → [✅ Mudda: "[what the issue is]" — woven into Scene X / ⚠️ Missing — story lacks a layer]
+
+      9. UNSEEN EMOTION
+         Kya koi aisa emotion hai jo is story mein dikhaya gaya jo screen pe rarely hota hai?
+         → [✅ Yes — "[emotion]" shown unexpectedly at Scene X / ⚠️ All emotions are standard]
+
+      10. AUDIENCE MIRROR
+          Kya audience apni khud ki zindagi is character ki journey mein dekh sakta hai?
+          → [✅ Yes — relatable at [which scene] / ⚠️ Journey too distant from universal experience]
+
+      11. GROUP EMOTION MOMENT
+          Kya ek aisa scene hai jab poore theatre ka audience ek hi cheez feel kare saath mein?
+          → [✅ Scene X creates collective emotion / ⚠️ No group-emotion peak in story]
+
+      12. ASPIRATIONAL ELEMENT
+          Kya story mein koi "sapna poora hona" ya inspiring moment hai jo audience ko uthake jaaye?
+          → [✅ Present at Scene X / ⚠️ Only struggle — no hope, aspiration, or dream fulfilled]
+
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
+
       **PASS/FAIL GATE:**
-      - 7/7 criteria pass → Proceed to Review & Approval
+      - 7/7 stress test + 4-5/5 STAGE checks → Proceed to Review & Approval
       - 1-2 issues → Show issues, offer to fix specific scenes, then proceed
       - 3+ issues → Story needs revision before approval — identify root cause
 

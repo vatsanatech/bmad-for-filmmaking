@@ -1076,3 +1076,66 @@ NOT:
 **The story should READ like a Bollywood film is being described in Hindi.**
 **This is how Indians tell stories - in their language, not English.**
 
+## GENRE QUESTIONS — SOCIAL CINEMA ARCHITECT
+## (Run at STEP 8 — after Master Story Director routes to this specialist)
+## Reference: 15 questions in 5 groups
+
+**A. SOCIAL ISSUE + APPROACH (3 questions)**
+Q1. Central Issue: Caste discrimination? Gender violence? Corruption/system failure?
+    Environmental destruction? Economic inequality? Religious conflict? Education?
+    Child rights? LGBTQ+ acceptance? Disability? What is the specific issue THIS story addresses?
+Q2. Approach: Shyam Benegal style (unflinching realism, no compromise)?
+    Govind Nihalani (institutional critique, dark)?
+    Anurag Basu (issue embedded in human story)?
+    Mainstream-accessible (Airlift / Pink style — issue + entertainment)?
+    Or describe what approach this story takes.
+Q3. Thesis vs. Question: Does this film have a THESIS (this is what I believe about the issue)?
+    Or does it raise a QUESTION (here is the complexity, audience decides)?
+    Which is this story? Both approaches are valid — choose consciously.
+
+**B. PROTAGONIST IN SOCIAL CONTEXT (3 questions)**
+Q4. Protagonist's Relationship to Issue: Directly affected victim? Outsider who witnesses?
+    System insider who rebels? Unlikely ally? Person complicit in the system who changes?
+Q5. Why This Protagonist: Kya specific reason hai ki IS character ki story tell karne se
+    THE ISSUE more powerfully visible hota hai? What does this protagonist's position reveal?
+Q6. The Change Arc: Social cinema protagonists often face: fight and succeed? fight and fail but plant seeds?
+    Don't fight (tragedy)? Change personally but not the system?
+    What arc serves this story's truth?
+
+**C. SYSTEM + ANTAGONIST (3 questions)**
+Q7. The System as Antagonist: Kya antagonist ek individual hai ya ek system (institution, society, law)?
+    If system — how is system made visible and specific (not abstract)?
+Q8. Human Face of System: Best social cinema gives the system a human face — someone who
+    enforces the injustice, believes they're right. Who is that person in this story?
+    Are they purely evil or complicit-but-human?
+Q9. Institutional Detail: Social cinema is powerful when specific.
+    Kaunsi ek institutional detail (procedure, rule, practice, document) this story will expose?
+    Specificity makes the abstract real.
+
+**D. EMOTIONAL STRATEGY (3 questions)**
+Q10. Hope Level: Does this film end with hope (change is possible)? Despair (nothing changes)?
+     Ambiguity (change possible but uncertain)? Defiance (even if we lose, we stood up)?
+     Choose consciously — this defines the film's emotional politics.
+Q11. Catharsis Type: Social cinema's catharsis — anger (audience leaves outraged)?
+     Grief (audience leaves sad but aware)?
+     Inspiration (audience leaves wanting to act)?
+     Complexity (audience leaves unsettled, thinking)?
+Q12. Personal vs. Political: Kya social issue is story mein protagonist ke PERSONAL wound se
+     connected hai? Best social cinema makes the political personal.
+     Kya connection hai is protagonist ke personal story aur social issue ke beech?
+
+**E. SOCIAL CINEMA-SPECIFIC ELEMENTS (3 questions)**
+Q13. Research Authenticity: Kya real events, real places, real institutional processes use honge?
+     Or fictional but realistic? How much documentation/research is built into the world?
+Q14. Avoiding Savior Narrative: Social cinema ka common failure — outsider "saves" marginalized people.
+     Is this story avoiding that trap? How? Who drives their own liberation?
+Q15. The Uncomfortable Truth: Kya ek cheez hai is film mein jo audience ko uncomfortable karega —
+     kyunki it implicates them too? (Not just "bad people are bad" but "we are all complicit somehow")
+     Kya hai woh uncomfortable truth?
+
+**SOCIAL CINEMA QUALITY GATES:**
+- [ ] Issue is specific (not abstract "corruption is bad" but THIS specific corrupt practice)
+- [ ] Protagonist's personal stake makes social issue emotionally real
+- [ ] System has a human face (not cartoon evil)
+- [ ] Resolution is honest (not convenient triumph)
+- [ ] Uncomfortable truth implicates audience, not just distant "bad people"
