@@ -57,13 +57,12 @@ description: |
 
   **3-PHASE PROCESS**:
 
-  **Phase 1: Writer Extraction Questions (23 deep questions)**
-  - PHILOSOPHY: Story writer ke andar se nikalti hai — AI se nahi
-  - 5 phases: Writer's Soul → Protagonist's Interior → World → Conflict → Tone
-  - NO options/choices given — open questions only, writer answers freely
-  - Master Story Director listens, follows up, summarizes — never suggests
-  - Scale-adaptive (5-min short = 14 Qs, feature = all 23 + follow-ups)
-  - Genre identified from answers, not asked upfront
+  **Phase 1: Core Seed Questions (12 Deep Seeds) + AI Architecture Proposal**
+  - MODEL: 40/60 — writer provides 12 deep seeds (Main Q + Depth Probe each)
+  - AI builds 60% creative architecture from these rich, dense seeds
+  - After seeds: AI Architecture Proposal → writer calibrates with quick reactions
+  - NO options/choices in seed questions — open questions + mandatory depth probes
+  - Genre identified from seeds, not asked upfront
 
   **Phase 2: Genre-Specific Questions (5-8 focused questions)**
   - Genre specialist asks targeted craft questions (reduced — foundation already built)
@@ -159,9 +158,10 @@ process:
 
       **STEP 0A — Screen Format:**
       Ask writer what they are making:
-      Feature Film / Short Film / Web Series / Limited Series /
-      Anthology / Documentary / Docudrama / Micro-Drama /
-      Social Media / Mockumentary
+      1. Feature Film  (90-120 min)
+      2. Short Film    (Under 30 min)
+      3. Web Series    (Multi-episode, streaming)
+      4. Micro Drama   (3-7 min per episode, multiple episodes)
 
       Ask format-specific follow-ups (runtime, episodes, platform, etc.)
 
@@ -215,13 +215,14 @@ process:
       ```
       ✅ STEP 0 complete.
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      📍 STEP 1 of 9 — Concept Mining
+      📍 STEP 1 of 9 — Core Seed Questions (12 Deep Seeds)
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       ```
-      **PHILOSOPHY: Story writer ke andar se nikalti hai, AI se nahi.**
+      **40/60 MODEL: Writer 12 deep seeds deta hai. AI 60% creative architecture un seeds se banata hai.**
 
-      Tumhara kaam hai SUNNA. Sawal poochhna. Writer ke dimaag mein jo hai woh bahar laana.
-      Koi suggestion mat do. Koi option mat do. Khule sawal poochho — writer khud jawab de.
+      Tumhara kaam hai SUNNA aur DHUNDHNA — writer ke 12 seeds nikalo, deep aur specific.
+      Har seed ke baad mandatory depth probe karo — yeh surface answer nahi, DNA chahiye.
+      Koi suggestion mat do. Khule sawal. Depth probes zaroori hain — skip mat karo.
 
       Reference: `.bmad-film/agents/master-story-director-interactive.md`
 
@@ -274,181 +275,253 @@ process:
       | "bade sheher" | Woh sheher naam se kaunsa hai dimaag mein? |
       | "purani dosti" | Kitne saal baad mil rahe hain? Kya hua beech mein? |
 
-      **COLLECT:** Un 3-5 threads ke jawab lo. Tab Phase A shuru karo.
+      **COLLECT:** Un 3-5 threads ke jawab lo. Tab 12 deep seeds shuru karo.
 
       ---
 
-      **5-PHASE WRITER EXTRACTION FRAMEWORK (23 questions)**
+      **12 DEEP SEED QUESTIONS (Main Q + Mandatory Depth Probe each)**
 
-      Ek phase ke sawal poochho, jawab lo, phir agle phase pe jao.
-      Ek baar mein 2-3 sawal se zyada mat poochho — writer ko space do sochne ka.
-
-      ---
-
-      **PHASE A: LEKHAK KI AATMA (5 questions) — WHY this story?**
-      *Yeh phase samjhata hai ki writer is story ki taraf KYUN khinch raha hai.*
-
-      Q1. KHINCHAV:
-          "Yeh story tumhare dimaag mein kab se hai? Aur kya cheez hai is mein jo tumhe
-          baar baar wapas kheenchti hai — koi personal connection, koi cheez jo tumne
-          dekhi, koi sawaal jo tumhare andar unsolved hai?"
-
-      Q2. PEHLI IMAGE:
-          "Aankhein band karo ek second. Is story ka koi ek scene ya moment hai jo
-          tumhare dimaag mein clearly dikh raha hai — ek image, ek chehra, ek jagah.
-          Kya dikh raha hai? Describe karo — aisa jaise koi painting ho."
-
-      Q3. AUDIENCE KA AAKHRI EHSAAS:
-          "Film khatam hoti hai. Audience cinema se bahar nikal rahi hai. Unhe kuch
-          feel ho raha hai — woh exactly kya hai? Sirf ek emotion, ek thought —
-          jo tum chahte ho unke andar reh jaaye."
-
-      Q4. JO KEHNA MUSHKIL HAI:
-          "Is story mein koi cheez hai jo tumhe thodi uncomfortable karti hai —
-          koi dark truth, koi complex cheez, koi angle jo typical nahi hai —
-          lekin phir bhi tumhe lagta hai kehna zaroori hai? Kya hai woh?"
-
-      Q5. KISKE LIYE:
-          "Yeh story kiske liye hai? Koi ek insaan — real ya imaginary — jiske
-          liye tum yeh bana rahe ho. Woh kaun hai?"
+      3 groups mein poochho — ek group at a time. Ek seed ke baad depth probe ZAROORI hai.
+      Surface answer kaafi nahi. DNA chahiye. Ek baar mein 1 seed + 1 probe — writer ko space do.
 
       ---
 
-      **PHASE B: PROTAGONIST KA ANDAR (5 questions) — WHO is at the center?**
-      *Yeh phase character ko andar se samjhta hai — surface se nahi.*
+      **GROUP 1 — WHY + CORE (Seeds S1–S4)**
 
-      Q6. PEHLI NAZAR:
-          "Apna main character close your eyes karke dekho. Describe karo —
-          kya pehna hua hai, kaise chalta hai, koi ek kaam jo woh karta hai
-          jab koi nahi dekh raha. Sirf woh image batao."
+      S1. KHINCHAV (Personal Origin)
+          Main Q: "Yeh story kab se hai tumhare andar? Kya cheez baar baar kheenchti hai is taraf?"
+          Depth Probe: "Woh exact moment kya tha jab yeh story pehli baar aayi — koi cheez dekhi,
+          suni, ya mehsoos ki? Koi real se connected hai kuch is mein?"
+          [AI gets: personal origin — only THIS writer can write this story. Irreplaceable specificity.]
 
-      Q7. CHAAHAT AUR ZAROORAT:
-          "Tumhara protagonist kya CHAHTA hai — woh cheez jo woh bol sake,
-          jo clearly dikhti hai? Aur phir — woh actually kya ZAROORI hai
-          uske liye jo shayad use khud bhi pata nahi?"
+      S2. PEHLI IMAGE (Visual DNA)
+          Main Q: "Aankhein band karo. Is story ka woh ek image jo tumhe nahi chhodta —
+          ek frame, ek moment. Abhi describe karo."
+          Depth Probe: "Us frame mein light kahan se aa rahi hai — andhera zyada hai ya roshni?
+          Aur woh image silent hai ya koi awaaz hai usme?"
+          [AI gets: visual grammar + tone temperature + sound palette. World uniquely built.]
 
-      Q8. CHHUPI SHARM:
-          "Is character ka ek raaz hai — koi aisi cheez jo isse sharm aati hai,
-          ya jo usne kabhi kisi ko nahi bataya. Woh kya hai?
-          (Yeh story mein directly aana zaroori nahi — bas tum jaano.)"
+      S3. AAKHRI EHSAAS (Emotional Destination)
+          Main Q: "Film khatam hoti hai, audience bahar nikal rahi hai — exactly kya feel
+          ho raha hai unhe? Woh ek emotion ya thought jo unke andar reh jaaye."
+          Depth Probe: "Yeh feeling — kya tumhari khud ki zindagi mein kisi cheez se connected
+          hai? Koi baar tumhe yeh exact feeling aayi thi?"
+          [AI gets: story's emotional destination + thematic resonance + personal truth.]
 
-      Q9. BADLAAV:
-          "Story ke end mein yeh insaan pehle se alag hai. Andar kuch toot gaya
-          ya ban gaya. Kya change hua? Woh pehle kya tha, aur ab kya hai?"
-
-      Q10. GALAT JO SAHI THA:
-          "Ek moment batao — ya soch ke banao — jab tumhare protagonist ne kuch
-          aisa kiya jo logon ko galat lagta, lekin uske liye woh bilkul sahi tha.
-          Kyon woh decision liya usne?"
-
-      ---
-
-      **PHASE C: DUNIYA AUR MAHOL (4 questions) — WHERE does this live?**
-      *Writer ki duniya ko feel karo — sirf location nahi, atmosphere.*
-
-      Q11. JAGAH KI ROOH:
-          "Story ki main jagah mein tum khade ho — aankhein band. Batao:
-          wahan kaisi smell hai? Kaisi awaaz? Kitni roshni? Kya feel hota hai
-          us jagah mein khade hoke — calm, dar, energy, udaasi, kuch aur?"
-
-      Q12. WAQT AUR MAASAM:
-          "Yeh story kab ki hai — raat ya din, kaun sa season, kaunsa waqt?
-          Aur tumhare dimaag mein aisa kyun hai — woh specific time ya maasam
-          is kahani ke liye kyun sahi lagta hai?"
-
-      Q13. WOH JAGAH JAHAN JAANA NAHI CHAHTE:
-          "Protagonist ki ek aisi jagah hai — physical ya emotional — jahan
-          woh kabhi nahi jaana chahta. Lekin story unhe wahan le jaati hai.
-          Kaunsi jagah hai woh? Wahan jaake unhe kya face karna padta hai?"
-
-      Q14. DUNIYA KA RANG:
-          "Is duniya mein sab theek nahi hai. Kuch badal raha hai, kuch toot
-          raha hai, ya kuch build ho raha hai background mein. Kya hai woh?"
+      S4. JO KEHNA MUSHKIL HAI (Core Uncomfortable Truth)
+          Main Q: "Is story mein koi dark ya uncomfortable angle hai — koi truth jo kehna
+          zaroori hai lekin mushkil lagta hai? Kya hai woh?"
+          Depth Probe: "Agar tum yeh nahi kehte is story mein — story kya missing ho jaayegi?
+          Exactly woh kya hai jo sirf yeh story keh sakti hai?"
+          [AI gets: thematic core + why story MUST be told + irreplaceable distinction.]
 
       ---
 
-      **PHASE D: SANGHARSH AUR STRUCTURE (5 questions) — WHAT breaks and changes?**
-      *Story ka dil — woh moments jab sab kuch hil jaata hai.*
+      **GROUP 2 — WHO + RELATIONSHIP (Seeds S5–S8)**
 
-      Q15. WOH EK DECISION:
-          "Ek choice — sirf ek — jo sab kuch badal deti hai. Protagonist leti
-          hai ya nahi leti, dono mein se ek. Kya hai woh decision? Aur woh
-          moment kaisa dikhta hai — kahan hota hai, kaise hota hai?"
+      S5. CHAHNA AUR ZAROORAT (Character Psychology + Want vs Need Gap)
+          Main Q: "Tumhara main character kya CHAHTA hai — jo dikhta hai? Aur unhe kya ZAROORI hai — jo unhe khud bhi pata nahi?"
+          Depth Probe 1: "Woh 'zaroori' cheez — kab se hai unke andar? Koi ek moment
+          jab woh need shuru hui — kya hua tha tab?"
+          Depth Probe 2 (WANT vs NEED GAP — MANDATORY):
+          "Protagonist ka WANT kya hai — woh kya KARTE HAIN? (External goal — dikhta hai)
+          Aur unka NEED kya hai — woh kya HONA CHAHIYE? (Internal — jo unhe khud pata nahi)
+          Kya dono ALAG hain? Agar same hain — yeh flat arc hai. Restate until they diverge.
+          RULE: Story ka plot = mechanism jo protagonist ko Want aur Need ke beech choose karwata hai."
+          [AI gets: character wound origin + arc direction + full psychological depth.]
 
-      Q16. SABSE BURA WALA MOMENT:
-          "Story ka lowest point — jab lagta hai sab khatam ho gaya, koi rasta
-          nahi. Kya hota hai tab? Protagonist kahan hota hai, kya feel kar
-          raha hai, kya sochta hai?"
+      S6. SABSE IMPORTANT RISHTA (Relationship DNA)
+          Main Q: "Is story ka sabse important rishta kaun sa hai — woh do log
+          jinke beech jo hoga, woh hi story ka asli dil hoga?"
+          Depth Probe: "Jab dono pehli baar milte hain — exactly kya feel hota hai?
+          Aur ek cheez batao jo un dono ne kabhi same direction mein nahi dekhi."
+          [AI gets: relationship baseline + subtext origin + defining dynamic.]
 
-      Q17. VISHWAAS WALA INSAAN:
-          "Is story mein ek aur insaan hai — shayad secondary character —
-          jis pe protagonist decide karta hai ki sach bol sakta hai.
-          Woh kaun hai? Unke beech kya connection hai?"
+      S7. JO KABHI NAHI KAHA GAYA (Subtext Engine)
+          Main Q: "Un dono ke beech woh unsaid cheez kya hai jo har scene mein
+          hawa mein rehti hai — jo kabhi seedha nahi kaha gaya?"
+          Depth Probe: "Agar woh unsaid cheez kabhi sirf ek sentence mein keh di jaaye —
+          kya hoga? Kaunsi conversation yeh do log kabhi nahi kar sakte?"
+          [AI gets: exact subtext sentence + relationship tension + what every scene carries beneath.]
 
-      Q18. JO PATA NAHI THA:
-          "Koi reveal, koi twist, koi aisi baat jo audience ko puri story
-          naye angle se dekhne pe majboor kare? Hai aisi koi cheez tumhare
-          dimaag mein? (Hona zaroori nahi — agar hai toh batao.)"
+      S8. WOH EK DECISION (Structural Spine)
+          Main Q: "Ek choice — sirf ek — jo sab kuch badal deti hai. Kya hai woh?"
+          Depth Probe: "Woh exact moment mein protagonist kahan hai — akela hai ya koi
+          saath hai? Kaunsi ek cheez dekh, sun, ya feel karke woh decision lete hain?"
+          [AI gets: story pivot + cinematic specificity + cause-effect chain. Spine locked.]
 
-      Q19. AAKHRI IMAGE:
-          "Film ka last scene — tumhare dimaag mein koi ek image hai.
-          Kya hai woh? Kaun hai frame mein, kya ho raha hai, kaisi feeling hai?"
-
-      ---
-
-      **PHASE E: SOUL AUR TONE (4 questions) — HOW does it feel?**
-      *Story ki personality — rang, texture, temperature.*
-
-      Q20. HASSI AUR DARD:
-          "Is story mein koi halka moment hai — koi hasi, koi warmth, koi
-          relief ka pal? Ya yeh pure dark hai? Agar humor hai, woh kahan
-          se aata hai is story mein?"
-
-      Q21. FEEL REFERENCE:
-          "Koi ek Bollywood ya koi bhi film jis ki FEEL tumhare story ke
-          kareeb hai — story nahi, sirf feel, texture, energy. Kaunsi film?
-          Aur woh feel specifically kya hai usme jo tumhare story se milti hai?"
-
-      Q22. JO BILKUL NAHI CHAHIYE:
-          "Ek cheez jo is story mein tum definitely NAHI chahte — koi cliché,
-          koi trope, koi moment jo tumhe dekhke irritate karta hai films mein.
-          Woh kya hai?"
-
-      Q23. OUT OF THE BOX ELEMENT:
-          "Is story mein kuch aisa hai — ya tum chahte ho hona chahiye —
-          jo typically is type ki story mein nahi hota? Kuch unexpected,
-          kuch jo log sochenge 'yeh alag hai.' Kya hai woh?"
+      S8a. INTERVAL SEED (Movie format only — skip for Short Film/Web/Micro)
+           Main Q: "Interval pe story kahaan hogi? Audience wapas aane se pehle —
+           unke haath mein woh kya hoga jo unhe screen ki taraf kheenche?
+           Koi cliffhanger, revelation, ya decision point jo resolve nahi hua?"
+           Depth Probe: "Is interval moment ke baad audience theatre se uthte hue —
+           exactly kya feel kar rahe honge? Anxiety? Dread? Hope? Betrayal?
+           Woh exact emotion batao jo half-time mein unke saath baahir jaayega."
 
       ---
 
-      **SCALE-ADAPTIVE — Kitne sawal poochho:**
-      - 30-second microdrama: Phase A (Q1-Q5) only — 5 questions
-      - 5-minute short: Phase A + B + Q11 + Q15 + Q19 + Q22 — 14 questions
-      - 15-minute short: Phase A + B + C + Q15-Q19 + Q22-Q23 — 19 questions
-      - Feature film: All 23 questions + follow-ups on any answer
-      - Web series: All 23 + series arc questions
-      - Sequel: Phase B + D + E only (foundation assumed from previous)
+      **GROUP 3 — LANDING + TONE (Seeds S9–S12)**
+
+      S9. AAKHRI IMAGE (Resolution)
+          Main Q: "Film ka last scene — tumhare dimaag mein ek image.
+          Kaun hai frame mein, kya ho raha hai?"
+          Depth Probe: "Pehli image (S2) se yeh last image kaise different hai?
+          Protagonist akela hai ya koi saath hai — aur woh presence ya absence kyun?"
+          [AI gets: full arc S2→S9 + transformation logic + resolution emotional state.]
+
+      S10. FEEL REFERENCE (Hyper-Specific Tone)
+          Main Q: "Koi ek film jis ki FEEL tumhare story se milti hai — story nahi,
+          sirf feel, texture, energy. Kaunsi film?"
+          Depth Probe: "Us film mein ek specific scene jo us feel ko best represent
+          karta hai — woh 2-3 minute ka scene describe karo."
+          [AI gets: not genre label but exact texture, pacing, emotional temperature.]
+
+      S11. JO BILKUL NAHI CHAHIYE (Anti-Cliché Guard)
+          Main Q: "Ek cheez jo is story mein tum definitely NAHI chahte — koi
+          cliché, koi trope, koi moment."
+          Depth Probe: "Agar woh cheez accidentally aa jaaye — audience ko exactly
+          kya feel hoga jo tum NAHI chahte? Woh feeling batao."
+          [AI gets: anti-pattern material with emotional reasoning — what to reject and WHY.]
+
+      S12. OUT OF THE BOX + SUBTEXT (Uniqueness + Hidden Layer)
+          Main Q: "Kuch aisa jo typically is genre mein nahi hota — unexpected element.
+          Aur: koi ek cheez jo story mein kabhi directly nahi kahi jaayegi par neeche behti rahegi."
+          Depth Probe: "Woh 'out of box' element kahan se aaya — koi real cheez, koi memory?
+          Aur agar audience ne poori film dekhi aur woh hidden current feel ki —
+          woh ek sentence mein kya samjhe jo film ne kabhi nahi kaha?"
+          [AI gets: originality anchor with real-world origin + thematic subtext in one sentence to weave throughout.]
 
       ---
 
-      **MANDATORY RULES FOR ASKING:**
+      **SCALE-ADAPTIVE — Kitne seeds poochho:**
+      - 30-sec microdrama: S1, S2, S3, S6 (4 seeds + their probes)
+      - 5-min short: S1-S4, S6, S8, S9, S11 (8 seeds + their probes)
+      - Feature / Series: All 12 seeds + depth probes + follow-ups on rich answers
 
-      0. **CONCEPT MINING PEHLE.** Writer ke initial words se threads nikalo. Structured questions
-         baad mein. Yeh rule kabhi skip mat karo.
-      1. **70% WRITER KE WORDS SE.** Writer jo bhi bolte hain — usse pehle exhaust karo questions se.
-         AI ki taraf se koi cheez introduce mat karo jab tak writer ki sab threads explore na ho jaayein.
-      2. **Ek baar mein 2-3 sawal se zyada mat poochho.** Writer ko breathe karne do.
-      3. **Koi option mat do.** "A, B, C mein se choose karo" — yeh NAHI. Khule sawal poochho.
-      4. **Writer ke jawab pe follow-up karo.** Agar koi interesting cheez kahi — ek follow-up
-         question poochho woh aur kholo. Workflow se thoda aage-peeche hona theek hai.
-      5. **Summarize baar baar.** Har phase ke baad: "Theek hai, main samajh raha hoon — [summary]. Sahi hai?"
-      6. **Suggestion mat do.** "Kya aap soch rahe hain ki protagonist ek doctor ho?" — yeh GALAT.
-         Writer ke dimaag se nikalna chahiye, tumhare se nahi.
-      7. **Silence respected karo.** Agar writer "pata nahi" kahe — "theek hai, chhodo — agle sawaal
-         pe chalte hain. Yeh baad mein khud aa sakta hai."
+      ---
 
-      **Collect ALL answers before moving to Step 2.**
-    duration: "20-35 min"
+      **MANDATORY RULES:**
+      1. **CONCEPT MINING PEHLE** — structured seeds baad mein. Rule kabhi skip nahi.
+      2. **Depth Probe MANDATORY** — har seed ke baad depth probe poochho. Surface answer nahi chalega.
+      3. **Ek baar mein 1 seed + 1 probe** — writer ko breathe karne do.
+      4. **Koi option mat do** — khule sawal. "A, B, C mein se choose karo" strictly forbidden.
+      5. **Follow-up karo** — rich answer mila toh ek extra probe karo.
+      6. **Har group ke baad summarize** — "Yeh main samjha — sahi hai?"
+      7. **"Pata nahi"** = "Theek hai, chhodo, aage chalte hain."
+      8. **NEVER suggest** — sirf seeds extract karo. AI baad mein banayega.
+
+      **Collect ALL 12 seeds + depth probe answers. Tab Step 1b (AI Architecture Proposal) shuru karo.**
+    duration: "20-30 min"
+
+  - step: 1b
+    name: "AI Architecture Proposal (60% Creative Contribution)"
+    agent: "master-story-director-interactive"
+    action: |
+      **PURPOSE: Writer ke 12 deep seeds se AI puri story architecture propose karta hai.**
+      **Yeh AI ka 60% creative contribution hai — seeds ke bahar expand karna.**
+
+      **STEP 1: PASS 0 — SEED TRACEABILITY (run internally before showing user)**
+
+      Har proposed element ke liye check karo: "Yeh kaunse seed se aaya?"
+
+      Seed → What it drives:
+      - S1 (khinchav + real origin) → protagonist's emotional reason + personal wound
+      - S2 (first image + light/sound) → visual grammar, world opening, defining image
+      - S3 (last feeling + personal connection) → resolution tone, thematic resonance
+      - S4 (uncomfortable truth + what's missing without it) → thematic core, story's purpose
+      - S5 (want/need + wound origin moment) → character psychology, arc cause
+      - S6 (relationship + first meeting feel + divergent direction) → relationship DNA
+      - S7 (unsaid + unspeakable sentence) → subtext engine, what every scene carries
+      - S8 (decision + location + sensory trigger) → structural spine, pivot specificity
+      - S9 (last image + contrast with S2) → full story arc, transformation proof
+      - S10 (feel reference + specific scene described) → hyper-specific tone, pacing
+      - S11 (what not to have + feeling to avoid) → anti-pattern map, rejection reasoning
+      - S12 (unexpected element + subtext sentence) → originality layer, hidden current
+
+      RULE: Koi bhi proposed element bina seed se trace kiye nahi rahega.
+            Agar koi element kisi seed se trace nahi hota → woh AI generic default hai → HATA DO.
+
+      **STEP 2: GENERATE ARCHITECTURE — then USER KO DIKHAO:**
+
+      ```
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 AI ARCHITECTURE PROPOSAL
+      Tumhare 12 deep seeds se main yeh story architecture propose kar raha hoon:
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      GENRE READ: [Primary + Secondary] — from S[X] + S[X]
+
+      CHARACTER PSYCHOLOGY:
+      → Hidden wound (kab se, kya hua): [AI proposal] — from S5 depth probe
+      → Core contradiction (jo unexpected lage): [AI proposal] — from S4 + S5
+      → Arc direction (how they change): [AI proposal] — from S8 + S9 contrast
+
+      WORLD (3 hyper-specific details AI built):
+      → [Specific light/sound/visual detail] — from S2 depth probe
+      → [World constraint holding protagonist] — from S6/S7
+      → [Background decay or change] — from S4
+
+      RELATIONSHIP BLUEPRINT:
+      → Core dynamic (what they ARE to each other): [AI proposal] — from S6
+      → Power: who holds it, when it shifts: [AI proposal] — from S7 unspeakable sentence
+      → The defining scene: [AI proposal] — from S2/S9 images
+
+      STORY SPINE:
+      → Opening state (protagonist + world): [AI proposal] — from S1/S2
+      → The pivot (decision + where + who): [AI proposal] — from S8 depth probe
+      → Landing (last image + feeling): [AI proposal] — from S9/S3
+
+      SUBTEXT LAYER:
+      → The unsaid current (never stated, always felt): [S7 unspeakable sentence woven into]
+      → The hidden line audience will understand: [S12 subtext sentence]
+
+      TONE + VISUAL GRAMMAR:
+      → [Hyper-specific texture] — from S10 specific scene described
+      → [What to avoid + why]: [S11 feeling to avoid]
+      → [Unexpected element origin]: [S12 real-world anchor]
+
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      Har point pe batao — theek hai, wrong direction, ya kya change karna hai?
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
+
+    outputs:
+      - AI Architecture Proposal (all sections, each element seed-traced)
+    duration: "5-10 min"
+
+  - step: 1c
+    name: "Writer Reaction Protocol (40% Calibration)"
+    agent: "master-story-director-interactive"
+    action: |
+      **PURPOSE: Writer reacts to AI proposal. Yeh writer ka 40% hai — generating nahi, calibrating.**
+
+      Quick aur targeted reactions collect karo. Writer ka har reaction architecture refines karta hai.
+
+      **REACTION RULES:**
+      - "Theek hai" → lock it, next element
+      - "Wrong direction" → probe once: "Woh kya hoga toh?" → note → adjust
+      - "Change karna hai" → "Exactly kya change?" → note → adjust
+      - "Nahi samjha" → rephrase using writer's own seed words
+      - After all reactions: synthesize CONFIRMED architecture
+
+      **AFTER ALL REACTIONS — SYNTHESIZE + CONFIRM:**
+
+      ```
+      Theek hai! Confirmed architecture:
+
+      ✓ Genre: [final]
+      ✓ Character psychology + wound: [final — seed + calibration]
+      ✓ World details (3 specific): [final]
+      ✓ Relationship blueprint: [final]
+      ✓ Story spine (opening → pivot → landing): [final]
+      ✓ Subtext + tone: [final]
+      ✓ What to avoid: [final]
+
+      Sab confirm hai? Ab genre specialist ko brief karta hoon.
+      ```
+
+      Pass this CONFIRMED ARCHITECTURE to Step 2 (Genre Analysis + Agent Routing).
+    duration: "10-15 min"
 
   - step: 2
     name: "Answer Processing & Genre Routing"
@@ -456,7 +529,7 @@ process:
     action: |
       **🔴 ANNOUNCE TO USER (MANDATORY):**
       ```
-      ✅ STEP 1 complete — All writer extraction questions answered.
+      ✅ STEP 1 complete — Seeds extracted, AI architecture proposed, direction calibrated.
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       📍 STEP 7 of 9 — Genre Analysis + Agent Routing
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -560,6 +633,29 @@ process:
 
       Project name = lowercase, hyphenated version of story title or concept.
       Example: "political thriller" → `project/political-thriller/genre-analysis.md`
+
+      **NAVA RASA MAPPING (Bollywood films — mandatory for Movie format):**
+
+      After genre identification, map which rasas this story will hit:
+
+      ```
+      NAVA RASA MAP — Is film mein kaun se rasas honge aur kahan:
+
+      1. Shringar (pyaar/saundarya): Scene? — [AI maps from S6/S7 seeds]
+      2. Hasya (comedy/laughter): Scene? — [Optional — from tone seeds]
+      3. Karuna (pathos/dard): Scene? — [From S3/S5 emotional destination]
+      4. Raudra (gussa/fury): Scene? — [From S8 decision + conflict seeds]
+      5. Vira (heroism/himmat): Scene? — [From S8a interval or climax]
+      6. Bhayanaka (fear/dread): Scene? — [If genre includes tension]
+      7. Bibhatsa (disgust): Scene? — [Optional — if story demands]
+      8. Adbhuta (wonder/surprise): Scene? — [From twist architecture]
+      9. Shanta (peace/resolution): Scene? — [From S9 last image]
+
+      MINIMUM 5 rasas mandatory for commercial Hindi film.
+      Single-rasa = art cinema (acceptable only if writer deliberately chooses it).
+      Rasa sequence = emotional pacing map of the film.
+      ```
+
     outputs:
       - "project/{project_name}/genre-analysis.md"
     duration: "5 min"
@@ -615,14 +711,17 @@ process:
       Q14. Clue Planting - Fair play? Hidden? Behavioral? No clues?
       Q15. Suspense vs Surprise - Audience knows more? Shocking reveals?
 
-      **SIMILAR FOR OTHER GENRES**:
-      - Romance Architect: Love type, chemistry, obstacles, resolution
-      - Action Architect: Combat style, scale, hero type, climax
-      - Comedy Architect: Humor source, ensemble, message depth
-      - Drama Architect: Drama style, emotional intensity, realism level
-      - Horror Architect: Horror type, scare strategy, intensity
-      - Musical Architect: Music role, dance focus, song count
-      - Social Cinema: Issue focus, approach, protagonist type
+      **OTHER GENRES — Full question sets in their agent files:**
+      Reference each agent for complete 15-question frameworks:
+      - Romance → `.bmad-film/agents/genre-specialists/romance-architect.md` → GENRE QUESTIONS section
+      - Action → `.bmad-film/agents/genre-specialists/action-architect.md` → GENRE QUESTIONS section
+      - Comedy → `.bmad-film/agents/genre-specialists/comedy-architect.md` → GENRE QUESTIONS section
+      - Drama → `.bmad-film/agents/genre-specialists/drama-architect.md` → GENRE QUESTIONS section
+      - Horror → `.bmad-film/agents/genre-specialists/horror-architect.md` → GENRE QUESTIONS section
+      - Musical → `.bmad-film/agents/genre-specialists/musical-architect.md` → GENRE QUESTIONS section
+      - Social Cinema → `.bmad-film/agents/genre-specialists/social-cinema-architect.md` → GENRE QUESTIONS section
+
+      Each agent has: A. Sub-Genre Type | B. Protagonist Architecture | C. Conflict Structure | D. Tone & Style | E. Genre-Specific Elements
 
       **Collect answers, then process in Step 4.**
     duration: "10-20 min"
@@ -667,6 +766,67 @@ process:
 
       **Think like genre masters**: Ghosh/Raghavan/Chopra/etc.
       depending on genre.
+
+      ---
+
+      **🔴 6 STORY ELEMENT PROCESSING PASSES (MANDATORY — Run before writing):**
+      (PASS 0 runs FIRST — before all others. Then PASS 1-5 in order.)
+
+      **PASS 0 — SEED TRACEABILITY FINAL CHECK (Run FIRST):**
+      Story ka final version likhne se pehle — har element trace karo:
+      - Character wound/psychology → S5 depth probe? Agar nahi → REWRITE from seed
+      - World detail 1 → S2 depth probe (light/sound)? Agar nahi → REWRITE
+      - World detail 2 → S4/S6/S7? Agar nahi → REWRITE
+      - Relationship dynamic → S6 + S7 unspeakable sentence? Agar nahi → REWRITE
+      - Story pivot specifics → S8 depth probe (location + sensory)? Agar nahi → REWRITE
+      - Subtext current → S12 subtext sentence? Agar nahi → REWRITE
+      - Tone/visual → S10 specific scene described? Agar nahi → REWRITE
+      ZERO TOLERANCE: Koi bhi untraced element = generic AI default = hatao.
+      Yeh AI ka 60% ko writer ke 40% seeds mein grounded rakhta hai.
+
+      **PASS 1 — ANTI-PATTERN FILTER (OUTPUT TO USER — MANDATORY):**
+      Is story ki 3 sabse predictable versions internally identify karo.
+      Phir inhe USER KO DIKHAO — story likhne se PEHLE. Yeh step skip nahi hoga.
+
+      **USER KO DIKHAO (MANDATORY FORMAT):**
+      ```
+      Is story ke teen sabse predictable versions jo main NAHI likh raha:
+
+      ❌ Version 1: [Generic version — 1-2 lines, writer ke genre/concept se directly related]
+      ❌ Version 2: [Generic version — 1-2 lines, alag angle se]
+      ❌ Version 3: [Generic version — 1-2 lines, ek aur common trap]
+
+      Yeh teeno avoid kiye gaye hain. Ab 4th version likh raha hoon.
+      ```
+
+      Phir internally "4th version" determine karo — unexpected but earned from writer's own answers.
+      Check: "Yeh story ka core kisi aur film jaisa toh nahi?" → Yes = rethink approach.
+
+      **PASS 2 — ELEMENT BALANCE CHECK (Relationship as Engine):**
+      Kya PLOT drive kar raha hai ya RELATIONSHIP+EMOTION?
+      → Agar PLOT: Reverse engineer karo — relationship decision se plot emerge karao
+      → Har major plot point trace karo: "Yeh kisi character ki emotional state ya relationship dynamic se kyun ho raha hai?"
+      → Subtext layer: Jo kaha gaya + Jo nahi kaha gaya + Jo chahte hain = teeno alag hone chahiye
+
+      **PASS 3 — SPECIFICITY DRILL (Generic → Cinematic):**
+      Har story element ko hyper-specific banao BEFORE writing:
+      - Generic world → ek specific smell/sound/color only HERE (use Q12a answer)
+      - Generic conflict → exact moment, exact word, exact silence (use Q10c answer)
+      - Generic character → use contradiction (Q10a) + want vs need (Q7) + rishta (Q10b-Q10e)
+      Test: "Kya koi isko kisi aur story mein copy kar sakta hai?" → Yes = aur specific karo
+
+      **PASS 4 — EMOTIONAL SUBVERSION MAP:**
+      Har major scene mein: audience EXPECTS kya feel karna? → Deliver unexpected version (earned):
+      - Expected: Big confrontation → Deliver: Silence, ek sentence, phir walk away
+      - Expected: Victory → Deliver: Victory + loss of what they were really fighting for
+      Goal: Audience ko ek unexpected emotional dhakka — jo SAHI bhi lage, SURPRISING bhi
+
+      **PASS 5 — "ONLY THIS STORY" TEST:**
+      Har plot point: "Kya yeh EXACT moment kisi aur film mein alag characters ke saath ho sakta tha?"
+      Agar YES → Rewrite until it couldn't happen anywhere else.
+      Characters ki specific psychology + world ka specific pressure = unique irreplaceable moment.
+      Use Q10b-Q10e (rishta answers) + Q12a (world anchor) + Q10a (contradiction) to make it specific.
+
     duration: "10 min"
 
   - step: 5
@@ -692,18 +852,74 @@ process:
   # PHASE 3: CREATION PHASE
   # ═══════════════════════════════════════════════════════
 
+  - step: 5b
+    name: "Diverge Before Converge — Direction Confirmation"
+    agent: "[selected-genre-architect]"
+    action: |
+      **PURPOSE: Writer ke answers se 3 bilkul alag directions nikalo — writer ek direction RECOGNIZE kare, choose nahi.**
+
+      Yeh OPTIONS dene ka step nahi hai. Yeh RECOGNITION step hai.
+      Writer ke answers mein already ek direction exist karti hai — yeh step usse surface pe laata hai.
+
+      **KAISE KARO:**
+
+      1. Writer ke SABHI answers padhke 3 genuinely different directions generate karo.
+         Teeno directions WRITER KE APNE ANSWERS se emerge honi chahiye — AI invention nahi.
+         Teeno ek doosre se FUNDAMENTALLY alag honi chahiye — tone, structure, ya emotional core mein.
+
+      2. Har direction ke liye note karo: "Yeh direction writer ke kaunse specific answer se aai?"
+         (Q2 ki image? Q8 ki sharm? Q10c ka unsaid? Q23 ka out-of-box element?)
+
+      3. Format — USER KO DIKHAO:
+
+      ```
+      Tumhare answers mein teen alag directions dikh rahi hain. Ek second suno:
+
+      🔵 Direction A — [1-line story direction]
+         [Woh writer ka ek specific answer jo is direction ko generate karta hai]
+         Feel: [Dark/Intimate/Quiet/Explosive — 1-2 words]
+
+      🟡 Direction B — [1-line story direction — genuinely different from A]
+         [Woh writer ka specific answer jo is direction ko generate karta hai]
+         Feel: [1-2 words]
+
+      🔴 Direction C — [1-line story direction — genuinely different from A and B]
+         [Woh writer ka specific answer jo is direction ko generate karta hai]
+         Feel: [1-2 words]
+
+      Kaunsa feel zyada tumhara lagta hai?
+      Ya koi do cheezein combine karna chahte ho?
+      ```
+
+      **MANDATORY RULES:**
+      - Teeno directions writer ke ANSWERS se — not genre conventions, not AI defaults
+      - Ek direction is Q2 (first image) ya Q19 (last image) se driven honi chahiye
+      - Ek direction is Q10b-Q10e (rishta seeds) se driven honi chahiye
+      - Ek direction is Q23/Q23a (unexpected element / subtext) se driven honi chahiye
+      - "Kaunsa lagta hai tumhara?" = recognition prompt, not a choice question
+      - Agar writer kehta hai "teeno nahi" → probe: "kaunsa element bilkul wrong lag raha hai?" → adjust
+      - Agar writer kehta hai "A aur C milo do" → exactly note which elements from each → confirm
+      - Lock the direction. Tab Story Creation shuru karo.
+
+      **Direction confirmed hone ke baad STEP 9 announce karo.**
+
+    outputs:
+      - Confirmed story direction (writer's recognized direction locked)
+    duration: "5-10 min"
+
   - step: 6
     name: "PHASE 3 - Story Creation (Based on YOUR Answers)"
     agent: "[selected-genre-architect]"
     action: |
       **🔴 ANNOUNCE TO USER (MANDATORY):**
       ```
-      ✅ STEP 8 complete — All questions answered, vision clear.
+      ✅ STEP 8 complete — All questions answered, direction confirmed.
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       📍 STEP 9 of 9 — Story Creation
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       Creating your story now — in Simple Bollywood Hindi,
-      based on YOUR 30+ answers. Both formats will be created:
+      based on YOUR 30+ answers + confirmed direction.
+      Both formats will be created:
       Continuous Narrative + Scene-by-Scene Breakdown.
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       ```
@@ -878,6 +1094,79 @@ process:
     outputs:
       - "project/{project_name}/story-synopsis.md"
     duration: "20-30 min"
+
+  - step: 6b
+    name: "Story Stress Test + Audience Intelligence Check"
+    agent: "[selected-genre-architect]"
+    action: |
+      **🔴 ANNOUNCE TO USER (MANDATORY):**
+      ```
+      ✅ Story written. Ab quality stress test chal raha hai...
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STORY STRESS TEST — 7 Criteria
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
+
+      **Run all 7 checks on the written story. Show results to user.**
+
+      **USER KO DIKHAO (MANDATORY FORMAT):**
+      ```
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      STORY STRESS TEST RESULTS
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      1. PROTAGONIST AGENCY
+         Kya story protagonist ki CHOICES se drive hoti hai ya plot unhe carry karta hai?
+         → [✅ Pass: Protagonist [name] actively drives story from Scene X / ⚠️ Issue: Scene Y mein protagonist passive hai — fix: make them choose]
+
+      2. AUDIENCE PREDICTION TEST
+         Smart audience kaunsa twist/turn 2 scenes pehle predict kar sakti hai?
+         → [✅ None predictable / ⚠️ Turn at Scene X is telegraphed — suggestion to fix]
+
+      3. WOUND → DECISION LINK
+         S5 ka character wound S8 ke pivotal decision se directly connected hai?
+         → [✅ Connected: Wound causes decision at Scene X / ⚠️ Gap found between wound and decision — missing link: ...]
+
+      4. RELATIONSHIP DRIVES PLOT
+         Har major plot event kisi character ki emotional state se emerge hota hai?
+         → [✅ Yes — all events relationship-rooted / ⚠️ Plot event X has no emotional root — rewrite from: ...]
+
+      5. THE UNSAID TEST
+         S7 ki unsaid cheez poori story mein present hai bina kabhi directly kahi gayi?
+         → [✅ Unsaid runs throughout / ⚠️ Scene Y mein accidentally said — pull it under]
+
+      6. "ONLY THIS STORY" FINAL
+         Kya yeh story kisi doosri film ke characters ke saath exactly ho sakti thi?
+         → [✅ Unique and irreplaceable / ⚠️ Core arc similar to [film name] — differentiation needed at: ...]
+
+      7. HINDI QUALITY CHECK
+         Koi English narration slip, sentence fragment, forbidden word?
+         → [✅ Clean / ⚠️ Issues found at lines: [list] — corrections: [list]]
+
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
+
+      **AUDIENCE INTELLIGENCE SIMULATION:**
+
+      ```
+      AUDIENCE INTELLIGENCE CHECK:
+
+      At Scene [opening]: "Ek regular Bollywood viewer yahan kya expect karega? Humne kya deliver kiya?"
+      → [Expected: X | Delivered: Y | Assessment: ✅ Subverted / ⚠️ Too expected]
+
+      At Interval/Midpoint: "Kya twist actually unexpected hai ya just delayed expected?"
+      → [Assessment + fix if needed]
+
+      At Climax: "Kya resolution EARNED hai ya convenient?"
+      → [Assessment + evidence from story seeds]
+      ```
+
+      **PASS/FAIL GATE:**
+      - 7/7 criteria pass → Proceed to Review & Approval
+      - 1-2 issues → Show issues, offer to fix specific scenes, then proceed
+      - 3+ issues → Story needs revision before approval — identify root cause
+
+    duration: "5 min"
 
   - step: 7
     name: "Review & Approval Decision"
