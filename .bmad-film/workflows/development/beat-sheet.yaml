@@ -103,43 +103,33 @@ process:
     agent: story-developer
 
     action: |
-      **Story Developer asks 8 beat sheet questions:**
+      **Story Developer asks 5 beat sheet questions:**
 
-      **A. STRUCTURE APPROACH (3 questions)**:
+      **NOTE**: Story structure type is read from story-synopsis.md (set at STEP 2 of Story Synopsis).
+      Opening strategy is read from story-synopsis.md (set at STEP 11A of Story Synopsis).
+      Transitions are handled by AI based on genre and pacing. No need to re-ask these.
 
-      Q1. Story Structure Type - Kaun sa structure best fit hai?
-         OPTIONS:
-         - THREE-ACT (Setup → Confrontation → Resolution)
-         - FIVE-ACT (Exposition → Rising → Climax → Falling → Resolution)
-         - NON-LINEAR (Flashbacks, time jumps, puzzle)
-         - CIRCULAR (Ends where it began)
-         - SINGLE TIMELINE (Simple A→B→C progression)
+      ---
 
-      Q2. Opening Hook Strategy - Story kaise shuru honi chahiye?
-         OPTIONS:
-         - IN MEDIAS RES (Action mein directly)
-         - SLOW BURN (Establish world first)
-         - MYSTERY OPENING (Question raise karo)
-         - CHARACTER INTRO (Character se shuru)
-         - WORLD BUILDING (Setting establish first)
+      **A. PACING (1 question)**:
 
-      Q3. Pacing Rhythm - Overall pacing kaisi chahiye?
+      Q1. Pacing Rhythm - Overall pacing kaisi chahiye?
          OPTIONS:
          - FAST-PACED (Quick beats, rapid progression)
          - MEASURED (Balanced, breathing room)
          - SLOW BURN (Gradual build, patience)
-         - UNEVEN (Varies - slow then fast)
+         - UNEVEN (Slow then fast — wave pattern)
          - RELENTLESS (Non-stop, no breaks)
 
       **B. EMOTIONAL BEATS (3 questions)**:
 
-      Q4. Emotional Highs - Kahaan audience ko high/excited feel hona chahiye? (List 2-3 moments)
+      Q2. Emotional Highs - Kahaan audience ko high/excited feel hona chahiye? (List 2-3 moments)
          Example: "When protagonist succeeds", "Romantic confession", "Victory moment"
 
-      Q5. Emotional Lows - Kahaan audience ko low/tense feel hona chahiye? (List 2-3 moments)
+      Q3. Emotional Lows - Kahaan audience ko low/tense feel hona chahiye? (List 2-3 moments)
          Example: "When protagonist fails", "Betrayal reveal", "All seems lost"
 
-      Q6. Climax Emotional Peak - Climax mein audience ko kya feel karna chahiye?
+      Q4. Climax Emotional Peak - Climax mein audience ko kya feel karna chahiye?
          OPTIONS:
          - TRIUMPH/VICTORY (Hero wins!)
          - TRAGEDY/LOSS (Hero loses)
@@ -148,22 +138,16 @@ process:
          - CATHARSIS (Emotional release)
          - AMBIGUOUS (Uncertain/open)
 
-      **C. BEAT DETAIL LEVEL (2 questions)**:
+      **C. BEAT DETAIL LEVEL (1 question)**:
 
-      Q7. Beat Granularity - Beats kitne detailed chahiye?
+      Q5. Beat Granularity - Beats kitne detailed chahiye?
          OPTIONS:
          - MACRO BEATS (10-15 big beats, major moments only)
          - MODERATE (20-30 beats, scene-level detail)
          - MICRO BEATS (40+ beats, every story unit)
          - MINIMAL (5-8 beats, sequences only)
 
-      Q8. Scene Transition Notes - Beats mein transitions ka mention?
-         OPTIONS:
-         - YES (How beats connect, transition notes)
-         - NO (Just beat description, no transition)
-         - SELECTIVE (Only for complex transitions)
-
-      **Collect ALL 8 answers before proceeding.**
+      **Collect ALL 5 answers before proceeding.**
 
     duration: "10-15 min"
 
@@ -177,14 +161,13 @@ process:
       ```
       Perfect! Beat sheet vision clear hai:
 
-      ✓ Structure: [Q1 answer - three-act/non-linear/etc.]
-      ✓ Opening: [Q2 answer - in medias res/slow burn]
-      ✓ Pacing: [Q3 answer - fast/measured/slow burn]
-      ✓ Emotional Highs: [Q4 answer - specific moments]
-      ✓ Emotional Lows: [Q5 answer - specific moments]
-      ✓ Climax Feel: [Q6 answer - triumph/tragedy/etc.]
-      ✓ Detail Level: [Q7 answer - macro/moderate/micro]
-      ✓ Transitions: [Q8 answer - yes/no/selective]
+      ✓ Structure: [From story-synopsis.md — STEP 2 answer]
+      ✓ Opening: [From story-synopsis.md — STEP 11A answer]
+      ✓ Pacing: [Q1 answer - fast/measured/slow burn]
+      ✓ Emotional Highs: [Q2 answer - specific moments]
+      ✓ Emotional Lows: [Q3 answer - specific moments]
+      ✓ Climax Feel: [Q4 answer - triumph/tragedy/etc.]
+      ✓ Detail Level: [Q5 answer - macro/moderate/micro]
 
       Yeh sahi hai? Final confirm before beat sheet creation?
       ```
@@ -192,13 +175,13 @@ process:
       **Apply Decision Tree**:
 
       Based on answers, determine:
-      - Beat count (Q7 - macro=10-15, moderate=20-30, micro=40+)
-      - Structure type (Q1 - three-act divisions, non-linear markers)
-      - Opening approach (Q2 - cold open vs slow intro)
-      - Pacing distribution (Q3 - fast=quick beats, slow=longer beats)
-      - Emotional beat placement (Q4, Q5 - where highs/lows go)
-      - Climax construction (Q6 - how to build to peak)
-      - Transition notes inclusion (Q8 - add or skip)
+      - Beat count (Q5 - macro=10-15, moderate=20-30, micro=40+)
+      - Structure type (from story-synopsis.md STEP 2)
+      - Opening approach (from story-synopsis.md STEP 11A)
+      - Pacing distribution (Q1 - fast=quick beats, slow=longer beats)
+      - Emotional beat placement (Q2, Q3 - where highs/lows go)
+      - Climax construction (Q4 - how to build to peak)
+      - Transitions: AI handles based on genre and pacing (no user input needed)
 
     duration: "5 min"
 
@@ -259,22 +242,22 @@ process:
            Start          Mid          End
       ```
 
-      **Place Q4 emotional highs** at appropriate story beats:
-      - User specified 2-3 high moments in Q4
+      **Place Q2 emotional highs** at appropriate story beats:
+      - User specified 2-3 high moments in Q2
       - Find beats matching those descriptions
       - Mark as EMOTIONAL HIGH
 
-      **Place Q5 emotional lows** at appropriate story beats:
-      - User specified 2-3 low moments in Q5
+      **Place Q3 emotional lows** at appropriate story beats:
+      - User specified 2-3 low moments in Q3
       - Find beats matching those descriptions
       - Mark as EMOTIONAL LOW
 
-      **Build to Q6 climax emotion**:
-      - Q6 specified climax feeling (triumph/tragedy/etc.)
+      **Build to Q4 climax emotion**:
+      - Q4 specified climax feeling (triumph/tragedy/etc.)
       - Ensure beats build toward that emotion
-      - Climax beat reflects Q6 choice
+      - Climax beat reflects Q4 choice
 
-      **Apply Q3 pacing**:
+      **Apply Q1 pacing**:
       - If FAST-PACED → Beats quick, rapid progression, less breathing room
       - If MEASURED → Beats balanced, even distribution, some pauses
       - If SLOW BURN → Beats gradual, patient build, more setup
@@ -306,8 +289,8 @@ process:
 
       **Genre**: [Genre]
       **Runtime**: [Runtime]
-      **Structure**: [Q1 Answer - Three-Act/Non-Linear/etc.]
-      **Pacing**: [Q3 Answer - Fast/Measured/Slow Burn]
+      **Structure**: [From story-synopsis.md]
+      **Pacing**: [Q1 Answer - Fast/Measured/Slow Burn]
 
       **Created by**: BMAD-FILM Story Developer
       **Date**: [Date]
@@ -316,10 +299,10 @@ process:
 
       ## STORY STRUCTURE OVERVIEW
 
-      **Opening Strategy**: [Q2 Answer]
-      **Emotional Highs**: [Q4 Moments]
-      **Emotional Lows**: [Q5 Moments]
-      **Climax Emotion**: [Q6 Answer]
+      **Opening Strategy**: [From story-synopsis.md STEP 11A]
+      **Emotional Highs**: [Q2 Moments]
+      **Emotional Lows**: [Q3 Moments]
+      **Climax Emotion**: [Q4 Answer]
 
       ═══════════════════════════════════════════════════════
 
@@ -337,7 +320,7 @@ process:
       **BEAT 2** - [Beat Title/Description]
       - **What Happens**: [Action/event description]
       - **Characters**: [Who's involved]
-      - **Emotional Tone**: [EMOTIONAL HIGH ⬆️] [If Q4 moment]
+      - **Emotional Tone**: [EMOTIONAL HIGH ⬆️] [If Q2 moment]
       - **Story Function**: [Setup/Complication/etc.]
       - **Character Arc**: [Progression]
       - **Duration**: [Estimated time]
@@ -346,7 +329,7 @@ process:
       **BEAT 3** - [Beat Title/Description]
       - **What Happens**: [Action/event description]
       - **Characters**: [Who's involved]
-      - **Emotional Tone**: [EMOTIONAL LOW ⬇️] [If Q5 moment]
+      - **Emotional Tone**: [EMOTIONAL LOW ⬇️] [If Q3 moment]
       - **Story Function**: [Complication/Revelation/etc.]
       - **Character Arc**: [Progression]
       - **Duration**: [Estimated time]
@@ -359,7 +342,7 @@ process:
       **BEAT [CLIMAX]** - [Climax Beat Title]
       - **What Happens**: [Climax action]
       - **Characters**: [All key characters]
-      - **Emotional Tone**: **CLIMAX - [Q6 Answer]** 🎬
+      - **Emotional Tone**: **CLIMAX - [Q4 Answer]** 🎬
       - **Story Function**: Resolution/Revelation
       - **Character Arc**: [Final transformation]
       - **Duration**: [Estimated time]
@@ -390,7 +373,7 @@ process:
 
       **Total Beats**: [Count based on Q7]
       **Avg Beat Duration**: [Runtime / beat count]
-      **Rhythm**: [Q3 Pacing description]
+      **Rhythm**: [Q1 Pacing description]
 
       **Fast Sections**: [Beats where pace quickens]
       **Slow Sections**: [Beats where pace slows]
@@ -403,32 +386,28 @@ process:
 
       **Apply Q1 Structure**:
       - If THREE-ACT → Group beats into Act 1 (Setup), Act 2 (Confrontation), Act 3 (Resolution)
-      - If FIVE-ACT → Group beats into 5 acts
       - If NON-LINEAR → Add time markers (PRESENT, FLASHBACK, etc.)
       - If CIRCULAR → Note circular structure in overview
       - If SINGLE TIMELINE → Simple linear progression
+      (Structure type read from story-synopsis.md STEP 2)
 
-      **Apply Q2 Opening**:
+      **Apply Opening Strategy** (from story-synopsis.md STEP 11A):
       - If IN MEDIAS RES → Beat 1 starts in action, backstory in Beat 2-3
       - If SLOW BURN → Beat 1-2 establish world/character before action
       - If MYSTERY → Beat 1 poses question
       - If CHARACTER INTRO → Beat 1 focuses on protagonist introduction
-      - If WORLD BUILDING → Beat 1 establishes setting/rules
 
-      **Apply Q7 Granularity**:
+      **Apply Q5 Granularity**:
       - MACRO → 10-15 beats total (big moments only)
       - MODERATE → 20-30 beats (scene-level detail)
       - MICRO → 40+ beats (every action shift)
       - MINIMAL → 5-8 beats (sequences only)
 
-      **Apply Q8 Transitions**:
-      - If YES → Add "Transition To Next" field for each beat
-      - If NO → Skip transition notes
-      - If SELECTIVE → Add only for complex transitions
+      **Apply Q1 Pacing** — determines beat length and breathing room
 
-      **Mark Q4 Emotional Highs** with ⬆️ symbol
-      **Mark Q5 Emotional Lows** with ⬇️ symbol
-      **Mark Climax** with 🎬 and Q6 emotion
+      **Mark Q2 Emotional Highs** with ⬆️ symbol
+      **Mark Q3 Emotional Lows** with ⬇️ symbol
+      **Mark Climax** with 🎬 and Q4 emotion
 
     quality_standards: |
       Every beat must meet:
@@ -441,6 +420,35 @@ process:
       ✓ **Timed**: Duration estimate helps pacing
       ✓ **Complete**: All story events from synopsis covered
       ✓ **Answer-Based**: Reflects Q1-Q8 user choices
+
+    creative_elevation_mandate: |
+      ┌─────────────────────────────────────────────────────────┐
+      │  CREATIVE ELEVATION MANDATE — BEAT SHEET                │
+      │                                                         │
+      │  Beats are not structural labels. They are emotional    │
+      │  and narrative events with specific, irreplaceable      │
+      │  stakes that belong only to THIS story.                 │
+      │                                                         │
+      │  BEAT DESCRIPTION STANDARD:                             │
+      │  Every beat description must answer THREE things:       │
+      │  → WHAT specifically happens (not "confrontation" —     │
+      │    what exact thing is said or done?)                   │
+      │  → HOW the protagonist FEELS in this beat (not          │
+      │    "sad" — what specific emotional texture?)            │
+      │  → WHAT CHANGES — what is different after this beat     │
+      │    that was not true before it?                         │
+      │                                                         │
+      │  WHERE WRITER DEFINED A BEAT VAGUELY: AI creates the    │
+      │  most cinematically interesting specific version of     │
+      │  that beat — the one only THIS story could have.        │
+      │                                                         │
+      │  TEST (run on every beat):                              │
+      │  "Could this beat exist in a different film with the    │
+      │  same genre?" If YES → make it more story-specific.     │
+      │                                                         │
+      │  Emotional transitions between beats must feel EARNED,  │
+      │  not mechanical. Show why one beat leads to the next.   │
+      └─────────────────────────────────────────────────────────┘
 
     outputs:
       - Complete beat sheet document
@@ -460,14 +468,13 @@ process:
       **Master Story Director reviews beat sheet for Q1-Q8 answer usage:**
 
       **Check ANSWER INTEGRATION**:
-      - [ ] Structure matches Q1 answer (three-act/non-linear/etc. - not default)
-      - [ ] Opening approach matches Q2 answer (in medias res/slow burn/etc.)
-      - [ ] Pacing rhythm matches Q3 answer (fast/measured/slow burn)
-      - [ ] Q4 emotional highs placed at specified moments
-      - [ ] Q5 emotional lows placed at specified moments
-      - [ ] Climax emotion matches Q6 answer (triumph/tragedy/etc.)
-      - [ ] Beat count matches Q7 granularity (macro/moderate/micro)
-      - [ ] Transition notes match Q8 choice (yes/no/selective)
+      - [ ] Structure matches story-synopsis.md STEP 2 (not default)
+      - [ ] Opening approach matches story-synopsis.md STEP 11A
+      - [ ] Pacing rhythm matches Q1 answer (fast/measured/slow burn)
+      - [ ] Q2 emotional highs placed at specified moments
+      - [ ] Q3 emotional lows placed at specified moments
+      - [ ] Climax emotion matches Q4 answer (triumph/tragedy/etc.)
+      - [ ] Beat count matches Q5 granularity (macro/moderate/micro)
 
       **Check QUALITY**:
       - All story events from synopsis covered (no gaps)
@@ -483,7 +490,7 @@ process:
       - Total runtime matches (beat durations sum to target)
       - No contradictions with story synopsis
       - No contradictions with character arcs
-      - User's Q1-Q8 answers RESPECTED throughout
+      - User's Q1-Q5 answers RESPECTED throughout
 
       **If user's Q1-Q8 answers not used → Send back for revision**
       **If beats don't cover all story events → Send back**

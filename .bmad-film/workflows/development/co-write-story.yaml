@@ -399,20 +399,15 @@ process:
       4. OPEN QUESTIONS SECTION — At end, list all things
          writer said "not decided" so they know what to develop next.
 
-      Write in TWO FORMATS (both mandatory):
+      Write as CONTINUOUS NARRATIVE (the only format for story-synopsis.md):
 
-      FORMAT 1: CONTINUOUS NARRATIVE (Flowing Hindi Prose)
+      CONTINUOUS NARRATIVE (Flowing Hindi Prose)
       - Writer's story told as flowing Hindi prose
       - No scene headings, no dividers, no technical labels
       - Pure paragraphs, one flowing into next
       - Language: As writer specified (Hindi/Hinglish/dialect)
       - Writer's voice preserved, not sanitized
-
-      FORMAT 2: SCENE-BY-SCENE BREAKDOWN (Technical)
-      - Same story in numbered scene format
-      - Location, time, action, dialogue
-      - Technical details for production
-      - Timestamps/sequence
+      - Scene-by-scene breakdown belongs in the Beat Sheet — NOT here
 
       Save to: project/{project_name}/story-synopsis.md
 

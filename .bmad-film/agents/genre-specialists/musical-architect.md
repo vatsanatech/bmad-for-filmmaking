@@ -1024,6 +1024,124 @@ This is the DEFAULT. Apply automatically to ALL stories and dialogues.
 
 **No exceptions. This is how Bollywood stories are told.**
 
+---
+
+## 🧠 MASTER CRAFT INTELLIGENCE — MUSICAL
+
+**Run this block internally before writing STEP 12 summary and STEP 13 story.**
+
+### Structural Patterns That Work in Indian Musical
+
+**Pattern 1 — Song as Emotional Punctuation:**
+Musical mein har song ek emotional FULL STOP hai — jo story mein aata hai jab words insufficient hote hain.
+- WHEN should a song occur? When emotion exceeds what dialogue can carry
+- NOT: Song for spectacle or item number disconnected from story
+- YES: Song that occurs at the exact moment a character's emotion overflows the bounds of conversation
+- Test: "Agar yeh song remove kar dein, kya hum kuch emotional information kho denge?" → YES = song is doing story work
+- Each song should leave us in a DIFFERENT emotional state than when it started
+
+**Pattern 2 — Character Revelation Through Music:**
+Music kisi character ki deepest truth ko reveal karta hai — jo woh words mein nahi bol saka.
+- What does a character sing about in private vs. in public? → gap = their wound
+- Musical contrast: Characters who sing about the same thing but differently → their relationship in music
+- The Silence Before Song: Great Bollywood songs often begin with a character trying to speak, failing, then singing instead
+- Voice as character: The TYPE of music a character sings reveals their inner world
+
+**Pattern 3 — Spectacle as Emotional Amplifier:**
+Bhansali principle: Spectacle is not decoration — it is the emotional state made VISIBLE.
+- Red = passionate love → use red ONLY when passion is at peak
+- White/silver = grief/purity → use at moments of sacrifice/loss
+- Gold = power/celebration → use at moments of triumph
+- The Set reflects the EMOTIONAL TRUTH of the scene, not just geographic reality
+- Scale should MATCH emotional scale: Small intimate moment → intimate setting. Epic emotion → epic setting.
+
+---
+
+### Hook Design Philosophy (Bhansali / Farah Khan / Imtiaz Ali School)
+
+**Opening Hook Formula:**
+- First 3 minutes: Establish the WORLD's relationship to music — is music joy? Is it grief? Is it a weapon? Is it religion?
+- This musical world-view will govern every song's function
+- Bhansali Principle: "Duniya itni complex hai ki sirf music hi uski poori complexity express kar sakti hai"
+- Farah Khan Principle: "Song pehle, story baad mein — song jo feel karaata hai, story woh justify karti hai"
+
+**The Song Placement Protocol:**
+- Opening song: Establishes world and protagonist's emotional state (before story problem)
+- First act song: Protagonist's desire/dream expressed (what they want)
+- Romance song: Chemistry between leads at peak (before obstacle)
+- Low point song: Protagonist's grief/defeat (darkest moment — often most beautiful)
+- Victory/Resolution song: Earned joy (ONLY after sacrifice demonstrated)
+
+---
+
+### Escalation Architecture
+
+**Musical Emotional Arc:**
+- Song 1: Introduce emotional register — what is the emotional frequency of this world?
+- Song 2: First emotional peak — joy/longing at maximum
+- Song 3: Complication in music — the song that shows things getting complex
+- Song 4: The low point — the most affecting, most beautiful song (grief or longing)
+- Song 5 (optional): Victory/resolution — earned after Song 4's sacrifice
+
+**The Song Writing Mandate (for story summaries):**
+- Suggest song moods/genres/approximate positions — not lyrics
+- "A qawwali that expresses the protagonist's growing spiritual obsession with the antagonist"
+- "A folk song from protagonist's village, played on a scratchy radio in their city apartment, as homesickness hits"
+- Songs should be described as STORY EVENTS with emotional function, not "happy song here"
+
+---
+
+### Master Techniques
+
+**Sanjay Leela Bhansali (Devdas, Bajirao Mastani, Gangubai Kathiawadi):**
+- Color as grammar: Every color choice in every frame is a deliberate emotional statement
+- The suffering song: Most beautiful music accompanies most intense pain — pain made transcendent
+- Classical forms: Mujra, ghazal, bandish — classical music forms carry their own emotional history which he exploits
+- Female protagonist's arc in music: Woman's songs track her transformation from constrained to unleashed
+
+**Farhan Akhtar / Farah Khan (Rock On, Don, Main Hoon Na):**
+- Music as identity statement: What music a character listens to = who they are
+- Nostalgia songs: Songs that reference a character's past as their emotional anchor
+- Genre-mixing: Rock + classical, hip-hop + folk — genre blend mirrors character's mixed identity
+
+**Imtiaz Ali (Highway, Rockstar, Tamasha):**
+- Song as memory: The same song heard in different contexts = different emotional meaning
+- AR Rahman collaboration principle: Music anticipates emotion — we feel before we know why
+- The journey song: Song during travel = character processing what they cannot yet articulate in dialogue
+
+---
+
+### Emotional Contract with Audience
+
+**What audience comes for:** To feel specific emotions AMPLIFIED to extraordinary intensity through music
+**What they leave with:** The songs — humming the music is the emotional residue of the film
+**The Musical Promise:** Every song will be NECESSARY — remove it and the story is incomplete
+**The FORBIDDEN feeling:** Audience should NEVER feel "nice song but why is it here?" — every song must have story justification
+
+---
+
+### Common Failures to Avoid
+
+❌ **Item Number Interruption**: Unrelated song interrupts story momentum — audience disconnects
+❌ **Songs as Shortcuts**: Song replaces character development instead of deepening it
+❌ **Generic Picturization**: Beautiful location + dancing → no story meaning. Song location should mirror character's internal state.
+❌ **All Same Tempo**: Story needs variety — slow grief song, fast joy song, medium longing song
+❌ **Lip Sync Over Performance**: Singer's voice doesn't match actor's character — breaks believability
+❌ **Too Many Songs**: Every song added dilutes the impact of every other song. Less = more.
+
+---
+
+### Story Creation Protocol (Musical)
+
+Before writing a single line of story, answer internally:
+1. What is this world's relationship to music — is music joy, escape, prayer, weapon, memory?
+2. At what 4-5 specific emotional moments does language fail and only music can carry the scene?
+3. What song type (ghazal, folk, rock, qawwali, classical, contemporary) fits this world and these characters?
+4. Which song will be the emotional centerpiece — the one audiences hum for months after?
+5. How does the relationship between the two leads change across their shared musical moments?
+
+---
+
 ## 🔴 STORY NARRATION IN HINDI (MANDATORY)
 
 **Write the ENTIRE story narrative in Simple Bollywood Hindi, not English.**

@@ -1,7 +1,8 @@
-# Story Synopsis Workflow (Genre-Routed)
-# Lightweight story outline development for approval BEFORE full development
-# NOW WITH GENRE IDENTIFICATION AND SPECIALIZED AGENT ROUTING
-
+# Story Synopsis Workflow — v11.0 (Unified · Format-First · Structure-First · Summary Approval at STEP 11)
+# THE SINGLE UNIFIED WORKFLOW for Movie / Web Series / Micro Drama / Short Film
+# Format is chosen FIRST (STEP 1) · Structure SECOND (STEP 2) · Story Summary approved at STEP 11
+# web-series.yaml and micro-drama.yaml are DEPRECATED — this is the ONLY story workflow
+#
 # ═══════════════════════════════════════════════════════════════════
 # 🔴 AUTO-TRIGGER RULE — MANDATORY — ZERO EXCEPTIONS
 # ═══════════════════════════════════════════════════════════════════
@@ -12,8 +13,10 @@
 #   - "write a story about..."     - "story of..."
 #   - "5 min story..."             - "short film on..."
 #   - "ek kahani..."               - "story banao..."
+#   - "web series banao"           - "micro drama"
 #   - "story idea for..."          - "film story..."
 #   - "screenplay for..."          - "concept for..."
+#   - "ek idea hai..."             - "suno ek kahani..."
 #   - ANY request implying story/film/screenplay creation
 #
 #   DETAIL LEVEL DOES NOT MATTER:
@@ -22,1468 +25,1564 @@
 #   No amount of detail skips the question phase.
 #
 #   MANDATORY FIRST RESPONSE (no exceptions):
-#   Step 1 → Acknowledge concept in 1 line
-#   Step 2 → Start Concept Mining from writer's OWN words (3-5 questions)
-#   Step 3 → Then structured phases
+#   Step 1 → Acknowledge concept in 1 warm line
+#   Step 2 → Immediately ask STEP 1 — Format Selection (Movie/Web Series/Micro Drama/Don't Know)
 #   NEVER → Write story first
 #   NEVER → Offer "quick version" or "rough outline"
-#   NEVER → Ask "should I start?" — just start asking questions
+#   NEVER → Ask "should I start?" — just start asking
+#   NEVER → Do concept mining / thread probing before STEP 1
 #
 # ═══════════════════════════════════════════════════════════════════
 
 # ═══════════════════════════════════════════════════════════════════
-# WORKFLOW CONTROLLER REFERENCE
+# LANGUAGE LAW — MANDATORY — PEHLE PADHO, PHIR LIKHO
 # ═══════════════════════════════════════════════════════════════════
-# Step sequence authority: .bmad-film/WORKFLOW-CONTROLLER.md
-# Step announcement format: "📍 STEP X of 9 — [Step Name]"
-# ALL steps must be announced BEFORE executing.
-# NEVER skip steps. NEVER write story before STEP 9.
+#
+# DEFAULT = Simple Bollywood Hindi (60-70% Hindi + 30-40% natural English)
+# User can change language at STEP 12D — until then, questions in Hindi/Hinglish
+#
+# STORY NARRATION    → Hindi mein (NEVER English paragraphs)
+# QUESTIONS TO USER  → Hinglish (warm, conversational)
+# SCENE HEADINGS     → English allowed
+# CHARACTER NAMES    → English allowed
+# TECHNICAL TERMS    → English allowed
+#
+# SENTENCE RULES:
+#   [ ] Complete sentences — subject + verb mandatory
+#   [ ] Connectors mandatory: lekin, par, aur, toh, kyunki, isliye, phir bhi...
+#   [ ] No forbidden English: tattered/edges/debris/proximity/sustains/subsequently
+#   [ ] Natural Hinglish — not awkward hybrid
+#
+# PRE-OUTPUT CHECK before any story narration:
+#   [ ] 1. Narration Hindi mein hai? (English? → REWRITE)
+#   [ ] 2. Har sentence complete? (fragment? → FIX)
+#   [ ] 3. Sentences connected? (list? → ADD connectors)
+#   [ ] 4. Forbidden English? → REPLACE
+#   [ ] 5. Hinglish natural? (awkward? → REWRITE)
+#
+# ACCESSIBILITY TEST: "Kya ek Delhi autowala ya Himachal ka kisan samajhega?"
+#   YES → Output karo  |  NO → Rewrite karo
+#
+# Full rules: WORKFLOW-CONTROLLER.md → GLOBAL LANGUAGE LAW
 # ═══════════════════════════════════════════════════════════════════
 
 workflow:
-  id: "story-synopsis"
-  name: "Story Synopsis & Outline (Genre-Routed)"
-  version: "4.0.0-writer-first"
+  id: "story-synopsis-v11"
+  name: "Story Synopsis — Unified Creative Workflow (Format-First · Structure-First · Summary Approval)"
+  version: "11.0.0-format-first-structure-step2-summary-step11"
   phase: "development"
-  scale: ["micro", "short", "feature", "series", "sequel"]
-  estimated_duration: "45-90 minutes (includes question phase)"
+  scale: ["micro", "short", "feature", "series", "micro-drama"]
+  replaces: ["web-series.yaml", "micro-drama.yaml"]
+  estimated_duration: "30-60 minutes"
 
 description: |
-  **INTERACTIVE CO-WRITING SYSTEM** - We don't generate generic stories. We collaborate with YOU to create unique films.
+  THE SINGLE WORKFLOW for all story formats — Movie, Web Series, Micro Drama, Short Film.
+  web-series.yaml and micro-drama.yaml are DEPRECATED. This is the ONLY story workflow.
 
-  This is the FIRST STEP before /story-development.
+  v11.0 KEY CHANGES from v10.0:
+  1. FORMAT SELECTION moved to STEP 1 — writer knows format FIRST before exploring story
+     • Movie → duration asked (default: 120 min)
+     • Web Series → episode count + duration asked (defaults: 8 eps × 30-45 min)
+     • Micro Drama → episode count + duration asked (defaults: 15 eps × 5-7 min)
+     • Don't Know → auto-assign at STEP 13 based on story DNA
+  2. STORY STRUCTURE is now STEP 2 — Linear / Non-Linear / Framework from list / Auto-assign
+  3. STEP 11 redesigned — NO anti-patterns, NO 3 directions:
+     • ONE Story Summary shown (~200 words, from all collected seeds)
+     • Writer: APPROVE → go to STEP 12 | CHANGE VARIANT → new summary | FEEDBACK → refine current
+     • Loop repeats as many times as writer wants — no limit
+     • approved_summary stored → used as blueprint at STEP 13
+  4. STEP 13 simplified — NO processing passes. Just write + save.
+  5. Old STEP 9 (Opening+Ending) + old STEP 10 (Language) combined into STEP 12.
 
-  **NEW IN v3.0-interactive**: Question-based collaborative storytelling
+  STEP SEQUENCE v11.0:
+  STEP 1 → Format Selection | STEP 2 → Story Structure | STEP 3 → Most Important Factor
+  STEP 4 → Factor Deep Dive | STEP 5 → Genre + Feel | STEP 6 → Theme + Core Truth
+  STEP 7 → Character Detailing | STEP 8 → Core Emotion | STEP 9 → Core Conflict
+  STEP 10 → Milestones + Highpoints | STEP 11 → Opening + Ending + Language
+  STEP 12 → Story Summary Approval | STEP 13 → Genre Routing + Full Story Creation
 
-  **3-PHASE PROCESS**:
-
-  **Phase 1: Core Seed Questions (12 Deep Seeds) + AI Architecture Proposal**
-  - MODEL: 40/60 — writer provides 12 deep seeds (Main Q + Depth Probe each)
-  - AI builds 60% creative architecture from these rich, dense seeds
-  - After seeds: AI Architecture Proposal → writer calibrates with quick reactions
-  - NO options/choices in seed questions — open questions + mandatory depth probes
-  - Genre identified from seeds, not asked upfront
-
-  **Phase 2: Genre-Specific Questions (5-8 focused questions)**
-  - Genre specialist asks targeted craft questions (reduced — foundation already built)
-  - Thriller: Antagonist reveal timing, twist mechanics, suspense build
-  - Romance: Specific obstacle, chemistry moment, separation type
-  - Action: Set-piece scale, chase type, climax structure
-  - (Only what's NOT already answered in Phase 1)
-
-  **Phase 3: Story Creation**
-  - Specialist creates UNIQUE story based on your answers (not generic pattern)
-  - Story told in Hindi (Simple Bollywood Hindi narration)
-  - **Two versions (BOTH MANDATORY)**:
-    1. Continuous Narrative (flowing Hindi story - for understanding)
-    2. Scene-by-Scene Breakdown (technical production - for planning)
-  - Genre-specific techniques from Ghosh/Raghavan/Chopra/Bhansali/etc.
-
-  Creates:
-  - **story-synopsis.md** with BOTH versions in one file
-  - Unique to YOUR answers, not pattern-based
-  - Genre-appropriate twist/revelation
-  - Ready for approval AND ready for production planning
-  - Next workflows will READ this output for consistency
-
-  Once approved, proceed to /story-development for character bible + screenplay.
-
-# ═══════════════════════════════════════════════════════
-# ALWAYS INTERACTIVE — NO OTHER MODE EXISTS
-# This workflow AUTO-TRIGGERS on ANY story/film/screenplay request.
-# Do NOT skip questions. Do NOT generate story without asking first.
-# Detail level of user prompt does NOT skip question phase.
-# ═══════════════════════════════════════════════════════
 execution_mode: "interactive-only"
 auto_trigger: true
 trigger_on_any_story_request: true
 skip_allowed: false
 quick_version_allowed: false
 
-lead_agent: "master-story-director-interactive"
-supporting_agents:
-  - "format-selector"               # STEP 0 — Always first
-  - "genre-specific-story-architect" # Selected based on genre after questions
-
-# Genre-Specific Agents Available:
+lead_agent: "master-story-director"
 genre_agents:
-  thriller: "suspense-architect" # Sujoy Ghosh, Sriram Raghavan, Anurag Kashyap
-  romance: "romance-architect" # Yash Chopra, Sanjay Leela Bhansali, Imtiaz Ali
-  action: "action-architect" # Rohit Shetty, Siddharth Anand, Ali Abbas Zafar
-  comedy: "comedy-architect" # Hrishikesh Mukherjee, Rajkumar Hirani, Priyadarshan
-  drama: "drama-architect" # Bimal Roy, Gulzar, Ashutosh Gowariker
-  horror: "horror-architect" # Ram Gopal Varma, Vikram Bhatt, Vishal Bhardwaj
-  musical: "musical-architect" # Farah Khan, Karan Johar, Aditya Chopra
-  social: "social-cinema-architect" # Shyam Benegal, Govind Nihalani, Anurag Basu
-
-prerequisites:
-  - "Story concept or idea (even a vague idea is fine — genre will be DISCOVERED through questions)"
-  - "Target format (30 sec, 5 min, 15 min, 90 min, etc.)"
-  - "NOTE: Genre/tone is NOT required upfront — it will be identified through the question phase"
-
-inputs:
-  required:
-    - "story_concept" # Initial idea — even vague is fine, questions will develop it
-
-  optional:
-    - "target_length"    # If known; otherwise agent will ask
-    - "specific_elements" # Must-have elements (e.g., "victim not dead", "twist ending")
-    - "thematic_interests"
-    - "setting_preferences"
-    # NOTE: genre_tone is REMOVED from required — genre is discovered interactively
+  thriller: "suspense-architect"
+  romance: "romance-architect"
+  action: "action-architect"
+  comedy: "comedy-architect"
+  drama: "drama-architect"
+  horror: "horror-architect"
+  musical: "musical-architect"
+  social: "social-cinema-architect"
 
 outputs:
-  # Both files saved to project/{project_name}/ folder
-  - "project/{project_name}/genre-analysis.md"   # Created in Step 2 (after question phase)
-  - "project/{project_name}/story-synopsis.md"   # Created in Step 6 (after genre-specific questions)
+  - "project/{project_name}/genre-analysis.md"
+  - "project/{project_name}/story-synopsis.md"
 
 process:
-  # ═══════════════════════════════════════════════════════
-  # STEP 0: FORMAT SELECTION (Format Selector Agent — ALWAYS FIRST)
-  # ═══════════════════════════════════════════════════════
-
-  - step: 0
-    name: "STEP 0 — Screen Format + Story Structure Selection"
-    agent: "format-selector"
-    action: |
-      **🔴 ANNOUNCE TO USER (MANDATORY):**
-      ```
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      📍 STEP 0 of 9 — Format Selection
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      ```
-      **ALWAYS runs before any story questions. No exceptions.**
-
-      Reference: `.bmad-film/agents/format-selector.md`
-
-      **STEP 0A — Screen Format:**
-      Ask writer what they are making:
-      1. Feature Film  (90-120 min)
-      2. Short Film    (Under 30 min)
-      3. Web Series    (Multi-episode, streaming)
-      4. Micro Drama   (3-7 min per episode, multiple episodes)
-
-      Ask format-specific follow-ups (runtime, episodes, platform, etc.)
-
-      **PRODUCTION FEASIBILITY LAYER (ask after format selection):**
-
-      *Story ki duniya format se pehle tay hoti hai — budget se.*
-
-      Budget Tier select karo (yeh sab world/location/character choices shape karega):
-
-      1. **MICRO BUDGET** (under ₹50 lakhs / $60K)
-         → Max 3-4 locations | Max 5-6 speaking characters | No VFX | Real locations only
-      2. **INDIE** (₹50L - ₹5Cr / $60K - $600K)
-         → Max 8-10 locations | Max 10-12 characters | Minimal VFX | Mix of real + set
-      3. **MID-RANGE COMMERCIAL** (₹5Cr - ₹50Cr / $600K - $6M)
-         → Flexible locations | Full cast | Moderate VFX | Period possible
-      4. **STUDIO COMMERCIAL** (₹50Cr+ / $6M+)
-         → Any location, any world, any scale, full VFX
-
-      Store as: `budget_tier: [selected]` — apply at every world-building step.
-      Flag story ideas that exceed selected tier and suggest compression.
-
-      **STEP 0B — Story Structure:**
-      Ask which structure they want OR run the 10-question diagnostic:
-      Three-Act / Hero's Journey / Save the Cat / Dan Harmon /
-      Bollywood Interval / Kishōtenketsu / Non-Linear /
-      Parallel / Sequence Approach / Mini-Movie Method
-
-      **STEP 0C — Structure-Specific Writer Questions:**
-      Based on chosen structure, ask the corresponding questions
-      (see format-selector.md for full question sets per structure):
-      - Three-Act: 10 questions (Q-S1 to Q-S10)
-      - Hero's Journey: 11 questions (Q-S1 to Q-S11)
-      - Save the Cat: 13 questions (Q-S1 to Q-S13)
-      - Bollywood Interval: 10 questions (Q-S1 to Q-S10)
-      - Dan Harmon: 8 questions (Q-S1 to Q-S8)
-      - Kishōtenketsu: 5 questions (Q-S1 to Q-S5)
-      - Web Series: 7 questions (Q-S1 to Q-S7)
-      - Short Film: 6 questions (Q-S1 to Q-S6)
-      - Micro-Drama: 5 questions (Q-S1 to Q-S5)
-      - Non-Linear: 5 questions (Q-S1 to Q-S5)
-
-      **OUTPUT:** Produce Step 0 summary:
-      - Screen Format confirmed
-      - Story Structure confirmed
-      - Structure foundation (key beats from writer's answers)
-      - Pass ALL this context to subsequent steps
-
-      **SCALE-ADAPTIVE STRUCTURE QUESTIONS:**
-      - Micro/Social (under 5 min): Ask only 3-4 core structure questions
-      - Short Film: Ask 6 structure questions
-      - Feature / Series: Ask full set
-
-    outputs:
-      - Screen format confirmed
-      - Story structure selected
-      - Structure foundation beats (from writer's answers)
-      - Context passed to all subsequent steps
-    duration: "10-20 min"
 
   # ═══════════════════════════════════════════════════════
-  # PHASE 1: QUESTION PHASE (Master Story Director)
+  # STEP 1 — FORMAT SELECTION (FIRST — before story exploration)
   # ═══════════════════════════════════════════════════════
 
   - step: 1
-    name: "PHASE 1 - Writer Extraction Questions (Master Story Director)"
-    agent: "master-story-director-interactive"
+    name: "Format Selection"
+    agent: "master-story-director"
     action: |
-      **🔴 ANNOUNCE TO USER (MANDATORY):**
-      ```
-      ✅ STEP 0 complete.
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      📍 STEP 1 of 9 — Core Seed Questions (12 Deep Seeds)
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      ```
-      **40/60 MODEL: Writer 12 deep seeds deta hai. AI 60% creative architecture un seeds se banata hai.**
-
-      Tumhara kaam hai SUNNA aur DHUNDHNA — writer ke 12 seeds nikalo, deep aur specific.
-      Har seed ke baad mandatory depth probe karo — yeh surface answer nahi, DNA chahiye.
-      Koi suggestion mat do. Khule sawal. Depth probes zaroori hain — skip mat karo.
-
-      Reference: `.bmad-film/agents/master-story-director-interactive.md`
-
-      ---
-
-      **⚡ PRE-PHASE: CONCEPT MINING (ALWAYS FIRST — BEFORE ANY STRUCTURED QUESTION)**
-
-      *Yeh sabse zaroori step hai. Structured questions ke pehle karo.*
-
-      Jab writer pehli baar kuch bolte hain — ek word, ek line, ek rough idea —
-      woh gold hai. Har specific word jo unhone choose kiya, kisi reason se choose kiya.
-
-      **KAISE KARO:**
-
-      1. Writer ke initial prompt ko ek baar dhyan se padho.
-      2. Har specific word ya detail notice karo jो GENERIC nahi hai — jo SPECIFIC choice hai.
-      3. Un specific cheezon pe directly probe karo — unhin ke words use karte hue.
-
-      **EXAMPLE:**
-
-      Writer bolte hain: *"Kasol couple trip story"*
-
-      Generic agent kya karta: "Genre kya hai? Tone kya hai?"
-      ❌ GALAT — yeh writer ke words se nahi nikla.
-
-      Concept Mining agent kya karta:
-      → "Kasol — specifically Kasol kyun? Koi personal connection hai is jagah se?"
-      → "Couple — yeh log abhi apni life mein kahan hain? Naye hain, purane hain, kuch unsettled hai?"
-      → "Trip — yeh trip kisi cheez se BHAAGNA hai, kuch DHUNDHNA hai, ya sirf hona hai saath mein?"
-      ✅ SAHI — writer ke apne words se nikle sawal
-
-      **RULE:** Writer ne jo bhi kaha — us mein se minimum 3-5 "thread" nikalo aur unpe probe karo.
-      Tab tak koi structured question mat poochho jab tak yeh threads explore na ho jaayein.
-
-      **70% OUTCOME WRITER KE WORDS SE:**
-      Yeh rule yaad rakho — agar writer ne kuch specific kaha hai, woh already story ka 70% hai.
-      Tumhara kaam sirf woh 70% bahar laana hai. Baaki 30% structured questions se aayega.
-
-      **REFERENCE FILM INTEGRATION (run if writer mentions any reference films):**
-
-      *"Masaan jaisi feeling chahiye" se kaam nahi chalega — specifically kya chahiye?*
-
-      Agar writer ne koi film ka naam liya, toh yeh extract karo:
-
-      ASK: "[Film name] mein SPECIFICALLY kya tha jo aapko chahiye?"
-        → Ek specific scene ya moment — poori film nahi
-        → Woh scene technically KAISE bana tha? (long silence / handheld / no background music)
-        → Woh scene ne kaunsa emotion create kiya?
-
-      Reference Extraction Table (fill per film):
-      | Reference Film | Specific Scene | Technique Used | Emotion Created | Apply In Our Story At |
-      |---|---|---|---|---|
-      | [Film] | [Scene] | [Camera/edit/sound] | [Audience emotion] | [Which part of our story] |
-
-      RULE: Reference films give TECHNIQUE, not story. Writer's seeds give STORY.
-      Never copy story elements — only extract the HOW, not the WHAT.
-
-      **CONCEPT MINING EXAMPLES:**
-
-      | Writer Ka Word | Thread Jo Nikalta Hai |
-      |---|---|
-      | "Kasol" | Yeh jagah specifically kyun? Personal connection? |
-      | "couple" | Relationship ki current state kya hai? |
-      | "trip" | Kaun le gaya tha idea? Reluctant tha koi? |
-      | "heist" | Tumhare dimaag mein kaun karta hai — insider ya outsider? |
-      | "marriage" | Arranged ya love? Khushi ki shaadi ya kuch aur? |
-      | "brother" | Dono mein kya rishta hai — close, distant, complicated? |
-      | "5 minute" | Kyun sirf 5 minute — koi specific reason? |
-      | "bade sheher" | Woh sheher naam se kaunsa hai dimaag mein? |
-      | "purani dosti" | Kitne saal baad mil rahe hain? Kya hua beech mein? |
-
-      **COLLECT:** Un 3-5 threads ke jawab lo. Tab 12 deep seeds shuru karo.
-
-      ---
-
-      **12 DEEP SEED QUESTIONS (Main Q + Mandatory Depth Probe each)**
-
-      3 groups mein poochho — ek group at a time. Ek seed ke baad depth probe ZAROORI hai.
-      Surface answer kaafi nahi. DNA chahiye. Ek baar mein 1 seed + 1 probe — writer ko space do.
-
-      ---
-
-      **GROUP 1 — WHY + CORE (Seeds S1–S4)**
-
-      S1. KHINCHAV (Personal Origin)
-          Main Q: "Yeh story kab se hai tumhare andar? Kya cheez baar baar kheenchti hai is taraf?"
-          Depth Probe: "Woh exact moment kya tha jab yeh story pehli baar aayi — koi cheez dekhi,
-          suni, ya mehsoos ki? Koi real se connected hai kuch is mein?"
-          [AI gets: personal origin — only THIS writer can write this story. Irreplaceable specificity.]
-
-      S2. PEHLI IMAGE (Visual DNA)
-          Main Q: "Aankhein band karo. Is story ka woh ek image jo tumhe nahi chhodta —
-          ek frame, ek moment. Abhi describe karo."
-          Depth Probe: "Us frame mein light kahan se aa rahi hai — andhera zyada hai ya roshni?
-          Aur woh image silent hai ya koi awaaz hai usme?"
-          [AI gets: visual grammar + tone temperature + sound palette. World uniquely built.]
-
-      S3. AAKHRI EHSAAS (Emotional Destination)
-          Main Q: "Film khatam hoti hai, audience bahar nikal rahi hai — exactly kya feel
-          ho raha hai unhe? Woh ek emotion ya thought jo unke andar reh jaaye."
-          Depth Probe: "Yeh feeling — kya tumhari khud ki zindagi mein kisi cheez se connected
-          hai? Koi baar tumhe yeh exact feeling aayi thi?"
-          [AI gets: story's emotional destination + thematic resonance + personal truth.]
-
-      S4. JO KEHNA MUSHKIL HAI (Core Uncomfortable Truth)
-          Main Q: "Is story mein koi dark ya uncomfortable angle hai — koi truth jo kehna
-          zaroori hai lekin mushkil lagta hai? Kya hai woh?"
-          Depth Probe: "Agar tum yeh nahi kehte is story mein — story kya missing ho jaayegi?
-          Exactly woh kya hai jo sirf yeh story keh sakti hai?"
-          [AI gets: thematic core + why story MUST be told + irreplaceable distinction.]
-
-      ---
-
-      **GROUP 2 — WHO + RELATIONSHIP (Seeds S5–S8)**
-
-      S5. CHAHNA AUR ZAROORAT (Character Psychology + Want vs Need Gap)
-          Main Q: "Tumhara main character kya CHAHTA hai — jo dikhta hai? Aur unhe kya ZAROORI hai — jo unhe khud bhi pata nahi?"
-          Depth Probe 1: "Woh 'zaroori' cheez — kab se hai unke andar? Koi ek moment
-          jab woh need shuru hui — kya hua tha tab?"
-          Depth Probe 2 (WANT vs NEED GAP — MANDATORY):
-          "Protagonist ka WANT kya hai — woh kya KARTE HAIN? (External goal — dikhta hai)
-          Aur unka NEED kya hai — woh kya HONA CHAHIYE? (Internal — jo unhe khud pata nahi)
-          Kya dono ALAG hain? Agar same hain — yeh flat arc hai. Restate until they diverge.
-          RULE: Story ka plot = mechanism jo protagonist ko Want aur Need ke beech choose karwata hai."
-          [AI gets: character wound origin + arc direction + full psychological depth.]
-
-      S6. SABSE IMPORTANT RISHTA (Relationship DNA)
-          Main Q: "Is story ka sabse important rishta kaun sa hai — woh do log
-          jinke beech jo hoga, woh hi story ka asli dil hoga?"
-          Depth Probe: "Jab dono pehli baar milte hain — exactly kya feel hota hai?
-          Aur ek cheez batao jo un dono ne kabhi same direction mein nahi dekhi."
-          [AI gets: relationship baseline + subtext origin + defining dynamic.]
-
-      S7. JO KABHI NAHI KAHA GAYA (Subtext Engine)
-          Main Q: "Un dono ke beech woh unsaid cheez kya hai jo har scene mein
-          hawa mein rehti hai — jo kabhi seedha nahi kaha gaya?"
-          Depth Probe: "Agar woh unsaid cheez kabhi sirf ek sentence mein keh di jaaye —
-          kya hoga? Kaunsi conversation yeh do log kabhi nahi kar sakte?"
-          [AI gets: exact subtext sentence + relationship tension + what every scene carries beneath.]
-
-      S8. WOH EK DECISION (Structural Spine)
-          Main Q: "Ek choice — sirf ek — jo sab kuch badal deti hai. Kya hai woh?"
-          Depth Probe: "Woh exact moment mein protagonist kahan hai — akela hai ya koi
-          saath hai? Kaunsi ek cheez dekh, sun, ya feel karke woh decision lete hain?"
-          [AI gets: story pivot + cinematic specificity + cause-effect chain. Spine locked.]
-
-      S8a. INTERVAL SEED (Movie format only — skip for Short Film/Web/Micro)
-           Main Q: "Interval pe story kahaan hogi? Audience wapas aane se pehle —
-           unke haath mein woh kya hoga jo unhe screen ki taraf kheenche?
-           Koi cliffhanger, revelation, ya decision point jo resolve nahi hua?"
-           Depth Probe: "Is interval moment ke baad audience theatre se uthte hue —
-           exactly kya feel kar rahe honge? Anxiety? Dread? Hope? Betrayal?
-           Woh exact emotion batao jo half-time mein unke saath baahir jaayega."
-
-      S8b. OPENING SCENE SEED *(Movie format only — skip for Short Film/Web/Micro)*
-
-           *First 7 minutes = audience ka pehla decision: rukna ya jaana.*
-
-           Main Q: "Aapki film ka PEHLA scene — pehli image kya hai jo audience dekhegi?
-           Kaun hai frame mein, kya ho raha hai, pehla sound kya hai?"
-           Depth Probe — Opening Engineering:
-           → Pehla dialogue line kya hai — ya kya koi bolega hi nahi?
-           → Woh pehla scene audience ke dimag mein kaunsa EK sawaal dalta hai?
-             (Yeh sawaal poori film mein unanswered rehna chahiye — climax tak)
-
-           Opening Scene Types (writer recognizes, not chooses):
-           - IN MEDIAS RES: Story ke beech se shuru (action/argument already happening)
-           - CHARACTER REVEAL: Protagonist ki ek action jo unka poora character bataye
-           - WORLD REVEAL: Duniya dikhao — protagonist ke aane se pehle
-           - TONAL PROMISE: First scene = contract with audience (what kind of film this is)
-
-           Store as: `opening_hook_question` — verify it's answered at climax in Stress Test.
-
-      ---
-
-      **GROUP 3 — LANDING + TONE (Seeds S9–S12)**
-
-      S9. AAKHRI IMAGE (Resolution)
-          Main Q: "Film ka last scene — tumhare dimaag mein ek image.
-          Kaun hai frame mein, kya ho raha hai?"
-          Depth Probe: "Pehli image (S2) se yeh last image kaise different hai?
-          Protagonist akela hai ya koi saath hai — aur woh presence ya absence kyun?"
-          [AI gets: full arc S2→S9 + transformation logic + resolution emotional state.]
-
-      S10. FEEL REFERENCE (Hyper-Specific Tone)
-          Main Q: "Koi ek film jis ki FEEL tumhare story se milti hai — story nahi,
-          sirf feel, texture, energy. Kaunsi film?"
-          Depth Probe: "Us film mein ek specific scene jo us feel ko best represent
-          karta hai — woh 2-3 minute ka scene describe karo."
-          [AI gets: not genre label but exact texture, pacing, emotional temperature.]
-
-      S11. JO BILKUL NAHI CHAHIYE (Anti-Cliché Guard)
-          Main Q: "Ek cheez jo is story mein tum definitely NAHI chahte — koi
-          cliché, koi trope, koi moment."
-          Depth Probe: "Agar woh cheez accidentally aa jaaye — audience ko exactly
-          kya feel hoga jo tum NAHI chahte? Woh feeling batao."
-          [AI gets: anti-pattern material with emotional reasoning — what to reject and WHY.]
-
-      S12. OUT OF THE BOX + SUBTEXT (Uniqueness + Hidden Layer)
-          Main Q: "Kuch aisa jo typically is genre mein nahi hota — unexpected element.
-          Aur: koi ek cheez jo story mein kabhi directly nahi kahi jaayegi par neeche behti rahegi."
-          Depth Probe: "Woh 'out of box' element kahan se aaya — koi real cheez, koi memory?
-          Aur agar audience ne poori film dekhi aur woh hidden current feel ki —
-          woh ek sentence mein kya samjhe jo film ne kabhi nahi kaha?"
-          [AI gets: originality anchor with real-world origin + thematic subtext in one sentence to weave throughout.]
-
-      ---
-
-      **SCALE-ADAPTIVE — Kitne seeds poochho:**
-      - 30-sec microdrama: S1, S2, S3, S6 (4 seeds + their probes)
-      - 5-min short: S1-S4, S6, S8, S9, S11 (8 seeds + their probes)
-      - Feature / Series: All 12 seeds + depth probes + follow-ups on rich answers
-
-      ---
-
-      **MANDATORY RULES:**
-      1. **CONCEPT MINING PEHLE** — structured seeds baad mein. Rule kabhi skip nahi.
-      2. **Depth Probe MANDATORY** — har seed ke baad depth probe poochho. Surface answer nahi chalega.
-      3. **Ek baar mein 1 seed + 1 probe** — writer ko breathe karne do.
-      4. **Koi option mat do** — khule sawal. "A, B, C mein se choose karo" strictly forbidden.
-      5. **Follow-up karo** — rich answer mila toh ek extra probe karo.
-      6. **Har group ke baad summarize** — "Yeh main samjha — sahi hai?"
-      7. **"Pata nahi"** = "Theek hai, chhodo, aage chalte hain."
-      8. **NEVER suggest** — sirf seeds extract karo. AI baad mein banayega.
-
-      **Collect ALL 12 seeds + depth probe answers. Tab Step 1b (AI Architecture Proposal) shuru karo.**
-
-      ---
-
-      **B-STORY / SUBPLOT DESIGN *(Movie format only — supplement to seeds)***
-
-      *Bollywood ki kamzor filmein B-story mein marti hain — woh A-story ke parallel chalti hai aur kabhi milti nahi.*
-
-      B1: Aapki film mein ek DOOSRI kahani kya hai jo A-story ke saath-saath chal rahi hai?
-          Depth Probe → B-story mein kaunse characters hain jo A-story mein bhi hain?
-
-      B2: B-story aur A-story KAHAN milti hain? (They MUST collide — parallel nahi chalegi)
-          → Kis scene mein B-story ka conflict A-story ke climax ko directly affect karta hai?
-          Depth Probe → Agar B-story remove kar dein → A-story badlegi? Agar nahi → B-story weak hai
-
-      B3: B-story ka emotional function kya hai?
-          → Comic relief / Emotional contrast / Theme mirror / Stakes amplifier / Character reveal
-          Depth Probe → B-story protagonist ke internal wound ko address karti hai?
-
-      B-STORY COLLISION TEST (internal — run before story creation):
-      ✅ PASS: B-story character ek scene mein A-story outcome ko directly change karta hai
-      ❌ FAIL: B-story runs separately, mentioned occasionally, disappears at climax
-      → FAIL = redesign B-story OR remove it entirely (no B-story > weak B-story)
-
-    duration: "20-30 min"
-
-  - step: 1b
-    name: "AI Architecture Proposal (60% Creative Contribution)"
-    agent: "master-story-director-interactive"
-    action: |
-      **PURPOSE: Writer ke 12 deep seeds se AI puri story architecture propose karta hai.**
-      **Yeh AI ka 60% creative contribution hai — seeds ke bahar expand karna.**
-
-      **STEP 1: PASS 0 — SEED TRACEABILITY (run internally before showing user)**
-
-      Har proposed element ke liye check karo: "Yeh kaunse seed se aaya?"
-
-      Seed → What it drives:
-      - S1 (khinchav + real origin) → protagonist's emotional reason + personal wound
-      - S2 (first image + light/sound) → visual grammar, world opening, defining image
-      - S3 (last feeling + personal connection) → resolution tone, thematic resonance
-      - S4 (uncomfortable truth + what's missing without it) → thematic core, story's purpose
-      - S5 (want/need + wound origin moment) → character psychology, arc cause
-      - S6 (relationship + first meeting feel + divergent direction) → relationship DNA
-      - S7 (unsaid + unspeakable sentence) → subtext engine, what every scene carries
-      - S8 (decision + location + sensory trigger) → structural spine, pivot specificity
-      - S9 (last image + contrast with S2) → full story arc, transformation proof
-      - S10 (feel reference + specific scene described) → hyper-specific tone, pacing
-      - S11 (what not to have + feeling to avoid) → anti-pattern map, rejection reasoning
-      - S12 (unexpected element + subtext sentence) → originality layer, hidden current
-
-      RULE: Koi bhi proposed element bina seed se trace kiye nahi rahega.
-            Agar koi element kisi seed se trace nahi hota → woh AI generic default hai → HATA DO.
-
-      **STEP 2: GENERATE ARCHITECTURE — then USER KO DIKHAO:**
-
+      **🔴 ANNOUNCE:**
       ```
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      📍 AI ARCHITECTURE PROPOSAL
-      Tumhare 12 deep seeds se main yeh story architecture propose kar raha hoon:
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-      GENRE READ: [Primary + Secondary] — from S[X] + S[X]
-
-      CHARACTER PSYCHOLOGY:
-      → Hidden wound (kab se, kya hua): [AI proposal] — from S5 depth probe
-      → Core contradiction (jo unexpected lage): [AI proposal] — from S4 + S5
-      → Arc direction (how they change): [AI proposal] — from S8 + S9 contrast
-
-      WORLD (3 hyper-specific details AI built):
-      → [Specific light/sound/visual detail] — from S2 depth probe
-      → [World constraint holding protagonist] — from S6/S7
-      → [Background decay or change] — from S4
-
-      RELATIONSHIP BLUEPRINT:
-      → Core dynamic (what they ARE to each other): [AI proposal] — from S6
-      → Power: who holds it, when it shifts: [AI proposal] — from S7 unspeakable sentence
-      → The defining scene: [AI proposal] — from S2/S9 images
-
-      STORY SPINE:
-      → Opening state (protagonist + world): [AI proposal] — from S1/S2
-      → The pivot (decision + where + who): [AI proposal] — from S8 depth probe
-      → Landing (last image + feeling): [AI proposal] — from S9/S3
-
-      SUBTEXT LAYER:
-      → The unsaid current (never stated, always felt): [S7 unspeakable sentence woven into]
-      → The hidden line audience will understand: [S12 subtext sentence]
-
-      TONE + VISUAL GRAMMAR:
-      → [Hyper-specific texture] — from S10 specific scene described
-      → [What to avoid + why]: [S11 feeling to avoid]
-      → [Unexpected element origin]: [S12 real-world anchor]
-
-      STORY WORLD IDENTITY (STAGE Framework):
-      → World Type: [Realistic / Heightened Reality / Historical / Fantastical]
-      → LOOK (Visual Identity): [Defining color, texture, light — one detail only THIS world has] — from S2
-      → SOUND (Sound Identity): [Defining audio — music/ambient/silence of this world] — from S2 depth probe
-      → FEEL (Emotional Identity): [The dominant emotion this world evokes in audience] — from S3
-      → RULE (World as Constraint): [One social/physical rule that holds protagonist back] — from S6/S7
-      → MUDDA (Core Issue): [Unexplored human or social truth this world contains] — from S4
-
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      Har point pe batao — theek hai, wrong direction, ya kya change karna hai?
+      📍 STEP 1 of 13 — Format Selection
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       ```
+
+      **ASK:**
+
+      ---
+      **Pehle ek baat decide karo — yeh story kis SCREEN par dikhogi?**
+      **Format pehle se pata ho toh sab kuch ussi hisaab se dhalta hai.**
+
+      **A) 🎬 MOVIE (Feature Film)**
+      Ek complete duniya, ek complete safar — ek hi viewing mein.
+      Interval, songs, climax grandeur — Bollywood ka full canvas.
+      *Default agar duration nahi bataaya: 120 min*
+
+      **B) 📱 WEB SERIES (Multi-Episode Streaming)**
+      Multiple episodes — sustained story across weeks.
+      Complex plots, ensemble casts, Season 2 possibilities.
+      *Default agar nahi bataaya: 8 episodes × 30-45 min each*
+
+      **C) ⚡ MICRO DRAMA (Short Episodes)**
+      3-7 min per episode — phone pe, vertical ya square format.
+      Har episode mein hook + cliffhanger. Addictive binge format.
+      *Default agar nahi bataaya: 15 episodes × 5-7 min each*
+
+      **D) 🤷 PATA NAHI (Auto-Assign)**
+      Story ka idea hai, format abhi decide nahi kiya.
+      Story ke hisaab se main best format recommend karunga/karungi STEP 13 mein.
+
+      ---
+      Ya apna format batao:
+
+      ---
+
+      **AFTER FORMAT SELECTION — Ask format-specific follow-ups:**
+
+      ### IF MOVIE SELECTED:
+      "Kitni duration soch rahe ho?"
+
+      A) ~90 min (tight, festival/short commercial style)
+      B) ~120 min (standard commercial Bollywood — **DEFAULT**)
+      C) ~150-180 min (epic, multi-arc story)
+      D) Mujhe decide karne do story ke hisaab se
+
+      *(Agar koi jawab nahi diya ya skip kiya → **DEFAULT: 120 min** apply karo silently)*
+
+      ### IF WEB SERIES SELECTED:
+      "Kitne episodes soch rahe ho?"
+
+      A) 6 episodes (limited series — tight, complete arc)
+      B) 8 episodes (**DEFAULT** — standard OTT season)
+      C) 10-12 episodes (room for subplots + side arcs)
+      D) 20+ episodes (long-running, multiple storylines)
+
+      *(Agar skip kiya → **DEFAULT: 8 episodes**)*
+
+      "Aur har episode kitna lamba?"
+
+      A) 20-25 min (short-form OTT — Netflix micro-series style)
+      B) 30-45 min (**DEFAULT** — standard streaming episode)
+      C) 45-60 min (prestige drama — HBO/SonyLIV style)
+
+      *(Agar skip kiya → **DEFAULT: 30-45 min per episode**)*
+
+      ### IF MICRO DRAMA SELECTED:
+      "Kitne episodes soch rahe ho?"
+
+      A) 10 episodes
+      B) 15 episodes (**DEFAULT**)
+      C) 20 episodes
+      D) 25-30 episodes (long micro series)
+
+      *(Agar skip kiya → **DEFAULT: 15 episodes**)*
+
+      "Har episode kitna lamba?"
+
+      A) 3-4 min (very short — pure hook + reveal)
+      B) 5-7 min (**DEFAULT** — standard micro drama episode)
+      C) 8-10 min (mini-episode — slightly extended)
+
+      *(Agar skip kiya → **DEFAULT: 5-7 min per episode**)*
+
+      ### IF DON'T KNOW SELECTED:
+      "Theek hai — story ke hisaab se main best format STEP 13 mein suggest karunga."
+      *(Store: screen_format = "auto-assign". No follow-up questions needed.)*
+
+      **COLLECT & STORE:**
+      `screen_format`: [MOVIE / WEB SERIES / MICRO DRAMA / AUTO-ASSIGN]
+      `duration`: [e.g., "120 min" / "auto" / "8 eps × 30-45 min" / "15 eps × 5-7 min"]
+      Apply defaults silently if writer skips or doesn't specify.
 
     outputs:
-      - AI Architecture Proposal (all sections, each element seed-traced)
-    duration: "5-10 min"
-
-  - step: 1c
-    name: "Writer Reaction Protocol (40% Calibration)"
-    agent: "master-story-director-interactive"
-    action: |
-      **PURPOSE: Writer reacts to AI proposal. Yeh writer ka 40% hai — generating nahi, calibrating.**
-
-      Quick aur targeted reactions collect karo. Writer ka har reaction architecture refines karta hai.
-
-      **REACTION RULES:**
-      - "Theek hai" → lock it, next element
-      - "Wrong direction" → probe once: "Woh kya hoga toh?" → note → adjust
-      - "Change karna hai" → "Exactly kya change?" → note → adjust
-      - "Nahi samjha" → rephrase using writer's own seed words
-      - After all reactions: synthesize CONFIRMED architecture
-
-      **AFTER ALL REACTIONS — SYNTHESIZE + CONFIRM:**
-
-      ```
-      Theek hai! Confirmed architecture:
-
-      ✓ Genre: [final]
-      ✓ Character psychology + wound: [final — seed + calibration]
-      ✓ World details (3 specific): [final]
-      ✓ Relationship blueprint: [final]
-      ✓ Story spine (opening → pivot → landing): [final]
-      ✓ Subtext + tone: [final]
-      ✓ What to avoid: [final]
-
-      Sab confirm hai? Ab genre specialist ko brief karta hoon.
-      ```
-
-      Pass this CONFIRMED ARCHITECTURE to Step 2 (Genre Analysis + Agent Routing).
-    duration: "10-15 min"
-
-  - step: 2
-    name: "Answer Processing & Genre Routing"
-    agent: "master-story-director-interactive"
-    action: |
-      **🔴 ANNOUNCE TO USER (MANDATORY):**
-      ```
-      ✅ STEP 1 complete — Seeds extracted, AI architecture proposed, direction calibrated.
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      📍 STEP 7 of 9 — Genre Analysis + Agent Routing
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      ```
-      **Process user's answers and route to genre specialist:**
-
-      **STEP 2A: Summarize Understanding**
-      ```
-      Theek hai! Main samajh gaya:
-
-      ✓ Emotion: [User's answer to Q1]
-      ✓ Protagonist: [User's answer to Q6]
-      ✓ Conflict: [User's answer to Q8]
-      ✓ Tone: [User's answer to Q9/Q13]
-      ✓ Genre: [Identified from answers]
-
-      Kya yeh sahi hai? Kuch add ya change karna hai?
-      ```
-
-      **STEP 2B: Identify Genre from Answers**
-
-      Apply decision tree based on Q1 (Emotion) + Q7 (Want) + Q8 (Conflict):
-
-      - Suspense/tension + mystery solve → THRILLER/SUSPENSE
-      - Pyaar/romance + relationship → ROMANCE
-      - Adrenaline + physical conflict → ACTION
-      - Khushi/laughter + absurdity → COMEDY
-      - Character transformation + serious issue → DRAMA
-      - Dar/dread + supernatural → HORROR
-      - Wonder/celebration + music/dance → MUSICAL
-      - Injustice + system critique → SOCIAL CINEMA
-
-      If mixed:
-      - Primary Genre (60%+)
-      - Secondary elements (20-40%)
-
-      **STEP 2C: Select & Brief Genre Specialist**
-
-      Route to appropriate agent:
-      - Thriller → `.bmad-film/agents/genre-specialists/suspense-architect.md`
-      - Romance → `.bmad-film/agents/genre-specialists/romance-architect.md`
-      - Action → `.bmad-film/agents/genre-specialists/action-architect.md`
-      - Comedy → `.bmad-film/agents/genre-specialists/comedy-architect.md`
-      - Drama → `.bmad-film/agents/genre-specialists/drama-architect.md`
-      - Horror → `.bmad-film/agents/genre-specialists/horror-architect.md`
-      - Musical → `.bmad-film/agents/genre-specialists/musical-architect.md`
-      - Social → `.bmad-film/agents/genre-specialists/social-cinema-architect.md`
-
-      **Pass to specialist**:
-      - All 20 answers from user
-      - Genre classification
-      - Creative constraints (must-haves from Q16, must-avoids from Q17)
-      - Target scale/format
-
-      **Output to user**:
-      ```
-      Genre: [THRILLER] (Primary)
-      Selected Agent: SUSPENSE ARCHITECT (trained on Ghosh/Raghavan)
-
-      Rationale: Aapne kaha suspense chahiye, mystery solve karna hai,
-      dark tone chahiye - yeh Sujoy Ghosh aur Sriram Raghavan ka territory hai.
-
-      Main ab Suspense Architect ko brief kar raha hoon. Woh ab genre-specific
-      questions poochenge thriller craft ke liye.
-      ```
-
-      **SAVE genre-analysis.md to: `project/{project_name}/genre-analysis.md`**
-
-      File format (MANDATORY):
-      ```markdown
-      # GENRE ANALYSIS
-      ## Project: {project_name}
-
-      **Primary Genre**: [e.g., THRILLER/SUSPENSE]
-      **Secondary Elements**: [e.g., Drama (20%)]
-      **Genre Mix**: [e.g., 80% Thriller + 20% Drama]
-
-      ## Selected Agent
-      **Agent**: [e.g., Suspense Architect]
-      **Trained On**: [e.g., Sujoy Ghosh, Sriram Raghavan, Anurag Kashyap]
-      **Rationale**: [Why this agent fits the user's answers]
-
-      ## User Vision Summary
-      - **Emotional Core**: [Q1 answer]
-      - **Protagonist**: [Q6 answer]
-      - **Central Conflict**: [Q8 answer]
-      - **Tone**: [Q9/Q13 answers]
-      - **Ending Direction**: [Q10 answer]
-      - **Must-Haves**: [Q16 answers]
-      - **Must-Avoids**: [Q17 answers]
-      - **Scale**: [Format — 5-min short / feature / etc.]
-
-      ## Tonal Analysis
-      - **Dark ↔ Light**: [Position on scale]
-      - **Realistic ↔ Stylized**: [Position on scale]
-      - **Pacing**: [Fast / Moderate / Slow-burn]
-
-      ## Genre-Specific Strategy
-      [What techniques from the selected masters will be applied and why]
-      ```
-
-      Project name = lowercase, hyphenated version of story title or concept.
-      Example: "political thriller" → `project/political-thriller/genre-analysis.md`
-
-      **NAVA RASA MAPPING (Bollywood films — mandatory for Movie format):**
-
-      After genre identification, map which rasas this story will hit:
-
-      ```
-      NAVA RASA MAP — Is film mein kaun se rasas honge aur kahan:
-
-      1. Shringar (pyaar/saundarya): Scene? — [AI maps from S6/S7 seeds]
-      2. Hasya (comedy/laughter): Scene? — [Optional — from tone seeds]
-      3. Karuna (pathos/dard): Scene? — [From S3/S5 emotional destination]
-      4. Raudra (gussa/fury): Scene? — [From S8 decision + conflict seeds]
-      5. Vira (heroism/himmat): Scene? — [From S8a interval or climax]
-      6. Bhayanaka (fear/dread): Scene? — [If genre includes tension]
-      7. Bibhatsa (disgust): Scene? — [Optional — if story demands]
-      8. Adbhuta (wonder/surprise): Scene? — [From twist architecture]
-      9. Shanta (peace/resolution): Scene? — [From S9 last image]
-
-      MINIMUM 5 rasas mandatory for commercial Hindi film.
-      Single-rasa = art cinema (acceptable only if writer deliberately chooses it).
-      Rasa sequence = emotional pacing map of the film.
-      ```
-
-      **BOLLYWOOD SONG PLACEMENT ENGINEERING *(Movie format only)***
-
-      *Song galat jagah = momentum toot gaya. Song sahi jagah = emotion double ho gayi.*
-
-      Song Count by Film Type:
-      - Full Commercial: 5-7 songs | Indie/Drama: 2-3 songs | Thriller/Action: 1-2 songs (background only)
-
-      For each song, define:
-      | Song # | Placement (beat/scene) | Emotional Function | Nava Rasa Served | Story Information Carried |
-      |---|---|---|---|---|
-      | 1 | [Pre-interval / Act 1] | [Establish / Character intro] | [...] | [What audience learns/feels] |
-      | 2 | [Post-interval / Act 2 turn] | [Montage / Release / Time passage] | [...] | [...] |
-      | N | [Climax / End credits] | [Resolution / Theme] | [...] | [...] |
-
-      Song Placement Rules:
-      → NEVER place a song immediately after the interval — momentum already broken
-      → Post-interval first scene = dialogue/action (establish stakes BEFORE any song)
-      → A song carrying no story information (no character change, no time passage) = filler = cut
-      → Climax song: ONLY after emotional resolution — never DURING the climax scene
-      → Song Stress Test: "Agar yeh song remove kar dein — kya story ka koi hissa miss hoga?"
-         YES = song is doing work → keep | NO = song is decoration → cut or replace with score
-
-    outputs:
-      - "project/{project_name}/genre-analysis.md"
-    duration: "5 min"
+      - screen_format confirmed (with defaults applied if not specified)
+      - format_details stored (duration / episode count / episode duration)
+    duration: "3-5 min"
 
   # ═══════════════════════════════════════════════════════
-  # PHASE 2: GENRE-SPECIFIC QUESTIONS
+  # STEP 2 — STORY STRUCTURE
+  # ═══════════════════════════════════════════════════════
+
+  - step: 2
+    name: "Story Structure"
+    agent: "master-story-director"
+    action: |
+      **🔴 ANNOUNCE:**
+      ```
+      ✅ STEP 1 complete.
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 2 of 13 — Story Structure
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
+
+      **ASK:**
+
+      ---
+      **Is story ki STRUCTURE kaisi hogi?**
+      **Container shape karta hai kahani ko — jo andar hai wahi zindagi hai.**
+
+      **A) 📏 LINEAR (Seedhi Kahani)**
+      Time ka bahav ek direction mein — shuruwaat se ant tak.
+      Audience ke saath protagonist ka safar — chronological order.
+      Jo pehle hua woh pehle dikhega. Simple, clean, powerful.
+      *Best for: Clear emotional journey, first-time filmmakers, accessible storytelling*
+      *Examples: Dangal, Queen, Taare Zameen Par, Dil Chahta Hai*
+
+      **B) 🌀 NON-LINEAR (Teri-Meri Timeline)**
+      Time mein chhalaang — flashbacks, flash-forwards, multiple timelines.
+      Mystery, complexity, aur rewatchability is structure ki khasiyat.
+      *Best for: Mystery reveal, haunted past, multiple POVs, revelation-based stories*
+      *Examples: Andhadhun, Talaash, Lootera, Gangs of Wasseypur*
+
+      **C) 📋 FRAMEWORK SE CHOOSE KARO:**
+      Ek proven cinematic structure chunna chahte ho? List se select karo:
+
+      1) 🎬 **Three-Act** — Setup → Confrontation → Resolution (Classical)
+         *Timeless format. Audience ko familiar emotional curve milti hai.*
+         *Examples: 3 Idiots, Swades, Kabhi Khushi Kabhie Gham*
+
+      2) 🦸 **Hero's Journey** (12 Stages) — Ordinary world → Call → Ordeal → Return transformed
+         *Epic transformation stories. Protagonist ki identity badal jaati hai.*
+         *Examples: Bhaag Milkha Bhaag, Taare Zameen Par, Swades*
+
+      3) 🐱 **Save the Cat** (15 Beats) — Commercial precision with thematic backbone
+         *Wired for audience satisfaction. Every beat has a specific emotional job.*
+         *Examples: Queen, Badhaai Ho, Shubh Mangal Saavdhan*
+
+      4) 🎯 **Bollywood Interval Format** — Do-aadha architecture with interval as hinge
+         *Pehla half duniya banata hai. Interval sab palat deta hai. Doosra half consequence hai.*
+         *Examples: Drishyam, Kahaani, Andhadhun, Gangs of Wasseypur*
+
+      5) 🔄 **Dan Harmon Story Circle** (8 Steps) — You → Need → Go → Search → Find → Take → Return → Change
+         *Tight cyclical structure. Great for character-driven, transformation stories.*
+
+      6) 🌸 **Kishōtenketsu** — Introduction → Development → Twist → Reconciliation
+         *No traditional villain needed. Conflict emerges from revelation, not battle.*
+
+      7) 📚 **Sequence Approach** (8 Sequences) — Film as 8 interlocking 10-15 min sequences
+         *Screenplay-friendly structure. Keeps pace tight. Each sequence has its own mini-arc.*
+
+      **D) 🤖 AUTO-ASSIGN (AI Decides)**
+      Story ke baaki answers dekh ke main best structure suggest karunga.
+      Structure story ke DNA se emerge hogi — forced nahi hogi.
+      *STEP 11 mein story summary likhte waqt best fit structure apply hoga.*
+
+      ---
+      Ya apne words mein batao kaisi structure chahiye:
+
+      ---
+
+      **COLLECT & STORE:**
+      `story_structure`: [LINEAR / NON-LINEAR / specific-framework-name / AUTO-ASSIGN]
+      If framework chosen from list → also store: `structure_framework: "[specific name]"`
+      If AUTO-ASSIGN → flag for STEP 11 to determine based on genre + story DNA.
+
+      **DEFAULT (if writer skips or says "anything is fine"):**
+      Structure = AUTO-ASSIGN (story DNA se decide hoga)
+
+    outputs:
+      - story_structure confirmed (or "auto-assign")
+      - structure_framework noted (if specific chosen from list)
+    duration: "3-5 min"
+
+  # ═══════════════════════════════════════════════════════
+  # STEP 3 — MOST IMPORTANT FACTOR (was STEP 1)
   # ═══════════════════════════════════════════════════════
 
   - step: 3
-    name: "PHASE 2 - Genre-Specific Questions (10-15 questions)"
-    agent: "[selected-genre-architect]"
+    name: "Most Important Factor"
+    agent: "master-story-director"
     action: |
-      **🔴 ANNOUNCE TO USER (MANDATORY):**
+      **🔴 ANNOUNCE:**
       ```
-      ✅ STEP 7 complete — Genre identified, specialist selected.
+      ✅ STEP 2 complete.
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      📍 STEP 8 of 9 — Genre-Specific Questions
+      📍 STEP 3 of 13 — Is Story Ki Backbone
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       ```
-      **Genre Specialist asks their specific questions:**
 
-      Each genre architect has 10-15 questions unique to their craft.
-      Reference the selected agent file for full question framework.
+      **ASK THIS QUESTION:**
 
-      **EXAMPLE: If SUSPENSE ARCHITECT selected**:
+      ---
+      **Har great film ki ek backbone hoti hai — baaki sab us backbone pe tika hota hai.
+      Is story mein kya hai woh backbone?**
 
-      Reference: `.bmad-film/agents/genre-specialists/suspense-architect.md`
+      **A) 🌍 DUNIYA (World/Setting)**
+      Ek aisi jagah ya atmosphere jo characters ko shape kare bina kehne ke.
+      Satyajit Ray ki Bengal, Anurag Kashyap ka Varanasi, Vishal Bhardwaj ka Chambal —
+      duniya khud ek character ban jaati hai. Story world ke baad aati hai.
 
-      Ask thriller-specific questions:
+      **B) 👤 INSAAN (Character)**
+      Ek aisa insaan jiske through audience khud ka reflection dekhe.
+      Character ki andar ki journey = film ki journey.
+      Piku. Taare Zameen Par. Queen. Masaan. Talaash.
 
-      **A. SUSPENSE TYPE (3 questions)**:
-      Q1. Thriller Sub-Genre - Psychological? Procedural? Neo-noir? Revenge?
-      Q2. Suspense Build Strategy - Atmospheric? Puzzle? Ticking clock?
-      Q3. Information Reveal - One big twist? Multiple turns? Gradual reveal?
+      **C) 🤝 RISHTA (Relationship)**
+      Do ya teen logon ke beech ki chemistry, tension, ya pyaar — jo story ka asli engine hai.
+      Baaki sab sirf context hai. DDLJ. Dil Dhadakne Do. Rang De Basanti. Kapoor & Sons.
 
-      **B. ANTAGONIST ARCHITECTURE (3 questions)**:
-      Q4. Antagonist Type - Hidden? Known? Morally grey? System?
-      Q5. Antagonist Reveal Timing - Beginning? Mid-point? Climax?
-      Q6. Moral Complexity - Pure evil? Sympathetic motives? Victim too?
+      **D) ⚡ GHATNA (Plot/Events)**
+      Ek series of events, twists, ya revelations jo audience ko kursi pe rok ke rakhen.
+      "Kya hua? Kya hoga?" — yeh sawaal hi story chalata hai.
+      Kahaani. Andhadhun. Drishyam. Badla.
 
-      **C. ATMOSPHERE & TONE (3 questions)**:
-      Q7. Ghosh vs Raghavan Style - Atmospheric world vs clinical plot?
-      Q8. Darkness Level - Light suspense? Moderate? Heavy dark?
-      Q9. Humor/Irony - Dark comedy touches? Pure serious?
+      **E) 💬 BAAT (Theme/Message)**
+      Ek truth, ek sawaal, ek idea jise story ke zariye kehna chahte ho.
+      Story = vehicle. Message = destination.
+      Newton. Article 15. Pink. Taare Zameen Par.
 
-      **D. STRUCTURAL CHOICES (3 questions)**:
-      Q10. Timeline Structure - Linear? Frame narrative? Dual timeline?
-      Q11. POV Strategy - Single POV? Dual? Multiple? Unreliable narrator?
-      Q12. Ending Type - Clear resolution? Twist? Ambiguous? Bittersweet?
+      ---
+      Ya ek line mein apne words mein batao kya hai is story ki backbone:
+      ---
 
-      **E. THRILLER ELEMENTS (3 questions)**:
-      Q13. Red Herrings - Heavy misdirection? Moderate? Minimal?
-      Q14. Clue Planting - Fair play? Hidden? Behavioral? No clues?
-      Q15. Suspense vs Surprise - Audience knows more? Shocking reveals?
+      **AFTER ANSWER:**
+      Note the factor. Collect in: `core_factor: [A/B/C/D/E / writer's words]`
+      Move to STEP 4 (Factor-Specific Deep Questions).
 
-      **OTHER GENRES — Full question sets in their agent files:**
-      Reference each agent for complete 15-question frameworks:
-      - Romance → `.bmad-film/agents/genre-specialists/romance-architect.md` → GENRE QUESTIONS section
-      - Action → `.bmad-film/agents/genre-specialists/action-architect.md` → GENRE QUESTIONS section
-      - Comedy → `.bmad-film/agents/genre-specialists/comedy-architect.md` → GENRE QUESTIONS section
-      - Drama → `.bmad-film/agents/genre-specialists/drama-architect.md` → GENRE QUESTIONS section
-      - Horror → `.bmad-film/agents/genre-specialists/horror-architect.md` → GENRE QUESTIONS section
-      - Musical → `.bmad-film/agents/genre-specialists/musical-architect.md` → GENRE QUESTIONS section
-      - Social Cinema → `.bmad-film/agents/genre-specialists/social-cinema-architect.md` → GENRE QUESTIONS section
+    outputs:
+      - core_factor confirmed
+    duration: "3-5 min"
 
-      Each agent has: A. Sub-Genre Type | B. Protagonist Architecture | C. Conflict Structure | D. Tone & Style | E. Genre-Specific Elements
-
-      **Collect answers, then process in Step 4.**
-    duration: "10-20 min"
+  # ═══════════════════════════════════════════════════════
+  # STEP 4 — FACTOR-SPECIFIC DEEP QUESTIONS (was STEP 2)
+  # ═══════════════════════════════════════════════════════
 
   - step: 4
-    name: "Answer Synthesis & Story Architecture"
-    agent: "[selected-genre-architect]"
+    name: "Factor-Specific Deep Dive"
+    agent: "master-story-director"
     action: |
-      **Synthesize ALL answers (20 core + 10-15 genre-specific):**
-
+      **🔴 ANNOUNCE:**
       ```
-      Theek hai! Complete vision clear hai:
-
-      ✓ Core: [Emotion, protagonist, conflict, tone]
-      ✓ Genre Specifics: [Thriller type, antagonist, twist strategy, etc.]
-      ✓ Must-Haves: [Elements from Q16]
-      ✓ Must-Avoids: [Clichés from Q17]
-
-      Yeh sahi hai? Final confirm before story creation?
+      ✅ STEP 3 complete.
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 4 of 13 — Is Backbone Ko Aur Gehri Karte Hain
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       ```
 
-      **Apply Decision Tree Architecture:**
+      **Based on STEP 3 answer, ask the corresponding 3-4 deep questions:**
 
-      Based on answers, automatically determine:
-      - Story approach (Ghosh atmospheric vs Raghavan clinical, etc.)
-      - Structure (linear vs non-linear, POV choices)
-      - Twist architecture (when reveal, how recontextualize)
-      - Tone application (darkness level, humor balance)
-      - Character complexity (moral ambiguity level)
+      ---
+      ### IF FACTOR = A (DUNIYA/WORLD):
 
-      **Architect the story internally (don't write yet)**:
-      - Opening (hook strategy based on answers)
-      - Journey (how suspense/emotion builds)
-      - Revelation (twist based on user preference)
-      - Resolution (ending type user wanted)
+      **W1.** "Yeh duniya dimaag mein kahan hai — koi specific jagah, sheher, ya setting?"
+      → Creative choices:
+      A) 🏙️ Metro city — alag-alag worlds ek hi frame mein (Mumbai, Delhi, Kolkata)
+      B) 🌾 Chhota sheher ya gaon — jahan sab ek doosre ko jaante hain
+      C) 🏔️ Isolated / remote — pahad, jungle, desert — duniya se door
+      D) 🏢 Ek specific institution — office, hospital, school, prison, court
+      Ya apne words mein:
 
-      **Ensure UNIQUENESS**:
-      - Check against generic patterns
-      - Use user's specific answers (not defaults)
-      - Apply constraint-based creativity from Q17 (avoid clichés)
-      - Root in personal inspiration if given (Q20)
+      **W2.** "Is duniya mein kya NIYAM hai — kuch aisa jo hamesha hota hai, ya kuch jo kabhi nahi ho sakta?"
+      (Open question — let writer describe the rules of their world naturally)
 
-      **Think like genre masters**: Ghosh/Raghavan/Chopra/etc.
-      depending on genre.
+      **W3.** "Is duniya ka woh ek detail batao jo koi baahri insaan notice kare par andar wale nahi karate —
+      koi cheez jo sirf yahan hoti hai."
+      (Open question — specific texture detail)
+
+      **W4.** "Yeh duniya aur yahan ke log — kab se hain aaise? Koi pehle ka waqt tha jab sab alag tha?"
+      → Creative choices:
+      A) 🔄 Hamesha aisa tha — yeh duniya mein kuch nahi badla kabhi
+      B) 💥 Kuch hua tha — ek event ne sab palat diya
+      C) ⏰ Dheere-dheere badi tabdeeli aayi hai
+      D) 🌅 Yeh story khud ek badlaav ki shuruwaat hai
+      Ya apne words mein:
+
+      ---
+      ### IF FACTOR = B (INSAAN/CHARACTER):
+
+      **C1.** "Yeh insaan — andar se sab se badi takleef kya hai? Jo baahir nahi dikhti par andar se kha rahi hai?"
+      → Creative choices:
+      A) 😰 Kabhi adequate feel nahi hua — hamesha lag raha hai kuch kum hai
+      B) 💔 Kisi ko khoya hai — aur woh vacuum kabhi bhara nahi
+      C) 🎭 Saalon se ek mask pehan ke ji rahe hain — sachcha self chhupa hua hai
+      D) 🔗 Ek galti ya choice hai jo hant karti rehti hai — guilt ya regret
+      Ya apne words mein:
+
+      **C2.** "Woh kya CHAHTE hain — jo dikhta hai, jo baahir waale jaante hain?
+      Aur unhe actually kya CHAHIYE — jo unhe khud bhi pata nahi?"
+      (IMPORTANT: Want aur Need alag honin chahiye — agar same hain, probe karo jab tak diverge na ho jaayein)
+
+      **C3.** "Ek aisa moment imagine karo jab woh insaan poori tarah akela ho —
+      koi nahi dekh raha, koi nahi sun raha. Woh kya karte hain?"
+      (Open question — this reveals true character)
+
+      **C4.** "Unka sabse bada CONTRADICTION — ek aisi cheez jo baaki log unke baare mein galat samajhte hain?"
+      → Creative choices:
+      A) 💪 Baahir se strong dikhte hain, andar se toot rahe hain
+      B) 🤝 Sabse care karte hain, par closest logon ko hurt karte hain
+      C) 📚 Samaaj mein sahi kaam karte hain, par andar kuch aur chahte hain
+      D) 😤 Gusse mein dikhte hain, par actually bahut scared hain
+      Ya apne words mein:
+
+      ---
+      ### IF FACTOR = C (RISHTA/RELATIONSHIP):
+
+      **R1.** "Yeh rishta — in dono ke beech pehle kab se hai, ya pehli baar kab milenge?"
+      → Creative choices:
+      A) 🌱 Naya rishta — abhi shuruwaat ho rahi hai
+      B) 📅 Purana rishta — saalon ka history hai saath mein
+      C) 🔄 Bichhadne ke baad dobara — kuch waqt beeta, phir mile
+      D) 👥 Stranger from opposite worlds — ekdum alag backgrounds
+      Ya apne words mein:
+
+      **R2.** "In dono ke beech woh ek cheez kya hai jo kabhi seedha nahi kahi gayi —
+      hawa mein rehti hai, par lips pe nahi aati?"
+      (Open question — this is the subtext engine of the story)
+
+      **R3.** "Kaunsa ek moment tha — ya hoga — jab is rishte mein pehli baar crack aaya?"
+      (Open question)
+
+      **R4.** "Agar yeh dono 24 ghante ek room mein band ho jaayein — koi baahri duniya nahi —
+      kya hoga in dono ke beech?"
+      → Creative choices:
+      A) 💥 Woh sab kuch baahir aayega jo kabhi nahi kaha gaya
+      B) 😶 Dono khaamosh rahenge — woh khaamoshi hi sab kuch kahegi
+      C) 🎭 Ek act karenge ki sab theek hai — par dono jaante hain nahi hai
+      D) 🌱 Shayad is forced closeness mein kuch naya milega dono ko
+      Ya apne words mein:
+
+      ---
+      ### IF FACTOR = D (GHATNA/PLOT):
+
+      **P1.** "Is story mein woh ek ghatna kya hai jo sab kuch palat deti hai —
+      woh turning point jiske baad kuch bhi pehle jaisa nahi rehta?"
+      (Open question — most important plot point)
+
+      **P2.** "Audience ko — kya pehle se pata hoga kya hone wala hai?
+      Ya unhe bhi utna hi surprise milega jitna characters ko?"
+      → Creative choices:
+      A) 🎭 Audience jaanti hai, character nahi — yeh dramatic irony hai (hitchcockian suspense)
+      B) 🤯 Audience bhi bilkul andheri mein — sab ko ek saath pata chalega
+      C) 🧩 Audience ko clues milte hain — jo dhyan se dekhe woh pehle samjhe
+      D) 📖 Audience future jaanti hai, past reveal hota hai — reverse structure
+      Ya apne words mein:
+
+      **P3.** "Is story mein koi RAAZ hai — kuch chhupa hua jo baad mein reveal hoga?"
+      (Open question — secrets and reveals)
+
+      **P4.** "Story ka sabse intense moment kab hoga —
+      aur us waqt exactly screen pe kya ho raha hoga?"
+      (Open question — cinematic highpoint)
+
+      ---
+      ### IF FACTOR = E (BAAT/THEME):
+
+      **T1.** "Yeh theme — tumhare khud ki life mein kahan se aayi?
+      Koi personal experience, koi cheez jo tumne observe ki, ya koi sawaal jo andar se ghoomta hai?"
+      (Open question — personal origin)
+
+      **T2.** "Is theme ke baare mein duniya kya sochti hai jo tumhare hisaab se GALAT hai —
+      aur tum is story se kya sahi karna chahte ho?"
+      (Open question — the corrective truth)
+
+      **T3.** "Is theme ki OPPOSITE baat kya hai —
+      woh character ya force jo is theme ke khilaf khada ho?"
+      → Creative choices:
+      A) 🎭 Ek specific antagonist jo opposite believe karta hai
+      B) 🏛️ Ek system ya institution jo opposing values ko enforce karta hai
+      C) 👥 Society itself — majority ki soch jo protagonist se alag hai
+      D) 🪞 Protagonist khud — unka ek hissa jo theme ke khilaf hai (internal conflict)
+      Ya apne words mein:
+
+      **T4.** "Film khatam hone ke baad audience ke dimaag mein yeh theme kaise rehna chahiye?"
+      → Creative choices:
+      A) 💡 Ek clear answer milega — audience jaanegi kya sahi hai
+      B) ❓ Ek sawaal chhodna chahte hain — audience khud decide kare
+      C) 🔥 Ek uncomfortable feeling — kuch change karne ki urgency
+      D) 🌱 Ek quiet hope — ki kuch behtar ho sakta hai
+      Ya apne words mein:
 
       ---
 
-      **🔴 6 STORY ELEMENT PROCESSING PASSES (MANDATORY — Run before writing):**
-      (PASS 0 runs FIRST — before all others. Then PASS 1-5 in order.)
+      **COLLECT ALL ANSWERS. Move to STEP 5.**
 
-      **PASS 0 — SEED TRACEABILITY FINAL CHECK (Run FIRST):**
-      Story ka final version likhne se pehle — har element trace karo:
-      - Character wound/psychology → S5 depth probe? Agar nahi → REWRITE from seed
-      - World detail 1 → S2 depth probe (light/sound)? Agar nahi → REWRITE
-      - World detail 2 → S4/S6/S7? Agar nahi → REWRITE
-      - Relationship dynamic → S6 + S7 unspeakable sentence? Agar nahi → REWRITE
-      - Story pivot specifics → S8 depth probe (location + sensory)? Agar nahi → REWRITE
-      - Subtext current → S12 subtext sentence? Agar nahi → REWRITE
-      - Tone/visual → S10 specific scene described? Agar nahi → REWRITE
-      ZERO TOLERANCE: Koi bhi untraced element = generic AI default = hatao.
-      Yeh AI ka 60% ko writer ke 40% seeds mein grounded rakhta hai.
+    duration: "8-12 min"
 
-      **PASS 1 — ANTI-PATTERN FILTER (OUTPUT TO USER — MANDATORY):**
-      Is story ki 3 sabse predictable versions internally identify karo.
-      Phir inhe USER KO DIKHAO — story likhne se PEHLE. Yeh step skip nahi hoga.
-
-      **USER KO DIKHAO (MANDATORY FORMAT):**
-      ```
-      Is story ke teen sabse predictable versions jo main NAHI likh raha:
-
-      ❌ Version 1: [Generic version — 1-2 lines, writer ke genre/concept se directly related]
-      ❌ Version 2: [Generic version — 1-2 lines, alag angle se]
-      ❌ Version 3: [Generic version — 1-2 lines, ek aur common trap]
-
-      Yeh teeno avoid kiye gaye hain. Ab 4th version likh raha hoon.
-      ```
-
-      Phir internally "4th version" determine karo — unexpected but earned from writer's own answers.
-      Check: "Yeh story ka core kisi aur film jaisa toh nahi?" → Yes = rethink approach.
-
-      **PASS 2 — ELEMENT BALANCE CHECK (Relationship as Engine):**
-      Kya PLOT drive kar raha hai ya RELATIONSHIP+EMOTION?
-      → Agar PLOT: Reverse engineer karo — relationship decision se plot emerge karao
-      → Har major plot point trace karo: "Yeh kisi character ki emotional state ya relationship dynamic se kyun ho raha hai?"
-      → Subtext layer: Jo kaha gaya + Jo nahi kaha gaya + Jo chahte hain = teeno alag hone chahiye
-
-      **PASS 3 — SPECIFICITY DRILL (Generic → Cinematic):**
-      Har story element ko hyper-specific banao BEFORE writing:
-      - Generic world → ek specific smell/sound/color only HERE (use Q12a answer)
-      - Generic conflict → exact moment, exact word, exact silence (use Q10c answer)
-      - Generic character → use contradiction (Q10a) + want vs need (Q7) + rishta (Q10b-Q10e)
-      Test: "Kya koi isko kisi aur story mein copy kar sakta hai?" → Yes = aur specific karo
-
-      **PASS 4 — EMOTIONAL SUBVERSION MAP:**
-      Har major scene mein: audience EXPECTS kya feel karna? → Deliver unexpected version (earned):
-      - Expected: Big confrontation → Deliver: Silence, ek sentence, phir walk away
-      - Expected: Victory → Deliver: Victory + loss of what they were really fighting for
-      Goal: Audience ko ek unexpected emotional dhakka — jo SAHI bhi lage, SURPRISING bhi
-
-      **PASS 5 — "ONLY THIS STORY" TEST:**
-      Har plot point: "Kya yeh EXACT moment kisi aur film mein alag characters ke saath ho sakta tha?"
-      Agar YES → Rewrite until it couldn't happen anywhere else.
-      Characters ki specific psychology + world ka specific pressure = unique irreplaceable moment.
-      Use Q10b-Q10e (rishta answers) + Q12a (world anchor) + Q10a (contradiction) to make it specific.
-
-      **PASS 6 — STAGE QA SCORE (Internal — run after architecture, before step 5):**
-      Target: 70+ to proceed. Score each parameter internally.
-
-      STORY & CONCEPT      /25 → Originality + Hook strength + Theme (organic, not stated) + Mudda presence + Audience fit
-      STRUCTURE           /20 → Opening hook + Pacing (dialogue vs action balance) + Interval/Midpoint strength + Climax earn
-      CHARACTERS          /15 → Protagonist distinctness + Character world (lived-in, not vacuum) + Arc completeness
-      DIALOGUES           /15 → Authenticity (natural speech) + Memorable/quotable lines + Subtext weight
-      EMOTIONAL ENGAGEMENT /10 → Clear emotional core + Unseen Emotion (emotion rarely shown on screen)
-      SONGS / PACING      /10 → [Movie: song situations earned + chartbuster potential] [Short/Micro: rhythm + emotional density]
-      PRODUCTION FEASIBILITY /5 → Story stays within selected budget tier?
-
-      STAGE SCORE GATE:
-      → 85-100 (A+): Premium — proceed with confidence
-      → 75-84  (A) : Quality — proceed
-      → 65-74  (B+): Fix flagged areas before writing
-      → Below 65   : Return to seeds — story needs rethink
-
-      CRITICAL FLAGS (fail immediately if any present):
-      ❌ Mudda missing: No unexplored social/human truth → Story feels hollow
-      ❌ Unseen emotion absent: All emotions predictable → Story forgettable
-      ❌ Hook weak: First scenes don't plant a driving question that runs to climax
-      ❌ Character world flat: Characters exist in a vacuum — no lived-in world context
-
-    duration: "10 min"
+  # ═══════════════════════════════════════════════════════
+  # STEP 5 — GENRE QUESTIONS (was STEP 3)
+  # ═══════════════════════════════════════════════════════
 
   - step: 5
-    name: "Quality Verification"
-    agent: "[selected-genre-architect]"
+    name: "Genre + Feel"
+    agent: "master-story-director"
     action: |
-      **Before writing, verify against quality checks:**
-
-      - [ ] Answers guide UNIQUE direction (not generic pattern)
-      - [ ] Genre principles applied correctly (Ghosh/Raghavan/etc.)
-      - [ ] Twist architecture matches user preference
-      - [ ] Moral complexity at requested level
-      - [ ] Atmospheric tone matches answers
-      - [ ] Structure serves story truth (not gimmick)
-      - [ ] Must-haves included, must-avoids avoided
-      - [ ] Hindi narration will be used throughout
-      - [ ] Specificity over generality in every element
-
-      If any check fails, rethink approach before writing.
-    duration: "5 min"
-
-  # ═══════════════════════════════════════════════════════
-  # PHASE 3: CREATION PHASE
-  # ═══════════════════════════════════════════════════════
-
-  - step: 5b
-    name: "Diverge Before Converge — Direction Confirmation"
-    agent: "[selected-genre-architect]"
-    action: |
-      **PURPOSE: Writer ke answers se 3 bilkul alag directions nikalo — writer ek direction RECOGNIZE kare, choose nahi.**
-
-      Yeh OPTIONS dene ka step nahi hai. Yeh RECOGNITION step hai.
-      Writer ke answers mein already ek direction exist karti hai — yeh step usse surface pe laata hai.
-
-      **KAISE KARO:**
-
-      1. Writer ke SABHI answers padhke 3 genuinely different directions generate karo.
-         Teeno directions WRITER KE APNE ANSWERS se emerge honi chahiye — AI invention nahi.
-         Teeno ek doosre se FUNDAMENTALLY alag honi chahiye — tone, structure, ya emotional core mein.
-
-      2. Har direction ke liye note karo: "Yeh direction writer ke kaunse specific answer se aai?"
-         (Q2 ki image? Q8 ki sharm? Q10c ka unsaid? Q23 ka out-of-box element?)
-
-      3. Format — USER KO DIKHAO:
-
+      **🔴 ANNOUNCE:**
       ```
-      Tumhare answers mein teen alag directions dikh rahi hain. Ek second suno:
-
-      🔵 Direction A — [1-line story direction]
-         [Woh writer ka ek specific answer jo is direction ko generate karta hai]
-         Feel: [Dark/Intimate/Quiet/Explosive — 1-2 words]
-
-      🟡 Direction B — [1-line story direction — genuinely different from A]
-         [Woh writer ka specific answer jo is direction ko generate karta hai]
-         Feel: [1-2 words]
-
-      🔴 Direction C — [1-line story direction — genuinely different from A and B]
-         [Woh writer ka specific answer jo is direction ko generate karta hai]
-         Feel: [1-2 words]
-
-      Kaunsa feel zyada tumhara lagta hai?
-      Ya koi do cheezein combine karna chahte ho?
+      ✅ STEP 4 complete.
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 5 of 13 — Genre + Feel
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       ```
 
-      **MANDATORY RULES:**
-      - Teeno directions writer ke ANSWERS se — not genre conventions, not AI defaults
-      - Ek direction is Q2 (first image) ya Q19 (last image) se driven honi chahiye
-      - Ek direction is Q10b-Q10e (rishta seeds) se driven honi chahiye
-      - Ek direction is Q23/Q23a (unexpected element / subtext) se driven honi chahiye
-      - "Kaunsa lagta hai tumhara?" = recognition prompt, not a choice question
-      - Agar writer kehta hai "teeno nahi" → probe: "kaunsa element bilkul wrong lag raha hai?" → adjust
-      - Agar writer kehta hai "A aur C milo do" → exactly note which elements from each → confirm
-      - Lock the direction. Tab Story Creation shuru karo.
+      **QUESTION 5A — Primary Genre:**
 
-      **Direction confirmed hone ke baad STEP 9 announce karo.**
+      ---
+      **Is story ko dekhte hue audience EXACTLY kya experience kare?**
+      **Yeh story ki duniya kaisi FEEL karegi?**
+
+      **A) 🔍 RAHASYA (Thriller/Suspense)**
+      Har jawab ek naya sawaal kholta hai. Audience har scene mein sochti hai:
+      "Kya sach hai? Kaun hai? Kya hoga?" — tension jo kabhi poori tarah nahi utarti.
+      *Masters: Sujoy Ghosh (Kahaani), Sriram Raghavan (Andhadhun), Neeraj Pandey (A Wednesday)*
+
+      **B) 💘 MOHABBAT (Romance)**
+      Do log, ek rishta — aur beech mein poori duniya haazir.
+      Milna ya na milna — yahi story hai. Audience khud yeh feel kare ki yeh unki bhi kahani hai.
+      *Masters: Imtiaz Ali (Jab We Met, Tamasha), Yash Chopra (DDLJ), Neeraj Ghaywan (Masaan)*
+
+      **C) 🔥 JUNG (Action/Adventure)**
+      Insaan vs insaan, insaan vs system, insaan vs apni kismat.
+      Body, mind, aur soul — sab kuch at stake. Adrenaline + stakes = audience glued.
+      *Masters: Rohit Shetty (Golmaal, Singham), Siddharth Anand (Pathaan, War), Anurag Kashyap (Gangs of Wasseypur)*
+
+      **D) 😂 MAZAK (Comedy)**
+      Pareshani mein hasna — comedy jo sirf entertainment nahi, andar se kuch touch bhi kare.
+      Laughter as the entry point for deeper truths.
+      *Masters: Hrishikesh Mukherjee, Rajkumar Hirani (3 Idiots), Priyadarshan (Hera Pheri)*
+
+      **E) 😢 ZINDAGI (Drama)**
+      Real insaan, real kasak, real transformation. Character ke andar ki journey.
+      Audience empathy feel kare — "Yeh toh main bhi karta hoon."
+      *Masters: Bimal Roy, Gulzar, Shoojit Sircar (Piku, Vicky Donor), Ashutosh Gowariker*
+
+      **F) 👻 DARNA (Horror)**
+      Dar ka ek alag rang — supernatural ya psychological.
+      Andar kuch toot jaata hai. Dread jo seen khatam hone ke baad bhi rehta hai.
+      *Masters: Anurag Kashyap (Gulaal), Rahi Anil Barwe (Tumbbad), Amar Kaushik (Stree)*
+
+      **G) 🎵 SANGEET (Musical/Drama)**
+      Sur aur taal se story banti hai. Music sirf entertainment nahi — story bolne ka zariya.
+      Spectacle + emotion + narration ek saath.
+      *Masters: Farah Khan (Om Shanti Om), Subhash Ghai, Sanjay Leela Bhansali (Devdas)*
+
+      **H) ⚖️ SAMAJ (Social/Parallel Cinema)**
+      Ek sach jo uncomfortable hai par kehna zaroori hai.
+      System ka aayna — audience roze ki zindagi ko alag nazar se dekhe.
+      *Masters: Shyam Benegal, Anurag Kashyap, Anubhav Sinha (Article 15), Amit Masurkar (Newton)*
+
+      ---
+      Ya ek sentence mein apni genre describe karo:
+
+      ---
+
+      **AFTER GENRE ANSWER:**
+
+      **QUESTION 5B — Genre Mixing (if applicable):**
+      "Kya is mein koi doosra genre bhi mix hoga?
+      Ya yeh ek pure [chosen genre] story hai?"
+
+      If mixed → "Primary genre kya hoga (60%+)? Secondary element kya (20-40%)?"
+      Example: Thriller primary + Romance secondary | Drama primary + Comedy secondary
+
+      **INTERNAL NOTE (not shown to user):**
+      Store: `primary_genre` + `secondary_elements` + `genre_mixing_ratio`
+      This will be used for genre agent selection at STEP 13.
+
+      **QUESTION 5C — Tone Scale:**
+      "Ek tone slider imagine karo:"
+
+      A) 🌑 Bahut dark — uncomfortable, real, no easy answers
+      B) 🌗 Realistic — grounded, some light moments, mostly serious
+      C) 🌤️ Mixed — serious themes par light treatment
+      D) ☀️ Light — entertainment first, fun, feel-good
+      Ya describe karo:
 
     outputs:
-      - Confirmed story direction (writer's recognized direction locked)
-    duration: "5-10 min"
+      - primary_genre confirmed
+      - secondary_elements noted
+      - tone scale noted
+    duration: "5-8 min"
+
+  # ═══════════════════════════════════════════════════════
+  # STEP 6 — THEME QUESTIONS (was STEP 4)
+  # ═══════════════════════════════════════════════════════
 
   - step: 6
-    name: "PHASE 3 - Story Creation (Based on YOUR Answers)"
-    agent: "[selected-genre-architect]"
+    name: "Theme + Core Truth"
+    agent: "master-story-director"
     action: |
-      **🔴 ANNOUNCE TO USER (MANDATORY):**
+      **🔴 ANNOUNCE:**
       ```
-      ✅ STEP 8 complete — All questions answered, direction confirmed.
+      ✅ STEP 5 complete.
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      📍 STEP 9 of 9 — Story Creation
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      Creating your story now — in Simple Bollywood Hindi,
-      based on YOUR 30+ answers + confirmed direction.
-      Both formats will be created:
-      Continuous Narrative + Scene-by-Scene Breakdown.
+      📍 STEP 6 of 13 — Theme + Core Truth
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       ```
-      **Write the story in SIMPLE BOLLYWOOD HINDI using ALL answers:**
 
-      **CRITICAL: This story must be UNIQUE based on user's answers**
-      - NOT generic thriller pattern #7
-      - NOT standard romance template
-      - But specific story shaped by their 30-35 answers
-      - Use their protagonist type, their conflict, their tone, their twist preference
-      - Include must-haves from Q16, avoid clichés from Q17
-      - Apply genre master techniques (Ghosh/Raghavan/etc.) to THEIR vision
+      **QUESTION 6A — Core Theme:**
 
-      **Write in TWO VERSIONS (BOTH MANDATORY):**
+      ---
+      **Is story ke neeche behne wali woh ek BAAT kya hai —
+      jo seedha nahi kahi jaayegi, par hamesha feel hogi?**
 
-      **VERSION 1: CONTINUOUS NARRATIVE STORY** (Flowing Hindi Prose)
-      - Complete story as PURE FLOWING PROSE — like a novel/novella
-      - 🚫 NO scene headings (no ### Opening Scene, no ### Character Name)
-      - 🚫 NO dividers (no ---, no ═══ inside the narrative)
-      - 🚫 NO technical labels (no Location:, Time:, Camera:)
-      - 🚫 NO structural section breaks of any kind
-      - ✅ Pure paragraphs only — one flowing into the next
-      - ✅ Characters introduced through action and description, not headings
-      - ✅ Story moves forward like a river — continuous, no dams
-      - ✅ Emotional journey felt through prose rhythm, not structure
-      - Use for: Understanding story flow, pitching, emotional grasp
-      - EXAMPLE OF WRONG FORMAT: "### Opening Scene\n---\nBihar. Patna."
-      - EXAMPLE OF RIGHT FORMAT: "Bihar. Patna. Election ka maahol. ARJUN..."
+      **A) 🪞 KHUD KI PAHCHAAN**
+      "Main kaun hoon — actually?" Yeh sawaal har insaan poochhta hai par bahut kam log jawab dhundhtein hain.
+      Story ek aisa safar hai jahan protagonist khud ko discover karta/karti hai.
+      *Films: Queen, Zindagi Na Milegi Dobara, Kapoor & Sons, Tamasha*
 
-      **LANGUAGE & GRAMMAR STANDARDS (MANDATORY FOR VERSION 1)**:
+      **B) ❤️‍🔥 PYAAR AUR AZAADI**
+      "Kya mohabbat mein khud ko khona padta hai?" — Love ka eternal tension.
+      Kya do log saath aa sakte hain bina ek doosre ki individuality khoye?
+      *Films: Rockstar, Lootera, Masaan, Ae Dil Hai Mushkil*
 
-      **1. COMPLETE SENTENCES ONLY**:
-      - 🚫 WRONG (fragment): "Woh Vikram nahi hai. Woh Arjun hai."
-      - ✅ RIGHT (complete): "Woh Vikram nahi hai — woh Arjun hai, family ka majhla beta."
-      - 🚫 WRONG (fragment): "48 ghante. Koi neend nahi. Nandini saath thi."
-      - ✅ RIGHT (complete): "Arjun ne poore 48 ghante bina neend ke kaam kiya, aur Nandini poore waqt uske saath rahi."
-      - Every sentence must have a subject and a verb. No standalone words or phrases as sentences.
-      - Exception: Short cinematic opening like "Varanasi. Ghaton ka sheher." allowed ONLY as first establishing line.
+      **C) ⚡ SACH AUR JHOOTH**
+      "Kya sach kehna hamesha sahi hai?" — Truth vs survival vs convenience.
+      Kya sach kabhi comfortable hota hai? Kya jhooth kabhi zaroori hai?
+      *Films: Andhadhun, Drishyam, Pink, Kahaani*
 
-      **2. ONLY NATURALLY-SPOKEN ENGLISH — NO LITERARY/FORMAL ENGLISH**:
-      - Use ONLY English words that Hindi speakers actually use in daily conversation.
-      - 🚫 FORBIDDEN English words (literary/formal — not spoken in Hindi): tattered, edges, debris, proximity, sustains, simultaneously, subsequently, encounter, antagonistic, fragmented, deteriorating, illuminate
-      - ✅ ALLOWED English (naturally absorbed in Hindi speech): building, notice, office, time, okay, problem, system, music, class, workshop, recording, cassette, police, party, station, camera, film, sorry
-      - TEST: "Would a rickshaw driver or shopkeeper say this English word in a Hindi sentence?" — If NO, use Hindi.
-      - 🚫 WRONG: "Notice tattered hai, edges pe jab se chipka hai tab se baarish padh chuki hai."
-      - ✅ RIGHT: "Notice kaafi waqt se wahan laga tha, baarish ne uska rang thoda ghis diya tha."
+      **D) 🏠 GHAR AUR BEPARWAHI**
+      "Ghar kya hota hai — jagah ya log?" — Belonging, exile, return.
+      Kuch log hamesha outsider feel karte hain — chahe ghar mein hi hon.
+      *Films: Swades, English Vinglish, Kapoor & Sons, Highway*
 
-      **3. BOLLYWOOD SPOKEN HINDI — NOT LITERARY, NOT FRAGMENTED**:
-      - Write the way Bollywood films narrate — natural, cinematic, conversational
-      - Hindi sentence order: Subject → Object → Verb (Arjun ne decision liya)
-      - Use proper connectors: lekin, par, aur, toh, kyunki, isliye, phir bhi, jab, tab
-      - 🚫 WRONG: "Bihar. Patna." (just location words as sentences — except as first line)
-      - ✅ RIGHT: "Bihar ki rajdhani Patna mein election ka maahol tha."
-      - 🚫 WRONG: "Koi backup nahi. Koi team nahi." (fragments)
-      - ✅ RIGHT: "Arjun ke paas na koi backup tha, na koi team — sirf uski khud ki samajh aur Nandini ka saath."
+      **E) ⚔️ NYAYA AUR ZINDAGI**
+      "Kya sahi karna hamesha safe hai?" — Justice ka price.
+      Jo sahi hai woh karna chahte hain, par duniya woh allow nahi karti.
+      *Films: Newton, Article 15, A Wednesday, Pink, Rang De Basanti*
 
-      **4. NATURAL HINGLISH GRAMMAR**:
-      - English words fit naturally into Hindi sentence structure
-      - 🚫 WRONG: "He was emotional type ka insaan tha." (mixed wrongly)
-      - ✅ RIGHT: "Woh emotional kism ka insaan tha, jise politicians ki duniya mein kamzori maana jaata hai."
-      - Verb endings always Hindi: kiya, gaya, tha, hai, rahega
-      - English nouns/adjectives are fine when naturally spoken: party, documents, campaign, press conference
+      **F) ⏰ WAQT AUR YAADEIN**
+      "Kya bhoolna hi aage badhna hai?" — Memory, regret, moving forward.
+      Kuch zakhm bharte hain, kuch hamesha rehte hain. Is story mein woh kaunsa zakhm hai?
+      *Films: Lootera, Ae Dil Hai Mushkil, Dil Se, Jab Tak Hai Jaan*
 
-      **5. SENTENCE FLOW — CONNECTED WRITING**:
-      - Sentences must connect to each other with flow, not feel like a list
-      - Use connectors: lekin, par, aur, toh, kyunki, isliye, phir bhi, jab, tab, jaise hi, tabhi, warna, phir
-      - 🚫 WRONG (disconnected): "Meera andar gayi. Dust tha. Photos the. Cassette mili."
-      - ✅ RIGHT (flowing): "Meera andar gayi toh sirf dhool thi aur purani deewaaron pe photos the, lekin ek corner mein ushe woh cassette mil gayi."
+      **G) 🌱 INSAAN AUR BADLAAV**
+      "Kya insaan sachchi mein badal sakta hai?" — Transformation vs fixed nature.
+      Kuch log badalna chahte hain. Kuch chahte hain ki duniya badle. Dono ka safar alag hai.
+      *Films: Taare Zameen Par, 3 Idiots, Highway, Dil Dhadakne Do*
 
-      **6. CINEMATIC PROSE RHYTHM**:
-      - Short paragraph = one complete moment or thought
-      - Longer paragraph = build-up, rising action, emotional scene
-      - Dialogue woven naturally into prose — not listed separately
-      - Emotions shown through action and consequence, not stated directly
+      **H) 💰 DAUR AUR INSAAN**
+      "Kya paisa, power, ya status insaan ko badalta hai?" — Corruption of the soul.
+      Jo hum hona chahte the, aur jo hum ho gaye hain — in dono ke beech ka faasla.
+      *Films: Guru, Gangs of Wasseypur, Ugly, Raag Desh*
 
-      **VERSION 2: SCENE-BY-SCENE BREAKDOWN** (Technical Production Version)
-      - Same story broken into numbered scenes/fragments
-      - Each scene has: Location, Time, Visual description, Action, Dialogue (if any)
-      - Includes timestamps/sequence (for runtime planning)
-      - Technical details: Camera suggestions, atmosphere notes
-      - Use for: Production planning, shot list prep, crew briefing
-      - Format: Structured technical breakdown (industry-standard) — headings and dividers ARE allowed here
-
-      **BOTH VERSIONS REQUIRED** - One for story understanding, one for production planning.
-
-      **HINDI NARRATION MANDATORY**:
-      - Story opening: Hindi mein
-      - Character descriptions: Hindi mein
-      - Action sequences: Hindi mein
-      - Scene descriptions: Hindi mein
-      - Dialogue: Hindi mein (obviously)
-
-      **Simple Bollywood Hindi (60-70% Hindi + 30-40% English mixing)**:
-      - ✓ "VIKRAM apni gun nikaal ke chamber mein ghusta hai"
-      - ✗ "VIKRAM enters the chamber with his gun drawn"
-
-      **Format**:
-      ```markdown
-      # STORY SYNOPSIS
-      ## [Title in Hindi/English]
-
-      **Logline**: [One-line Hindi/English]
-
-      ═══════════════════════════════════════════════════════
-
-      ## CONTINUOUS NARRATIVE STORY
-      ### (Simple Bollywood Hindi - Flowing Version)
-
-      [पूरी कहानी - Complete story in flowing Hindi prose]
-
-      Delhi की एक रात. [Story begins...]
-
-      [Continue with natural flow - scenes blend together, no rigid breaks]
-      [Emotional journey clear through prose]
-      [Hindi narration throughout (60-70% Hindi + 30-40% English mix)]
-
-      [Story unfolds naturally to climax...]
-
-      [Revelation/Twist...]
-
-      [Resolution...]
-
-      **कहानी का सार**: [Brief summary if needed]
-
-      ═══════════════════════════════════════════════════════
-
-      ## SCENE-BY-SCENE BREAKDOWN
-      ### (Technical Production Version)
-
-      ### **OPENING IMAGE** (0:00-0:XX)
-      **Location**: [Where]
-      **Time**: [When]
-
-      [Visual description]
-      [Action happening]
-      [Dialogue if any]
-      [Atmosphere notes]
+      ---
+      Ya ek sentence mein apni theme:
 
       ---
 
-      ### **SCENE/FRAGMENT 1** (0:XX-X:XX)
-      **Location**: [Where]
-      **Time**: [When]
+      **QUESTION 6B — Theme Opposition:**
+      "Is theme ka ULTA kya hai — woh baat ya force jo is story mein theme ke khilaf khadi hai?"
+      (Open question — no choices, let writer describe naturally)
 
-      [Technical details...]
-      [Camera suggestions...]
-      [Action breakdown...]
+      **QUESTION 6C — Audience Takeaway:**
+      "Film khatam hone ke baad — audience ke saath yeh baat kaise rehni chahiye?"
 
-      [Continue for all scenes with timestamps...]
+      A) 💡 Ek clear answer — yeh sahi hai, woh galat. Audience jaanegi.
+      B) ❓ Ek khula sawaal — audience khud decide kare. No easy answers.
+      C) 🔥 Ek guilt ya discomfort — "Kya main bhi aisa karta hoon?"
+      D) 🌱 Ek quiet hope — "Kuch behtar ho sakta hai."
+      Ya apne words mein:
 
-      ═══════════════════════════════════════════════════════
-      ```
-
-      **DO NOT Include**:
-      - Logline, theme statements, analysis
-      - Character profiles (that's next workflow)
-      - Production details, technical specs
-      - Explanations or commentary
-      - English narration (only Hindi!)
-
-      **Apply Genre Master Principles**:
-      - Thriller: Ghosh (atmosphere) + Raghavan (moral ambiguity)
-      - Romance: Chopra (poetry) + Bhansali (grandeur) + Ali (realism)
-      - Action: Shetty (spectacle) + Anand (slick) + Zafar (grounded)
-      - Comedy: Mukherjee (warmth) + Hirani (message) + Priyadarshan (chaos)
-      - Drama: Roy (dignity) + Gulzar (poetry) + Gowariker (epic)
-      - Horror: RGV (atmosphere) + Bhatt (mythology) + Bhardwaj (dark)
-      - Musical: Farah (spectacle) + Karan (emotion) + Aditya (romance)
-      - Social: Benegal (realism) + Nihalani (dark) + Basu (contemporary)
-
-      **JUST TELL THE STORY in Hindi. Nothing else.**
     outputs:
-      - "project/{project_name}/story-synopsis.md"
-    duration: "20-30 min"
+      - core_theme confirmed
+      - theme_opposition noted
+      - audience_takeaway noted
+    duration: "5-8 min"
 
-  - step: 6b
-    name: "Story Stress Test + Audience Intelligence Check"
-    agent: "[selected-genre-architect]"
-    action: |
-      **🔴 ANNOUNCE TO USER (MANDATORY):**
-      ```
-      ✅ Story written. Ab quality stress test chal raha hai...
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      📍 STORY STRESS TEST — 7 Criteria
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      ```
-
-      **THEME STRESS TEST (run internally before 7-criteria check):**
-
-      Theme Statement: "Yeh film kehti hai ki ___________" (from S4 + S12)
-
-      Scene-by-Scene Theme Check (internal):
-      → Har major scene: Is it ADVANCING, COMPLICATING, or CHALLENGING the theme?
-      → OR is it only advancing plot?
-
-      Theme Presence Score:
-      - Scenes actively serving theme: [X] of [total major scenes]
-      - Target: 70%+ of scenes connect to theme
-      - Theme Violation Flags:
-        ❌ Theme STATED in dialogue ("Zindagi mein trust important hai")
-        ❌ Subplot contradicts theme
-        ❌ Climax abandons theme
-        ❌ Theme only present at start/end (middle forgets)
-
-      PASS: 70%+ + climax resolves thematic question
-      FLAG: Under 70% → list specific scenes for targeted revision
-
-      ---
-
-      **Run all 7 checks on the written story. Show results to user.**
-
-      **USER KO DIKHAO (MANDATORY FORMAT):**
-      ```
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      STORY STRESS TEST RESULTS
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-      1. PROTAGONIST AGENCY
-         Kya story protagonist ki CHOICES se drive hoti hai ya plot unhe carry karta hai?
-         → [✅ Pass: Protagonist [name] actively drives story from Scene X / ⚠️ Issue: Scene Y mein protagonist passive hai — fix: make them choose]
-
-      2. AUDIENCE PREDICTION TEST
-         Smart audience kaunsa twist/turn 2 scenes pehle predict kar sakti hai?
-         → [✅ None predictable / ⚠️ Turn at Scene X is telegraphed — suggestion to fix]
-
-      3. WOUND → DECISION LINK
-         S5 ka character wound S8 ke pivotal decision se directly connected hai?
-         → [✅ Connected: Wound causes decision at Scene X / ⚠️ Gap found between wound and decision — missing link: ...]
-
-      4. RELATIONSHIP DRIVES PLOT
-         Har major plot event kisi character ki emotional state se emerge hota hai?
-         → [✅ Yes — all events relationship-rooted / ⚠️ Plot event X has no emotional root — rewrite from: ...]
-
-      5. THE UNSAID TEST
-         S7 ki unsaid cheez poori story mein present hai bina kabhi directly kahi gayi?
-         → [✅ Unsaid runs throughout / ⚠️ Scene Y mein accidentally said — pull it under]
-
-      6. "ONLY THIS STORY" FINAL
-         Kya yeh story kisi doosri film ke characters ke saath exactly ho sakti thi?
-         → [✅ Unique and irreplaceable / ⚠️ Core arc similar to [film name] — differentiation needed at: ...]
-
-      7. HINDI QUALITY CHECK
-         Koi English narration slip, sentence fragment, forbidden word?
-         → [✅ Clean / ⚠️ Issues found at lines: [list] — corrections: [list]]
-
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      ```
-
-      **AUDIENCE INTELLIGENCE SIMULATION:**
-
-      ```
-      AUDIENCE INTELLIGENCE CHECK:
-
-      At Scene [opening]: "Ek regular Bollywood viewer yahan kya expect karega? Humne kya deliver kiya?"
-      → [Expected: X | Delivered: Y | Assessment: ✅ Subverted / ⚠️ Too expected]
-
-      At Interval/Midpoint: "Kya twist actually unexpected hai ya just delayed expected?"
-      → [Assessment + fix if needed]
-
-      At Climax: "Kya resolution EARNED hai ya convenient?"
-      → [Assessment + evidence from story seeds]
-      ```
-
-      **CLIMAX ENGINEERING CHECK:**
-
-      *Climax ek scene nahi hai — teen resolutions ek saath hain.*
-
-      C1 — EXTERNAL CONFLICT RESOLUTION:
-        → Protagonist ka external goal achieve hua ya nahi? (Ya consciously abandon kiya?)
-        → Is resolution earned by protagonist's actions — not luck, not others?
-
-      C2 — INTERNAL WOUND RESOLUTION:
-        → S5 ka character wound address hua?
-        → Did they CHANGE because of the story — or did they just survive it?
-        → Wound doesn't have to heal — but must be ACKNOWLEDGED and acted upon
-
-      C3 — CORE RELATIONSHIP RESOLUTION:
-        → S6 ki core relationship — where does it END?
-        → Did THE UNSAID (S7) finally get spoken? Or deliberately left unspoken?
-        → Is relationship's end state EARNED by what happened between these two people?
-
-      CLIMAX FAILURE PATTERNS (flag if present):
-      ❌ DEX EX MACHINA: Someone else solves protagonist's problem
-      ❌ COINCIDENCE CLIMAX: Lucky event resolves external conflict
-      ❌ EMOTIONAL SKIP: External resolved but internal wound ignored
-      ❌ RELATIONSHIP ABANDONED: Core relationship disappears at climax
-      ❌ THEME VIOLATION: Climax contradicts the story's own theme
-
-      OPENING HOOK CLOSURE: `opening_hook_question` (from S8b) — answered at climax? ✅/❌
-      First image (S2) and last image (S9) — in dialogue with each other? ✅/❌
-
-      PASS: All 3 resolutions present + no failure patterns + opening hook closed
-      FAIL: Any resolution missing → flag to writer → targeted revision before approval
-
-      ---
-
-      **LOGLINE GENERATOR (mandatory output after story creation):**
-
-      *Har filmmaker ko yeh chahiye: ek line mein poori film.*
-
-      Generate THREE logline versions:
-
-      🎬 **VERSION A — Commercial Hook** (for producers/investors):
-      "[Protagonist descriptor] jab [inciting incident] toh use [goal] karna padta hai, lekin [obstacle from S8], aur agar fail ho gaya toh [stakes from S3]."
-
-      💭 **VERSION B — Emotional Hook** (for audiences/trailers):
-      "[Character essence from S5] aur [core relationship from S6] ki kahani, jab [catalyst]..."
-
-      🏆 **VERSION C — Festival/Art House** (for critics/festivals):
-      "[Theme statement] — ek [tone word] film, jab [world] mein [protagonist] ko [human truth] ka saamna karna padta hai"
-
-      Show all three to writer: "Kaunsi logline aapki film ko sahi capture kar rahi hai?"
-      Confirmed logline → save to genre-analysis.md under `LOGLINE:` field.
-
-      ---
-
-      **STAGE CONTENT QUALITY CHECKS — Show results to user (5 criteria):**
-      ```
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      STAGE EVALUATION — 5 Audience Connection Criteria
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-      8. MUDDA (Unexplored Issue)
-         Kya story mein koi aisa topic hai jo screen pe pehle rarely explore hua?
-         → [✅ Mudda: "[what the issue is]" — woven into Scene X / ⚠️ Missing — story lacks a layer]
-
-      9. UNSEEN EMOTION
-         Kya koi aisa emotion hai jo is story mein dikhaya gaya jo screen pe rarely hota hai?
-         → [✅ Yes — "[emotion]" shown unexpectedly at Scene X / ⚠️ All emotions are standard]
-
-      10. AUDIENCE MIRROR
-          Kya audience apni khud ki zindagi is character ki journey mein dekh sakta hai?
-          → [✅ Yes — relatable at [which scene] / ⚠️ Journey too distant from universal experience]
-
-      11. GROUP EMOTION MOMENT
-          Kya ek aisa scene hai jab poore theatre ka audience ek hi cheez feel kare saath mein?
-          → [✅ Scene X creates collective emotion / ⚠️ No group-emotion peak in story]
-
-      12. ASPIRATIONAL ELEMENT
-          Kya story mein koi "sapna poora hona" ya inspiring moment hai jo audience ko uthake jaaye?
-          → [✅ Present at Scene X / ⚠️ Only struggle — no hope, aspiration, or dream fulfilled]
-
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      ```
-
-      **PASS/FAIL GATE:**
-      - 7/7 stress test + 4-5/5 STAGE checks → Proceed to Review & Approval
-      - 1-2 issues → Show issues, offer to fix specific scenes, then proceed
-      - 3+ issues → Story needs revision before approval — identify root cause
-
-    duration: "5 min"
+  # ═══════════════════════════════════════════════════════
+  # STEP 7 — CHARACTER DETAILING (was STEP 5)
+  # ═══════════════════════════════════════════════════════
 
   - step: 7
-    name: "Review & Approval Decision"
-    agent: "bmad-film-master"
+    name: "Character Detailing"
+    agent: "master-story-director"
     action: |
-      Present synopsis to user with options:
+      **🔴 ANNOUNCE:**
+      ```
+      ✅ STEP 6 complete.
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 7 of 13 — Character Detailing
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
 
-      **Option A: APPROVE & PROCEED**
-      → Move to /story-development for full development
+      **QUESTION 7A — Primary Character Type:**
 
-      **Option B: REFINE**
-      → Adjust elements (theme, structure, twist, etc.)
-      → Re-run this workflow with changes
+      ---
+      **Is story ka MUKHYA CHARACTER (protagonist) — inke baare mein kya feel hoti hai?**
+      **Audience inke saath kyun chalegi — poori film?**
 
-      **Option C: PIVOT**
-      → Concept not working, try different approach
-      → Start over with new concept
+      **A) 🧩 ORDINARY INSAAN, EXTRAORDINARY SITUATION**
+      Normal insaan jisne kuch khaas nahi kiya life mein — ek event ne sab palat diya.
+      Audience easily connect karti hai. "Yeh toh main bhi kar sakta tha."
+      *Examples: Kahaani protagonist, Drishyam's Vijay Salgaonkar, Piku*
 
-      Get user's decision before proceeding
-    output: "Approval status + next steps"
-    duration: "5 min"
+      **B) 💔 TOOTA HUA INSAAN**
+      Kuch toot gaya hai andar se — koi loss, koi failure, koi zakhm.
+      Wholeness ki talash mein hain — chahe unhe khud pata ho ya na ho.
+      *Examples: Devdas, Rockstar's Jordan, Highway's Alia, Masaan's both protagonists*
 
-context_updates:
-  - section: "project_overview"
-    fields: ["logline", "genre", "format"]
+      **C) 🎭 CHHUPTA HUA INSAAN**
+      Jo hain woh nahi dikhate. Duniya ke liye ek face, khud ke liye ek aur.
+      Audience dheere-dheere discover karti hai. Mystery of character = mystery of story.
+      *Examples: Andhadhun's Akash, Queen's Rani, Lootera's Varun*
 
-  - section: "creative_vision"
-    fields:
-      - "theme"
-      - "story_synopsis"
-      - "basic_structure"
+      **D) ⚡ REBEL / FIGHTER**
+      System ya society ke khilaf khade hain. Jaante hain cost kya hogi. Phir bhi.
+      Unki determination = story ka engine.
+      *Examples: Article 15's Ayan, Newton's Newton Kumar, Rang De Basanti's DJ*
 
-  - section: "decision_log"
-    append: "Story synopsis approved on [date]"
+      **E) 🌊 LOST INSAAN**
+      Direction nahi pata — zindagi mein kya chahiye, kahan jaana hai, kaun hai.
+      Story unki khoj hai — khud ko dhundhne ki, ya raaste ki.
+      *Examples: Tamasha's Ved, Zindagi Na Milegi Dobara's Kabir*
 
-success_criteria:
-  - "Story is UNIQUE based on user's 30-35 answers (not generic pattern)"
-  - "Story told in Simple Bollywood Hindi (60-70% Hindi narration)"
-  - "Genre master principles applied correctly (Ghosh/Raghavan/etc.)"
-  - "User's must-haves included, must-avoids avoided"
-  - "Twist/revelation matches user's preference"
-  - "Tone, atmosphere, complexity match answers"
-  - "Story is compelling and worth developing further"
-  - "User feels HEARD - this is THEIR story, not system's pattern"
-  - "User approves and wants to proceed to character bible"
+      ---
+      Ya ek-do line mein apne main character describe karo:
 
-next_workflows:
-  - "/story-development" # If approved, proceed to full development
-  - "Re-run /story-synopsis with adjustments" # If needs refinement
+      ---
 
-tips:
-  - "WRITER FIRST: Story tumhare andar se aayegi — agent sirf sunne wala hai"
-  - "Open questions only — koi A/B/C options nahi. Khulke jawab do"
-  - "Phase A ke 5 sawal sabse zaroori hain — WHY this story, THAT first image"
-  - "Interesting jawab mila? Agent ek follow-up karega — flow mein rehna"
-  - "Pata nahi? Theek hai — chhodo aur aage badho. Woh baad mein aa sakta hai"
-  - "Scale-adaptive: 5-min short = 14 questions, feature = all 23 + follow-ups"
-  - "Genre specialist sirf woh poochhenga jo Phase 1 mein answer nahi hua"
-  - "Story written in HINDI narration (Simple Bollywood Hindi 60-70% mix)"
-  - "Both versions mandatory: Continuous narrative + Scene-wise breakdown"
-  - "UNIQUE to your answers — not AI pattern, not template"
-  - "Final feel: 'Yeh meri story hai — inhone mujhe samjha'"
+      **QUESTION 7B — Character's Biggest Fear:**
+      "Is insaan ka sabse bada DARR kya hai — jo story mein unhe rokta rahega?"
 
-philosophy: |
-  **Writer-First Philosophy:**
+      A) 😰 Akela reh jaana — ki koi unhe chhod jaayega
+      B) 🎯 Naakaam ho jaana — ki woh enough nahi hain
+      C) 🔓 Control kho dena — ki haalat unke haath se nikal jaayein
+      D) 💔 Pyaar karke khona — ki vulnerable hona = hurt hona
+      E) 🪞 Sachcha self reveal ho jaana — ki log unhe dekh lein jo woh actually hain
+      Ya apne words mein:
 
-  Story writer ke andar se nikalti hai. Hamesha.
+      **QUESTION 7C — Secondary Character(s):**
+      "Is story mein ek ya do aur important log hain — kaun hain woh?
+      Protagonist ke saath unka rishta kya hai — aur woh story mein kya kaam karte hain?"
+      (Open question — writer describes their supporting cast naturally)
 
-  AI ka kaam hai ek skilled co-writer ki tarah behave karna — jo sunata hai,
-  jo sawal poochhhta hai, jo writer ke vision ko articulate karne mein help karta hai.
-  AI ka kaam NAHI hai story suggest karna, options dena, ya template fill karna.
+      **QUESTION 7D — Character's Want vs Need Gap:**
+      "Protagonist kya CHAHTA/CHAHTI hai — jo dikhta hai, jo log jaante hain?
+      Aur unhe actually kya CHAHIYE — jo unhe khud bhi pata nahi hoga story ki shuruwaat mein?"
+      (RULE: Want aur Need ALAG hone chahiye. Agar same hain — probe deeper until they diverge)
 
-  Yeh 23 questions ek interview nahi hai. Yeh ek creative conversation hai
-  jisme writer apni story khud discover karta hai — aur hum usse articulate
-  karne mein help karte hain.
+    outputs:
+      - protagonist_type noted
+      - protagonist_fear noted
+      - secondary_characters noted
+      - want_need_gap noted
+    duration: "8-12 min"
 
-  Sab se powerful moment woh hota hai jab writer khud kehta hai:
-  "Haan — yahi toh kehna chahta tha main."
+  # ═══════════════════════════════════════════════════════
+  # STEP 8 — CORE EMOTION (was STEP 6)
+  # ═══════════════════════════════════════════════════════
 
-  Hum woh moment create karte hain.
+  - step: 8
+    name: "Core Emotion"
+    agent: "master-story-director"
+    action: |
+      **🔴 ANNOUNCE:**
+      ```
+      ✅ STEP 7 complete.
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 8 of 13 — Core Emotion
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
 
-  Jab writer ki awaaz story mein clearly sunai de, tab genre master us awaaz
-  ko Bollywood cinema ki bhasha mein translate karta hai.
-  Tabhi banati hai woh story jo sirf tumhari ho sakti hai.
+      **QUESTION 8A — Audience Emotion at the End:**
+
+      ---
+      **Film ka aakhri scene. Credits roll. Audience uthke ja rahi hai.
+      EXACTLY kya feel kar rahi hai woh — woh ek emotion ya state jo andar reh jaayegi?**
+
+      **A) 😭✨ BHARI AANKHON SE MUSKURAANA**
+      Rona bhi, muskuraana bhi — dono ek saath. Bittersweet.
+      Dard tha, par ant mein ek warm light hai. Audience ghar jaate hue smile karti hai.
+      *Like: Taare Zameen Par ending, Masaan ending, Bajrangi Bhaijaan ending*
+
+      **B) 🌊 ANDAR KI KHAMOSHI**
+      Kuch ghoom raha ho andar — kuch unsettled, kuch haunted.
+      Audience soch mein doob jaaye. Ghar jaake bhi story sochte rahein.
+      *Like: Andhadhun ending, Tumbbad, Gulaal, Talaash ending*
+
+      **C) 🔥 GUSSA JO KUCH KARNA CHAHTA HAI**
+      Injustice dikhaya — audience change chahti hai. Uthke kuch karna chahti hai.
+      Anger with purpose. Not rage — resolve.
+      *Like: Article 15, Newton, Pink, Rang De Basanti*
+
+      **D) 💫 INSAAN PE YAKEEN**
+      Cathartic faith in humanity. "Duniya mein achhai hai."
+      Hope that feels earned — not given easily.
+      *Like: 3 Idiots ending, Swades, Dangal, Bajrangi Bhaijaan*
+
+      **E) 🤯 DIMAG GHOOM GAYA**
+      "Wait — kya hua abhi?" Sab kuch revisit karna chahein.
+      Plot twist ya revelation ka aftermath — delicious confusion.
+      *Like: Andhadhun's climax, Kahaani's reveal, Drishyam's ending*
+
+      **F) 💔 EARNED DARD**
+      Sab kuch nahi hua theek. Par jo hua — woh hona hi tha.
+      Tragedy that feels inevitable, not cruel. Audience accepts it.
+      *Like: Devdas, Dil Se, Lootera ending, Gangs of Wasseypur*
+
+      ---
+      Ya ek sentence mein describe karo:
+
+      ---
+
+      **QUESTION 8B — Protagonist's Emotional State (Last Scene):**
+      "Aur protagonist — aakhri scene mein woh EXACTLY kya feel kar rahi/raha hai?
+      Ek word ya ek line mein batao."
+      (Open question — connects character arc to audience emotion)
+
+      **QUESTION 8C — Story's Emotional Spine:**
+      "Shuruwaat mein audience ko kya feel hoga — aur ant tak woh feeling kaise change hogi?"
+      (Open question — overall emotional journey arc)
+
+    outputs:
+      - audience_final_emotion noted
+      - protagonist_final_state noted
+      - emotional_spine noted
+    duration: "5-8 min"
+
+  # ═══════════════════════════════════════════════════════
+  # STEP 9 — CORE CONFLICT (was STEP 7)
+  # ═══════════════════════════════════════════════════════
+
+  - step: 9
+    name: "Core Conflict"
+    agent: "master-story-director"
+    action: |
+      **🔴 ANNOUNCE:**
+      ```
+      ✅ STEP 8 complete.
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 9 of 13 — Core Conflict
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
+
+      **QUESTION 9A — Internal Conflict (Andar Ki Ladai):**
+
+      ---
+      **Protagonist ke andar ki LADAI kya hai —
+      woh inner battle jo baahri story ke saath saath chal rahi hai?**
+
+      **A) 😨 DAR vs HIMMAT**
+      Kuch karna chahte hain — par karne se darte hain.
+      Puri story woh darr todne ki journey hai, ya phir us darr ke saamne jhukne ki.
+      *Core arc: Courage. Examples: Queen, Taare Zameen Par, Bhaag Milkha Bhaag*
+
+      **B) ❤️ PYAAR vs ZIMMEDAARI**
+      Dono sach hain, dono real hain. Par dono ek saath impossible hain.
+      Choose karna padega — aur dono mein kuch kho jaayega.
+      *Core arc: Sacrifice. Examples: Dil Dhadakne Do, Kapoor & Sons, Piku*
+
+      **C) 🪞 SACHCHA SELF vs JO DUNIYA DEKHNA CHAHTI HAI**
+      Saalo se ek mask pehan ke jiya hai — society ke liye, family ke liye.
+      Story mein woh mask toot-ta/tootti hai — ya aur mazboot hota/hoti hai.
+      *Core arc: Authenticity. Examples: Queen, Tamasha, Kapoor & Sons, English Vinglish*
+
+      **D) 🔄 KHUD SE BHAAGNA vs KHUD SE MILNA**
+      Kuch aisa hai andar jisse face nahi karna chahte — memory, galti, khwahish.
+      Poori story us chiz ka peecha karna hai — ya us se bhaagna.
+      *Core arc: Self-confrontation. Examples: Rockstar, Highway, Zindagi Na Milegi Dobara*
+
+      **E) 💀 BACHNA vs JEENA**
+      Sirf survive karna hai ya woh zindagi jeena hai jo actual hai?
+      Safety ka cost kya hai — aur woh cost pay karna sahi hai ya nahi?
+      *Core arc: Aliveness. Examples: Tumbbad, Highway, Masaan, Article 15*
+
+      ---
+      Ya apne words mein describe karo:
+
+      ---
+
+      **QUESTION 9B — External Conflict (Baahri Ladai):**
+
+      **Protagonist kisse ya kisse ladh raha/rahi hai BAAHRI taur pe?**
+
+      A) 👤 **EK INSAAN** — ek specific antagonist jiska ek face aur ek motive hai
+      B) 🏛️ **SYSTEM/SOCIETY** — institution, caste, rules, expectations, collective inertia
+      C) ⏰ **TIME/FATE** — race against something beyond control — clock, illness, deadline, chance
+      D) 🌊 **KHUD KA PAST** — past choices, decisions taken, roads not taken — past itself is the antagonist
+      E) 🌍 **WORLD/ENVIRONMENT** — nature, geography, circumstance — harsh external reality
+      Ya apne words mein:
+
+      **QUESTION 9C — Antagonist (if applicable):**
+      "Agar ek specific antagonist hai — woh kaun hai, aur woh GALAT kyun nahi hai?
+      Matlab — unka apna perspective kya hai? Woh apni nazar se kya soch rahe hain?"
+      (Great antagonists believe they are right — probe this)
+
+    outputs:
+      - internal_conflict noted
+      - external_conflict noted
+      - antagonist_perspective noted
+    duration: "5-8 min"
+
+  # ═══════════════════════════════════════════════════════
+  # STEP 10 — MILESTONES + HIGHPOINTS (was STEP 8)
+  # ═══════════════════════════════════════════════════════
+
+  - step: 10
+    name: "Milestones + Highpoints"
+    agent: "master-story-director"
+    action: |
+      **🔴 ANNOUNCE:**
+      ```
+      ✅ STEP 9 complete.
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 10 of 13 — Milestones + Highpoints
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
+
+      **QUESTION 10A — First Major Turn:**
+
+      ---
+      **Story ki shuruwaat ke baad — woh pehla BADA MODA kya hoga
+      jiske baad story bilkul naya direction le leti hai?**
+
+      **A) 💡 REVELATION**
+      Kuch pata chalta hai jo sab kuch palat deta hai.
+      "Oh. Yeh nahi pata tha." — aur ab sab kuch naye angle se dikhta hai.
+      *Examples: Andhadhun ke discoveries, Kahaani's reveals, Talaash's twist*
+
+      **B) 💥 LOSS**
+      Kuch ya koi chala jaata hai — permanently.
+      Jo tha, ab nahi rahega. Protagonist ab aage chahte ya na chahte, hona hi hoga.
+      *Examples: Masaan's inciting loss, Dil Dhadakne Do family revelation*
+
+      **C) ⚡ EK DECISION**
+      Protagonist kuch karta/karti hai jiske baad wapas nahi ja sakte.
+      No undo button. Rubicon cross hua. Story abhi shuru hui.
+      *Examples: Newton's posted election duty, Queen's solo trip, Article 15's investigation launch*
+
+      **D) 🔥 CONFRONTATION**
+      Do opposing forces directly aamne-saamne aate hain pehli baar.
+      Stakes suddenly clear ho jaate hain. "Yeh itna serious hai."
+      *Examples: Gangs of Wasseypur's first violence, Pink's courtroom confrontation beginning*
+
+      ---
+      Ya apne words mein describe karo woh first major turn:
+
+      ---
+
+      **QUESTION 10B — Darkest Moment:**
+      "Story ka SABSE DARK MOMENT — woh lowest point jab sab kuch kho gaya lagta hai.
+      Kya hoga tab? Protagonist kahan hoga/hogi? Kaisi situation mein?"
+
+      A) 🌑 Sabse zaroori insaan ka chale jaana — abandonment ya death
+      B) 😔 Apne haath se khud hi haar maanna — self-defeat, giving up
+      C) 🎭 Sach pata chalna jo tod deta hai — a truth that destroys something believed
+      D) 🔗 Completely trapped — koi raasta nahi dikh raha, koi option nahi
+      Ya apne words mein:
+
+      **QUESTION 10C — Climax:**
+      "CLIMAX — woh ek moment jo sab kuch decide karta hai.
+      Audience ne poori film dekhi hai is moment ke liye. Kya hoga?"
+
+      A) 👊 **DIRECT CONFRONTATION** — Protagonist aur antagonist directly face each other
+      B) 💔 **PERSONAL CHOICE** — Baahri fight nahi — protagonist ka khud ka decision sab resolve karta hai
+      C) 🌊 **INEVITABLE CASCADE** — Jo hona tha woh hoke rahega — truth emerge karti hai
+      D) 🔄 **REVERSAL** — Jo soch rahe the ho raha hai, woh nahi — complete flip of meaning
+      Ya apne words mein:
+
+      **QUESTION 10D — Story Unique Element:**
+      "Is story mein kuch aisa jo typically is genre ya type ki films mein nahi hota —
+      kuch unexpected, kuch surprising, kuch OUT OF THE BOX?
+      Koi cheez jo audience expect nahi karegi?"
+      (Open question — this is the uniqueness anchor of the story)
+
+    outputs:
+      - first_major_turn noted
+      - darkest_moment noted
+      - climax_type noted
+      - unique_element noted
+    duration: "5-8 min"
+
+  # ═══════════════════════════════════════════════════════
+  # STEP 11 — OPENING + ENDING + LANGUAGE
+  # (before Story Summary — so ALL data feeds into STEP 12 summary)
+  # ═══════════════════════════════════════════════════════
+
+  - step: 11
+    name: "Opening + Ending + Language"
+    agent: "master-story-director"
+    action: |
+      **🔴 ANNOUNCE:**
+      ```
+      ✅ STEP 10 complete.
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 11 of 13 — Opening + Ending + Language
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
+
+      **QUESTION 11A — Opening Scene:**
+
+      ---
+      **PEHLA SCENE — audience ne abhi screen dekha hai.
+      Woh pehli 2-3 minutes mein EXACTLY kya dekhenge?**
+
+      **A) 🎬 BEECH MEIN SE SHURU (In Medias Res)**
+      Action ya conversation already ho rahi hai. Audience enters mid-stream.
+      No setup. No explanation. Figure it out as you go.
+      *Examples: Drishyam (already in interrogation), Andhadhun (violin concert in progress)*
+
+      **B) 🌍 DUNIYA PEHLE (World Establishment)**
+      Jagah ya society dikhao — protagonist ke aane se pehle.
+      Setting = character. World mein audience ko drop karo.
+      *Examples: Tumbbad (village and temple established), Gangs of Wasseypur (Dhanbad's streets)*
+
+      **C) 👤 PROTAGONIST REVEAL**
+      Protagonist ki ek single action jo unka poora character define kare.
+      Audience jaanle — yeh insaan kaisa hai — bina kisi dialogue ke.
+      *Examples: Piku (Piku's morning routine), Newton (Newton refusing to take bribe)*
+
+      **D) ❓ MYSTERY FIRST (The Hook)**
+      Ek image, ek scene, ek line — jo ek sawaal create kare.
+      Woh sawaal poori film tak unanswered rahe — climax tak.
+      *Examples: Talaash (body in water), Kahaani (pregnant woman arrives)*
+
+      **E) 🎭 CHARACTER IN CONTRAST**
+      Protagonist ko ek situation mein dikhao jo film ke ant se bilkul ULTI ho.
+      Before aur after ka contrast — shuruwaat mein hi hint.
+      *Examples: Queen (Rani before trip vs after), Taare Zameen Par (Ishaan's paintings)*
+
+      ---
+      Ya apne words mein batao pehla scene kaisa hoga:
+
+      ---
+
+      **QUESTION 11B — Ending Scene:**
+
+      **AAKHRI SCENE — film khatam ho rahi hai. Kya dikh raha hai screen pe?**
+
+      **A) ✨ RESOLUTION WITH HOPE**
+      Mushkil safar, par ant mein roshni hai. Kuch achieve hua — earned, not given.
+      Audience ko warmth feel ho.
+      *Examples: Taare Zameen Par, Dangal, Swades, Bajrangi Bhaijaan*
+
+      **B) 🌓 OPEN/AMBIGUOUS**
+      Audience khud decide kare kya hua. No clear answer.
+      Multiple interpretations — sab valid.
+      *Examples: Andhadhun's final shot, Dil Chahta Hai's last scene, Talaash ending*
+
+      **C) 🔄 PYRRHIC VICTORY**
+      Protagonist ne goal achieve kiya — par kuch important permanently kho gaya.
+      Win + loss ek saath. Bittersweet.
+      *Examples: Gangs of Wasseypur, Lootera, Masaan*
+
+      **D) 🪞 FULL CIRCLE**
+      Last image echoes first image — same composition, completely different meaning.
+      Journey ka proof yeh hai ki same jagah alag feel karti hai.
+      *Examples: Kapoor & Sons, Rang De Basanti, Piku*
+
+      **E) 💔 EARNED TRAGEDY**
+      Jo hona tha woh hua. Loss jo zaroor tha.
+      Audience roti hai, par samajhti hai. Not cruel — inevitable.
+      *Examples: Devdas, Dil Se, Mughal-E-Azam*
+
+      **F) ⚡ TWIST ENDING**
+      Jo soch rahe the woh nahi — ya jo soch rahe the nahi woh hai.
+      Rewatching changes everything.
+      *Examples: Andhadhun's ending, Kahaani's final reveal, Drishyam's last scene*
+
+      ---
+      Ya apne words mein last scene describe karo:
+
+      ---
+
+      **QUESTION 11C — Anti-Cliché Guard:**
+      "Ek cheez batao jo is story mein BILKUL NAHI chahiye —
+      koi cliché, koi trope, koi moment jo dikhne ke baad sab kuch fail ho jaaye."
+      (Open question — anti-cliché anchor, applied at STEP 13)
+
+      ---
+
+      **QUESTION 11D — Language Selection:**
+
+      **Is story ko kis language mein likhna chahoge?**
+      *(Yeh sirf story narration ke liye hai — questions continue in Hinglish)*
+
+      **A) Simple Bollywood Hindi** (DEFAULT)
+      60-70% Hindi + 30-40% naturally spoken English mixing
+      Natural, warm, accessible — jaise Bollywood films mein hota hai
+      "Woh ped ke paas aayi aur scarf utha liya."
+
+      **B) Pure Hindi**
+      Formal, literary Hindi — for historical, period films, or Doordarshan-style
+      "Woh vriksha ke nikat aai aur dupatta uth liya."
+
+      **C) English**
+      For international market, English-language film, OTT (global)
+      "She walked to the tree and picked up the scarf."
+
+      **D) Regional Language**
+      → Haryanvi / Punjabi / Gujarati / Marathi / Bengali / Tamil / Telugu / Bhojpuri / Rajasthani
+      (Specify which one — story will be written in that regional flavor)
+
+      **E) Hinglish (Equal Mix)**
+      50% Hindi + 50% English — urban, contemporary, young India
+      "Woh ped ke paas gayi and picked up the scarf."
+
+      **F) Bilingual Format**
+      Narration in one language + dialogues in another
+      (Specify combination)
+
+      ---
+      Ya apni language preference batao:
+
+      ---
+
+      **COLLECT ALL:**
+      `opening_scene_type` + `ending_type` + `anti_cliche_guard` + `output_language`
+      Store. STEP 12 (Story Summary) will now use ALL of these + everything from STEPs 1-10.
+
+    outputs:
+      - opening_scene_type noted
+      - ending_type noted
+      - anti_cliche_guard noted
+      - output_language confirmed
+    duration: "8-12 min"
+
+  # ═══════════════════════════════════════════════════════
+  # STEP 12 — STORY SUMMARY APPROVAL
+  # Uses ALL data from STEPs 1-11 — complete picture before story creation
+  # ONE summary · Approve / Change Variant / Give Feedback · Unlimited iterations
+  # ═══════════════════════════════════════════════════════
+
+  - step: 12
+    name: "Story Summary Approval"
+    agent: "master-story-director"
+    action: |
+      **🔴 ANNOUNCE:**
+      ```
+      ✅ STEP 11 complete.
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 12 of 13 — Story Summary Approval
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
+
+      **PURPOSE:**
+      STEPS 1-11 ke saare answers ab complete hain — format, structure, story DNA, opening, ending, language.
+      Ab AI ek ~200-word story summary generate karega — full picture se.
+      Writer isko approve kare, ya change kare. Approved summary → STEP 13 mein story banega.
+
+      **INTERNAL PREPARATION (do not show to user):**
+
+      FULL SEED COLLECTION — use ALL of these:
+      → screen_format + format_details (STEP 1)
+      → story_structure (STEP 2)
+      → core_factor + factor DNA (STEP 3 + 4)
+      → primary_genre + tone (STEP 5)
+      → core_theme + takeaway (STEP 6)
+      → protagonist_type + fear + want_need_gap + secondary_characters (STEP 7)
+      → emotional_arc + protagonist_final_state (STEP 8)
+      → internal_conflict + external_conflict + antagonist (STEP 9)
+      → first_major_turn + darkest_moment + climax_type + unique_element (STEP 10)
+      → opening_scene_type + ending_type + anti_cliche_guard + output_language (STEP 11)
+
+      SUMMARY RULES (before writing):
+      → Write in output_language chosen at STEP 11 (default: Simple Bollywood Hindi)
+      → ~200 words — enough to feel the COMPLETE story arc, not just a premise
+      → MUST include: how story opens (from STEP 11A), protagonist wound, core conflict,
+        key escalation, how story ends (from STEP 11B) — the complete arc in miniature
+      → Apply anti_cliche_guard from STEP 11C — that element must NOT appear in the summary
+      → Use story_structure from STEP 2 as the structural skeleton
+      → Every element traceable to writer's answers — nothing invented out of thin air
+
+      ┌─────────────────────────────────────────────────────────┐
+      │  CREATIVE ELEVATION MANDATE — STEP 12 SUMMARY          │
+      │                                                         │
+      │  Writer's answers = raw material. AI's job = forge      │
+      │  the best possible film from that material.             │
+      │                                                         │
+      │  1. OPENING LINE: Must hook immediately — like a film   │
+      │     pitch that makes a producer lean forward.           │
+      │     Not "yeh kahani hai..." — start IN the world.      │
+      │                                                         │
+      │  2. CHARACTERS: Describe each with their               │
+      │     wound + want in ONE specific, irreplaceable detail. │
+      │     Not "broken man" — what specifically broke him?     │
+      │                                                         │
+      │  3. CONFLICT: Show why it is INEVITABLE given these     │
+      │     specific characters in this specific world.         │
+      │     The collision should feel like it had to happen.    │
+      │                                                         │
+      │  4. SPECIFICITY TEST: Could this summary describe a     │
+      │     different film? If YES → add details until only     │
+      │     THIS story fits. Generics = failure.                │
+      │                                                         │
+      │  5. ENDING: Don't just say what happens — make the      │
+      │     reader FEEL the resolution or open wound.           │
+      │                                                         │
+      │  Where writer was specific → honor exactly, build on.   │
+      │  Where writer was vague → AI makes the most cinematic,  │
+      │  specific, original choice — never the default.         │
+      └─────────────────────────────────────────────────────────┘
+
+      **SHOW TO WRITER:**
+
+      ```
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📖 STORY SUMMARY
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+      Format: [MOVIE (120 min) / WEB SERIES (8 eps × 30-45 min) / etc. from STEP 1]
+      Structure: [LINEAR / NON-LINEAR / Framework name]
+      Opens: [opening scene type from STEP 11A]
+      Ends: [ending type from STEP 11B]
+      Language: [chosen language from STEP 11D]
+
+      [~200-word story summary in the chosen language.
+      Write it like a compelling film pitch — vivid, specific, emotionally alive.
+      Para 1: World + protagonist (who they are + their wound/contradiction — specific, not generic)
+      Para 2: Core tension + what triggers the story + first major turn (with momentum)
+      Para 3: Escalation + darkest moment + how it resolves + emotional landing
+      Opening and ending must match what writer chose at STEP 11A and 11B.
+      Story must feel INTERESTING and SURPRISING — not predictable.
+      Apply the anti-cliché guard — the forbidden element must NOT appear.]
+
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      Kya yeh sahi direction hai?
+
+      ✅  A) APPROVE — "Haan, yeh story sahi lag rahi hai — aage badho"
+      🔄  B) NAYA VARIANT — "Ek bilkul alag version dikhao" (naya angle, same seeds)
+      ✏️  C) FEEDBACK DO — "Is version mein yeh cheez badlo: ___"
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
+
+      **AFTER WRITER RESPONSE:**
+
+      → **A) APPROVED:**
+         - Store: `approved_summary: { text: "[full summary]", format: "[format]", structure: "[structure]",
+           opening: "[type]", ending: "[type]", language: "[language]" }`
+         - "✅ Story lock hua! STEP 13 mein poori story likhte hain."
+         - Move to STEP 13.
+
+      → **B) NAYA VARIANT requested:**
+         - Generate a COMPLETELY NEW summary — different creative angle from same seeds.
+         - Different emotional entry, different key scene foregrounded, different narrative voice.
+         - Opening/ending types from STEP 11 still apply (unless writer says change those too).
+         - Show new summary using same format above.
+         - Ask again: A) Approve / B) Naya Variant / C) Feedback
+         - **NO LIMIT on variants** — keep generating until writer is satisfied.
+
+      → **C) FEEDBACK given:**
+         - Note EXACTLY what writer wants changed.
+         - Regenerate with ONLY that element changed — keep rest intact.
+         - Show revised summary using same format above.
+         - Ask again: A) Approve / B) Naya Variant / C) Feedback
+         - **NO LIMIT on feedback rounds** — iterate as many times as needed.
+
+      **HARD RULE:**
+      `approved_summary` nahi mila toh STEP 13 NAHI chal sakta — no exceptions.
+      Writer MUST explicitly say "Approve" / "A" / "Haan theek hai" / "Sahi hai" before proceeding.
+
+    outputs:
+      - approved_summary locked (full text + format + structure + opening + ending + language)
+    duration: "8-15 min (no iteration limit)"
+
+  # ═══════════════════════════════════════════════════════
+  # STEP 13 — GENRE ROUTING + FULL STORY CREATION (v11.0 — no processing passes)
+  # ═══════════════════════════════════════════════════════
+
+  - step: 13
+    name: "Genre Routing + Full Story Creation"
+    agent: "[master-story-director → selected-genre-architect]"
+    action: |
+      **🔴 ANNOUNCE:**
+      ```
+      ✅ STEP 12 complete!
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      📍 STEP 13 of 13 — Story Creation
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      ```
+
+      **PHASE 13A — GENRE AGENT SELECTION (Master Story Director):**
+
+      From STEP 5 answers, select genre specialist:
+      - Thriller/Suspense → suspense-architect.md (Ghosh/Raghavan/Kashyap trained)
+      - Romance → romance-architect.md (Chopra/Bhansali/Imtiaz trained)
+      - Action → action-architect.md (Shetty/Anand/Zafar trained)
+      - Comedy → comedy-architect.md (Mukherjee/Hirani/Priyadarshan trained)
+      - Drama → drama-architect.md (Roy/Gulzar/Gowariker trained)
+      - Horror → horror-architect.md (Barwe/Kaushik/Varma trained)
+      - Musical → musical-architect.md (Farah/Johar/Bhansali trained)
+      - Social → social-cinema-architect.md (Benegal/Nihalani/Masurkar trained)
+
+      If screen_format = "auto-assign" (from STEP 1): decide best format now based on story DNA.
+      Announce format recommendation + rationale to user before proceeding.
+
+      **ANNOUNCE TO USER:**
+      ```
+      Genre: [PRIMARY GENRE] (+ [Secondary] if applicable)
+      Selected Specialist: [AGENT NAME] — trained on [Directors]
+      Rationale: [1-2 lines why this agent fits this story's DNA]
+      ```
+
+      **SAVE genre-analysis.md:**
+      Save to: `project/{project_name}/genre-analysis.md`
+
+      ---
+
+      **PHASE 13B — GENRE-SPECIFIC QUESTIONS (Genre Specialist):**
+
+      Genre specialist asks 5-8 targeted craft questions — ONLY what's NOT already answered in STEPS 1-12.
+      These are technical craft questions specific to the genre:
+
+      Thriller → twist timing, red herring strategy, POV choice, reveal mechanics
+      Romance → chemistry scene, separation type, reunion conditions, love obstacle
+      Action → set piece scale, chase type, physical stakes, climax structure
+      Comedy → comedy style (situational/verbal/satirical), tone, farcical level
+      Drama → social context, pacing, transformation markers, realism level
+      Horror → sub-genre (supernatural/psychological/folk/body), scare tone, climax type
+      Musical → song count, placement, style (classical/folk/pop/EDM), performance stakes
+      Social → specific issue, research depth needed, tone (angry/hopeful/ironic)
+
+      Reference each agent file for their specific 5-8 question set.
+      Collect answers. THEN proceed to 13C.
+
+      ---
+
+      **PHASE 13C — STORY WRITING:**
+
+      **BLUEPRINT (from STEP 11 + STEP 12):**
+      Use EXACTLY the `approved_summary` writer locked at STEP 12 as story blueprint.
+      Apply `opening_scene_type`, `ending_type`, `anti_cliche_guard` from STEP 11.
+      Apply `output_language` from STEP 11D.
+      Apply `story_structure` from STEP 2.
+      Do not deviate from approved direction. Do not add elements writer did not confirm.
+
+      If story_structure = AUTO-ASSIGN → apply best structure for this genre + story DNA now.
+
+      **PRE-WRITING SELF-CHECK (Language Law):**
+      [ ] 1. Narration [selected language] mein hai?
+      [ ] 2. Har sentence complete? (subject + verb)
+      [ ] 3. Sentences connectors se jude hain?
+      [ ] 4. Forbidden English words absent?
+      [ ] 5. Hinglish natural?
+      FAIL = RUKO. REWRITE. PHIR LIKHO.
+
+      ┌─────────────────────────────────────────────────────────┐
+      │  CREATIVE ELEVATION MANDATE — STEP 13 STORY WRITING    │
+      │                                                         │
+      │  This is not transcription. This is filmmaking.        │
+      │  AI is the co-author — bring full creative intelligence.│
+      │                                                         │
+      │  WHERE WRITER WAS SPECIFIC: Honor it exactly.          │
+      │  Then build outward — add the sensory detail, the       │
+      │  specific image, the unexpected word that makes it live.│
+      │                                                         │
+      │  WHERE WRITER WAS VAGUE OR SKIPPED: AI decides.        │
+      │  Always make the most cinematically interesting choice, │
+      │  never the safe/generic one. If two choices exist,      │
+      │  pick the one only THIS story could have.               │
+      │                                                         │
+      │  EVERY SCENE MUST HAVE ALL THREE:                       │
+      │  → One specific visual detail (reader can see it)       │
+      │  → One emotional truth (reader can feel it)             │
+      │  → One story function (plot or character moves forward) │
+      │                                                         │
+      │  QUALITY TEST (run before saving):                      │
+      │  "Could any scene in this story belong to a different   │
+      │   film?" If YES → rewrite with more specificity.        │
+      │                                                         │
+      │  Standard: Match the craft of the genre masters this    │
+      │  agent is trained on. That is the floor, not the target.│
+      └─────────────────────────────────────────────────────────┘
+
+      **WRITE CONTINUOUS NARRATIVE (the only format for story-synopsis.md):**
+
+      ```
+      [Flowing story in chosen language — for writer/reader experience]
+      [750-1500 words depending on format scale]
+      [Scene-wise breakdown is NOT written here — that is the Beat Sheet's job]
+      ```
+
+      **FORMAT-SPECIFIC ADJUSTMENTS:**
+      - Movie: Include interval placement, song placement notes, Nava Rasa mapping
+      - Web Series: Mark episode breaks, season arc, cliffhanger positions
+      - Micro Drama: Mark episode 1-N breaks, each with hook + cliffhanger
+      - Short Film / Auto-assigned: Apply best-fit format adjustments
+
+      **SAVE FILES — ALL FORMATS save to project root:**
+
+      Save: `project/{project_name}/genre-analysis.md`
+      Save: `project/{project_name}/story-synopsis.md`
+
+      This is the same for ALL formats (Movie, Web Series, Micro Drama).
+      Common docs always live at the project root — no subfolder.
+      episodes/ folder is the ONLY addition for Web Series and Micro Drama.
+
+      Include in story-synopsis.md: Continuous narrative ONLY
+      Include: Format notes inline (episode breaks / song placement / structure markers noted within prose)
+
+      ---
+
+      **PHASE 13D — EPISODE FILES (Web Series + Micro Drama only):**
+
+      # ─────────────────────────────────────────────────────
+      # WEB SERIES — Episode FOLDERS (full treatment per ep)
+      # ─────────────────────────────────────────────────────
+      IF screen_format = "web-series":
+
+        For EACH episode (episode_count from STEP 1):
+          Create FOLDER: `project/{project_name}/episodes/episode-{NN}/`
+          Create FILE:   `project/{project_name}/episodes/episode-{NN}/story-synopsis.md`
+          (Other files — beat-sheet.md, screenplay.md, shot-breakdown.md, shot-breakdown-ai.md
+           will be created here in later workflow steps — folder is pre-created now as placeholder)
+
+          story-synopsis.md for each episode MUST contain:
+
+          ```
+          # [SERIES TITLE] — Episode {N}: "[Episode Title]"
+
+          **Series**: [Title] | **Format**: Web Series
+          **Episode**: {N} of {episode_count} | **Duration**: {episode_duration} min
+
+          ---
+
+          ## Episode Summary
+          [2-3 lines — what happens, what changes, what the cliffhanger is]
+
+          ---
+
+          ## Episode Narrative
+          [Full episode narrative — 400-800 words — chosen language — continuous prose only]
+          [Scene-wise breakdown belongs in the episode's beat-sheet.md — NOT here]
+
+          ---
+          **Episode Hook / Cliffhanger**: [1 line]
+          **Character State at End**: [1 line]
+          ```
+
+        Each episode's story-synopsis derives from the root story-synopsis.md:
+        - Extracted and expanded — NOT rewritten from scratch
+        - Self-contained episode story AND part of the larger arc
+        - Cliffhanger mandatory on every episode EXCEPT the final
+
+        ANNOUNCE after saving:
+        ```
+        ✅ {N} episode folders created: episodes/episode-01/ through episodes/episode-{NN}/
+        Each contains story-synopsis.md (Continuous Narrative only)
+        Scene-wise breakdown, beat-sheet, screenplay, shot-breakdown will be added in later steps.
+        ```
+
+      # ─────────────────────────────────────────────────────
+      # MICRO DRAMA — Episode FLAT FILES (combined all-in-one)
+      # ─────────────────────────────────────────────────────
+      IF screen_format = "micro-drama":
+
+        Create folder: `project/{project_name}/episodes/`
+
+        For EACH episode (episode_count from STEP 1):
+          Create FILE: `project/{project_name}/episodes/episode-{NN}.md`
+          (Single combined file — no subfolder — because episodes are 5-7 min)
+
+          Each episode file MUST contain ALL of the following in one file:
+
+          ```
+          # [SERIES TITLE] — Episode {N}: "[Episode Title]"
+
+          **Series**: [Title] | **Format**: Micro Drama
+          **Episode**: {N} of {episode_count} | **Duration**: {episode_duration} min
+
+          ---
+
+          ## Episode Summary
+          [1-2 lines — what happens + hook]
+
+          ---
+
+          ## STORY (Continuous Narrative)
+          [150-250 words — chosen language — flowing prose]
+          [Scene-wise breakdown NOT included here — belongs in screenplay step]
+
+          ---
+
+          ## BEAT-SHEET (Episode Beats)
+          Beat 1: [Opening hook — first 30 sec]
+          Beat 2: [Complication — min 1-2]
+          Beat 3: [Turn/Reveal — min 3-4]
+          Beat 4: [Cliffhanger/Payoff — last 30 sec]
+
+          ---
+
+          ## SHOT NOTES (Key Shots)
+          [3-5 key shots with camera direction — no full breakdown needed]
+          [AI prompt note if applicable]
+
+          ---
+          **Micro-Recap** (Ep 2+): [1 sentence recap of previous episode]
+          **Episode Hook**: [1 line — why viewer clicks next episode]
+          ```
+
+        ANNOUNCE after saving:
+        ```
+        ✅ {N} episode files created: episodes/episode-01.md through episodes/episode-{NN}.md
+        Each is a combined file: Story (Continuous) + Beat-Sheet + Shot Notes
+        Screenplay will be added in the screenplay step.
+        ```
+
+    outputs:
+      ALL formats (common docs — always at root):
+        - "project/{project_name}/genre-analysis.md"
+        - "project/{project_name}/story-synopsis.md"
+      Web Series (additional):
+        - "project/{project_name}/episodes/episode-01/story-synopsis.md  [... through episode-NN/story-synopsis.md]"
+        - Future per episode: beat-sheet.md, screenplay.md, shot-breakdown.md, shot-breakdown-ai.md
+      Micro Drama (additional):
+        - "project/{project_name}/episodes/episode-01.md  [... through episode-NN.md — combined all-in-one]"
+    duration: "15-25 min (+ 5-10 min for episode files if Web Series/Micro Drama)"
+
+# ═══════════════════════════════════════════════════════
+# QA + APPROVAL
+# ═══════════════════════════════════════════════════════
+
+quality_gates:
+  - gate: "STEP 1 (Format) completed with defaults applied for any skipped fields"
+  - gate: "STEP 2 (Structure) completed — auto-assign flagged if not chosen"
+  - gate: "STEP 11 (Opening+Ending+Language) MUST be completed before Story Summary at STEP 12"
+  - gate: "STEP 12 Story Summary shown to writer — writer must explicitly APPROVE before STEP 13"
+  - gate: "approved_summary stored (text + format + structure + opening + ending + language) — MANDATORY before STEP 13"
+  - gate: "STEP 13 story writing uses approved_summary from STEP 12 — no deviations"
+  - gate: "story-synopsis.md contains Continuous Narrative only (no scene-wise breakdown)"
+  - gate: "Language Law compliance verified before writing"
+  - gate: "genre-analysis.md saved to project folder"
+  - gate: "story-synopsis.md saved to project folder"
+
+next_steps:
+  after_approval:
+    - "Character Bible: `character-developer.md` workflow"
+    - "Beat Sheet: `beat-sheet-specialist.md` workflow"
+    - "Screenplay: `screenplay-structure-writer.md` workflow"
+    - "Shot Breakdown: `shot-breakdown-specialist.md` workflow"
+
+notes:
+  - "FORMAT selected at STEP 1 — FIRST question, not last. Defaults applied if writer skips."
+  - "STRUCTURE selected at STEP 2 — Linear / Non-Linear / Framework / Auto-Assign"
+  - "STEP 11 shows ONE story summary — writer Approves / requests New Variant / gives Feedback"
+  - "No limit on iterations at STEP 11 — writer loops until fully satisfied"
+  - "No processing passes at STEP 13 — just write from approved_summary blueprint"
+  - "This is the SINGLE workflow replacing separate web-series.yaml and micro-drama.yaml"
+  - "Creative choices in every question — writer can always type their own answer"
+  - "Choices are researched from Bollywood masters — specific, evocative, not generic"
+  - "Full story only written at STEP 13 — NEVER before"
+  - "Anti-cliché guard collected at STEP 12C and applied during STEP 13 story writing"

@@ -955,6 +955,124 @@ This is the DEFAULT. Apply automatically to ALL stories and dialogues.
 
 **No exceptions. This is how Bollywood stories are told.**
 
+---
+
+## 🧠 MASTER CRAFT INTELLIGENCE — COMEDY
+
+**Run this block internally before writing STEP 12 summary and STEP 13 story.**
+
+### Structural Patterns That Work in Indian Comedy
+
+**Pattern 1 — The Misunderstanding Spiral:**
+Comedy ki best engine hai: ek chhoti si baat jisko sab galat samjhe — aur phir sab uske oopar aur galat faishle lete hain.
+- Seed: A small, almost trivial misunderstanding
+- First Lie (to cover it): Makes situation worse
+- Second Lie (to cover the first): Now multiple people involved
+- Spiral: Each character's reasonable response to their false information creates MORE chaos
+- Explosion: The moment all misunderstandings collide simultaneously
+- Resolution: Truth out — and it's simpler than anyone imagined
+- Test: "Remove the first misunderstanding — does anything else work?" → NO = tight spiral
+
+**Pattern 2 — Hidden Truth Comedy:**
+Character puri kahani kuch HIDE karta hai — aur hide karne ki koshish hi comedy create karti hai.
+- What are they hiding? (A relationship, a job, an identity, a mistake)
+- Who are they hiding it from? (Multiple different people ideally — creates multi-track comedy)
+- Why can't they just tell the truth? (The reason must be SPECIFIC and sympathetic)
+- The Escalation: Truth almost comes out → they dodge it → worse situation → repeat
+- Revelation: Truth revealed at the worst possible moment → forced reckoning
+
+**Pattern 3 — Character Comedy (Situational Escalation):**
+Sabse lasting comedy character se aati hai — character jo perfectly normal insaan hai... par ek ajeeb cheez ke baare mein completely irrational hai.
+- The ONE THING: Character has one overwhelming obsession/fear/desire that makes them funny
+- Normal World: Put them in normal situations — their ONE THING makes everything absurd
+- Social Friction: Their ONE THING keeps colliding with social norms
+- Examples: A man obsessed with punctuality in India, a person who cannot lie in situations requiring social courtesy, a Gujarati accountant who treats every relationship as a balance sheet
+
+---
+
+### Hook Design Philosophy (Hrishikesh Mukherjee / Rajkumar Hirani School)
+
+**Opening Hook Formula:**
+- First 3 minutes: Establish character's SPECIFIC and LOVABLE quirk — not a joke, a TRAIT
+- We should smile at them, not laugh AT them — warmth first, then comedy
+- Mukherjee Principle: "Jab audience character se pyaar kare, tab kuch bhi funny ho sakta hai"
+- Hirani Principle: "Comedy tabhi works karti hai jab ek serious problem uske andar chhipa ho"
+
+**The Rule of Three:**
+- Setup: Establish the pattern (twice, same way)
+- Subversion: Third time — unexpected variation
+- Example: Character makes the same mistake twice → third time, we expect the same → they do something completely different → bigger laugh because expectation was violated
+
+---
+
+### Escalation Architecture
+
+**Comedy Timing Map:**
+- Act 1: Establish character + world + the problem that creates comedy
+- Act 1 Turn: The misunderstanding/lie that sets the engine running
+- Act 2: Escalation — each scene builds on previous, stakes increase, confusion deepens
+- Act 2 Low Point: Protagonist has dug themselves into an impossible hole — ALL their lies about to collapse
+- Act 3: The Explosion — everything comes out at once → chaos → resolution
+- Note: The resolution must be SATISFYING emotionally, not just plot-logical
+
+**The Callback System:**
+- Plant details in Act 1 that become payoffs in Act 3
+- Every good comedy has at least 3 callbacks
+- The BEST callback: something planted so early/casually that audience forgot it — then it returns as the most important thing
+
+---
+
+### Master Techniques
+
+**Hrishikesh Mukherjee (Golmaal, Chupke Chupke, Khubsoorat):**
+- Warmth over slapstick: Characters are flawed but LIKABLE — audience laughs with, not at
+- Middle-class texture: Comedy of aspiration, status anxiety, social propriety — deeply Indian
+- The sincere protagonist: Main character takes their mission deadly seriously — comedy comes from situation, not character being foolish
+
+**Rajkumar Hirani (3 Idiots, Munna Bhai series, PK):**
+- Comedy + social message — neither dilutes the other
+- The outsider's view: Character who doesn't follow social rules (Munna, Rancho, PK) reveals absurdity of systems we take for granted
+- Emotional climax beats comic climax: Final scene makes us cry, not just laugh — earns the comedy
+- Underdog wins: But not by cheating or luck — by being genuinely themselves
+
+**Priyadarshan (Hera Pheri, Bhool Bhulaiyaa, Hulchul):**
+- Ensemble chaos: Multiple characters with multiple agendas — all colliding
+- Physical comedy with Bollywood scale: Slapstick that is choreographed like action
+- The Twist: Comedy film reveals a serious hidden layer (crime, ghost, identity) — makes both funnier and more interesting
+
+---
+
+### Emotional Contract with Audience
+
+**What audience comes for:** Relief, joy, the pleasure of watching smart people be hilariously wrong
+**What they leave with:** A warm feeling — they liked these characters, they laughed, they felt good
+**The Comedy Promise:** Every joke is EARNED — not random, but rooted in character and situation logic
+**The FORBIDDEN feeling:** Audience should NEVER feel "that was mean" — punch-up allowed, punch-down forbidden. Comedy at expense of dignity or difference = not funny
+
+---
+
+### Common Failures to Avoid
+
+❌ **Random Funny**: Things happen that are "funny" with no connection to character or situation
+❌ **The Stupid Protagonist**: Character does obviously dumb things so plot can happen — audience loses respect
+❌ **Toilet Humor as Default**: Vulgar humor without wit — gets a reaction but leaves nothing behind
+❌ **Villain Who's Just Evil**: Comedy villains need specific, absurd reasons for their villainy
+❌ **Forgotten Stakes**: Comedy must have something real at stake — without stakes, there's no tension, no release
+❌ **Over-explaining the Joke**: Describe the setup, let joke land, MOVE ON. Never explain why it was funny.
+
+---
+
+### Story Creation Protocol (Comedy)
+
+Before writing a single line of story, answer internally:
+1. What is the ONE trait/desire/fear that makes this character inherently funny in this world?
+2. What is the seed misunderstanding/lie that can spiral into maximum chaos?
+3. What are the THREE callbacks to plant in Act 1?
+4. What is the SERIOUS emotional truth underneath this comedy?
+5. At what moment does comedy stop and genuine emotion take over? (The turn toward Act 3)
+
+---
+
 ## 🔴 STORY NARRATION IN HINDI (MANDATORY)
 
 **Write the ENTIRE story narrative in Simple Bollywood Hindi, not English.**

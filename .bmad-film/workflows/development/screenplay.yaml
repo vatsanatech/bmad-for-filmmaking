@@ -179,30 +179,29 @@ process:
       📍 STEP 1 of 4 — Screenplay Questions (15 questions)
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       ```
-      **Screenplay Structure Writer asks 10 questions:**
+      **Screenplay Structure Writer asks 6 questions:**
 
       Reference: `.bmad-film/agents/screenplay-structure-writer.md`
 
-      **A. SCREENPLAY STYLE (4 questions)**:
+      **NOTE**: Opening/Closing scene already in story-synopsis.md (STEP 11A/11B).
+      Pacing and emotional beat placement already in beat-sheet.md (Q1-Q3). Read those.
+
+      **A. SCREENPLAY STYLE (2 questions)**:
 
       Q1. Dialogue vs Visual Balance - Dialogue-heavy? Balanced? Visual-first?
       Q2. Scene Length - Quick cuts? Moderate? Longer takes? Varied?
-      Q3. Opening Scene - Character? World? Hook? Mood? Inciting incident?
-      Q4. Closing Scene - Last image/moment kya hona chahiye?
 
-      **B. PACING & STRUCTURE (3 questions)**:
+      **B. STRUCTURE TEXTURE (2 questions)**:
 
-      Q5. Pacing Strategy - Fast & tight? Measured? Building? Wave pattern?
-      Q6. Subtext Level - Direct? Moderate? Heavy subtext? Layered?
-      Q7. Scene Transitions - Hard cuts? Motivated? Time jumps? Thematic?
+      Q3. Subtext Level - Direct? Moderate? Heavy subtext? Layered?
+      Q4. Scene Transitions - Hard cuts? Motivated? Time jumps? Thematic?
 
-      **C. SPECIFIC SCENES (3 questions)**:
+      **C. SPECIFIC SCENES (2 questions)**:
 
-      Q8. Must-Have Scenes - Koi specific scenes clearly imagine kar rahe ho?
-      Q9. Emotional Beats Placement - Audience ko kab kya feel (map 3-5 moments)?
-      Q10. Montages/Special Sequences - Training? Time passage? Flashbacks?
+      Q5. Must-Have Scenes - Koi specific scenes clearly imagine kar rahe ho?
+      Q6. Montages/Special Sequences - Training? Time passage? Flashbacks?
 
-      **Collect all 10 answers before proceeding to Step 2.**
+      **Collect all 6 answers before proceeding to Step 2.**
 
     duration: "10-15 min"
 
@@ -211,19 +210,20 @@ process:
     agent: dialogue-writer
 
     action: |
-      **Dialogue Writer asks 5 language questions:**
+      **Dialogue Writer asks 3 language questions:**
 
       Reference: `.bmad-film/agents/dialogue-writer.md`
 
-      **LANGUAGE & VOICE (5 questions)**:
+      **NOTE**: Hindi-English ratio already set in story-synopsis.md STEP 11D.
+      Dialect/regional flavor already defined in character-bible.md. Read those.
 
-      Q11. Hindi-English Ratio - Default 60-70% Hindi theek hai? Ya adjust?
-      Q12. Dialect/Regional Flavor - Koi specific dialect? (Haryanvi, Punjabi, etc.)
-      Q13. Formality Level - Formal? Casual? Mixed? Character-based?
-      Q14. Memorable Lines - Koi specific lines/quotes include karna hai?
-      Q15. Dialogue Density - Talky? Balanced? Minimal? Action-driven?
+      **LANGUAGE & VOICE (3 questions)**:
 
-      **Collect all 5 answers before proceeding.**
+      Q7. Formality Level - Formal? Casual? Mixed? Character-based?
+      Q8. Memorable Lines - Koi specific lines/quotes include karna hai?
+      Q9. Dialogue Density - Talky? Balanced? Minimal? Action-driven?
+
+      **Collect all 3 answers before proceeding.**
 
     duration: "5-10 min"
 
@@ -239,10 +239,13 @@ process:
       ```
       Perfect! Screenplay vision clear hai:
 
-      ✓ Style: [Q1-Q4 answers - dialogue/visual balance, pacing]
-      ✓ Structure: [Q5-Q7 - pacing, subtext, transitions]
-      ✓ Scenes: [Q8-Q10 - must-haves, beats, montages]
-      ✓ Language: [Q11-Q15 - ratio, dialect, formality, density]
+      ✓ Style: [Q1-Q2 - dialogue/visual balance, scene length]
+      ✓ Opening/Closing: [From story-synopsis.md STEP 11A/11B]
+      ✓ Pacing: [From beat-sheet.md Q1]
+      ✓ Texture: [Q3-Q4 - subtext level, scene transitions]
+      ✓ Scenes: [Q5-Q6 - must-haves, montages]
+      ✓ Language: [From story-synopsis.md STEP 11D + character-bible.md]
+      ✓ Dialogue: [Q7-Q9 - formality, memorable lines, density]
 
       Yeh sahi hai? Final confirm before screenplay creation?
       ```
@@ -251,17 +254,17 @@ process:
 
       Based on answers, determine:
       - Scene length/count (Q2 - quick cuts = 15-20 scenes, longer = 8-12)
-      - Pacing strategy (Q5 - fast/measured/building)
-      - Subtext level (Q6 - affects dialogue style)
-      - Language mix (Q11-Q13 - per character if needed)
-      - Montages needed (Q10)
-      - Opening/closing specific (Q3, Q4)
+      - Pacing strategy (from beat-sheet.md Q1)
+      - Subtext level (Q3 - affects dialogue style)
+      - Language mix (from story-synopsis.md + character-bible.md)
+      - Montages needed (Q6)
+      - Opening/closing specific (from story-synopsis.md STEP 11A/11B)
 
       **Architecture internally**:
       - Scene breakdown based on answers
-      - Emotional beat placement from Q9
-      - Must-have scenes from Q8 integrated
-      - Language/dialect strategy from Q11-Q13
+      - Emotional beat placement from beat-sheet.md Q2/Q3
+      - Must-have scenes from Q5 integrated
+      - Language/dialect from story-synopsis.md + character-bible.md
 
     duration: "10 min"
 
@@ -359,21 +362,21 @@ process:
       - Scene purpose (plot/character/theme)
       - Estimated duration
 
-      **Create scene flow using Q3, Q4, Q8, Q9 answers**:
-      - **Opening scene from Q3** (character? world? hook?)
-      - Development scenes (build story)
-      - **Must-have scenes from Q8** (integrate specifically)
-      - **Emotional beats from Q9** (place at right moments)
+      **Create scene flow**:
+      - **Opening scene from story-synopsis.md STEP 11A**
+      - Development scenes (build story from beat-sheet.md)
+      - **Must-have scenes from Q5** (integrate specifically)
+      - **Emotional beats from beat-sheet.md Q2/Q3** (place at right moments)
       - Climax scene (peak tension/emotion)
-      - **Closing scene from Q4** (specific final image/moment)
+      - **Closing scene from story-synopsis.md STEP 11B**
 
-      **Apply Q10 montages**:
+      **Apply Q6 montages**:
       - Training montage (if requested)
       - Time passage (if requested)
       - Flashbacks (if requested)
 
-      **Pacing from Q5**:
-      - Fast & tight = minimal setup, jump to action
+      **Pacing from beat-sheet.md Q1**:
+      - Fast-paced = minimal setup, jump to action
       - Building = slow start, accelerate to climax
       - Wave = peaks + valleys rhythm
 
@@ -429,6 +432,35 @@ process:
     agent: screenplay-structure-writer
 
     action: |
+      ┌─────────────────────────────────────────────────────────┐
+      │  CREATIVE ELEVATION MANDATE — SCREENPLAY               │
+      │                                                         │
+      │  Scenes are not beat descriptions with formatting.      │
+      │  They are moments of life — specific, visual, felt.    │
+      │                                                         │
+      │  ACTION LINES: Put the reader IN the scene.            │
+      │  Not "they argue" — what specifically is happening?     │
+      │  What does the space look like? What does the body do?  │
+      │  One specific visual detail makes it real.              │
+      │                                                         │
+      │  WHERE THE BEAT SHEET SAYS "confrontation scene":       │
+      │  AI creates the SPECIFIC version only possible between  │
+      │  THESE characters, in THIS world, at THIS moment.       │
+      │  Generic confrontations don't exist here.               │
+      │                                                         │
+      │  SCENE IRREPLACEABILITY TEST:                           │
+      │  "Could this scene, as written, exist in a different    │
+      │  script?" If YES → find the specific detail, action,   │
+      │  or word that makes it irreplaceable to THIS film.      │
+      │                                                         │
+      │  DIALOGUE RULE: Every line must do TWO things:         │
+      │  → Reveal character AND advance story simultaneously.   │
+      │  → If it only does one, it's a rewrite candidate.       │
+      │                                                         │
+      │  Standard: Craft worthy of the dialogue style          │
+      │  framework selected. That is the floor, not the target. │
+      └─────────────────────────────────────────────────────────┘
+
       **Write STRUCTURE DRAFT using Q1-Q10 answers:**
 
       This draft includes:
@@ -449,12 +481,12 @@ process:
       - Moderate → Scenes 1-3 pages
       - Longer takes → Scenes 3-5 pages
 
-      **Apply Q6 (Subtext Level)**:
+      **Apply Q3 (Subtext Level)**:
       - Direct → Placeholder dialogue says what it means
       - Heavy subtext → Placeholder shows tension, avoidance
       - Mark silences and beats
 
-      **Apply Q7 (Transitions)**:
+      **Apply Q4 (Transitions)**:
       - Hard cuts → Just scene heading, no bridge
       - Motivated → Link scenes with action/sound/theme
       - Time jumps → Add "LATER" / "DAYS LATER"
@@ -546,28 +578,22 @@ process:
     action: |
       **Replace ALL placeholder dialogue using Q11-Q15 answers:**
 
-      **Apply Q11 (Hindi-English Ratio)**:
-      - 60-70% Hindi (default) → Standard Bollywood mix
-      - More Hindi (80-90%) → Traditional/regional characters
-      - More English (40-50%) → Urban/elite characters
-      - Character-specific → Different per person
+      **Apply Language/Dialect** (from story-synopsis.md STEP 11D + character-bible.md):
+      - Hindi-English ratio already set — apply per character from character-bible.md
+      - Dialect/regional flavor already defined — apply from character-bible.md speech patterns
+      - 60-70% Hindi (default) unless story-synopsis.md STEP 11D specifies otherwise
 
-      **Apply Q12 (Dialect)**:
-      - NO DIALECT → Standard Bollywood Hindi
-      - LIGHT REGIONAL → Few dialect words for flavor
-      - HEAVY REGIONAL → Full Haryanvi/Punjabi/Bhojpuri/etc. for authenticity
-
-      **Apply Q13 (Formality)**:
+      **Apply Q7 (Formality)**:
       - Formal → "Aap" form, proper Hindi, educated vocabulary
       - Casual → "Tu/tum" form, street-smart mixing
       - Character-based → Different formality per person
 
-      **Apply Q14 (Memorable Lines)**:
+      **Apply Q8 (Memorable Lines)**:
       - If user gave specific lines → Include EXACTLY as given
       - Craft dialoguebaazi moments at key scenes
       - One-liners, philosophical zingers, quotable lines
 
-      **Apply Q15 (Dialogue Density)**:
+      **Apply Q9 (Dialogue Density)**:
       - Talky → Longer dialogue blocks, conversations
       - Balanced → Dialogue when needed, silence when powerful
       - Minimal → Terse lines, mark silences, Gulzar-style
@@ -748,20 +774,20 @@ process:
 
       **ANSWER INTEGRATION CHECK**:
       - [ ] Q1 (Dialogue vs Visual) applied correctly
-      - [ ] Q2 (Scene Length) matches - scenes right size
-      - [ ] Q3 (Opening Scene) matches user's vision
-      - [ ] Q4 (Closing Scene) matches specific final image
-      - [ ] Q5 (Pacing) matches user preference (fast/measured/building)
-      - [ ] Q6 (Subtext) level matches answer (direct/heavy/layered)
-      - [ ] Q7 (Transitions) style matches (cuts/motivated/jumps)
-      - [ ] Q8 (Must-Have Scenes) all included as specified
-      - [ ] Q9 (Emotional Beats) placed at specified moments
-      - [ ] Q10 (Montages) included if requested
-      - [ ] Q11 (Hindi-English Ratio) matches answer per character
-      - [ ] Q12 (Dialect) applied if specified
-      - [ ] Q13 (Formality) matches per character
-      - [ ] Q14 (Memorable Lines) included if user gave specific lines
-      - [ ] Q15 (Dialogue Density) matches (talky/balanced/minimal)
+      - [ ] Q2 (Scene Length) matches — scenes right size
+      - [ ] Q3 (Subtext) level matches answer (direct/heavy/layered)
+      - [ ] Q4 (Transitions) style matches (cuts/motivated/jumps)
+      - [ ] Q5 (Must-Have Scenes) all included as specified
+      - [ ] Q6 (Montages) included if requested
+      - [ ] Q7 (Formality) matches per character
+      - [ ] Q8 (Memorable Lines) included if user gave specific lines
+      - [ ] Q9 (Dialogue Density) matches (talky/balanced/minimal)
+      - [ ] Opening scene matches story-synopsis.md STEP 11A
+      - [ ] Closing scene matches story-synopsis.md STEP 11B
+      - [ ] Pacing matches beat-sheet.md Q1
+      - [ ] Emotional beats placed per beat-sheet.md Q2/Q3
+      - [ ] Language ratio matches story-synopsis.md STEP 11D
+      - [ ] Dialect applied per character-bible.md speech patterns
 
       **Structure Check**:
       - All story beats from synopsis present
@@ -922,10 +948,11 @@ process:
 success_criteria: |
   Screenplay is successful when:
 
-  ✓ **Answer-Based**: Screenplay matches ALL 15 answers (Q1-Q15, not generic template)
-  ✓ **Q1-Q7 Structure**: Dialogue/visual balance, scene length, pacing, subtext, transitions match answers
-  ✓ **Q8-Q10 Scenes**: Must-have scenes included, emotional beats placed correctly, montages if requested
-  ✓ **Q11-Q15 Dialogue**: Language ratio, dialect, formality, memorable lines, density match answers
+  ✓ **Answer-Based**: Screenplay matches all 9 answers (Q1-Q9) + sources from beat-sheet/story-synopsis
+  ✓ **Q1-Q4 Structure**: Dialogue/visual balance, scene length, subtext, transitions match answers
+  ✓ **Q5-Q6 Scenes**: Must-have scenes included, montages if requested
+  ✓ **Q7-Q9 Dialogue**: Formality, memorable lines, density match answers
+  ✓ **Cross-workflow**: Opening/closing from story-synopsis, pacing/beats from beat-sheet, language from character-bible
   ✓ **Structure**: Properly formatted (industry standard)
   ✓ **Story**: All story beats present
   ✓ **Visual**: Action lines show, don't tell (per Q1)

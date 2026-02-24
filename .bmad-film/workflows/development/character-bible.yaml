@@ -84,138 +84,13 @@ process:
       - `project/{project_name}/genre-analysis.md`
       - `project/{project_name}/story-synopsis.md`
 
-      **Before character development, determine language/dialect strategy:**
+      **Determine language/dialect strategy before character development:**
 
-      This enables creating content for multiple Indian languages/dialects from same story.
+      **DEFAULT**: Single Dialect (Simple Bollywood Hindi — 60-70% Hindi + 30-40% English). Most projects use this. Continue to Step 1.
 
-      ---
+      **IF MULTI-DIALECT NEEDED**: Specify which languages (Hindi, Tamil, Telugu, Bengali, Marathi, Punjabi, etc.) and localization depth (dialogue only / dialogue + names / full cultural adaptation). AI creates separate character-bible files per dialect.
 
-      **Q0a. Production Language Strategy?**
-
-      कौन सी approach चाहिए?
-
-      **OPTIONS**:
-      - **SINGLE DIALECT** (Hindi default - standard Bollywood mix)
-      - **MULTI-DIALECT** (Same story, multiple language versions for different regions)
-
-      **DEFAULT**: Single Dialect (Hindi)
-
-      ---
-
-      **IF SINGLE DIALECT CHOSEN**:
-      - Default = Hindi (Hinglish mix, 60-70% Hindi + 30-40% English)
-      - Continue to Step 1 (character extraction)
-      - Create: character-bible.md (single file)
-
-      ---
-
-      **IF MULTI-DIALECT CHOSEN, ask Q0b-Q0e:**
-
-      ---
-
-      **Q0b. Which Dialects/Languages to Create?** (Multi-select)
-
-      **MAJOR INDIAN LANGUAGES**:
-      - ✓ **Hindi** (हिंदी - Hinglish mix, Pan-India)
-      - ✓ **Tamil** (தமிழ் - Tamil Nadu)
-      - ✓ **Telugu** (తెలుగు - Andhra Pradesh, Telangana)
-      - ✓ **Bengali** (বাংলা - West Bengal, Bangladesh)
-      - ✓ **Marathi** (मराठी - Maharashtra)
-      - ✓ **Punjabi** (ਪੰਜਾਬੀ - Punjab)
-      - ✓ **Gujarati** (ગુજરાતી - Gujarat)
-      - ✓ **Kannada** (ಕನ್ನಡ - Karnataka)
-      - ✓ **Malayalam** (മലയാളം - Kerala)
-
-      **REGIONAL DIALECTS**:
-      - ✓ **Haryanvi** (हरियाणवी - Haryana)
-      - ✓ **Bhojpuri** (भोजपुरी - Bihar, Eastern UP)
-      - ✓ **Odia** (ଓଡ଼ିଆ - Odisha)
-      - ✓ **Assamese** (অসমীয়া - Assam)
-      - ✓ **Rajasthani** (राजस्थानी - Rajasthan)
-      - ✓ **Others** (specify)
-
-      **Batao - kaun kaun se languages/dialects mein banana hai?**
-
-      ---
-
-      **Q0c. Localization Depth?**
-
-      Kitna localize karna hai har dialect mein?
-
-      **OPTIONS**:
-
-      1. **DIALOGUE ONLY** (सबसे simple)
-         - Same story, same character names, same locations
-         - ONLY dialogue translated to regional language
-         - Example: "Aap kaise hain?" → "Neengal eppadi irukeenga?" (Tamil)
-
-      2. **DIALOGUE + NAMES** (Moderate)
-         - Dialogue translated
-         - Character names culturally adapted
-         - Example: Arjun → Arun (Tamil) / Arnab (Bengali) / Aravind (Kannada)
-
-      3. **DIALOGUE + CULTURE** (Deep)
-         - Dialogue translated
-         - Names adapted
-         - Cultural references localized (festivals, food, customs)
-         - Example: "Diwali ki raat" → "Pongal ki raat" (Tamil) / "Durga Puja ki raat" (Bengali)
-
-      4. **FULL CULTURAL ADAPTATION** (सबसे complete)
-         - Dialogue translated
-         - Names adapted
-         - Culture localized
-         - Locations adapted (Delhi → Chennai → Kolkata)
-         - Attire/costumes regionalized
-         - Regional sensibilities honored
-
-      **Kaunsa depth level chahiye?**
-
-      ---
-
-      **Q0d. Character Names Strategy?**
-
-      Names kaise handle karein?
-
-      **OPTIONS**:
-      - **KEEP UNIVERSAL** (Arjun = Arjun in all versions - works pan-India)
-      - **ADAPT CULTURALLY** (Arjun → Arun/Arnab/Aravind based on region)
-
-      **Recommendation**: Universal for urban/modern stories, Adapted for regional stories
-
-      **Names same rakhein ya culturally adapt karein?**
-
-      ---
-
-      **Q0e. Location Strategy?**
-
-      Story setting kaise approach karein?
-
-      **OPTIONS**:
-      - **REGION-AGNOSTIC** (Generic "ek shahar", "ek gaon" - works everywhere)
-      - **ADAPT PER DIALECT** (Hindi=Delhi/Mumbai, Tamil=Chennai, Bengali=Kolkata, etc.)
-
-      **Recommendation**: Region-agnostic for easier multi-dialect production
-
-      **Location generic rakhein ya dialect-specific?**
-
-      ---
-
-      **PROCESSING ANSWERS**:
-
-      Based on Q0a-Q0e answers:
-
-      **IF SINGLE DIALECT**:
-      - Create: `character-bible.md` (one file)
-      - Language: Hindi (default) or chosen single dialect
-      - Continue to Step 1
-
-      **IF MULTI-DIALECT**:
-      - Create: `character-bible-{dialect}.md` (separate file per dialect)
-      - Example: character-bible-hindi.md, character-bible-tamil.md, etc.
-      - Each file contains characters adapted for that dialect/culture
-      - Continue to Step 1 (repeat for each dialect)
-
-      **Save dialect preferences for later workflows** (Screenplay, Shot Breakdown will read this)
+      **Single language or multiple? Agar single hai toh Step 1 continue karo — koi question nahi. Agar multi-dialect chahiye toh languages batao.**
 
     outputs:
       - Dialect strategy determined
@@ -295,9 +170,6 @@ process:
       Q7. Relatability Factor - Flaws ke baavjood, kyun root karega audience?
          Good intentions? Humor? Love for someone? Underdog? Vulnerability?
 
-      Q8. Actor/Persona Reference - (Optional) Koi actor ya real person ka vibe?
-         "Pankaj Tripathi ki quiet intensity" / "Kangana ki fierceness"
-
       **B. SUPPORTING CHARACTERS (5 questions PER major character)**:
 
       For EACH major supporting character identified in Step 1:
@@ -321,15 +193,8 @@ process:
 
       Q14. Key Relationships - Sabse important relationships kaun se? (Top 2-3)
 
-      Q15. Romantic Subplot? - Romance hai? Kitna deep? Chemistry ka base?
-
-      Q16. Antagonist Type - Villain kaisa? Clear evil? Morally complex?
+      Q15. Antagonist Type - Villain kaisa? Clear evil? Morally complex?
          System? Internal demons? No antagonist?
-
-      Q17. Best Dialogue Potential - Kon se character pairs ke beech best dialogue?
-         Protagonist + antagonist? Mentor? Sidekick? Romantic?
-
-      Q18. Personal Inspiration - (Optional) Koi character real person se inspired?
 
       **CHARACTER CONTRADICTION DESIGN (mandatory — ask for EVERY character):**
 
@@ -357,7 +222,7 @@ process:
       Add to every character profile:
       Character Contradiction: [Quality A] contradicts [Quality B] | Scene where most visible: [which scene]
 
-      **Collect ALL 18 answers (8 + 5xN + 5) before proceeding.**
+      **Collect ALL answers (7 protagonist + 5xN supporting + 2 dynamics) before proceeding.**
 
     duration: "20-30 min"
 
@@ -436,6 +301,32 @@ process:
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       Creating full character profiles based on YOUR 18 answers.
       ```
+
+      ┌─────────────────────────────────────────────────────────┐
+      │  CREATIVE ELEVATION MANDATE — CHARACTER PROFILES        │
+      │                                                         │
+      │  Profiles are not questionnaire transcriptions.         │
+      │  They are living documents — characters who breathe.   │
+      │                                                         │
+      │  WHERE WRITER WAS SPECIFIC: Use as DNA. Then build     │
+      │  outward — add the specific memory, the physical tell,  │
+      │  the contradiction that makes them human, not symbolic. │
+      │                                                         │
+      │  WHERE WRITER WAS VAGUE: AI makes the most interesting, │
+      │  psychologically true choice for this character in      │
+      │  this story. Not the archetype default — the specific.  │
+      │                                                         │
+      │  EVERY CHARACTER MUST PASS THESE TESTS:                 │
+      │  → "Does this person react to this story's central      │
+      │     conflict in a way only THEY could?" If NO → deepen. │
+      │  → "Is there ONE detail here that could only belong to  │
+      │     this character in this specific story?" If NO → add.│
+      │  → "Can an actor build a full performance from this?" - │
+      │     wounds, wants, masks, and cracks must all be here.  │
+      │                                                         │
+      │  Standard: Characters should feel discovered, not made. │
+      └─────────────────────────────────────────────────────────┘
+
       **For PROTAGONIST, create FULL profile using answers:**
 
       **1. BASIC INFORMATION**
@@ -445,7 +336,6 @@ process:
       - Use EXACT details user provided
       - Age, build, face, clothing, distinguishing marks
       - Body language (from Q5 answer)
-      - Actor/persona reference if given (Q8)
 
       **3. PSYCHOLOGICAL PROFILE** (from Q1, Q3, Q7):
       - Core personality (from story + answers)
@@ -482,11 +372,10 @@ process:
       - Comfort habits
       - Energy level
 
-      **8. RELATIONSHIPS** (from Q9-Q18):
+      **8. RELATIONSHIPS** (from Q9-Q14):
       - With each major character (use answers from Q9-Q13)
       - Nature of relationships (help? hinder? complex?)
-      - Romantic connection if any (Q15)
-      - Best dialogue potential pairs (Q17)
+      - Key dynamics from Q14 (top 2-3 relationships)
 
       **CRITICAL**: Use user's SPECIFIC answers, not generic template!
       - Their fear from Q1, not generic fear
@@ -710,13 +599,14 @@ process:
       - [ ] Supporting roles match Q11 answers (ally/obstacle/etc.)
       - [ ] Memorable traits match Q12 answers (specific quirks)
       - [ ] Depth levels match Q13 answers (full/moderate/brief)
+      - [ ] Antagonist type matches Q15 answer
 
       **Check QUALITY**:
       - Characters feel three-dimensional (not templates)
       - Motivations believable
       - Arcs clear and earned
       - Relationships make sense (from Q14-Q17)
-      - Voices distinct (from Q4, Q17)
+      - Voices distinct (from Q4)
       - Physical descriptions detailed (Q5)
       - Simple Bollywood Hindi used
       - Genre conventions honored
@@ -905,7 +795,7 @@ success_criteria: |
   ✓ Speech patterns match Q4 answers (each character distinct voice)
   ✓ Physical descriptions match Q5 user details
   ✓ Supporting characters match Q9-Q13 answers (relationships, roles, quirks, depth)
-  ✓ Relationship dynamics match Q14-Q17 answers
+  ✓ Relationship dynamics match Q14-Q15 answers
   ✓ Characters feel real and three-dimensional (not flat archetypes)
   ✓ Motivations clear and believable
   ✓ Character arcs match user's Q6 transformation vision

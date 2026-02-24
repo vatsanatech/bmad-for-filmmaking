@@ -1038,6 +1038,127 @@ This is the DEFAULT. Apply automatically to ALL stories and dialogues.
 
 **No exceptions. This is how Bollywood stories are told.**
 
+---
+
+## 🧠 MASTER CRAFT INTELLIGENCE — SOCIAL CINEMA
+
+**Run this block internally before writing STEP 12 summary and STEP 13 story.**
+
+### Structural Patterns That Work in Indian Social Cinema
+
+**Pattern 1 — System as Character:**
+Social cinema mein asli antagonist ek insaan nahi hota — ek SYSTEM hota hai. System ko character banana padta hai.
+- Give the system a face: Not "corruption" — a specific corrupt official who IS the system, who believes they're right
+- Give the system rules: What does the system reward? What does it punish? How does it perpetuate itself?
+- Give the system history: How did this system get this way? Who built it? Who benefits?
+- The protagonist doesn't fight a villain — they fight a LOGIC that existed before them and will exist after
+- Test: "Agar is specific official ko hata dein, kya system change ho jaayega?" → NO = system is correctly the antagonist
+
+**Pattern 2 — The Representative Individual:**
+Social issue ko ek SPECIFIC person ke through dikhao — statistics ke through nahi.
+- The One Who Stands for Many: Protagonist represents a group but is never reduced to a symbol
+- Their specific story: Their name, their family, their specific humiliation, their specific hope
+- The Humanization Mandate: Audience must love this person BEFORE they understand the issue
+- Ripple Effect: Show how the issue affects this one person's specific relationships and daily life
+- Benegal Principle: "Vyavastha ki baat karo, par ek insaan ki aankhon se"
+
+**Pattern 3 — The Turning Tide:**
+Social cinema ka most satisfying arc: Individual + community finds their dignity and acts collectively.
+- Individual isolation: Protagonist alone against system — defeated repeatedly
+- Witness: Others see what's happening — first passive, then troubled
+- Catalyst: One incident too many — tipping point
+- Community formation: Individual's fight becomes collective
+- Action: Not always victory — but dignity reclaimed, seed planted
+- Indian history: Gandhi's salt march, Chipko movement, #MeToo — turning tide is deeply Indian
+
+---
+
+### Hook Design Philosophy (Shyam Benegal / Hansal Mehta / Neeraj Ghaywan School)
+
+**Opening Hook Formula:**
+- First 3 minutes: Place us in a specific Indian world with such texture that we cannot doubt its reality
+- Not: Voiceover explaining the issue
+- Yes: A day in the life — work, family, street, food, language — specific enough that we're THERE
+- Benegal Principle: "Pehle duniya banaao. Issue khud aayegi. Duniya mein issue nahi hai — duniya hai, aur issue us duniya ka hissa hai."
+
+**The Personal Before the Political:**
+- Social issue cannot be the protagonist's only characteristic
+- Protagonist has a love life, a sense of humor, a specific relationship with food, a song they hum
+- When the system attacks them, it attacks a FULL PERSON — not a symbol
+- The audience's anger at injustice is proportional to how much they love the person being harmed
+
+---
+
+### Escalation Architecture
+
+**Systemic Pressure Map:**
+- Phase 1: Protagonist's ordinary life established (warmth, specificity, love)
+- Phase 2: First encounter with the system — protagonist tries to navigate (hope)
+- Phase 3: System resists — protagonist persists (determination)
+- Phase 4: System reveals its full power — protagonist hit hard (devastation)
+- Phase 5: The question: Accept defeat or continue? (character-defining choice)
+- Phase 6: Action from choice — whether victory, partial win, or dignified defeat
+
+**The Institutional Deep Dive:**
+- Show HOW the system works from inside: Paperwork, bribery, language barriers, waiting, humiliation
+- Specificity of process = authenticity
+- Examples from Mehta's Aligarh, Bhatt's Highway — bureaucratic reality IS the horror
+
+---
+
+### Master Techniques
+
+**Shyam Benegal (Ankur, Manthan, Bhumika):**
+- Rural India as politically complex space: Village is not idyllic — it is a battlefield of class, gender, caste
+- The Personal IS Political: Every personal story is simultaneously a systemic story — they cannot be separated
+- Female protagonist's specific oppression: Not generic "women's issues" — specific to her class, caste, region
+- Collaborative truth: Multiple perspectives all valid — no single hero, no single villain
+
+**Hansal Mehta (Aligarh, Shahid, Citylights):**
+- Based-on-real-events approach: Reality as foundation — specific dates, documents, institutions
+- Institutional cruelty in ordinary language: The most devastating moments are procedural, not dramatic
+- Dignity under assault: Protagonist maintains interior dignity even as exterior is stripped
+- The record-setting detail: One small, specific, verifiable detail that makes the story undeniably real
+
+**Neeraj Ghaywan (Masaan, Juice):**
+- Caste as invisible infrastructure: Not explicit, but present in every interaction, every silence
+- Young India's impossible aspiration: Protagonist who dares to want what they "shouldn't" want
+- The Geography of Injustice: Setting (Benaras ghats, Mumbai slum) is inseparable from social reality
+- Lyrical realism: Beauty coexists with horror — that contrast is the point
+
+---
+
+### Emotional Contract with Audience
+
+**What audience comes for:** To feel moved by truth — to have the world's injustice made emotionally real
+**What they leave with:** Anger, grief, AND a strange hope — the feeling that bearing witness is itself an act
+**The Social Cinema Promise:** Story will be FAIR to all perspectives — even those perpetuating the injustice have comprehensible reasons
+**The FORBIDDEN feeling:** Audience should NEVER feel preached at — if message overwhelms character/story, it's a pamphlet not a film
+
+---
+
+### Common Failures to Avoid
+
+❌ **Symbol Not Person**: Protagonist exists to illustrate the issue, not as a full human being
+❌ **The Savior Structure**: Privileged outsider arrives and fixes oppressed community's problem — deeply problematic
+❌ **Villain Simplicity**: The corrupt official/oppressor is irredeemably evil with no comprehensible motivation
+❌ **Resolution by Awareness**: "People now know about the problem" is not a resolution — what CHANGES?
+❌ **Lecturing**: Characters explain the issue to each other (and to audience) instead of living it
+❌ **Universal Victimhood**: Not all of any group is a victim — complexity, agency, and resistance must be present
+
+---
+
+### Story Creation Protocol (Social Cinema)
+
+Before writing a single line of story, answer internally:
+1. What specific system is this story about — and what is its internal logic (why does it perpetuate itself)?
+2. Who is the specific individual who carries this story — and what does the system want to take from them specifically?
+3. What is the moment when the system's injustice is made viscerally, personally real to the audience?
+4. What is the protagonist's choice at the lowest point — and what does that choice cost them?
+5. What does the ending leave with the audience — anger, grief, hope, or all three?
+
+---
+
 ## 🔴 STORY NARRATION IN HINDI (MANDATORY)
 
 **Write the ENTIRE story narrative in Simple Bollywood Hindi, not English.**

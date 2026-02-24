@@ -1006,6 +1006,125 @@ This is the DEFAULT. Apply automatically to ALL stories and dialogues.
 
 **No exceptions. This is how Bollywood stories are told.**
 
+---
+
+## 🧠 MASTER CRAFT INTELLIGENCE — ROMANCE
+
+**Run this block internally before writing STEP 12 summary and STEP 13 story.**
+
+### Structural Patterns That Work in Indian Romance
+
+**Pattern 1 — Impossible Recognition:**
+True romance nahi shuru hoti jab dono milte hain — shuru hoti hai jab ek dusre mein KHUD KO dekhte hain.
+- The Recognition Moment: Not "I find you attractive" but "You understand something about me nobody else does"
+- Invisible barrier: Both recognize it — and BOTH are afraid of it
+- Indian context: The recognition often happens despite cultural/class/family barriers trying to prevent it
+- Escalation: Every obstacle makes the recognition MORE acute — "Why is this person the one who understands me when it's so impossible?"
+
+**Pattern 2 — The Sacrifice Arc:**
+Sabse khoobsurat romance woh hai jahan ek kisso ko THE PERSON ya THE DREAM mein se choose karna pade.
+- Not generic self-sacrifice: The specific thing being sacrificed MUST be something we've been shown they deeply love
+- The Sacrifice must be irreversible: A temporary sacrifice has no weight
+- Indian texture: Family honor, parental approval, career dreams, hometown — these are REAL sacrifices in this culture
+- The Twist: Sometimes the person being sacrificed FOR refuses the sacrifice — creating new conflict
+
+**Pattern 3 — Doomed Grandeur (Bhansali School):**
+Some romances are magnificent BECAUSE they cannot survive — their tragedy is inseparable from their beauty.
+- Establish early: These two people cannot exist together in the world as it is
+- Don't make it fixable: The obstacle is structural, not accidental
+- The Grandeur: Despite impossibility, love STILL happens — this is heroic, not foolish
+- The Choice: Do they change the world, change themselves, or accept the tragedy? ALL are valid.
+- Indian examples: Devdas, Laila Majnu, Heer Ranjha — doomed is a legitimate romantic tradition
+
+---
+
+### Hook Design Philosophy (Imtiaz Ali School)
+
+**Opening Hook Formula:**
+- First 3 minutes: Show protagonist's LONGING before you show what they're longing for
+- Not: Boy meets girl, attraction sparks
+- Yes: A person who is incomplete in a way they don't fully understand yet
+- Ali Principle: "Mohabbat tabhi interesting hoti hai jab insaan khud nahi jaanta ki woh dhundh kya raha hai"
+
+**The Meet-Cute Elevation:**
+- Don't engineer a cute meeting — engineer a NECESSARY meeting
+- Why do THESE two specific people meet at THIS specific moment? It should feel cosmically inevitable
+- Not: Coincidence — but: Convergence of two incomplete people at their exact moment of need
+
+---
+
+### Escalation Architecture
+
+**Emotional Escalation Map:**
+- Phase 1: Resistance — both characters resist the feeling (they have reasons NOT to fall)
+- Phase 2: Surrender — one surrenders first → vulnerability + danger
+- Phase 3: Reciprocation — second surrenders → brief joy, high stakes
+- Phase 4: Crisis — the obstacle that was always there demands a price
+- Phase 5: Choice — each character must decide what they love more: the person or everything else
+- Indian Texture: Family, reputation, class, religion — these obstacles are REAL and should not be trivialized
+
+**The Chemistry Escalation (Show Don't Tell):**
+- Scene 1: They notice each other (audience sees it before characters do)
+- Scene 2: They understand something about each other no one else has noticed
+- Scene 3: They change each other's behavior (subtly, unintentionally)
+- Scene 4: They are different people when NOT together — and both know why
+- Scene 5: They make a decision BECAUSE of each other (without admitting it)
+
+---
+
+### Master Techniques
+
+**Imtiaz Ali (Jab We Met, Rockstar, Tamasha, Love Aaj Kal):**
+- Identity crisis as romantic fuel: Protagonist doesn't know who they are → love doesn't "complete" them, it reveals them
+- The Road as metaphor: Physical journey = internal journey — travel disrupts routine identity
+- Love as mirror: The romantic interest shows the protagonist their TRUE self (not always flattering)
+- Melancholy romanticism: Even in joy, a shadow of impermanence — Ali's couples know it won't be simple
+
+**Karan Johar (K3G, Kal Ho Na Ho, Student of the Year):**
+- Emotion as spectacle: Don't underplay — PERFORM the emotion, make it theatrical, make it LARGE
+- Family as love's battlefield: Love tested by family acceptance — reunion with family IS the climax
+- NRI/urban aspirational texture: Global settings, designer clothes — but old-fashioned emotional values
+- The Grand Gesture: Climax requires a public, irrevocable declaration
+
+**Sanjay Leela Bhansali (Devdas, Bajirao Mastani, Hum Dil De Chuke Sanam):**
+- Visual poetry: Colors, costumes, sets ARE the emotional language — red = passion, white = grief
+- Operatic scale: Emotions are operatic — quiet moments are QUIETER, loud moments are LOUDER
+- Beauty in tragedy: The more beautiful the love, the more devastating the loss
+- Period setting as emotional amplifier: Historical settings remove modern "easy outs" — no phones, no escape
+
+---
+
+### Emotional Contract with Audience
+
+**What audience comes for:** To feel the specific joy AND ache of love — vicariously
+**What they leave with:** A renewed sense that love is worth fighting for, even when it hurts
+**The Romance Promise:** If we have loved these two people and their connection feels true — we will FORGIVE any other story weakness
+**The FORBIDDEN feeling:** Audience should NEVER feel "these two don't actually belong together" — chemistry must be established FIRST, before any conflict
+
+---
+
+### Common Failures to Avoid
+
+❌ **Generic Meeting**: They spill coffee on each other — not why THESE two
+❌ **Obstacle is Circumstantial**: Problem that a phone call would solve — real obstacles are structural
+❌ **Passive Female Lead**: She waits, he decides — both must have agency and point of view
+❌ **Love Solves Everything**: Love doesn't solve the protagonist's identity/career/family problem — it illuminates it
+❌ **Chemistry Shortcut**: "They look good together" — not enough. Show WHY they understand each other
+❌ **Happy Ending by Default**: Earned resolution (happy or bittersweet) requires sacrifice demonstrated
+
+---
+
+### Story Creation Protocol (Romance)
+
+Before writing a single line of story, answer internally:
+1. Why are THESE two specific people inevitable for each other? (Not "fate" — specific psychology)
+2. What does each character BELIEVE about love that is wrong? How does the story correct it?
+3. What is the most painful scene — and why is it also the most romantic?
+4. What does each character sacrifice — and was it worth it?
+5. What is the ONE image that contains the entire relationship's emotional truth?
+
+---
+
 ## 🔴 STORY NARRATION IN HINDI (MANDATORY)
 
 **Write the ENTIRE story narrative in Simple Bollywood Hindi, not English.**

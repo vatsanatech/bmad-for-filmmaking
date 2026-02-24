@@ -1638,6 +1638,122 @@ This is the DEFAULT. Apply automatically to ALL stories and dialogues.
 
 **No exceptions. This is how Bollywood stories are told.**
 
+---
+
+## 🧠 MASTER CRAFT INTELLIGENCE — SUSPENSE/THRILLER
+
+**Run this block internally before writing STEP 12 summary and STEP 13 story.**
+
+### Structural Patterns That Work in Indian Suspense
+
+**Pattern 1 — The Revelation Spiral:**
+Har revelation pichli revelation ko reframe karta hai. Information sirf add nahi hoti — previous understanding ko SHATTER karti hai.
+- Layer 1: Audience ko lagta hai woh situation samajh gaye
+- Layer 2: Ek nayi information — Layer 1 ab alag dikhti hai
+- Layer 3: Ek aur revelation — Layer 2 bhi galat thi
+- Final: Poora story ek COMPLETELY different light mein dekha jata hai
+- Test: "Kya audience second viewing mein pehle wali viewing se ZYADA story enjoy karta hai?" → YES = Revelation Spiral working
+
+**Pattern 2 — Ordinary World Invasion:**
+Thriller mein terror tabhi maximize hota hai jab ordinary, familiar world mein dark truth ghus aaye.
+- Start: Protagonist ki ORDINARY life — job, family, routine (make audience COMFORTABLE)
+- Crack: Ek anomaly — small, almost dismissible
+- Unraveling: Ordinary world ke neeche ek PARALLEL dark reality exists
+- Climax: Protagonist realizes their "safe" world was never safe
+- Indian context: Family, social status, religious institutions, bureaucracy — yeh sab "safe" worlds hain jo crack kar sakte hain
+
+**Pattern 3 — The Moral Maze:**
+Protagonist ko ek impossible moral choice mein daalo — dono options mein loss hai.
+- Option A: Correct moral choice + personal destruction
+- Option B: Survival + moral compromise
+- The TWIST: At the end, protagonist realizes their "choice" was predetermined by system/antagonist
+- Indian texture: Systemic corruption forces impossible choices — character ne choose nahi kiya, system ne choose karwaya
+
+---
+
+### Hook Design Philosophy (Sriram Raghavan / Dibakar Banerjee School)
+
+**Opening Hook Formula:**
+- First 3 minutes: Ek IMAGE jo audience ko uncomfortable kare — not violent, but WRONG. Something slightly off.
+- Not: Explosion, chase, murder
+- Yes: A normal scene where something is subtly, inexplicably wrong — a smile at wrong moment, wrong reaction, wrong silence
+- Raghavan Principle: "Audience ko pehle comfortable karo, phir unko nahi pata kab uncomfortable ho gaye"
+
+**Question Design (every scene plants a question):**
+- Each scene answers ONE previous question AND plants TWO new questions
+- The audience should always be 1 step behind but feel they're ALMOST there
+- Plant-Payoff ratio: Every planted detail MUST pay off — no red herrings that lead nowhere
+
+---
+
+### Escalation Architecture
+
+**Tension Escalation Map:**
+- Phase 1 (Setup): Information withheld from audience — CURIOSITY
+- Phase 2 (Complication): Information revealed to audience but not protagonist — DRAMATIC IRONY (audience screams internally)
+- Phase 3 (Crisis): Protagonist knows what audience knows — now what? — SHARED DREAD
+- Phase 4 (Climax): Protagonist knows MORE than audience — SURPRISE
+- Phase 5 (Resolution): All information aligned — but emotional wound remains
+
+**The False Resolution Trap:**
+- At story's halfway point, give audience a FALSE SENSE of resolution
+- Protagonist "solves" the surface problem
+- THEN: Reveal the surface problem was the symptom, not the disease
+- Real problem is deeper, darker, more personal
+
+---
+
+### Master Techniques
+
+**Sriram Raghavan (Andhadhun, Badlapur, Johnny Gaddaar):**
+- Double-meaning dialogue: Every conversation has subtext that only LATER gets its full meaning
+- The unreliable protagonist: We trust them because they're POV — then question if they were ever trustworthy
+- Genre subversion: Use genre conventions to CREATE expectation → then violate them
+- Darkly comedic undertone: Even in dread, a dark humor that makes horror more disturbing, not less
+
+**Dibakar Banerjee (Shanghai, Detective Byomkesh Bakshy):**
+- Institutional corruption as hidden antagonist: The real villain is a SYSTEM, not just a person
+- Procedural texture: Accuracy in how investigations, bureaucracy, journalism work — gives authenticity
+- Social class as dramatic fuel: Status anxiety, upward mobility aspiration, class tension → add to every relationship
+
+**Anurag Kashyap (Black Friday, Ugly, Raman Raghav 2.0):**
+- The ABSENCE of conventional morality: No character is fully clean or fully dirty
+- Violence as consequence, not spectacle: Violence always arrives from character/situation logic
+- Mumbai/urban texture: City itself as a pressure cooker — density, crowd, noise as antagonist
+
+---
+
+### Emotional Contract with Audience
+
+**What audience comes for:** The pleasure of being outsmarted — they WANT to be surprised
+**What they leave with:** The unsettling feeling that the world is more complex/dangerous than they thought
+**The Raghavan Promise:** Story will be FAIR in retrospect — all clues were there, audience just didn't see them
+**The FORBIDDEN feeling:** Audience should NEVER feel "I was cheated" — surprise must be EARNED by planted information
+
+---
+
+### Common Failures to Avoid
+
+❌ **The Random Twist**: Twist that isn't planted — feels like author changing rules mid-game
+❌ **The Too-Smart Protagonist**: Detective who is always 10 steps ahead — no tension
+❌ **Villain Monologue Overload**: Villain explains everything — kills mystery
+❌ **Convenient Evidence**: Key clue found RIGHT when needed — no organic investigation
+❌ **Generic Fear**: "He's dangerous" not scary — specific, personal fear is
+❌ **The Big Reveal Without Stakes**: Twist that's intellectually interesting but emotionally empty
+
+---
+
+### Story Creation Protocol (Suspense)
+
+Before writing a single line of story, answer internally:
+1. What does the protagonist THINK the mystery is? What is it ACTUALLY?
+2. What is the moment the audience realizes they've been wrong about everything?
+3. What is the one scene that, on second viewing, completely changes meaning?
+4. What is the SPECIFIC fear this story exploits — not "danger" but what exact dread?
+5. What is the moral cost of discovering the truth?
+
+---
+
 ## 🔴 STORY NARRATION IN HINDI (MANDATORY)
 
 **Write the ENTIRE story narrative in Simple Bollywood Hindi, not English.**

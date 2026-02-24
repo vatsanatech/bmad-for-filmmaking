@@ -946,6 +946,125 @@ This is the DEFAULT. Apply automatically to ALL stories and dialogues.
 
 **No exceptions. This is how Bollywood stories are told.**
 
+---
+
+## 🧠 MASTER CRAFT INTELLIGENCE — ACTION
+
+**Run this block internally before writing STEP 12 summary and STEP 13 story.**
+
+### Structural Patterns That Work in Indian Action
+
+**Pattern 1 — The Upgrade Arc:**
+Protagonist ek warrior ban ke nahi aata — story mein banta hai. Audience ko yeh TRANSFORMATION dekhni chahiye.
+- Starting State: Protagonist capable but LIMITED (by fear, by injustice, by loss)
+- The Trigger: Something so personal, so irreversible that crossing the line becomes INEVITABLE
+- Each Act: Protagonist gains a new skill/resource/ally — but also loses something precious
+- Climax: Final form — strongest possible version of this specific protagonist, not a generic hero
+- Indian texture: Protection of family/community, revenge with honor, justice when system fails
+
+**Pattern 2 — Personal Stakes Escalation:**
+Action without personal stakes = spectacle. With personal stakes = cinema.
+- Layer 1: Physical threat to protagonist
+- Layer 2: Threat to someone they love (NOW it's personal)
+- Layer 3: Threat to their IDENTITY (who they believe themselves to be)
+- Layer 4: Threat to their LEGACY (what they will be remembered as)
+- Final: Protagonist fights not just for survival but for meaning
+
+**Pattern 3 — The Impossible Odds Architecture:**
+Every great action story stacks the deck IMPOSSIBLY against protagonist — then makes victory feel EARNED.
+- Establish antagonist's power fully — audience must believe protagonist CANNOT win
+- Strip protagonist of advantages one by one
+- At lowest point: Protagonist has ONLY their core strength left (the thing that makes them them)
+- Victory from this core strength only — not from a new weapon or lucky rescue
+- Test: "Does protagonist WIN by being specifically THIS person?" → YES = earned
+
+---
+
+### Hook Design Philosophy (Rohit Shetty / Zafar / Anand School)
+
+**Opening Hook Formula:**
+- First 3 minutes: Establish protagonist's CAPABILITY + their most VULNERABLE relationship simultaneously
+- Show them being excellent at something physical AND loving someone helplessly
+- Rohit Shetty: Spectacle first, then character — but character must JUSTIFY spectacle
+- Kabir Khan: Personal history creates public hero — the private wound fuels public action
+
+**Stakes Elevation Rule:**
+- Action scene 1: Physical stakes (self-preservation)
+- Action scene 2: Relational stakes (protecting someone)
+- Action scene 3: Moral stakes (something irrevocable)
+- Climax action: ALL THREE SIMULTANEOUSLY
+
+---
+
+### Escalation Architecture
+
+**Action Sequence Design:**
+Each action sequence must have:
+- REASON: Why is this fight happening right now?
+- STAKES: What happens if protagonist loses?
+- COST: What does protagonist sacrifice or lose to win?
+- REVEAL: What do we learn about protagonist from HOW they fight?
+
+**Pacing Map:**
+- Setup acts: Build character, world, stakes — action is BRIEF and purposeful
+- First major action: Establishes genre tone and protagonist capability
+- Mid-story: Action becomes more complex, more personal
+- Pre-climax: Protagonist fails — strips everything bare
+- Climax: Everything at once, no escape, pure character
+
+---
+
+### Master Techniques
+
+**Rohit Shetty (Singham, Golmaal series, Chennai Express):**
+- Spectacle AS character statement: How action is designed = who the hero is
+- Community as stakeholder: Action isn't just personal — community watches, is protected, celebrates
+- The ONE-LINER: Every hero needs one devastating line that crystallizes their identity
+- Comic relief integration: Humor makes action sequences breathe — timing is everything
+
+**Kabir Khan (Bajrangi Bhaijaan, New York, Phantom):**
+- Nation/identity as backdrop: Personal action in geopolitical context — individual human stakes against system stakes
+- Empathy across enemy lines: Antagonist's humanity acknowledged — makes protagonist's action more complex
+- Emotional climax beats physical climax: Final scene is emotional revelation, not physical fight
+
+**Zoya Akhtar / Farhan Akhtar (Bhaag Milkha Bhaag, Dil Dhadakne Do):**
+- Athletic/physical excellence as metaphor: Running isn't running — it's escaping the past
+- Past wound as present fuel: Character's history is not backstory — it IS the story
+- Team as family: Group dynamics, betrayal, loyalty — ensemble action
+
+---
+
+### Emotional Contract with Audience
+
+**What audience comes for:** To feel the thrill of impossible odds overcome, to feel strong vicariously
+**What they leave with:** "Agar woh kar sakta hai toh main bhi kar sakta hoon" — the inspiring feeling
+**The Action Promise:** Every action sequence will be EARNED — no fake threat, no easy escape
+**The FORBIDDEN feeling:** Audience should NEVER feel protagonist got lucky or was saved by coincidence — victory must be CHARACTER-driven
+
+---
+
+### Common Failures to Avoid
+
+❌ **Generic Enemy**: "Bad guys who are bad" — antagonist needs a SPECIFIC motivation that feels rational from their POV
+❌ **Superhero Invincibility**: Protagonist never bleeds, never loses — no tension
+❌ **Action Without Consequence**: Fights that don't change anything — no story cost
+❌ **The Rescue Problem**: Hero always rescues others but is never genuinely vulnerable
+❌ **Motivation = Revenge Only**: Revenge is acceptable motivation but needs something MORE — what does winning MEAN beyond revenge?
+❌ **Physics Immunity**: In Indian action physics bend — that's fine. But they must bend CONSISTENTLY for the logic of this film.
+
+---
+
+### Story Creation Protocol (Action)
+
+Before writing a single line of story, answer internally:
+1. What is the most personal thing at stake — NOT physical survival?
+2. At the climax, what specifically makes THIS protagonist the only one who could win?
+3. What does protagonist lose permanently to achieve victory?
+4. What is the villain's logic — why do THEY believe they're right?
+5. What is the single action sequence that doubles as emotional climax?
+
+---
+
 ## 🔴 STORY NARRATION IN HINDI (MANDATORY)
 
 **Write the ENTIRE story narrative in Simple Bollywood Hindi, not English.**

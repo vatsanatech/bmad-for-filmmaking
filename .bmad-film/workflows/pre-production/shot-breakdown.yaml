@@ -87,11 +87,15 @@ process:
       📍 STEP 1 of 3 — Visual Questions (15 questions)
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       ```
-      **Shot Breakdown Specialist asks 15 visual questions:**
+      **Shot Breakdown Specialist asks 10 visual questions:**
 
       Reference: `.bmad-film/agents/shot-breakdown-specialist.md`
 
-      **A. VISUAL STYLE (7 questions)**:
+      **NOTE**: Scene transitions already defined in screenplay.md (Q4). Read that.
+      Camera angles are derived by AI from genre, tone, and shot size — no need to constrain upfront.
+      Establishing shot depth is handled from coverage priority (Q7) + genre logic.
+
+      **A. VISUAL STYLE (4 questions)**:
 
       Q1. Visual Tone - Overall visual tone kaisa ho?
          BRIGHTNESS: Bright / Balanced / Dark
@@ -106,44 +110,35 @@ process:
       Q4. Lighting Mood - Lighting ka overall mood?
          OPTIONS: NATURAL / DRAMATIC / NOIR / SOFT/DIFFUSED / HARSH
 
-      Q5. Favorite Camera Angles - Koi specific angles jo pasand hain?
-         OPTIONS: LOW ANGLE / HIGH ANGLE / DUTCH TILT / POV / OVERHEAD / EYE-LEVEL
+      **B. COVERAGE STRATEGY (2 questions)**:
 
-      Q6. Reference Films (Visual Style) - Koi films jo visual style capture karti hain?
+      Q5. Reference Films (Visual Style) - Koi films jo visual style capture karti hain?
          Examples: "Tumbbad ki dark atmospheric" / "K3G ka colorful" / "GOW ki gritty"
 
-      Q7. Signature Shots (Must-Have) - Koi specific shots jo MUST dekhna chahte?
+      Q6. Signature Shots (Must-Have) - Koi specific shots jo MUST dekhna chahte?
          Examples: "Slow-motion walk" / "360° rotating" / "Long take" / "Bird's eye"
 
-      **B. COVERAGE STRATEGY (4 questions)**:
-
-      Q8. Coverage Priority - Coverage kitna chahiye?
+      Q7. Coverage Priority - Coverage kitna chahiye?
          OPTIONS: MINIMAL / MODERATE / EXTENSIVE / SINGLE-TAKE FOCUSED
 
-      Q9. Close-Up Philosophy - Close-ups ka use kitna?
+      Q8. Close-Up Philosophy - Close-ups ka use kitna?
          OPTIONS: HEAVY / SELECTIVE / RARE / GENRE-APPROPRIATE
-
-      Q10. Establishing Shots - Location establish mein kitna time?
-         OPTIONS: DETAILED / QUICK / MINIMALIST / REVISIT
-
-      Q11. Transitions & Cuts - Scene-to-scene transitions kaise?
-         OPTIONS: HARD CUTS / DISSOLVES / MATCH CUTS / CREATIVE / MOTIVATED
 
       **C. PRODUCTION REALITY (4 questions)**:
 
-      Q12. Equipment Available - Shooting equipment kya hai?
+      Q9. Equipment Available - Shooting equipment kya hai?
          OPTIONS: PHONE/BASIC / DSLR/MIRRORLESS / CINEMA CAMERA / FULL RIG
 
-      Q13. Crew Size - Team kitni badi hai?
+      Q10. Crew Size - Team kitni badi hai?
          OPTIONS: SOLO / SMALL (2-5) / MODERATE (10-20) / FULL CREW (30+)
 
-      Q14. Location Constraints - Shooting locations ka reality?
+      Q11. Location Constraints - Shooting locations ka reality?
          OPTIONS: SINGLE / FEW (2-3) / MULTIPLE (5+) / OUTDOOR / INDOOR / MIXED
 
-      Q15. Shooting Time Available - Kitne din shoot ke liye?
+      Q12. Shooting Time Available - Kitne din shoot ke liye?
          OPTIONS: SINGLE DAY / WEEKEND / ONE WEEK / TWO WEEKS / MONTH+
 
-      **Collect ALL 15 answers before proceeding.**
+      **Collect ALL 12 answers before proceeding.**
 
     duration: "10-15 min"
 
@@ -271,6 +266,36 @@ process:
       - Visual style MUST align with genre-analysis recommendations
       - Shot choices MUST serve character arcs from character-bible
       - Every screenplay scene gets shot breakdown (no scenes skipped)
+
+      ┌─────────────────────────────────────────────────────────┐
+      │  CREATIVE ELEVATION MANDATE — SHOT BREAKDOWN           │
+      │                                                         │
+      │  Shot lists are not coverage checklists. They are       │
+      │  visual interpretations of the story's emotional DNA.  │
+      │                                                         │
+      │  EVERY SHOT MUST SERVE TWO MASTERS SIMULTANEOUSLY:     │
+      │  → Story function (what it tells the audience)          │
+      │  → Visual language (how it expresses the genre/tone)    │
+      │  A shot that only does one is inefficient filmmaking.   │
+      │                                                         │
+      │  WHERE STANDARD COVERAGE WOULD WORK:                    │
+      │  Ask — is there a more visually intelligent choice that  │
+      │  is still shootable and serves the story better?        │
+      │  Standard coverage is the fallback, not the default.    │
+      │                                                         │
+      │  COMPOSITION + MOVEMENT must FEEL the character's       │
+      │  emotional state — not describe it. The frame IS        │
+      │  the character's psychology in visual form.             │
+      │                                                         │
+      │  TEST (run on every scene's shot list):                 │
+      │  "Does this sequence of shots tell THIS specific         │
+      │  story visually, or could it work for any film?"        │
+      │  Aim for the former. Character-arc shots > generic.     │
+      │                                                         │
+      │  Cutting rhythm must MATCH the beat-sheet's emotional   │
+      │  intensity map — fast edits in high tension,           │
+      │  breathing room in low-intensity moments.               │
+      └─────────────────────────────────────────────────────────┘
 
       **Combine previous outputs with Q1-Q15 visual answers to create shooting script.**
 

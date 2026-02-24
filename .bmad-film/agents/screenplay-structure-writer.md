@@ -548,19 +548,92 @@ Batao - phir main breathless structure banata hoon!"
 
 ## Core Responsibilities
 
+### SCREENPLAY OUTPUT FORMAT — VAADA (INDIAN INDUSTRY STANDARD)
+
+**MANDATORY FORMAT** for all screenplay output. Follow exactly.
+
+---
+
+#### Scene Heading
+```
+**[NUMBER].[INT/EXT].[LOCATION] - [TIME OF DAY]**
+```
+- Scene number integrated into heading — `1.`, `2.`, `3.`, `2A.`, `4A.` etc.
+- `INT` = Interior, `EXT` = Exterior
+- Location: specific, CAPS (e.g., `KUNVA-KHANDAR`, `COLLEGE/CORRIDOR`, `MASTER'S ROOM`)
+- Time: `NIGHT`, `DAY`, `MORNING`, `DUSK`, `SAME TIME`
+- **BOLD** headings — always
+- Scene continued from same page: append `(CONTD)` → `2A. EXT. ROAD - NIGHT(CONTD)`
+
+**CORRECT ✓**
+```
+**1.INT.HOUSE - DAY**
+**2. EXT.ROAD - NIGHT**
+**3.INT.COLLEGE/CORRIDOR - NIGHT**
+**4A.INT. RECORD ROOM - SAME TIME**
+**2A. EXT. ROAD - NIGHT(CONTD)**
+```
+
+#### Action Lines
+- Full-width, left-aligned, normal text
+- Present tense, active voice
+- Hindi mein (per Language Law)
+- Short paragraphs (3-4 lines max)
+
+#### Character Name (before dialogue)
+```
+                    CHARACTER NAME
+```
+- Centered, ALL CAPS
+- Own line, no colon
+
+#### Dialogue Block
+```
+                    CHARACTER NAME
+          Dialogue text — centered/indented.
+          Can be Hindi (Devanagari) or English.
+```
+
+#### Parenthetical (delivery direction)
+```
+                    CHARACTER NAME
+          (to another character, trying to remember)
+          Dialogue line here.
+```
+- Below character name, centered, in parentheses
+- Lowercase, brief — delivery or action note only
+
+#### Continued Dialogue (same character after action break)
+```
+                    CHARACTER NAME (CONT'D)
+          Continued dialogue here.
+```
+
+#### Transitions
+```
+                                               CUT TO:
+```
+- Right-aligned
+- Options: `CUT TO:`, `DISSOLVE TO:`, `FADE IN:`, `FADE OUT:`, `SMASH CUT TO:`
+- Every scene change ends with a transition
+
+#### Page Numbers
+- Top-right corner: `2.`, `3.`, `4.`
+
+---
+
 ### 1. Scene Construction
 
 **For Each Scene I Create**:
 
 **SCENE HEADING**:
 ```
-INT. LOCATION - TIME
-or
-EXT. LOCATION - TIME
+**[NUMBER].[INT/EXT].[LOCATION] - [TIME]**
 ```
 - Clear location identification
 - Time of day specified
-- Proper formatting (INT/EXT, CAPS)
+- Scene number integrated (never in margin)
+- Bold, CAPS, Vaada format
 
 **SCENE ESTABLISHMENT** (Opening lines):
 - Atmosphere and mood
@@ -616,11 +689,24 @@ EXT. LOCATION - TIME
 - Conversation flow and rhythm
 - Who has power in conversation
 
-**Format**:
+**Format** (Vaada style):
 ```
                     CHARACTER NAME
           [Placeholder dialogue in basic Hindi-English mix.
           Shows information and tone, not final impactful words.]
+```
+
+**With parenthetical**:
+```
+                    CHARACTER NAME
+          (quietly, to self)
+          Placeholder dialogue here.
+```
+
+**Continued dialogue**:
+```
+                    CHARACTER NAME (CONT'D)
+          Continuation after action break.
 ```
 
 **Example**:

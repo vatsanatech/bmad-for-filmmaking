@@ -976,6 +976,124 @@ Write the way great Bollywood films narrate — not literary Urdu, not broken fr
 - **Dialogue woven into prose** — not listed separately but embedded naturally
 - **Emotions shown through action**, not stated: "Arjun ka haath kaanp gaya" not "Arjun was shocked"
 
+---
+
+## 🧠 MASTER CRAFT INTELLIGENCE — DRAMA
+
+**Run this block internally before writing STEP 12 summary and STEP 13 story.**
+
+### Structural Patterns That Work in Indian Drama
+
+**Pattern 1 — The Dignity Spiral:**
+Drama ki asli engine dignity hai — kisi ki dignity ko threat pe rakhna.
+- Establish: What does this person's dignity rest on? (Job, family reputation, self-image, love, principle)
+- Threaten: Strip it. Slowly. One layer at a time.
+- The CHOICE: At lowest point, character must choose — dignity OR survival/love/acceptance
+- Resolution: Dignity either restored (differently than before) OR surrendered knowingly
+- Indian texture: Khandaan ki izzat, professional respect, caste dignity, gender dignity — specify WHICH
+
+**Pattern 2 — Relationship Archaeology:**
+Drama ke relationships mein layers of history hain. Woh history PRESENT mein aati rahti hai.
+- Present Conflict: Surface fight about something specific
+- Archaeological Dig: Present conflict is really about something from 5/10/20 years ago
+- The Buried Object: One unspoken truth both characters know but have never named
+- The Excavation: Story forces this buried truth to surface
+- Resolution: Truth spoken — changes relationship FOREVER (better or worse)
+
+**Pattern 3 — The Quiet Revolution:**
+Sabse powerful drama mein sabse bada change shameless nahi hota — andar se, quietly, inevitably aata hai.
+- No big dramatic speeches, no public confrontations as emotional climax
+- Instead: A SMALL action that represents a HUGE internal shift
+- Example: Not "Main tumse pyaar nahi karta" — but: pehli baar woh ghar ke kaam mein haath nahi batata
+- Test: "Kya yeh character 5 saal pehle yeh chota sa action karta?" → NO = revolution happened
+
+---
+
+### Hook Design Philosophy (Shoojit Sircar / Bimal Roy School)
+
+**Opening Hook Formula:**
+- First 3 minutes: Show character's ORDINARY LIFE with EXTRAORDINARY attention to detail
+- Not: Crisis, conflict, problem
+- Yes: The specific texture of their daily life — so specific we understand who they are without being told
+- Sircar Principle: "Pehle insaan banaao, phir story. Audience insaan se jude, story apne aap aage badhe."
+
+**Silence as Language:**
+- Great drama uses silence more than dialogue
+- What is NOT said is always louder than what IS said
+- Every silence should have a specific emotional content: Resigned silence vs. Furious silence vs. Loving silence vs. Guilty silence
+
+---
+
+### Escalation Architecture
+
+**Emotional Pressure Map:**
+- Phase 1: Status quo established — we understand everyone's role and relationship
+- Phase 2: First crack — something small disturbs the order (not a crisis, a tremor)
+- Phase 3: Suppression — characters try to restore status quo (denial/avoidance)
+- Phase 4: Suppression fails — the crack becomes a fracture
+- Phase 5: The core truth must be faced — characters can no longer pretend
+- Phase 6: New equilibrium — changed, scarred, but forward
+
+**The Pressure Cooker Technique:**
+- Put multiple characters in a CONFINED space (house, car trip, family event, hospital ward)
+- Each character brings their wound into this space
+- Space forces them to interact when they'd rather not
+- Pressure builds until SOMEONE releases it (not always the protagonist)
+
+---
+
+### Master Techniques
+
+**Bimal Roy (Do Bigha Zameen, Devdas, Madhumati):**
+- Economic injustice as emotional story: Not political documentary — deeply personal story of a person crushed by structure
+- Restraint principle: NEVER show emotion directly — show what characters do WITH emotion (work harder, go quiet, smile at wrong time)
+- Working class dignity: Give poor/marginalized characters full interior lives — their suffering is specific, not generic
+
+**Gulzar (Maachis, Ijaazat, Angoor):**
+- Poetry as story DNA: Each scene has a poetic logic, not just narrative logic
+- The ellipsis: Gulzar cuts BEFORE the expected moment — the gap IS the emotion
+- Complexity without chaos: Multiple perspectives, all valid, no villain needed
+- Memory and time: Past and present coexist — memory is not backstory, it's present-tense
+
+**Shoojit Sircar (Piku, October, Vicky Donor):**
+- Mundane as profound: Story of a chai stall, a road trip, a sickness — but really about love and identity
+- Character texture over plot: Plot serves character revelation, not vice versa
+- Unsentimental approach: No emotional manipulation — emotion EARNED through accumulation of small truths
+- Space and silence: Long takes, ambient sound, characters doing ordinary things — emotion lives in the gaps
+
+---
+
+### Emotional Contract with Audience
+
+**What audience comes for:** To feel SEEN — to have their own complicated, unresolved relationships reflected on screen
+**What they leave with:** A sense that human relationships are complex AND beautiful, even when painful
+**The Drama Promise:** If we believe in these people, we will stay with them through ANY story
+**The FORBIDDEN feeling:** Audience should NEVER feel "this character is stupid for not just talking to each other" — make communication structurally difficult, not conveniently avoided
+
+---
+
+### Common Failures to Avoid
+
+❌ **The Convenient Misunderstanding**: Characters could resolve everything with one conversation — but don't. LAZY drama.
+❌ **Villain as Problem Source**: In drama, there's no villain — circumstances and character flaws create conflict
+❌ **Emotional Manipulation**: Sad music + slow motion = manufactured emotion. Build to it organically.
+❌ **Resolution by Speech**: Character delivers monologue explaining everything → problem solved. Real resolution = ACTION.
+❌ **Single Perspective Truth**: In real drama, everyone is RIGHT from their own perspective — show all sides
+❌ **Generic Indian Family Conflict**: "Parents don't approve" is surface. What SPECIFIC value system creates this?
+
+---
+
+### Story Creation Protocol (Drama)
+
+Before writing a single line of story, answer internally:
+1. What is the unspoken thing at the center of this story's relationships?
+2. What does each character want vs. what do they actually need?
+3. What is the smallest possible action that represents the biggest internal change?
+4. What will audience members recognize from their own lives?
+5. What is the one moment of silence that contains the whole story's emotional truth?
+
+---
+
 ## 🔴 STORY NARRATION IN HINDI (MANDATORY)
 
 **Write the ENTIRE story narrative in Simple Bollywood Hindi, not English.**

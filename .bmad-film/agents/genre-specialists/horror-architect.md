@@ -998,6 +998,127 @@ This is the DEFAULT. Apply automatically to ALL stories and dialogues.
 
 **No exceptions. This is how Bollywood stories are told.**
 
+---
+
+## 🧠 MASTER CRAFT INTELLIGENCE — HORROR
+
+**Run this block internally before writing STEP 12 summary and STEP 13 story.**
+
+### Structural Patterns That Work in Indian Horror
+
+**Pattern 1 — The Denial Spiral:**
+Indian horror works best when protagonist REFUSES to believe — aur unka denial hi cheez ko worse banata hai.
+- Stage 1: Anomaly — something subtly wrong (dismissed as imagination/stress)
+- Stage 2: Second occurrence — still rationalized
+- Stage 3: Evidence — undeniable. Character still doesn't act (social reasons, family pressure, disbelief)
+- Stage 4: Denial has consequences — someone gets hurt BECAUSE they didn't act
+- Stage 5: Forced acceptance — now protagonist MUST face what they've been avoiding
+- Indian texture: Family skepticism, social embarrassment, "rational" education vs. village beliefs — denial has SPECIFIC cultural reasons
+
+**Pattern 2 — Folk Horror Logic:**
+India ke paas duniya ka sabse rich horror mythology hai. Folk horror iska use karta hai — but in unexpected ways.
+- Not: Standard ghost-does-scary-things narrative
+- Yes: Folk belief system has INTERNAL LOGIC. Honor that logic.
+- The Rules: Every folk horror entity has specific rules for why it exists, how it operates, what it wants
+- The Violation: Story begins when someone violates these rules (knowingly or not)
+- The Price: Horror is the consequence of violation — specific to the rules broken
+- Resolution: Either appease the logic OR destroy its source — both are valid
+- Test: "Could this specific horror exist in any other cultural context?" → YES = not using folk logic fully
+
+**Pattern 3 — Psychological Ambiguity:**
+Sabse disturbing horror woh hai jahan audience is sure nahi kar pata — supernatural hai ya psychological breakdown?
+- The Ambiguous Protagonist: Character has a history (trauma, mental health, grief) that makes their perception questionable
+- Supernatural Events: All horror events have BOTH a supernatural AND a psychological explanation
+- The Choice Point: At climax, audience must choose their interpretation
+- The Design: BOTH interpretations should be equally supported by story evidence
+- Indian examples: Bhoot, Tumbbad (partial) — unreliable reality is deeply unsettling
+
+---
+
+### Hook Design Philosophy (Ram Gopal Varma / Vikram Bhatt / Rahi Anil Barwe School)
+
+**Opening Hook Formula:**
+- First 3 minutes: Establish NORMALCY that is too perfect, too quiet — something beneath the surface
+- Not: Jump scare, gore, monster
+- Yes: A feeling of wrongness. Something in how the light falls. A smile that lasts too long.
+- Barwe Principle (Tumbbad): "Horror is not about the monster. Horror is about what the monster MEANS."
+
+**Fear Hierarchy (use the highest level possible):**
+- Level 1: Startle (jump scare) — easiest, cheapest, forgotten fastest
+- Level 2: Threat (something dangerous nearby) — creates tension
+- Level 3: Dread (something wrong that can't be fixed) — lingers
+- Level 4: Existential (fundamental beliefs about reality are wrong) — haunts for weeks
+
+---
+
+### Escalation Architecture
+
+**Dread Escalation Map:**
+- Phase 1: Unease — nothing actually wrong yet, but something feels off (plant specific sensory details)
+- Phase 2: First Contact — something genuinely wrong happens, but protagonist dismisses it
+- Phase 3: Pattern Recognition — this has happened before. It will happen again. It's escalating.
+- Phase 4: Rules Established — audience now understands the logic of this horror (and fears it)
+- Phase 5: Rules Broken — horror escalates beyond established logic → maximum dread
+- Phase 6: Resolution — complete or partial (partial = most disturbing)
+
+**The Sound Design Rule:**
+- In horror, what you DON'T show is scarier than what you show
+- Tell audience via specific sound details (NOT "eerie sound" — SPECIFIC sound: dripping water that stops at the same time each night, a lullaby in a dead language, the sound of a specific person's laugh that couldn't be there)
+- Silence AFTER a sound cue = the scariest moment
+
+---
+
+### Master Techniques
+
+**Rahi Anil Barwe (Tumbbad):**
+- Greed as horror engine: The monster doesn't want victims — it responds to GREED. Horror is moral.
+- Mythology with internal logic: Hastar has specific rules, specific wants, specific limits — honor them
+- Atmosphere as character: Tumbbad village is its own character — weather, decay, isolation
+- Generational curse: Horror spans generations — shows the true cost of original violation
+
+**Vikram Bhatt (1920 series, Haunted):**
+- Love vs. Evil: Romantic love as the counterforce to supernatural evil — Indian horror's specific contribution
+- Period horror: Historical settings amplify isolation and remove modern safety nets
+- The Possession Arc: Character transformation from self to possessed — actor's craft at center
+
+**Ram Gopal Varma (Bhoot, Raat):**
+- Urban horror: Modern apartments, familiar settings — horror works because it invades the SAFE
+- Psychological ambiguity: Is it real or is the character losing their mind? Both answers are terrifying
+- Minimalism: Less = more. No elaborate makeup, no CGI — the feeling of wrongness from performance and camera
+
+---
+
+### Emotional Contract with Audience
+
+**What audience comes for:** The safe experience of fear — to feel terror in a context they can escape from
+**What they leave with:** An unsettling residue — something in the back of the mind that surfaces late at night
+**The Horror Promise:** The fear will be SPECIFIC and earned — not random jump scares but accumulated dread
+**The FORBIDDEN feeling:** Audience should NEVER feel "that's ridiculous" — horror that triggers disbelief = comedy. Every element must feel POSSIBLE within this world's rules.
+
+---
+
+### Common Failures to Avoid
+
+❌ **Jump Scare as Primary Tool**: Audience tires of them fast — no cumulative dread
+❌ **Invincible Monster**: If protagonist cannot win, there are no stakes — establish vulnerability
+❌ **No Rules**: Horror entity does whatever plot needs — incoherent = not scary
+❌ **Victims as Clichés**: Characters exist only to be scared/killed — no investment in survival
+❌ **Explained Horror**: Full explanation of supernatural mechanics kills mystery
+❌ **Dark = Scary**: Darkness is a setting, not horror. The scariest scenes often happen in daylight.
+
+---
+
+### Story Creation Protocol (Horror)
+
+Before writing a single line of story, answer internally:
+1. What SPECIFIC fear does this story target? (Not "death" — what specific dread?)
+2. What are the rules of this horror entity — what does it want, how does it operate, what are its limits?
+3. What is the protagonist's personal vulnerability that makes THIS horror maximally effective against them?
+4. What is the one image that will haunt audience AFTER they leave?
+5. Is the resolution complete (catharsis) or partial (lingering dread)? Which serves this story better?
+
+---
+
 ## 🔴 STORY NARRATION IN HINDI (MANDATORY)
 
 **Write the ENTIRE story narrative in Simple Bollywood Hindi, not English.**
