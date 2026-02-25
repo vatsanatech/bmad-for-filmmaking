@@ -525,10 +525,124 @@ process:
       - Character arc progression
       - Dialogue placement and intensity
 
+      ---
+
+      # ╔═══════════════════════════════════════════════════════════════╗
+      # ║  🔴 PHASE 8B — EPISODE BEAT-SHEETS — MANDATORY — NEVER SKIP  ║
+      # ║                                                               ║
+      # ║  IF screen_format = "web-series" OR "micro-drama":           ║
+      # ║  Episode beat-sheet files MUST be created/updated BEFORE     ║
+      # ║  showing completion message. COMPLETION IS BLOCKED until ALL  ║
+      # ║  episode beat-sheet files are saved.                         ║
+      # ╚═══════════════════════════════════════════════════════════════╝
+
+      **PHASE 8B — EPISODE BEAT-SHEETS (Web Series + Micro Drama only) — 🔴 MANDATORY:**
+
+      # ─────────────────────────────────────────────────────────────────
+      # WEB SERIES — Add beat-sheet.md to each episode folder
+      # ─────────────────────────────────────────────────────────────────
+      IF screen_format = "web-series":
+
+        For EACH episode (episode_count from STEP 1 of story-synopsis):
+          Create FILE: `project/{project_name}/episodes/episode-{NN}/beat-sheet.md`
+
+          Each episode beat-sheet MUST contain:
+
+          ```
+          # [SERIES TITLE] — Episode {N}: "[Episode Title]" — Beat Sheet
+
+          **Series**: [Title] | **Format**: Web Series
+          **Episode**: {N} of {episode_count} | **Duration**: {episode_duration} min
+          **Structure**: [structure type from story-synopsis STEP 2]
+
+          ---
+
+          ## Episode Arc
+          **Episode Goal**: [What must change/resolve by episode end]
+          **Episode Tension**: [Central conflict driving this episode]
+          **Episode Emotional Promise**: [What audience feels at end]
+
+          ---
+
+          ## Beat-by-Beat Breakdown
+
+          **BEAT 1 — COLD OPEN / HOOK** [0:00-2:00]
+          [What happens — 1-2 lines — specific, visual, story-functional]
+
+          **BEAT 2 — EPISODE SETUP** [2:00-5:00]
+          [Establish episode stakes — what changed since last episode]
+
+          **BEAT 3 — COMPLICATION** [5:00-10:00]
+          [Central problem of this episode escalates]
+
+          **BEAT 4 — MIDPOINT TURN** [10:00-12:00]
+          [Something shifts — reversal, revelation, or decision]
+
+          **BEAT 5 — ESCALATION** [12:00-17:00]
+          [Stakes raised — character forced to act]
+
+          **BEAT 6 — EPISODE CLIMAX** [17:00-19:00]
+          [Peak tension — resolution attempted]
+
+          **BEAT 7 — CLIFFHANGER / RESOLUTION** [19:00-20:00]
+          [Episode ends — either cliffhanger (ep 1-N-1) or resolution (final ep)]
+
+          ---
+
+          **Series Arc Progress**: [1 line — how this episode moves the season arc forward]
+          **Character State at End**: [1 line per main character — what changed]
+          ```
+
+        ANNOUNCE after saving:
+        ```
+        ✅ {N} episode beat-sheets created: episodes/episode-01/beat-sheet.md through episodes/episode-{NN}/beat-sheet.md
+        Each episode now has: story-synopsis.md + beat-sheet.md
+        Screenplay will be added in the screenplay step.
+        ```
+
+      # ─────────────────────────────────────────────────────────────────
+      # MICRO DRAMA — Add beat-sheet section to existing episode-NN.md
+      # ─────────────────────────────────────────────────────────────────
+      IF screen_format = "micro-drama":
+
+        For EACH episode (episode_count from STEP 1 of story-synopsis):
+          UPDATE FILE: `project/{project_name}/episodes/episode-{NN}.md`
+          (File already exists from story-synopsis step — UPDATE the BEAT-SHEET section)
+
+          Replace the placeholder BEAT-SHEET section with full beats:
+
+          ```
+          ## BEAT-SHEET (Episode Beats)
+
+          **Beat 1 — HOOK** [0:00-0:30]
+          [Opening image/action — viewer must keep watching — specific, visual]
+
+          **Beat 2 — COMPLICATION** [0:30-2:00]
+          [Central problem of this episode — what goes wrong or changes]
+
+          **Beat 3 — TURN / REVEAL** [2:00-4:00]
+          [Something shifts — small reversal, decision, or emotional pivot]
+
+          **Beat 4 — CLIFFHANGER / PAYOFF** [4:00-5:00/7:00]
+          [Episode ends — cliffhanger for ep 1-N-1 / payoff for final ep]
+
+          **Episode Arc**: [1 line — what changed from start to end of episode]
+          ```
+
+        ANNOUNCE after saving:
+        ```
+        ✅ {N} episode files updated with beat-sheets: episodes/episode-01.md through episodes/episode-{NN}.md
+        Each episode now has: Story + Beat-Sheet (Shot Notes will be added at shot-breakdown step).
+        ```
+
     outputs:
       - Complete beat sheet document
       - Ready for screenplay development
       - Universal for all dialect versions
+      Web Series (additional):
+        - "project/{project_name}/episodes/episode-NN/beat-sheet.md (for each episode)"
+      Micro Drama (additional):
+        - "project/{project_name}/episodes/episode-NN.md (updated with beat-sheet section)"
 
 success_criteria: |
   Beat Sheet is successful when:

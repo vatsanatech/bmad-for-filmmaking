@@ -1149,6 +1149,84 @@ process:
 
     approval_gate: true
 
+  # ─────────────────────────────────────────────────────────────────────────
+  # ╔═══════════════════════════════════════════════════════════════════════╗
+  # ║  🔴 PHASE 15B — EPISODE SHOT-BREAKDOWN-AI FILES — MANDATORY          ║
+  # ║                                                                       ║
+  # ║  IF screen_format = "web-series" OR "micro-drama":                   ║
+  # ║  BOTH shot-breakdown.md AND shot-breakdown-ai.md MUST be created     ║
+  # ║  per episode BEFORE showing completion message.                      ║
+  # ║  COMPLETION IS BLOCKED until ALL episode AI shot files are saved.    ║
+  # ╚═══════════════════════════════════════════════════════════════════════╝
+
+  - step: 15b
+    name: "Episode AI Shot Files (Web Series + Micro Drama)"
+    agent: ai-shot-breakdown-specialist
+
+    action: |
+      **PHASE 15B — EPISODE AI SHOT FILES — 🔴 MANDATORY for Web Series + Micro Drama:**
+
+      # ─────────────────────────────────────────────────────────────────
+      # WEB SERIES — Add shot-breakdown-ai.md to each episode folder
+      # ─────────────────────────────────────────────────────────────────
+      IF screen_format = "web-series":
+
+        For EACH episode (episode_count from story-synopsis STEP 1):
+
+          IF episode shot count ≤ 20:
+            Create FILE: `project/{project_name}/episodes/episode-{NN}/shot-breakdown-ai.md`
+
+          IF episode shot count > 20:
+            Create FILES:
+              `project/{project_name}/episodes/episode-{NN}/shot-breakdown-ai-part1.md`
+              `project/{project_name}/episodes/episode-{NN}/shot-breakdown-ai-part2.md`
+              [additional parts as needed]
+
+          Each episode AI file MUST:
+          - Start with CHARACTER ANCHORS section (all characters in this episode)
+          - Use SAME anchor text verbatim in every AI INSTRUCTIONS field
+          - Cover ALL shots from episodes/episode-{NN}/shot-breakdown.md
+          - Each shot uses exact 18-field format (same as root-level AI breakdown)
+          - AI INSTRUCTIONS field in English (Veo3/platform paste-ready)
+          - Episode file header:
+            ```
+            # [SERIES TITLE] — Episode {N} — AI Shot Breakdown
+            # Platform: [Q16 answer] | Style: [Q20 answer]
+            # Episode {N} of {episode_count} | Shots: [total]
+            ```
+
+        ANNOUNCE after saving:
+        ```
+        ✅ {N} episode AI shot breakdowns created
+        Each episode folder now has:
+          shot-breakdown.md       ← Traditional (Director/DP/Set)
+          shot-breakdown-ai.md    ← AI Generation (paste-ready prompts)
+        ```
+
+      # ─────────────────────────────────────────────────────────────────
+      # MICRO DRAMA — Add AI shots section to existing episode-NN.md
+      # ─────────────────────────────────────────────────────────────────
+      IF screen_format = "micro-drama":
+
+        For EACH episode (episode_count from story-synopsis STEP 1):
+          UPDATE FILE: `project/{project_name}/episodes/episode-{NN}.md`
+          Add/replace SHOT NOTES section with full 18-field AI entries for 3-5 key shots.
+
+          ```
+          ## AI SHOT BREAKDOWN (Key Shots — AI Generation Ready)
+
+          ### CHARACTER ANCHORS
+          [Character descriptions for AI consistency]
+
+          ### SHOTS
+          [18-field entries for 3-5 key shots per micro episode]
+          ```
+
+        ANNOUNCE after saving:
+        ```
+        ✅ {N} micro drama episode files updated with AI shot sections.
+        ```
+
 success_criteria: |
   Shooting Script is successful when:
 

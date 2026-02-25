@@ -1436,7 +1436,18 @@ process:
 
       ---
 
-      **PHASE 13D — EPISODE FILES (Web Series + Micro Drama only):**
+      # ╔═══════════════════════════════════════════════════════════════╗
+      # ║  🔴 PHASE 13D — EPISODE FILES — MANDATORY — NEVER SKIP       ║
+      # ║                                                               ║
+      # ║  IF screen_format = "web-series" OR "micro-drama":           ║
+      # ║  Episode files MUST be created BEFORE showing completion      ║
+      # ║  message to user. This is NOT optional. This is NOT a later   ║
+      # ║  step. This MUST happen immediately after root files saved.   ║
+      # ║                                                               ║
+      # ║  COMPLETION MESSAGE is BLOCKED until ALL episode files saved. ║
+      # ╚═══════════════════════════════════════════════════════════════╝
+
+      **PHASE 13D — EPISODE FILES (Web Series + Micro Drama only) — 🔴 MANDATORY:**
 
       # ─────────────────────────────────────────────────────
       # WEB SERIES — Episode FOLDERS (full treatment per ep)
@@ -1562,6 +1573,7 @@ quality_gates:
   - gate: "STEP 11 (Opening+Ending+Language) MUST be completed before Story Summary at STEP 12"
   - gate: "STEP 12 Story Summary shown to writer — writer must explicitly APPROVE before STEP 13"
   - gate: "approved_summary stored (text + format + structure + opening + ending + language) — MANDATORY before STEP 13"
+  - gate: "🔴 STEP 13 EPISODE FILES — IF web-series: ALL episodes/episode-NN/story-synopsis.md MUST be created BEFORE completion message. IF micro-drama: ALL episodes/episode-NN.md MUST be created BEFORE completion message. NOT optional. NOT a later step. COMPLETION IS BLOCKED until done."
   - gate: "STEP 13 story writing uses approved_summary from STEP 12 — no deviations"
   - gate: "story-synopsis.md contains Continuous Narrative only (no scene-wise breakdown)"
   - gate: "Language Law compliance verified before writing"

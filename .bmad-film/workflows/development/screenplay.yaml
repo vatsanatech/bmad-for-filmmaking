@@ -938,12 +938,98 @@ process:
       **Also Preserve**:
       Keep `screenplay-structure.md` for reference (shows evolution from structure to final)
 
+      ---
+
+      # ╔═══════════════════════════════════════════════════════════════╗
+      # ║  🔴 PHASE 11B — EPISODE SCREENPLAYS — MANDATORY — NEVER SKIP ║
+      # ║                                                               ║
+      # ║  IF screen_format = "web-series" OR "micro-drama":           ║
+      # ║  Episode screenplay files MUST be created/updated BEFORE     ║
+      # ║  showing completion message. COMPLETION IS BLOCKED until ALL  ║
+      # ║  episode screenplay files are saved.                         ║
+      # ╚═══════════════════════════════════════════════════════════════╝
+
+      **PHASE 11B — EPISODE SCREENPLAYS (Web Series + Micro Drama only) — 🔴 MANDATORY:**
+
+      # ─────────────────────────────────────────────────────────────────
+      # WEB SERIES — Add screenplay.md to each episode folder
+      # ─────────────────────────────────────────────────────────────────
+      IF screen_format = "web-series":
+
+        For EACH episode (episode_count from STEP 1 of story-synopsis):
+          Create FILE: `project/{project_name}/episodes/episode-{NN}/screenplay.md`
+
+          Each episode screenplay MUST:
+          - Follow full Vaada format (Indian industry standard)
+          - Derive from: episodes/episode-{NN}/story-synopsis.md + episodes/episode-{NN}/beat-sheet.md
+          - Contain complete scenes for that episode ONLY (not full series)
+          - Scene count: approximately 8-12 scenes per 20-min episode
+          - Language: as per writer's STEP 11D language choice from story-synopsis workflow
+
+          File header format:
+          ```
+          # [SERIES TITLE] — Episode {N}: "[Episode Title]"
+          # Screenplay — Web Series | Episode {N} of {episode_count} | {episode_duration} min
+
+          ---
+          [Full Vaada-format screenplay for this episode]
+          ---
+
+          EPISODE END.
+          [CLIFFHANGER NOTE: (ep 1-N-1 only) — 1 line describing the hook]
+          ```
+
+        ANNOUNCE after saving:
+        ```
+        ✅ {N} episode screenplays created: episodes/episode-01/screenplay.md through episodes/episode-{NN}/screenplay.md
+        Each episode now has: story-synopsis.md + beat-sheet.md + screenplay.md
+        Shot breakdown will be added in the shot-breakdown step.
+        ```
+
+      # ─────────────────────────────────────────────────────────────────
+      # MICRO DRAMA — Add screenplay section to existing episode-NN.md
+      # ─────────────────────────────────────────────────────────────────
+      IF screen_format = "micro-drama":
+
+        For EACH episode (episode_count from STEP 1 of story-synopsis):
+          UPDATE FILE: `project/{project_name}/episodes/episode-{NN}.md`
+          (File already exists — UPDATE the screenplay section or ADD it after the BEAT-SHEET section)
+
+          Add/replace with full screenplay:
+
+          ```
+          ## SCREENPLAY
+
+          **[NUMBER].INT/EXT.[LOCATION] - [TIME]**
+
+          [Action line — Hindi — present tense — 1-3 lines max per scene]
+
+          CHARACTER NAME
+          (parenthetical if needed)
+          Dialogue line in chosen language.
+
+          [Continue scenes — micro drama = 3-6 scenes max for 5-7 min]
+
+          FADE OUT.
+          **Episode Hook**: [Last visual/line that makes viewer click next episode]
+          ```
+
+        ANNOUNCE after saving:
+        ```
+        ✅ {N} episode files updated with screenplays: episodes/episode-01.md through episodes/episode-{NN}.md
+        Each episode now has: Story + Beat-Sheet + Screenplay (Shot Notes will be added at shot-breakdown step).
+        ```
+
     outputs:
       - Final complete screenplay file(s)
       - Single file (if single dialect) OR Multiple files (if multi-dialect)
       - Production-ready script per dialect
       - Bollywood-authentic credits (two-agent model)
       - Clean, professional format
+      Web Series (additional):
+        - "project/{project_name}/episodes/episode-NN/screenplay.md (for each episode)"
+      Micro Drama (additional):
+        - "project/{project_name}/episodes/episode-NN.md (updated with screenplay section)"
 
 success_criteria: |
   Screenplay is successful when:
