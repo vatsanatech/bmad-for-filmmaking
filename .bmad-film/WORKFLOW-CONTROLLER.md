@@ -214,20 +214,27 @@ After completing a step:
 │   11D: Language Selection (6 options)                          │
 │                                                                 │
 │ STEP 12 of 13 — Story Summary Approval ← WRITER CHECKPOINT    │
-│   AI generates ONE ~200-word story summary from ALL seeds      │
+│   AI generates ONE 350-400 word story summary from ALL seeds   │
 │   (covers STEPs 1-11: format, structure, world, protagonist,   │
 │    opening, tension, turn, emotional landing, language)        │
+│   Summary includes 3 ANCHOR IMAGES (mandatory):               │
+│     🎬 Opening Image: first visual — world + character state  │
+│     🔁 Emotional Turn: the moment everything changes           │
+│     🌅 Closing Image: final image — transformation visible     │
 │   Writer chooses:                                              │
-│   ✅ A) APPROVE → go to STEP 13                               │
+│   ✅ A) APPROVE → Director's Vision auto-generated → STEP 13  │
 │   🔄 B) NAYA VARIANT → completely new summary (same seeds)    │
 │   ✏️ C) FEEDBACK → refine specific element in current summary  │
+│   🎲 D) KUCH ALAG → What If variant — unexpected territory    │
+│          (same characters + world, different direction)        │
 │   NO LIMIT on iterations — loop until writer approves          │
 │   ← GATE: STEP 13 only after writer explicitly approves ───── │
 │                                                                 │
 │ STEP 13 of 13 — Genre Routing + Full Story Creation            │
 │   13A: Genre agent selected + announced                        │
-│   13B: Genre-specific craft questions (5-8 only)              │
-│   13C: Write from approved_summary blueprint (no passes)       │
+│   13B: MASTER CRAFT INTELLIGENCE runs INTERNALLY (no questions)│
+│        Write DIRECTLY from approved_summary + Director's Vision│
+│   13C: Write from approved_summary + Director's Vision:        │
 │     • Use approved_summary from STEP 12 as blueprint          │
 │     • Apply opening/ending/anti-cliché from STEP 11           │
 │     • Apply language from STEP 11D                            │
@@ -244,17 +251,27 @@ After completing a step:
 │       Each file: Story + Beat-Sheet + Screenplay + Shot Notes  │
 │       (all-in-one — no subfolder — eps are 5-7 min)           │
 │     Cliffhanger/Hook mandatory on each (except final ep)      │
+│   13F: Series Bible [Web Series ONLY — auto-generated]:       │
+│     Save: project/{name}/series-bible.md                      │
+│     Contains: Series DNA, Season Arc, Character Long Arcs,    │
+│     World Rules, Tone + Episode Evolution Table                │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 **HARD GATES (v11.0):**
 - STEP 1 (Format) is ALWAYS the first question — NEVER skip or defer format
+- MICRO DRAMA FAST TRACK: If format=Micro Drama → offer Fast Track (3-session path) at STEP 1
+- STORY PULSE: Show 2-line sensory glimpse of forming story after STEPS 3, 6, and 9 (before next step)
 - STEP 11 (Opening+Ending+Language) MUST be completed before Story Summary at STEP 12
-- STEP 12 MUST show ONE story summary — writer must explicitly APPROVE before STEP 13
-- STEP 13 (Story Creation) CANNOT start before STEP 12 is approved
-- STEP 13 story MUST follow approved_summary from STEP 12 — no deviations
-- NO processing passes at STEP 13 — just write from blueprint
+- STEP 12 MUST show 350-400 word summary with 3 ANCHOR IMAGES — writer must explicitly APPROVE
+- DIRECTOR'S VISION: Auto-generated (80-100 words) immediately after STEP 12 approval
+  Captures: tone + visual feel + emotional promise — used as north star by all subsequent agents
+- STEP 13 (Story Creation) CANNOT start before STEP 12 approved + Director's Vision generated
+- STEP 13 story MUST follow approved_summary + Director's Vision — no deviations
+- STEP 13B: NO genre-specific craft questions — Master Craft Intelligence runs INTERNALLY
+- NO processing passes at STEP 13 — write DIRECTLY from blueprint
 - STEP 13E (Episode Files) MUST run after story-synopsis.md is saved — IF format = Web Series OR Micro Drama
+- STEP 13F (Series Bible) MUST be auto-generated after STEP 13D — IF format = Web Series
 - Web Series: episode FOLDERS (`episodes/episode-NN/`) — full treatment per episode
 - Micro Drama: episode FLAT FILES (`episodes/episode-NN.md`) — combined all-in-one (story + beats + screenplay + shots)
 - character-bible and character-relations are ROOT-LEVEL ONLY — never per-episode
@@ -282,33 +299,29 @@ After completing a step:
 │   • project/{name}/story-synopsis.md                           │
 │   Extract: all characters, their roles, tone, genre            │
 │                                                                 │
-│ STEP 1 of 6 — CHARACTER FRAMEWORK SELECTION ← NEW             │
-│   Show all 12 frameworks + Diagnostic option to writer         │
-│   Writer picks: single framework OR combination                 │
-│   Framework shapes ALL subsequent questions + output format     │
+│ STEP 1 of 6 — CHARACTER FRAMEWORK SELECTION                    │
+│   FAST TRACK (3 choices + Auto — default offer):              │
+│   F1. WOUND + ARC   — Egri #1 + Ghost Method #3 hybrid        │
+│   F2. PSYCHOLOGY    — Enneagram #5 + McKee #2 hybrid           │
+│   F3. PERFORMANCE   — Stanislavski #9 + Bollywood #12 hybrid   │
+│   F0. AUTO          — AI picks based on story DNA               │
+│   DEEP TRACK — all 12 frameworks (only if explicitly requested)│
 │   Reference: character-developer.md → STEP 1 section           │
-│                                                                 │
-│   12 Frameworks:                                                │
-│   1. Egri's 3 Dimensions    7. Truby's 22 Blocks               │
-│   2. McKee's True Character  8. Maslow's Hierarchy             │
-│   3. Save the Cat Ghost      9. Stanislavski Method            │
-│   4. Hauge's Inner Journey  10. Vogler's Character Web         │
-│   5. Enneagram              11. Trauma-Informed Design         │
-│   6. Jungian Archetypes     12. Bollywood Archetype            │
-│   D. Diagnostic (5 questions → recommendation)                 │
-│                                                                 │
-│   DEFAULT (if skipped): Egri #1 + Ghost Method #3              │
+│   DEFAULT (if skipped): F1 WOUND + ARC                         │
 │                                                                 │
 │ STEP 2 of 6 — Dialect Setup (1 question only)                   │
 │   Single dialect (Hindi default) or multi-dialect?             │
 │   If multi-dialect: specify languages — AI handles rest        │
 │                                                                 │
 │ STEP 3 of 6 — Character Questions (streamlined)                 │
-│   Base: Q1-Q15 (removed optional/redundant from 18 → 15)      │
-│   + Framework extras: 4-6 additional questions (per selection) │
-│   • Q1-Q7: Protagonist deep dive (removed actor ref Q8)        │
+│   Base: Q1-Q15 + Framework extras: 4-6 additional Qs           │
+│   • Q1-Q8: Protagonist deep dive                               │
+│   ★ CHARACTER PREVIEW after Q8 (mandatory protagonist reveal): │
+│     4-5 line scene fragment — protagonist in ordinary moment    │
+│     Writer approves: A) Bilkul Sahi / B) Thoda Alag / C) Nahin │
+│     GATE: supporting characters only after preview approved     │
 │   • Q9-Q13: Supporting characters (per character)              │
-│   • Q14-Q15: Character dynamics (removed romantic Q15, Q17, Q18)│
+│   • Q14-Q15: Character dynamics                                 │
 │   • Q16+: Framework-specific questions                         │
 │                                                                 │
 │ STEP 4 of 6 — Synthesis + User Confirmation                     │
@@ -330,9 +343,10 @@ After completing a step:
 ```
 
 **HARD GATES (Character Bible):**
-- STEP 1 (Framework Selection) CANNOT be skipped — minimum ask must happen
-- If user skips: Apply DEFAULT (Egri #1 + Ghost #3) and tell user
+- STEP 1 (Framework Selection) CANNOT be skipped — minimum Fast Track offer must happen
+- If user skips: Apply DEFAULT (F1 WOUND + ARC) and tell user
 - STEP 3 (Questions) only after framework confirmed
+- CHARACTER PREVIEW mandatory after protagonist Q8 — supporting chars only after preview approved
 - STEP 5 (Profile Creation) only after STEP 4 synthesis confirmed
 - CHARACTER RELATIONS MAP must be run after Character Bible before Screenplay
 
@@ -360,16 +374,16 @@ After completing a step:
 │   • Show list to user and confirm                               │
 │                                                                 │
 │ STEP 2 of 5 — Relationship Deep Questions (per pair)            │
-│   Core + Major pairs: 8 questions each                          │
-│   Q1: History (what happened before the story)                  │
-│   Q2: Relationship DNA (what they actually ARE to each other)   │
-│   Q3: Power Dynamic (who holds it, does it shift, when)         │
-│   Q4: Want vs Need (conscious vs unconscious per character)     │
-│   Q5: The Unsaid (what's never spoken, lives in every scene)    │
-│   Q6: Subtext Signature (recurring gesture/word/silence)        │
-│   Q7: Transformation Arc (beginning → trigger → end)           │
-│   Q8: The Defining Scene (one scene that defines this forever)  │
-│   Supporting pairs: Q1 + Q3 + Q5 + Q7 only (4 questions)      │
+│   History + DNA AUTO-DERIVED from story-synopsis + char-bible  │
+│   Core + Major pairs: 5 questions each                          │
+│   Q1: The Defining Scene ← ALWAYS FIRST                        │
+│        (one scene that defines this relationship forever)       │
+│   Q2: Power Dynamic (who holds it, does it shift, when)         │
+│   Q3: The Unsaid (what's never spoken, lives in every scene)    │
+│   Q4: Subtext Signature (recurring gesture/word/silence)        │
+│   Q5: Transformation Arc (beginning → trigger → end)           │
+│   Supporting pairs: Q1 + Q3 + Q5 only (3 questions)           │
+│   Background pairs: AI derives from story context — no Qs      │
 │                                                                 │
 │ STEP 3 of 5 — Synthesis + User Confirmation                     │
 │   • Summarize each relationship's core dynamic                  │
@@ -420,22 +434,15 @@ no subtext. With it, every scene carries the weight of the entire relationship.
 │   • project/{name}/character-bible.md                          │
 │   Extract: protagonist arc, genre, tone, format                 │
 │                                                                 │
-│ STEP 1 of 5 — BEAT FRAMEWORK SELECTION ← NEW                   │
-│   Show all 12 frameworks + Diagnostic option to writer          │
-│   Writer picks: single framework OR combination                 │
-│   Framework shapes ALL subsequent beats + output format         │
+│ STEP 1 of 5 — BEAT FRAMEWORK SELECTION                         │
+│   FAST TRACK (3 choices + Auto — default offer):              │
+│   F1. EMOTIONAL SPINE  — Save the Cat #1 + Emotional Map #10   │
+│   F2. BOLLYWOOD FORMULA — Bollywood Interval #5 + Masala hybrid│
+│   F3. TENSION MACHINE  — Fichtean Curve #8 + Seven-Point #6   │
+│   F0. AUTO             — AI picks from story DNA               │
+│   DEEP TRACK — all 12 frameworks (only if explicitly requested)│
 │   Reference: beat-sheet-specialist.md → STEP 1 section         │
-│                                                                 │
-│   12 Frameworks:                                                │
-│   1. Save the Cat 15 Beats   7. Sequence Approach (8)          │
-│   2. Hero's Journey 12 Stages 8. Fichtean Curve                │
-│   3. Three-Act Beat Map       9. Story Grid Obligatory          │
-│   4. Dan Harmon Story Circle  10. Emotional Beat Mapping        │
-│   5. Bollywood Interval       11. Kishōtenketsu (4 Parts)       │
-│   6. Seven-Point Structure    12. Parallel Beat Tracking        │
-│   D. Diagnostic (5 questions → recommendation)                  │
-│                                                                 │
-│   DEFAULT (if skipped): Save the Cat #1 + Emotional Mapping #10 │
+│   DEFAULT (if skipped): F1 EMOTIONAL SPINE                      │
 │                                                                 │
 │ STEP 2 of 5 — Beat Questions (5 Questions)                      │
 │   Structure type + Opening hook read from story-synopsis.md    │
@@ -454,6 +461,9 @@ no subtext. With it, every scene carries the weight of the entire relationship.
 │                                                                 │
 │ STEP 4 of 5 — Beat Sheet Creation (Framework-Adapted)          │
 │   • Write beat map using CHOSEN FRAMEWORK's structure           │
+│   • Each beat includes SCENE IMAGE (mandatory):                 │
+│     1-2 line specific visual (character + location + action)   │
+│     Makes beats feel cinematic, not just structural            │
 │   • Output format varies by framework (see beat-sheet-specialist)│
 │   • Language: Bollywood Hindi                                   │
 │                                                                 │
@@ -486,8 +496,10 @@ no subtext. With it, every scene carries the weight of the entire relationship.
 │   • genre-analysis.md + story-synopsis.md                      │
 │   • character-bible.md + character-relations.md (CRITICAL)     │
 │   • beat-sheet.md                                               │
+│   • series-bible.md (if Web Series — for tone + world rules)   │
 │   • Detect dialect setup from character-bible                   │
 │   • Load relationship subtext web from character-relations.md  │
+│   • Load Director's Vision from story-synopsis.md (if present) │
 │                                                                 │
 │ STEP 1 of 6 — SCREENPLAY APPROACH FRAMEWORK ← NEW              │
 │   Screenplay Structure Writer presents 12 approach frameworks   │
@@ -503,6 +515,15 @@ no subtext. With it, every scene carries the weight of the entire relationship.
 │   6. Genre Template      12. Micro-Drama Format                 │
 │   D. Diagnostic                                                 │
 │   DEFAULT: Hollywood Spec #1 + Emotional-Arc #5                 │
+│                                                                 │
+│ STEP 1.5 — SCENE ZERO (Proof of Concept) ← MANDATORY          │
+│   Write ONE representative scene before full screenplay         │
+│   Choose: scene that best captures story's tone + character    │
+│   Writer approves:                                              │
+│   A) Bilkul Theek → proceed to STEP 2                          │
+│   B) Thoda Change → note feedback, rewrite Scene Zero          │
+│   C) Nahin → revisit approach framework (back to STEP 1)       │
+│   GATE: Full screenplay only after Scene Zero approved          │
 │                                                                 │
 │ STEP 2 of 6 — DIALOGUE STYLE FRAMEWORK ← NEW                   │
 │   Dialogue Writer presents 12 style frameworks                  │
@@ -545,7 +566,10 @@ no subtext. With it, every scene carries the weight of the entire relationship.
 ```
 
 **HARD GATES (Screenplay):**
+- STEP 0: Read series-bible.md (if Web Series) + Director's Vision before starting
 - STEP 1 (Screenplay Framework) CANNOT be skipped — minimum ask must happen
+- STEP 1.5 (Scene Zero) CANNOT be skipped — write ONE scene BEFORE full screenplay
+  GATE: Full screenplay ONLY after Scene Zero approved by writer
 - STEP 2 (Dialogue Framework) CANNOT be skipped — separate from STEP 1
 - STEP 4 only after STEP 3 questions complete
 - STEP 5 only after STEP 4 structure draft approved
@@ -659,15 +683,16 @@ Even if user says "skip to the story" or "just write it":
 → Still announce current step → Complete it → Move to next
 Never jump ahead.
 
-### 4. Seed Phase Before Creation Phase — 40/60 MODEL
-- 40% from writer: 12 deep seeds (Main Q + Depth Probe each) — STEP 1
-- AI Architecture Proposal from seeds — STEP 1b (60% creative contribution)
-- Writer calibrates proposal — STEP 1c (completes writer's 40%)
-- Story creation ONLY after STEP 1 + 1b + 1c complete — then STEP 9A/9B/9C
+### 4. Creation Phase Only After Seed Phase Complete
+- Writer provides seeds through STEPS 1-11 (format → structure → world → character → emotion → conflict → milestones → opening/ending)
+- AI generates ONE Story Summary at STEP 12 (350-400 words + 3 anchor images) — writer approves
+- Director's Vision auto-generated after STEP 12 approval — used as north star throughout pipeline
+- Story Creation (STEP 13) ONLY after writer explicitly approves summary at STEP 12
 - Character Bible ONLY after synopsis approved
-- Screenplay ONLY after character-bible approved
+- Character Relations ONLY after Character Bible approved
+- Screenplay ONLY after character-bible + character-relations approved
 - Shot Breakdown ONLY after screenplay approved
-- Depth Probe is MANDATORY — surface answers = incomplete seeds = generic risk
+- Creative Elevation applies at every step — seeds → AI fills gaps with best cinematic choice
 
 ### 5. Story Synopsis = Continuous Narrative ONLY
 Story Synopsis produces ONE format: flowing prose narrative.
@@ -806,22 +831,22 @@ When in conflict → ask writer which version is correct → update ALL files to
 
 ---
 
-## QUICK TRIGGER REFERENCE (v9.0 — SINGLE STORY WORKFLOW)
+## QUICK TRIGGER REFERENCE (v11.0 — SINGLE STORY WORKFLOW)
 
 | User Says | Workflow | First Step |
 |-----------|----------|------------|
-| "story banao", "ek kahani", "write a story", "film concept", "ek idea hai", "suno ek kahani" | **Story Synopsis v9.0** (Unified) | STEP 0 — Concept Mining |
-| "web series banao", "multi-episode series" | **Story Synopsis v9.0** (Unified — format at STEP 12) | STEP 0 — Concept Mining |
-| "micro drama", "short episodes", "vertical series" | **Story Synopsis v9.0** (Unified — format at STEP 12) | STEP 0 — Concept Mining |
-| "short film banao", "5 min story" | **Story Synopsis v9.0** (Unified — format at STEP 12) | STEP 0 — Concept Mining |
+| "story banao", "ek kahani", "write a story", "film concept", "ek idea hai", "suno ek kahani" | **Story Synopsis v11.0** (Unified) | STEP 1 — Format Selection |
+| "web series banao", "multi-episode series" | **Story Synopsis v11.0** (Unified) | STEP 1 — Format Selection |
+| "micro drama", "short episodes", "vertical series" | **Story Synopsis v11.0** (Unified) | STEP 1 — Format Selection |
+| "short film banao", "5 min story" | **Story Synopsis v11.0** (Unified) | STEP 1 — Format Selection |
 | "character bible", "characters develop karo" | Character Bible | STEP 0 — Read Files |
 | "character relations", "relationships map karo", "rishta map" | Character Relations Map | STEP 0 — Read Files |
 | "beat sheet banao", "beats dikhao" | Beat Sheet | STEP 0 — Read Files |
-| "screenplay likho", "script banao" | Screenplay | STEP 0 — Read Files (including character-relations.md) |
+| "screenplay likho", "script banao" | Screenplay | STEP 0 — Read Files (including character-relations.md + series-bible.md) |
 | "shot breakdown", "shots plan karo" | Shot Breakdown | STEP 0 — Read Files → Both traditional + AI breakdown |
 
-**NOTE (v9.0)**: Movie, Web Series, and Micro Drama ALL use the SAME Story Synopsis v9.0 workflow.
-Format selection happens at **STEP 12** — after the brief synopsis is approved by the writer.
+**NOTE (v11.0)**: Movie, Web Series, and Micro Drama ALL use the SAME Story Synopsis v11.0 workflow.
+Format selection happens at **STEP 1** — FIRST question, always.
 NEVER route "web series banao" or "micro drama" to separate workflows. Those are DEPRECATED.
 
 ---

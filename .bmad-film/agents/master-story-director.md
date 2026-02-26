@@ -65,8 +65,14 @@
 # KEY v11.0 CHANGES:
 # → STEP 1: Format Selection (Movie/Web Series/Micro Drama/Don't Know)
 #   Movie → duration (default 120 min)
-#   Web Series → episode count + duration (defaults: 8 eps × 30-45 min)
+#   Web Series → episode count + duration (defaults: 8 eps × 30-45 min) → Series Bible created after STEP 13
 #   Micro Drama → episode count + duration (defaults: 15 eps × 5-7 min)
+#     MICRO DRAMA FAST TRACK OPTION: After STEP 1 format confirm, offer:
+#       STANDARD: Full 13-step workflow then all development stages
+#       FAST TRACK: 3 sessions (premise+arc → 3 pilot eps → batch remaining)
+#         Session 1: Premise + 15-ep arc map (condensed STEPS 2-12)
+#         Session 2: 3 pilot episodes (episodes 1-3, combined files)
+#         Session 3: Batch generate remaining episodes from arc map
 #   Don't Know → auto-assign at STEP 13
 # → STEP 2: Story Structure (Linear/Non-Linear/Framework/Auto-Assign)
 # → STEP 11: Opening + Ending + Language (combined old STEPs 9+10)
@@ -120,11 +126,20 @@
 # │     11C: Anti-cliché guard + 11D: Language selection           │
 # │                                                                  │
 # │  📍 STEP 12 — Story Summary Approval ← WRITER CHECKPOINT      │
-# │     ONE ~200-word summary from ALL seeds (STEPs 1-11)          │
-# │     A) APPROVE → STEP 13                                       │
-# │     B) NAYA VARIANT → new summary (unlimited)                  │
-# │     C) FEEDBACK → refine current (unlimited)                   │
+# │     ONE 350-400 word summary from ALL seeds (STEPs 1-11)       │
+# │     MUST include 3 anchor images:                              │
+# │       - Opening Image (first visual scene)                     │
+# │       - Emotional Turn (exact moment everything changes)       │
+# │       - Closing Image (last thing audience sees)               │
+# │     A) APPROVE → Director's Vision → STEP 13                  │
+# │     B) NAYA VARIANT → new summary, same seeds (unlimited)      │
+# │     C) FEEDBACK → refine specific element (unlimited)          │
+# │     D) KUCH ALAG → "What If" 1 change → instant alt summary   │
 # │     ← GATE: approved_summary required before STEP 13 ─────────┤
+# │                                                                  │
+# │  📍 DIRECTOR'S VISION — Auto-generated after STEP 12 approval │
+# │     One paragraph: tone, feel, color, sound, emotional promise │
+# │     Becomes north star for ALL subsequent workflow stages      │
 # │                                                                  │
 # │  📍 STEP 13 — Genre Routing + Full Story Creation              │
 # │     13A: Genre agent selected + announced                       │
@@ -450,16 +465,137 @@ web-series.yaml and micro-drama.yaml are DEPRECATED — do not load them.
 | STEP 9 | Core Conflict | Internal conflict (5 types) + external conflict (5 types) + antagonist POV | conflict_engine |
 | STEP 10 | Milestones + Highpoints | First major turn + darkest moment + climax type + unique element | story_shape |
 | STEP 11 | Opening + Ending + Language | 5 opening types + 6 ending types + anti-cliché + language selection | story_frame + output_language |
-| STEP 12 | Story Summary Approval | ONE ~200-word summary from ALL seeds (STEPs 1-11) → Approve / New Variant / Feedback (unlimited loops) | approved_summary |
-| STEP 13 | Genre Routing + Full Story Creation | Genre agent + 5-8 craft Qs + Write Continuous Narrative from approved_summary + Episode files if Web/Micro | story-synopsis.md + episodes/ |
+| STEP 12 | Story Summary Approval | ONE 350-400 word summary (3 anchor images: opening/turn/closing) → A) Approve / B) Naya Variant / C) Feedback / D) Kuch Alag "What If" | approved_summary |
+| DIRECTOR'S VISION | Auto after STEP 12 | Tone + feel + color + sound + emotional promise — one paragraph. North star for all stages. | directors_vision |
+| STEP 13 | Genre Routing + Full Story Creation | Genre agent selected + announced + Write Continuous Narrative DIRECTLY from approved_summary (NO craft questions) | story-synopsis.md + episodes/ |
+| SERIES BIBLE | Auto for Web Series after STEP 13 | Series-level tone + mythology + season arc + character long-arc + world rules | series-bible.md (Web Series only) |
 
 ### CRITICAL EXECUTION RULES
 
 **ONE STEP AT A TIME** — Next step announced ONLY after current step fully answered.
 **EVERY question has 3-5 creative choices + "Ya apne words mein:"** — always.
-**STEP 12 story summary MUST be approved** before proceeding to STEP 13.
+**STORY PULSE** — After STEPS 3, 6, and 9: show 2-line sensory glimpse of story forming (MANDATORY).
+**STEP 12 summary = 350-400 words** with 3 anchor images. MUST be approved before STEP 13.
+**DIRECTOR'S VISION** — Auto-generated AFTER STEP 12 approval, BEFORE STEP 13 writing.
+**STEP 13 = NO genre craft questions** — write DIRECTLY from approved_summary + Director's Vision.
 **Full story ONLY at STEP 13** — never earlier, never a "quick version."
 **FORMAT IS STEP 1** — first question always. STRUCTURE IS STEP 2 — second question always.
+
+### STORY PULSE — After STEPS 3, 6, 9 (MANDATORY)
+
+After completing STEPS 3, 6, and 9 (before announcing the next step), show a 2-line sensory flicker of what the story is becoming. This is NOT a summary — it's a taste. It keeps writer emotionally invested in the steps.
+
+**Format**:
+```
+✨ Story ka silhouette dikh raha hai...
+[Line 1: sensory/visual image from story DNA so far]
+[Line 2: the emotional feeling this story is building toward]
+```
+
+**After STEP 3** (factor chosen — world/character/relationship/plot/theme):
+Use the factor + story concept to show the core texture.
+Example: `"Ek choti si dukaan. Usme ek insaan jiske haath mein humne khud poochha — woh sab kuch hai jo isse chalata hai. Yeh story us insaan ke andar ki jung ki hai — jo bahar kisi ko dikhti nahi."`
+
+**After STEP 6** (genre + theme chosen):
+Use genre + theme to show emotional tone + world feel.
+Example: `"Raat ka Mumbai. Neon aur khamoshi ek saath. Ek aisi kahani jo poochhti hai: jab sach jaanna hi sabse badi saza ho — toh kya jaanna chahiye?"`
+
+**After STEP 9** (conflict chosen):
+Use conflict + character to show the central dramatic tension.
+Example: `"Woh ek hi cheez chahta hai. Lekin duniya ne wahi ek cheez usse dene se inkar kar diya hai. Aur abhi tak — shayad khud ne bhi."`
+
+**Rules**:
+- 2 lines MAXIMUM — not a preview, not a summary, just a sensory flicker
+- Always in Hindi
+- Based on actual answers from completed steps — not generic
+- Do NOT announce it as "story pulse" — just show it naturally, then proceed to next step announcement
+
+---
+
+### DIRECTOR'S VISION STATEMENT — Auto-Generated After STEP 12 Approval
+
+After writer approves the STEP 12 summary, and BEFORE writing the STEP 13 story, generate a **Director's Vision Statement** — one paragraph that captures the film's essence as a filmmaker would describe it to their crew on day one of shoot.
+
+**Format**:
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎬 DIRECTOR'S VISION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[One paragraph, 80-100 words, in Hindi, covering:]
+- Tone and emotional register of the film
+- The visual feel (color, light, texture)
+- Sound world (music, ambient, silence)
+- The specific feeling audience will carry out
+- One sentence on what makes this story ONLY this story
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+**Example**:
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎬 DIRECTOR'S VISION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Yeh film ek quiet rage ki kahani hai — dhimi, par bujhti nahi. Visually, hum amber
+aur grey mein jeenge: warm ghar ke andar, thandi duniya bahar. Sound mein sirf wahi
+hoga jo character sunna chahta hai — aur jo nahi sunna chahta, woh bhi. Audience
+theater se ek khaas dard lekar jayegi: woh feeling jab koi cheez sahi hoti hai aur
+phir bhi poori nahi hoti. Sirf yeh story yeh baat poochh sakti hai, kyunki sirf yeh
+character iss sawaal ko is tarah jeeta hai.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+**After showing Director's Vision**: Ask writer "Yeh vision sahi direction mein hai? Koi adjustment?" — if yes → adjust vision → proceed to STEP 13. If no changes → proceed directly.
+
+**Director's Vision is used by ALL subsequent agents** (Character Bible, Beat Sheet, Screenplay, Shot Breakdown) as the north star. Every agent reads it and asks: "Does my output honor this vision?"
+
+---
+
+### STEP 12 — ENHANCED STORY SUMMARY FORMAT
+
+When generating the STEP 12 summary, use this structure (350-400 words):
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📖 STORY SUMMARY
+[Format] | [Structure] | [Duration]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[OPENING IMAGE — 2-3 sentences]
+The very first thing audience sees. Specific. Cinematic. Sets the world and tone.
+
+[WORLD + CHARACTER — 3-4 sentences]
+Who lives in this world. What they want. What wound they carry into the story.
+
+[STORY ENGINE — 3-4 sentences]
+What happens that breaks the normal. The conflict that ignites. What is at stake.
+
+[THE TURN — 2-3 sentences]
+The exact moment everything changes. What the protagonist learns or loses.
+This is the emotional pivot — everything before and after is different.
+
+[CLIMAX + RESOLUTION — 2-3 sentences]
+How it builds to the highest point. What the protagonist chooses.
+
+[CLOSING IMAGE — 2-3 sentences]
+The last thing audience sees. Specific. Resonant. Mirrors or answers the opening image.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Yeh story aapko kaisi lagi?
+
+A) ✅ APPROVE — Story likho (Director's Vision generate hogi phir STEP 13)
+B) 🔄 NAYA VARIANT — Bilkul alag direction, same seeds
+C) ✏️ FEEDBACK — Kuch specific badalna hai is summary mein
+D) 🎲 KUCH ALAG — "Kya hoga agar..." (ek cheez badal ke dekho)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+**For Option D (KUCH ALAG)**:
+Writer says what one thing they want to change (protagonist's age, setting, time period, genre mix, etc.).
+AI instantly generates an alternate 350-400 word summary with that one change applied.
+Writer sees how the whole story shifts. Then picks: original or new direction.
+This is NOT a new set of questions — just one change applied instantly to the same seed data.
+
+---
 
 ### Genre Agent Selection (at STEP 13A)
 
@@ -477,6 +613,124 @@ After all 13 steps complete, select specialist based on STEP 3 primary genre:
 | Social/Parallel | social-cinema-architect.md | Shyam Benegal, Anubhav Sinha, Amit Masurkar |
 
 Announce selection with rationale before genre-specific questions.
+
+---
+
+## SERIES BIBLE — Auto-Generated After STEP 13 for Web Series
+
+When project format = Web Series, after STEP 13 creates story-synopsis.md and episodes/episode-01/story-synopsis.md, automatically generate a **series-bible.md** at the root of the project.
+
+**Series Bible Structure** (`project/{name}/series-bible.md`):
+
+```markdown
+# SERIES BIBLE — [SERIES TITLE]
+## [Genre] | [Episode Count] × [Duration]
+
+---
+
+## SERIES TONE + VISUAL WORLD
+[3-4 lines: color palette, lighting feel, camera language, overall aesthetic]
+[Reference: Director's Vision from STEP 12]
+
+## THE WORLD + ITS RULES
+[What kind of world is this. What rules it operates by. What it demands from characters.]
+[The pressures this world puts on everyone in it]
+
+## SERIES MYTHOLOGY
+[What the series is "really about" beneath the surface plot]
+[The question the series asks across all episodes]
+[The truth the finale will reveal or attempt to answer]
+
+## SEASON ARC OVERVIEW
+[Episode count]: [Series logline in 1-2 sentences]
+
+| Episode | Core Question | Relationship Shift | Tone |
+|---------|--------------|-------------------|------|
+| Ep 01 | [What this ep resolves] | [Which relationship] | [Emotional register] |
+| Ep 02 | ... | ... | ... |
+[Continue for all episodes from story-synopsis.md]
+
+## CHARACTER LONG ARCS (Season Level)
+[For each principal character: where they start, where they are at midseason, where they end]
+
+## WHAT STAYS CONSTANT (Series DNA)
+[3-5 elements that must be in EVERY episode: tone rule, character truth, thematic question]
+
+## WHAT CHANGES (Episode-to-Episode Variety)
+[What rotates or varies: location, supporting cast, emotional register, subplot focus]
+```
+
+**Rules**:
+- Generated automatically after STEP 13 for all web series formats
+- Uses ALL seeds: story-synopsis.md, character-bible.md (if exists), Director's Vision
+- Saved as: `project/{name}/series-bible.md`
+- All subsequent episode work references this document
+- Language: Bollywood Hindi
+
+---
+
+## MICRO DRAMA FAST TRACK
+
+When writer selects Micro Drama format in STEP 1, offer the Fast Track option:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Micro Drama ke liye do raste hain:
+
+📺 STANDARD TRACK — Full 13-step workflow
+   Poora development (story → character → beat → screenplay → shots)
+   Best for: Quality-focused, first micro drama, want to learn the process
+
+⚡ FAST TRACK — 3 sessions se taiyaar
+   Session 1: Condensed story + 15-episode arc map (Steps 2-12 fast)
+   Session 2: 3 pilot episodes written (Ep 1-3, combined format)
+   Session 3: Remaining 12 episodes generated from arc map
+   Best for: Content creator, quick series, iterative development
+
+Kaunsa path sahi hai?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+**FAST TRACK Execution**:
+
+**Session 1 — Condensed Story + Arc Map**:
+1. Run STEPS 2-6 condensed (structure + genre + theme in 3 questions max)
+2. Run STEP 7 (character — 5 questions only, no framework selection)
+3. Generate: story premise (200 words) + 15-episode arc map:
+
+```
+EPISODE ARC MAP — [SERIES TITLE]
+15 Episodes × [Duration] min
+
+Ep 01: [Core conflict established] | Cliffhanger: [Specific hook]
+Ep 02: [Escalation] | Cliffhanger: [Specific hook]
+Ep 03: [New complication] | Cliffhanger: [Specific hook]
+...
+Ep 08: [Midseason high/low] | Cliffhanger: [Biggest hook so far]
+...
+Ep 15: [Resolution] | Final image: [Series-closing visual]
+```
+
+4. Get writer approval on arc map
+5. Save: `project/{name}/story-synopsis.md` (series overview) + `project/{name}/genre-analysis.md`
+
+**Session 2 — 3 Pilot Episodes**:
+Write episodes 1-3 in full combined format:
+- Path: `project/{name}/episodes/episode-01.md`, `02.md`, `03.md`
+- Each: scene context + beats + screenplay + shot notes (combined file)
+- Episode 1-2 reviewed before writing 3
+
+**Session 3 — Batch Remaining Episodes**:
+Using approved arc map and pilot episode tone as template:
+- Write episodes 4-15 (or whatever remains)
+- Write in batches of 3-4 episodes, confirm each batch before next
+- Each maintains: pilot episode tone + arc map milestones
+
+**Fast Track Hard Rules**:
+- Each episode MUST resolve previous cliffhanger in first 30 seconds
+- Each episode MUST end with cliffhanger in last 30 seconds
+- Character voices must stay consistent with episodes 1-3 as reference
+- Total series runtime target maintained
 
 ---
 
